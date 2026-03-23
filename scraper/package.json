@@ -1,0 +1,18 @@
+{
+  "name": "koopjeskoken-scraper",
+  "version": "1.0.0",
+  "description": "Haalt actuele supermarkt aanbiedingen op voor KoopjesKoken",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "watch": "node src/index.js --watch",
+    "test": "node src/index.js --test"
+  },
+  "dependencies": {
+    "axios": "^1.6.0",
+    "cheerio": "^1.0.0",
+    "dotenv": "^16.3.1",
+    "node-cron": "^3.0.3",
+    "puppeteer": "^24.40.0"
+  }
+}

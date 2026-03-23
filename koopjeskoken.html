@@ -1,0 +1,1473 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KoopjesKoken — Lekker goedkoop koken</title>
+<meta name="description" content="Goedkope recepten gebaseerd op supermarkt aanbiedingen. Kook heerlijk voor minder dan €5 per persoon.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --cream: #FFF8F0; --warm-white: #FFFDF9; --ink: #1A1410; --ink-soft: #3D2E22;
+    --orange: #E8500A; --orange-light: #FF6B2B; --orange-pale: #FFF0E8;
+    --green: #2A7A3B; --green-light: #E8F5EB; --gold: #C8860A; --gold-pale: #FFF8E0;
+    --border: rgba(26,20,16,0.12); --shadow: 0 2px 20px rgba(26,20,16,0.08);
+    --shadow-hover: 0 8px 40px rgba(232,80,10,0.15); --radius: 16px;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  html { scroll-behavior: smooth; }
+  body { font-family:'DM Sans',sans-serif; background:var(--cream); color:var(--ink); overflow-x:hidden; }
+
+  /* ── NAV ── */
+  nav { position:sticky; top:0; z-index:100; background:rgba(255,248,240,0.95); backdrop-filter:blur(12px); border-bottom:1px solid var(--border); padding:0 clamp(1rem,4vw,3rem); }
+  .nav-inner { max-width:1280px; margin:auto; display:flex; align-items:center; justify-content:space-between; height:64px; }
+  .logo { font-family:'Playfair Display',serif; font-size:1.5rem; font-weight:900; color:var(--ink); text-decoration:none; letter-spacing:-0.03em; cursor:pointer; }
+  .logo span { color:var(--orange); }
+  .nav-links { display:flex; gap:2rem; list-style:none; }
+  .nav-links a { text-decoration:none; color:var(--ink-soft); font-size:0.9rem; font-weight:500; transition:color 0.2s; cursor:pointer; }
+  .nav-links a:hover, .nav-links a.active { color:var(--orange); }
+  .nav-right { display:flex; align-items:center; gap:1rem; }
+  .btn-nav { background:var(--orange); color:white; border:none; border-radius:100px; padding:0.5rem 1.25rem; font-family:'DM Sans',sans-serif; font-size:0.875rem; font-weight:600; cursor:pointer; transition:all 0.2s; text-decoration:none; position:relative; }
+  .btn-nav:hover { background:var(--orange-light); transform:translateY(-1px); }
+  .btn-nav .cart-count { position:absolute; top:-6px; right:-6px; background:var(--green); color:white; border-radius:50%; width:18px; height:18px; font-size:0.65rem; font-weight:800; display:flex; align-items:center; justify-content:center; }
+
+  /* ── PAGE SECTIONS (shown/hidden) ── */
+  .page { display:none; }
+  .page.active { display:block; }
+
+  /* ── HERO ── */
+  .hero { max-width:1280px; margin:0 auto; padding:clamp(3rem,8vw,6rem) clamp(1rem,4vw,3rem) 2rem; display:grid; grid-template-columns:1fr 1fr; gap:4rem; align-items:center; }
+  .hero-label { display:inline-flex; align-items:center; gap:0.5rem; background:var(--gold-pale); border:1px solid rgba(200,134,10,0.25); border-radius:100px; padding:0.35rem 1rem; font-size:0.8rem; font-weight:600; color:var(--gold); margin-bottom:1.5rem; animation:fadeUp 0.6s ease both; }
+  .hero-label::before { content:'✦'; font-size:0.7rem; }
+  .hero h1 { font-family:'Playfair Display',serif; font-size:clamp(2.5rem,5vw,4rem); line-height:1.1; font-weight:900; margin-bottom:1.25rem; animation:fadeUp 0.6s 0.1s ease both; }
+  .hero h1 em { font-style:italic; color:var(--orange); display:block; }
+  .hero-desc { font-size:1.1rem; color:var(--ink-soft); line-height:1.7; margin-bottom:2rem; animation:fadeUp 0.6s 0.2s ease both; }
+  .hero-actions { display:flex; gap:1rem; flex-wrap:wrap; animation:fadeUp 0.6s 0.3s ease both; }
+  .btn-primary { background:var(--orange); color:white; border:none; border-radius:100px; padding:0.875rem 2rem; font-family:'DM Sans',sans-serif; font-size:1rem; font-weight:600; cursor:pointer; transition:all 0.2s; display:flex; align-items:center; gap:0.5rem; }
+  .btn-primary:hover { background:var(--orange-light); transform:translateY(-2px); box-shadow:0 8px 24px rgba(232,80,10,0.3); }
+  .btn-secondary { background:white; color:var(--ink); border:1.5px solid var(--border); border-radius:100px; padding:0.875rem 2rem; font-family:'DM Sans',sans-serif; font-size:1rem; font-weight:500; cursor:pointer; transition:all 0.2s; }
+  .btn-secondary:hover { border-color:var(--orange); color:var(--orange); transform:translateY(-2px); }
+  .hero-stats { display:flex; gap:2rem; margin-top:2.5rem; animation:fadeUp 0.6s 0.4s ease both; }
+  .stat-num { font-family:'Playfair Display',serif; font-size:2rem; font-weight:900; color:var(--orange); line-height:1; }
+  .stat-label { font-size:0.8rem; color:var(--ink-soft); margin-top:0.2rem; }
+
+  /* Hero visual */
+  .hero-visual { position:relative; animation:fadeUp 0.6s 0.2s ease both; padding:2rem 2.5rem; }
+  .hero-card-main { background:white; border-radius:24px; overflow:hidden; box-shadow:var(--shadow-hover); border:1px solid var(--border); }
+  .hero-card-img { height:240px; background:linear-gradient(135deg,#F4A261,#E76F51,#E8500A); display:flex; align-items:center; justify-content:center; font-size:5rem; position:relative; }
+  .deal-badge { position:absolute; top:1rem; right:1rem; background:var(--green); color:white; border-radius:100px; padding:0.3rem 0.75rem; font-size:0.75rem; font-weight:700; }
+  .hero-card-body { padding:1.25rem 1.5rem 1.5rem; }
+  .hero-card-body h3 { font-family:'Playfair Display',serif; font-size:1.3rem; margin-bottom:0.5rem; }
+  .hero-card-meta { display:flex; gap:1rem; margin-bottom:1rem; font-size:0.85rem; color:var(--ink-soft); }
+  .price-row { display:flex; align-items:center; justify-content:space-between; }
+  .price-now { font-family:'Playfair Display',serif; font-size:1.75rem; font-weight:900; color:var(--orange); }
+  .price-was { font-size:0.85rem; color:var(--ink-soft); text-decoration:line-through; }
+  .supermarkt-badges { display:flex; gap:0.4rem; flex-wrap:wrap; }
+  .sm-badge { font-size:0.7rem; font-weight:700; padding:0.2rem 0.6rem; border-radius:6px; border:1px solid; }
+  .sm-ah { background:#FFF0E0; color:#E8500A; border-color:#E8500A; }
+  .sm-jumbo { background:#FFF9E0; color:#C8860A; border-color:#C8860A; }
+  .sm-lidl { background:#E0EAFF; color:#0D3FA6; border-color:#0D3FA6; }
+  .sm-aldi { background:#E0F0FF; color:#005CA8; border-color:#005CA8; }
+  .sm-plus { background:#E0F8E0; color:#008000; border-color:#008000; }
+  .sm-dirk { background:#FFE8E8; color:#B00000; border-color:#B00000; }
+
+  /* Floating cards */
+  .hero-float { position:absolute; background:white; border-radius:16px; padding:0.875rem 1.125rem; box-shadow:0 4px 24px rgba(0,0,0,0.12); border:1px solid var(--border); animation:float 3s ease-in-out infinite; z-index:10; }
+  .hero-float-1 { top:0.25rem; left:0; animation-delay:0s; }
+  .hero-float-2 { bottom:-0.5rem; right:0; animation-delay:1.5s; }
+  .float-label { font-size:0.7rem; color:var(--ink-soft); margin-bottom:0.25rem; }
+  .float-value { font-weight:700; font-size:0.95rem; color:var(--green); }
+
+  @keyframes float { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-6px)} }
+  @keyframes fadeUp { from{opacity:0;transform:translateY(20px)} to{opacity:1;transform:translateY(0)} }
+  @keyframes slideIn { from{transform:translateX(100%)} to{transform:translateX(0)} }
+
+  /* ── SEARCH ── */
+  .search-section { max-width:1280px; margin:0 auto; padding:0 clamp(1rem,4vw,3rem) 3rem; }
+  .search-box { background:white; border-radius:20px; padding:1.25rem 1.5rem; box-shadow:var(--shadow); border:1.5px solid var(--border); display:flex; gap:1rem; align-items:center; flex-wrap:wrap; }
+  .search-input-wrap { flex:1; min-width:200px; display:flex; align-items:center; gap:0.75rem; background:var(--cream); border-radius:12px; padding:0.75rem 1rem; border:1.5px solid transparent; transition:border-color 0.2s; }
+  .search-input-wrap:focus-within { border-color:var(--orange); }
+  .search-input-wrap input { border:none; background:transparent; font-family:'DM Sans',sans-serif; font-size:0.95rem; width:100%; outline:none; color:var(--ink); }
+  .search-input-wrap input::placeholder { color:#999; }
+  .filter-chips { display:flex; gap:0.5rem; flex-wrap:wrap; }
+  .chip { padding:0.5rem 1rem; border-radius:100px; border:1.5px solid var(--border); background:white; font-size:0.8rem; font-weight:500; cursor:pointer; transition:all 0.2s; font-family:'DM Sans',sans-serif; color:var(--ink-soft); }
+  .chip:hover,.chip.active { background:var(--orange); color:white; border-color:var(--orange); }
+
+  /* ── SECTIONS layout ── */
+  section.content-section { max-width:1280px; margin:0 auto; padding:2rem clamp(1rem,4vw,3rem); }
+  .section-header { display:flex; align-items:baseline; justify-content:space-between; margin-bottom:1.75rem; }
+  .section-header h2 { font-family:'Playfair Display',serif; font-size:clamp(1.5rem,3vw,2rem); font-weight:900; }
+  .section-header h2 span { color:var(--orange); }
+  .section-link { color:var(--orange); font-size:0.9rem; font-weight:600; text-decoration:none; display:flex; align-items:center; gap:0.25rem; transition:gap 0.2s; cursor:pointer; }
+  .section-link:hover { gap:0.5rem; }
+
+  /* ── RECIPE GRID ── */
+  .recipe-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); gap:1.5rem; }
+  .recipe-card { background:white; border-radius:var(--radius); overflow:hidden; border:1px solid var(--border); transition:all 0.3s ease; cursor:pointer; }
+  .recipe-card:hover { transform:translateY(-6px); box-shadow:var(--shadow-hover); border-color:rgba(232,80,10,0.2); }
+  .card-img { height:180px; position:relative; display:flex; align-items:center; justify-content:center; font-size:3.5rem; }
+  .card-deal-badge { position:absolute; top:0.75rem; left:0.75rem; background:var(--green); color:white; border-radius:8px; padding:0.25rem 0.6rem; font-size:0.72rem; font-weight:700; }
+  .card-time-badge { position:absolute; top:0.75rem; right:0.75rem; background:rgba(255,255,255,0.9); color:var(--ink); border-radius:8px; padding:0.25rem 0.6rem; font-size:0.72rem; font-weight:600; backdrop-filter:blur(4px); }
+  .card-body { padding:1.125rem; }
+  .card-tags { display:flex; gap:0.35rem; margin-bottom:0.6rem; flex-wrap:wrap; }
+  .card-tag { font-size:0.68rem; font-weight:600; padding:0.2rem 0.5rem; border-radius:6px; background:var(--orange-pale); color:var(--orange); }
+  .card-tag.green { background:var(--green-light); color:var(--green); }
+  .card-tag.gold { background:var(--gold-pale); color:var(--gold); }
+  .card-title { font-family:'Playfair Display',serif; font-size:1.1rem; font-weight:700; line-height:1.3; margin-bottom:0.5rem; }
+  .card-desc { font-size:0.82rem; color:var(--ink-soft); line-height:1.5; margin-bottom:0.875rem; }
+  .card-footer { display:flex; align-items:center; justify-content:space-between; padding-top:0.875rem; border-top:1px solid var(--border); }
+  .price-person { font-family:'Playfair Display',serif; font-size:1.3rem; font-weight:900; color:var(--orange); line-height:1; }
+  .price-label { font-size:0.7rem; color:var(--ink-soft); }
+  .card-sm-logos { display:flex; gap:0.3rem; }
+  .sm-dot { width:28px; height:28px; border-radius:8px; display:flex; align-items:center; justify-content:center; font-size:0.65rem; font-weight:800; }
+  .card-persons { font-size:0.78rem; color:var(--ink-soft); display:flex; align-items:center; gap:0.3rem; }
+
+  /* ── DEAL BANNER ── */
+  .deal-banner { background:linear-gradient(135deg,var(--orange),#C04008); border-radius:24px; padding:2.5rem 3rem; display:grid; grid-template-columns:1fr auto; gap:2rem; align-items:center; margin-bottom:1rem; position:relative; overflow:hidden; }
+  .deal-banner::before { content:''; position:absolute; top:-50%; right:10%; width:300px; height:300px; background:rgba(255,255,255,0.06); border-radius:50%; }
+  .deal-banner-label { background:rgba(255,255,255,0.2); display:inline-flex; align-items:center; gap:0.4rem; padding:0.3rem 0.875rem; border-radius:100px; font-size:0.8rem; font-weight:700; color:white; margin-bottom:1rem; }
+  .deal-banner h2 { font-family:'Playfair Display',serif; font-size:2rem; font-weight:900; color:white; line-height:1.2; margin-bottom:0.75rem; }
+  .deal-banner-desc { color:rgba(255,255,255,0.85); font-size:0.95rem; line-height:1.6; }
+  .deal-banner-cta { background:white; color:var(--orange); border:none; border-radius:100px; padding:1rem 2rem; font-family:'DM Sans',sans-serif; font-size:1rem; font-weight:700; cursor:pointer; white-space:nowrap; transition:all 0.2s; position:relative; z-index:1; }
+  .deal-banner-cta:hover { transform:scale(1.05); }
+
+  /* ── CATEGORIES ── */
+  .categories { display:grid; grid-template-columns:repeat(4,1fr); gap:1rem; margin-bottom:3rem; }
+  .category-card { border-radius:var(--radius); padding:1.5rem; cursor:pointer; transition:all 0.2s; border:1.5px solid transparent; }
+  .category-card:hover { transform:translateY(-4px); box-shadow:var(--shadow); }
+  .cat-1{background:var(--orange-pale)} .cat-2{background:var(--green-light)} .cat-3{background:var(--gold-pale)} .cat-4{background:#EEF0FF}
+  .cat-emoji { font-size:2.5rem; margin-bottom:0.75rem; display:block; }
+  .cat-title { font-family:'Playfair Display',serif; font-size:1.05rem; font-weight:700; margin-bottom:0.3rem; }
+  .cat-count { font-size:0.8rem; color:var(--ink-soft); }
+
+  /* ── DEALS STRIP ── */
+  .deals-strip { background:white; border-top:1px solid var(--border); border-bottom:1px solid var(--border); padding:1.5rem 0; margin:2rem 0; }
+  .deals-strip-inner { max-width:1280px; margin:auto; padding:0 clamp(1rem,4vw,3rem); }
+  .deals-strip h3 { font-family:'Playfair Display',serif; font-size:1rem; margin-bottom:1rem; color:var(--ink-soft); display:flex; align-items:center; gap:0.5rem; }
+  .deals-scroll { display:flex; gap:0.875rem; overflow-x:auto; scrollbar-width:none; padding-bottom:0.5rem; }
+  .deals-scroll::-webkit-scrollbar { display:none; }
+  .deal-pill { flex-shrink:0; display:flex; align-items:center; gap:0.75rem; background:var(--cream); border-radius:12px; padding:0.75rem 1.125rem; border:1px solid var(--border); cursor:pointer; transition:all 0.2s; min-width:180px; }
+  .deal-pill:hover { border-color:var(--orange); background:var(--orange-pale); }
+  .deal-pill-emoji { font-size:1.75rem; }
+  .deal-pill-name { font-size:0.85rem; font-weight:600; }
+  .deal-pill-sm { font-size:0.72rem; color:var(--ink-soft); }
+  .deal-pill-price { margin-left:auto; text-align:right; }
+  .deal-pill-new { font-weight:800; color:var(--orange); font-size:0.9rem; }
+  .deal-pill-old { font-size:0.7rem; color:var(--ink-soft); text-decoration:line-through; }
+
+  /* ── MODAL ── */
+  .modal-overlay { position:fixed; inset:0; z-index:200; background:rgba(26,20,16,0.7); backdrop-filter:blur(4px); display:none; align-items:flex-start; justify-content:center; padding:2rem 1rem; overflow-y:auto; }
+  .modal-overlay.open { display:flex; }
+  .modal { background:var(--warm-white); border-radius:24px; width:100%; max-width:820px; overflow:hidden; position:relative; animation:modalIn 0.3s ease; margin:auto; }
+  @keyframes modalIn { from{opacity:0;transform:translateY(30px) scale(0.97)} to{opacity:1;transform:translateY(0) scale(1)} }
+  .modal-close { position:absolute; top:1rem; right:1rem; z-index:10; background:rgba(255,255,255,0.9); border:none; border-radius:50%; width:40px; height:40px; font-size:1.2rem; cursor:pointer; display:flex; align-items:center; justify-content:center; backdrop-filter:blur(4px); transition:all 0.2s; }
+  .modal-close:hover { background:white; transform:rotate(90deg); }
+  .modal-hero { height:300px; position:relative; display:flex; align-items:center; justify-content:center; font-size:6rem; }
+  .modal-hero-info { position:absolute; bottom:1.5rem; left:1.5rem; display:flex; gap:0.75rem; flex-wrap:wrap; }
+  .modal-badge { background:rgba(255,255,255,0.92); backdrop-filter:blur(8px); border-radius:10px; padding:0.5rem 0.875rem; font-size:0.8rem; font-weight:600; display:flex; align-items:center; gap:0.35rem; }
+  .modal-body { padding:2rem; }
+  .modal-title { font-family:'Playfair Display',serif; font-size:2rem; font-weight:900; margin-bottom:0.5rem; }
+  .modal-meta { display:flex; gap:1.5rem; margin-bottom:1.5rem; font-size:0.875rem; color:var(--ink-soft); flex-wrap:wrap; }
+  .modal-meta span { display:flex; align-items:center; gap:0.35rem; }
+  .modal-grid { display:grid; grid-template-columns:1fr 1fr; gap:2rem; }
+  .modal-section-title { font-family:'Playfair Display',serif; font-size:1.15rem; font-weight:700; margin-bottom:1rem; display:flex; align-items:center; gap:0.5rem; }
+
+  /* Ingredient list */
+  .ingredient-list { list-style:none; }
+  .ingredient-item { display:flex; align-items:flex-start; justify-content:space-between; padding:0.75rem 0; border-bottom:1px solid var(--border); font-size:0.875rem; gap:0.5rem; }
+  .ingredient-item:last-child { border-bottom:none; }
+  .ing-left { flex:1; }
+  .ing-name { font-weight:500; }
+  .ing-qty-recept { color:var(--ink-soft); font-size:0.8rem; margin-top:0.15rem; }
+  .ing-qty-inkoop { font-size:0.72rem; color:var(--ink-soft); background:var(--cream); border-radius:6px; padding:0.1rem 0.4rem; display:inline-block; margin-top:0.2rem; }
+  .ing-right { display:flex; align-items:center; gap:0.4rem; flex-shrink:0; }
+  .ing-price { font-weight:700; color:var(--orange); }
+  .ing-deal { background:var(--green); color:white; border-radius:6px; padding:0.15rem 0.4rem; font-size:0.65rem; font-weight:700; }
+
+  /* Steps */
+  .steps-list { list-style:none; }
+  .step-item { display:flex; gap:1rem; padding:0.875rem 0; border-bottom:1px solid var(--border); }
+  .step-item:last-child { border-bottom:none; }
+  .step-num { min-width:32px; height:32px; background:var(--orange); color:white; border-radius:50%; display:flex; align-items:center; justify-content:center; font-weight:700; font-size:0.875rem; flex-shrink:0; }
+  .step-text { font-size:0.875rem; line-height:1.6; padding-top:0.35rem; }
+
+  /* Allergens */
+  .allergen-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:0.5rem; }
+  .allergen-item { padding:0.5rem 0.75rem; border-radius:8px; font-size:0.75rem; font-weight:500; display:flex; align-items:center; gap:0.35rem; }
+  .allergen-yes { background:#FFF0E8; color:#C04008; }
+  .allergen-no { background:var(--green-light); color:var(--green); }
+
+  /* Nutrition */
+  .nutrition-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:0.75rem; }
+  .nutrition-item { background:var(--cream); border-radius:10px; padding:0.75rem; text-align:center; }
+  .nut-val { font-family:'Playfair Display',serif; font-size:1.25rem; font-weight:900; color:var(--orange); }
+  .nut-label { font-size:0.72rem; color:var(--ink-soft); margin-top:0.1rem; }
+
+  /* Price summary */
+  .price-summary { background:linear-gradient(135deg,var(--orange-pale),white); border:1.5px solid rgba(232,80,10,0.2); border-radius:16px; padding:1.5rem; margin-top:0; grid-column:span 2; }
+  .price-summary-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1rem; text-align:center; }
+  .ps-val { font-family:'Playfair Display',serif; font-size:1.5rem; font-weight:900; }
+  .ps-val.orange { color:var(--orange); }
+  .ps-val.green { color:var(--green); }
+  .ps-val.strike { text-decoration:line-through; color:var(--ink-soft); font-size:1.1rem; }
+  .ps-label { font-size:0.75rem; color:var(--ink-soft); margin-top:0.25rem; }
+
+  /* Persons adjuster */
+  .persons-adjuster { display:flex; align-items:center; gap:1rem; background:var(--cream); border-radius:12px; padding:0.75rem 1rem; margin-bottom:1rem; }
+  .adj-btn { width:32px; height:32px; border-radius:50%; border:1.5px solid var(--border); background:white; cursor:pointer; font-size:1.1rem; font-weight:600; display:flex; align-items:center; justify-content:center; transition:all 0.2s; color:var(--ink); }
+  .adj-btn:hover { border-color:var(--orange); color:var(--orange); }
+  .adj-count { font-weight:700; font-size:1.1rem; min-width:20px; text-align:center; }
+  .adj-label { font-size:0.85rem; color:var(--ink-soft); }
+
+  /* ── AANBIEDINGEN PAGE ── */
+  .page-header { max-width:1280px; margin:0 auto; padding:3rem clamp(1rem,4vw,3rem) 1.5rem; }
+  .page-header h1 { font-family:'Playfair Display',serif; font-size:clamp(2rem,4vw,3rem); font-weight:900; margin-bottom:0.5rem; }
+  .page-header p { color:var(--ink-soft); font-size:1rem; }
+  .deals-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(220px,1fr)); gap:1.25rem; }
+  .deal-card { background:white; border-radius:var(--radius); overflow:hidden; border:1px solid var(--border); transition:all 0.25s; cursor:pointer; }
+  .deal-card:hover { transform:translateY(-4px); box-shadow:var(--shadow-hover); }
+  .deal-card-img { height:130px; display:flex; align-items:center; justify-content:center; font-size:3rem; position:relative; }
+  .deal-pct { position:absolute; top:0.5rem; left:0.5rem; background:var(--orange); color:white; border-radius:8px; padding:0.2rem 0.5rem; font-size:0.75rem; font-weight:800; }
+  .deal-card-body { padding:0.875rem; }
+  .deal-card-name { font-weight:700; font-size:0.9rem; margin-bottom:0.25rem; }
+  .deal-card-sm { font-size:0.75rem; color:var(--ink-soft); margin-bottom:0.5rem; }
+  .deal-card-prices { display:flex; align-items:baseline; gap:0.5rem; }
+  .deal-price-now { font-family:'Playfair Display',serif; font-size:1.1rem; font-weight:900; color:var(--orange); }
+  .deal-price-was { font-size:0.8rem; color:var(--ink-soft); text-decoration:line-through; }
+
+  .sm-filter-row { display:flex; gap:0.5rem; flex-wrap:wrap; margin-bottom:1.5rem; }
+
+  /* ── WEEKPLANNER PAGE ── */
+  .planner-grid { display:grid; grid-template-columns:repeat(7,1fr); gap:0.75rem; margin-bottom:2rem; }
+  .planner-day { background:white; border-radius:var(--radius); border:1.5px solid var(--border); overflow:hidden; min-height:160px; transition:all 0.2s; }
+  .planner-day-header { background:var(--cream); padding:0.6rem 0.75rem; font-size:0.8rem; font-weight:700; border-bottom:1px solid var(--border); display:flex; justify-content:space-between; align-items:center; }
+  .planner-day-header.today { background:var(--orange); color:white; }
+  .planner-slot { padding:0.6rem 0.75rem; }
+  .planner-meal { background:var(--orange-pale); border-radius:8px; padding:0.4rem 0.6rem; margin-bottom:0.4rem; font-size:0.75rem; cursor:pointer; border:1px solid rgba(232,80,10,0.15); transition:all 0.2s; }
+  .planner-meal:hover { background:var(--orange); color:white; }
+  .planner-meal-price { font-weight:700; color:var(--orange); font-size:0.7rem; }
+  .planner-meal:hover .planner-meal-price { color:rgba(255,255,255,0.85); }
+  .planner-add-btn { width:100%; background:var(--cream); border:1.5px dashed var(--border); border-radius:8px; padding:0.5rem; font-size:0.75rem; color:var(--ink-soft); cursor:pointer; transition:all 0.2s; font-family:'DM Sans',sans-serif; }
+  .planner-add-btn:hover { border-color:var(--orange); color:var(--orange); background:var(--orange-pale); }
+  .planner-summary { background:white; border-radius:var(--radius); border:1px solid var(--border); padding:1.5rem; display:grid; grid-template-columns:repeat(4,1fr); gap:1rem; text-align:center; }
+  .plan-sum-val { font-family:'Playfair Display',serif; font-size:1.5rem; font-weight:900; color:var(--orange); }
+  .plan-sum-label { font-size:0.75rem; color:var(--ink-soft); margin-top:0.25rem; }
+
+  /* ── SUPERMARKTEN PAGE ── */
+  .supermarkt-cards { display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); gap:1.5rem; }
+  .supermarkt-card { background:white; border-radius:var(--radius); border:1px solid var(--border); padding:1.75rem; transition:all 0.25s; cursor:pointer; }
+  .supermarkt-card:hover { transform:translateY(-4px); box-shadow:var(--shadow-hover); }
+  .sm-card-header { display:flex; align-items:center; gap:1rem; margin-bottom:1.25rem; }
+  .sm-logo-big { width:56px; height:56px; border-radius:12px; display:flex; align-items:center; justify-content:center; font-size:1.5rem; font-weight:900; }
+  .sm-card-name { font-family:'Playfair Display',serif; font-size:1.25rem; font-weight:700; }
+  .sm-card-tagline { font-size:0.8rem; color:var(--ink-soft); }
+  .sm-stats { display:grid; grid-template-columns:1fr 1fr; gap:0.75rem; }
+  .sm-stat { background:var(--cream); border-radius:10px; padding:0.75rem; text-align:center; }
+  .sm-stat-val { font-family:'Playfair Display',serif; font-size:1.1rem; font-weight:900; color:var(--orange); }
+  .sm-stat-label { font-size:0.7rem; color:var(--ink-soft); margin-top:0.1rem; }
+
+  /* ── BOODSCHAPPENLIJST PANEL ── */
+  .cart-panel { position:fixed; top:0; right:0; width:380px; height:100vh; background:white; z-index:300; box-shadow:-4px 0 40px rgba(26,20,16,0.15); transform:translateX(100%); transition:transform 0.35s ease; display:flex; flex-direction:column; }
+  .cart-panel.open { transform:translateX(0); }
+  .cart-backdrop { position:fixed; inset:0; background:rgba(26,20,16,0.5); z-index:299; display:none; backdrop-filter:blur(2px); }
+  .cart-backdrop.open { display:block; }
+  .cart-header { padding:1.25rem 1.5rem; border-bottom:1px solid var(--border); display:flex; align-items:center; justify-content:space-between; }
+  .cart-header h3 { font-family:'Playfair Display',serif; font-size:1.25rem; font-weight:700; }
+  .cart-close { background:none; border:none; font-size:1.2rem; cursor:pointer; color:var(--ink-soft); padding:0.25rem; border-radius:6px; transition:all 0.2s; }
+  .cart-close:hover { color:var(--orange); }
+  .cart-body { flex:1; overflow-y:auto; padding:1.25rem 1.5rem; }
+  .cart-empty { text-align:center; padding:3rem 1rem; color:var(--ink-soft); }
+  .cart-empty-icon { font-size:3rem; margin-bottom:1rem; display:block; }
+  .cart-group { margin-bottom:1.5rem; }
+  .cart-group-title { font-size:0.75rem; font-weight:700; text-transform:uppercase; letter-spacing:0.08em; color:var(--ink-soft); margin-bottom:0.5rem; display:flex; align-items:center; gap:0.4rem; }
+  .cart-item { display:flex; align-items:center; gap:0.75rem; padding:0.625rem 0; border-bottom:1px solid var(--border); }
+  .cart-item:last-child { border-bottom:none; }
+  .cart-item-check { width:20px; height:20px; border-radius:6px; border:1.5px solid var(--border); cursor:pointer; flex-shrink:0; display:flex; align-items:center; justify-content:center; transition:all 0.2s; }
+  .cart-item-check.checked { background:var(--green); border-color:var(--green); color:white; font-size:0.7rem; }
+  .cart-item-info { flex:1; }
+  .cart-item-name { font-size:0.875rem; font-weight:500; }
+  .cart-item-name.checked-text { text-decoration:line-through; color:var(--ink-soft); }
+  .cart-item-detail { font-size:0.75rem; color:var(--ink-soft); }
+  .cart-item-price { font-size:0.875rem; font-weight:700; color:var(--orange); }
+  .cart-item-remove { background:none; border:none; color:#ccc; cursor:pointer; font-size:1rem; padding:0.15rem; transition:color 0.2s; }
+  .cart-item-remove:hover { color:var(--orange); }
+  .cart-footer { padding:1.25rem 1.5rem; border-top:1px solid var(--border); }
+  .cart-total-row { display:flex; justify-content:space-between; align-items:center; margin-bottom:1rem; }
+  .cart-total-label { font-weight:600; font-size:0.9rem; }
+  .cart-total-val { font-family:'Playfair Display',serif; font-size:1.5rem; font-weight:900; color:var(--orange); }
+  .cart-actions { display:flex; gap:0.75rem; }
+  .btn-cart-print { flex:1; background:var(--cream); color:var(--ink); border:1.5px solid var(--border); border-radius:100px; padding:0.75rem; font-family:'DM Sans',sans-serif; font-weight:600; font-size:0.875rem; cursor:pointer; transition:all 0.2s; }
+  .btn-cart-print:hover { border-color:var(--orange); color:var(--orange); }
+  .btn-cart-clear { background:none; border:none; color:var(--ink-soft); font-size:0.8rem; cursor:pointer; text-decoration:underline; margin-top:0.5rem; font-family:'DM Sans',sans-serif; }
+  .btn-cart-clear:hover { color:var(--orange); }
+
+  /* ── TOAST ── */
+  .toast { position:fixed; bottom:2rem; left:50%; transform:translateX(-50%) translateY(100px); background:var(--ink); color:white; padding:0.875rem 1.5rem; border-radius:100px; font-size:0.875rem; font-weight:500; z-index:400; transition:transform 0.3s ease; display:flex; align-items:center; gap:0.5rem; white-space:nowrap; }
+  .toast.show { transform:translateX(-50%) translateY(0); }
+
+  /* ── FOOTER ── */
+  footer { background:var(--ink); color:white; padding:4rem clamp(1rem,4vw,3rem) 2rem; margin-top:4rem; }
+  .footer-inner { max-width:1280px; margin:auto; }
+  .footer-grid { display:grid; grid-template-columns:2fr 1fr 1fr 1fr; gap:3rem; margin-bottom:3rem; }
+  .footer-brand .logo { color:white; font-size:1.75rem; }
+  .footer-brand p { color:rgba(255,255,255,0.6); font-size:0.875rem; line-height:1.7; margin-top:1rem; max-width:280px; }
+  .footer-col h4 { font-weight:700; margin-bottom:1rem; font-size:0.9rem; }
+  .footer-col ul { list-style:none; }
+  .footer-col ul li { margin-bottom:0.6rem; }
+  .footer-col ul a { color:rgba(255,255,255,0.6); text-decoration:none; font-size:0.85rem; transition:color 0.2s; }
+  .footer-col ul a:hover { color:var(--orange); }
+  .footer-bottom { border-top:1px solid rgba(255,255,255,0.1); padding-top:1.5rem; display:flex; justify-content:space-between; align-items:center; font-size:0.8rem; color:rgba(255,255,255,0.4); flex-wrap:wrap; gap:1rem; }
+
+  /* ── RESPONSIVE ── */
+  @media(max-width:900px) {
+    .hero{grid-template-columns:1fr} .hero-visual{display:none}
+    .categories{grid-template-columns:repeat(2,1fr)}
+    .modal-grid{grid-template-columns:1fr} .price-summary{grid-column:span 1}
+    .footer-grid{grid-template-columns:1fr 1fr;gap:2rem}
+    .planner-grid{grid-template-columns:repeat(3,1fr)}
+    .cart-panel{width:100%}
+  }
+  @media(max-width:600px) {
+    .categories{grid-template-columns:1fr 1fr}
+    .footer-grid{grid-template-columns:1fr}
+    .deal-banner{grid-template-columns:1fr}
+    .price-summary-grid{grid-template-columns:1fr 1fr}
+    .allergen-grid{grid-template-columns:1fr 1fr}
+    .planner-grid{grid-template-columns:repeat(2,1fr)}
+    .planner-summary{grid-template-columns:1fr 1fr}
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <a class="logo" onclick="showPage('home')">Koopjes<span>Koken</span></a>
+    <ul class="nav-links">
+      <li><a onclick="showPage('home')" id="nav-home" class="active">Recepten</a></li>
+      <li><a onclick="showPage('aanbiedingen')" id="nav-aanbiedingen">Aanbiedingen</a></li>
+      <li><a onclick="showPage('planner')" id="nav-planner">Weekplanner</a></li>
+      <li><a onclick="showPage('supermarkten')" id="nav-supermarkten">Supermarkten</a></li>
+    </ul>
+    <div class="nav-right">
+      <button class="btn-nav" onclick="openCart()">🛒 Boodschappenlijst<span class="cart-count" id="cartCount" style="display:none">0</span></button>
+    </div>
+  </div>
+</nav>
+
+<!-- ══════════════════════════════════════════ HOME PAGE ══ -->
+<div id="page-home" class="page active">
+
+  <div class="hero">
+    <div class="hero-content">
+      <div class="hero-label">✦ Elke dag nieuwe aanbiedingen</div>
+      <h1>Lekker koken <em>voor minder geld</em></h1>
+      <p class="hero-desc">Recepten gebaseerd op supermarkt aanbiedingen bij Albert Heijn, Jumbo, Lidl en meer. Elke dag de goedkoopste maaltijden voor jou samengesteld.</p>
+      <div class="hero-actions">
+        <button class="btn-primary" onclick="document.getElementById('recepten').scrollIntoView({behavior:'smooth'})">🍽️ Bekijk recepten</button>
+        <button class="btn-secondary" onclick="openModal('1')">Voorbeeld recept</button>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><div class="stat-num">€0,95</div><div class="stat-label">Goedkoopste recept<br>van vandaag</div></div>
+        <div class="stat"><div class="stat-num">240+</div><div class="stat-label">Budget recepten</div></div>
+        <div class="stat"><div class="stat-num">7</div><div class="stat-label">Supermarkten<br>vergeleken</div></div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-float hero-float-1">
+        <div class="float-label">💚 Aanbieding AH</div>
+        <div class="float-value">Gehakt 40% korting!</div>
+      </div>
+      <div class="hero-card-main">
+        <div class="hero-card-img">🍝<div class="deal-badge">💰 Bespaar €2,60</div></div>
+        <div class="hero-card-body">
+          <h3>Spaghetti Bolognese</h3>
+          <div class="hero-card-meta"><span>⏱ 25 min</span><span>👤 4 personen</span><span>⭐ Makkelijk</span></div>
+          <div class="price-row">
+            <div><div class="price-now">€1,85 <small style="font-size:0.9rem;color:#888">p.p.</small></div><div class="price-was">Was €3,25 p.p.</div></div>
+            <div class="supermarkt-badges"><span class="sm-badge sm-ah">AH</span><span class="sm-badge sm-jumbo">Jumbo</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="hero-float hero-float-2">
+        <div class="float-label">📊 Prijs per persoon</div>
+        <div class="float-value">€1,85 — Bespaar 43%</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="search-section">
+    <div class="search-box">
+      <div class="search-input-wrap">
+        <span>🔍</span>
+        <input type="text" placeholder="Zoek op recept, ingrediënt of supermarkt..." id="searchInput" oninput="filterRecipes()">
+      </div>
+      <div class="filter-chips">
+        <button class="chip active" onclick="setFilter('all',this)">Alles</button>
+        <button class="chip" onclick="setFilter('aanbieding',this)">🏷️ Aanbieding</button>
+        <button class="chip" onclick="setFilter('snel',this)">⚡ Snel</button>
+        <button class="chip" onclick="setFilter('vegetarisch',this)">🥦 Vegetarisch</button>
+        <button class="chip" onclick="setFilter('vegan',this)">🌱 Vegan</button>
+        <button class="chip" onclick="setFilter('budget',this)">💶 Onder €3</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="deals-strip">
+    <div class="deals-strip-inner">
+      <h3>🏷️ Huidige aanbiedingen — koppel aan een recept <span id="dealsTimestamp" style="font-size:0.7rem;font-weight:400;color:#bbb;margin-left:0.5rem"></span></h3>
+      <div class="deals-scroll" id="dealsScrollHome"></div>
+    </div>
+  </div>
+
+  <section class="content-section">
+    <div class="section-header"><h2>Kies jouw <span>categorie</span></h2></div>
+    <div class="categories">
+      <div class="category-card cat-1" onclick="setFilterCat('aanbieding')"><span class="cat-emoji">🏷️</span><div class="cat-title">Aanbieding-recepten</div><div class="cat-count">48 recepten beschikbaar</div></div>
+      <div class="category-card cat-2" onclick="setFilterCat('student')"><span class="cat-emoji">🎓</span><div class="cat-title">Studenten keuken</div><div class="cat-count">62 recepten onder €3</div></div>
+      <div class="category-card cat-3" onclick="setFilterCat('snel')"><span class="cat-emoji">⚡</span><div class="cat-title">Klaar in 20 minuten</div><div class="cat-count">55 snelle maaltijden</div></div>
+      <div class="category-card cat-4" onclick="setFilterCat('vegetarisch')"><span class="cat-emoji">🌿</span><div class="cat-title">Vegetarisch &amp; Vegan</div><div class="cat-count">73 plantaardige opties</div></div>
+    </div>
+  </section>
+
+  <section class="content-section">
+    <div class="deal-banner">
+      <div>
+        <div class="deal-banner-label">🔥 Deze week populair</div>
+        <h2>Kook 5 maaltijden voor<br>minder dan €25</h2>
+        <p class="deal-banner-desc">Onze weekplanner selecteert automatisch de goedkoopste recepten op basis van aanbiedingen bij jouw supermarkt.</p>
+      </div>
+      <button class="deal-banner-cta" onclick="showPage('planner')">📅 Start weekplanner →</button>
+    </div>
+  </section>
+
+  <section class="content-section" id="recepten">
+    <div class="section-header">
+      <h2>Recepten van <span>vandaag</span></h2>
+      <span class="section-link" onclick="showPage('aanbiedingen')">Alle aanbiedingen →</span>
+    </div>
+    <div class="recipe-grid" id="recipeGrid"></div>
+  </section>
+
+</div><!-- /home page -->
+
+<!-- ══════════════════════════════════════════ AANBIEDINGEN PAGE ══ -->
+<div id="page-aanbiedingen" class="page">
+  <div class="page-header">
+    <h1>Aanbiedingen <span style="color:var(--orange)">deze week</span></h1>
+    <p>Actuele kortingen bij alle grote Nederlandse supermarkten, gekoppeld aan recepten.</p>
+  </div>
+  <section class="content-section" style="padding-top:0">
+    <div class="sm-filter-row" id="smFilterRow"></div>
+    <div class="deals-grid" id="dealsGrid"></div>
+  </section>
+</div>
+
+<!-- ══════════════════════════════════════════ WEEKPLANNER PAGE ══ -->
+<div id="page-planner" class="page">
+  <div class="page-header">
+    <h1>Weekplanner <span style="color:var(--orange)">2025</span></h1>
+    <p>Plan je maaltijden voor de week en zie direct hoeveel je uitgeeft en bespaart.</p>
+  </div>
+  <section class="content-section" style="padding-top:0">
+    <div class="planner-grid" id="plannerGrid"></div>
+    <div class="planner-summary" id="plannerSummary">
+      <div><div class="plan-sum-val" id="planTotal">€0,00</div><div class="plan-sum-label">Totaal deze week</div></div>
+      <div><div class="plan-sum-val" id="planSaving" style="color:var(--green)">€0,00</div><div class="plan-sum-label">Bespaard</div></div>
+      <div><div class="plan-sum-val" id="planMeals">0</div><div class="plan-sum-label">Maaltijden gepland</div></div>
+      <div><div class="plan-sum-val" id="planPerDay">€0,00</div><div class="plan-sum-label">Gemiddeld per dag</div></div>
+    </div>
+    <div style="margin-top:1.5rem;background:white;border-radius:var(--radius);border:1px solid var(--border);padding:1.5rem">
+      <div class="modal-section-title">➕ Voeg recept toe aan planner</div>
+      <div class="recipe-grid" id="plannerRecipeGrid"></div>
+    </div>
+  </section>
+</div>
+
+<!-- ══════════════════════════════════════════ SUPERMARKTEN PAGE ══ -->
+<div id="page-supermarkten" class="page">
+  <div class="page-header">
+    <h1>Supermarkten <span style="color:var(--orange)">vergelijken</span></h1>
+    <p>Bekijk welke supermarkt het voordeligst is voor jouw boodschappen.</p>
+  </div>
+  <section class="content-section" style="padding-top:0">
+    <div class="supermarkt-cards" id="supermarktCards"></div>
+  </section>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="logo" onclick="showPage('home')" style="color:white">Koopjes<span>Koken</span></a>
+        <p>Dagelijks bijgewerkte recepten gebaseerd op supermarkt aanbiedingen in Nederland. Lekker koken hoeft niet duur te zijn.</p>
+      </div>
+      <div class="footer-col"><h4>Recepten</h4><ul><li><a href="#">Budget maaltijden</a></li><li><a href="#">Studenten keuken</a></li><li><a href="#">Vegetarisch</a></li><li><a href="#">Snelle maaltijden</a></li><li><a href="#">Gezinsmaaltijden</a></li></ul></div>
+      <div class="footer-col"><h4>Supermarkten</h4><ul><li><a href="#">Albert Heijn</a></li><li><a href="#">Jumbo</a></li><li><a href="#">Lidl</a></li><li><a href="#">Aldi</a></li><li><a href="#">Dirk &amp; Plus</a></li></ul></div>
+      <div class="footer-col"><h4>Over KoopjesKoken</h4><ul><li><a href="#">Over ons</a></li><li><a href="#">Recept indienen</a></li><li><a href="#">Cookiebeleid</a></li><li><a href="#">Privacy</a></li><li><a href="#">Contact</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><span>© 2025 KoopjesKoken — Alle aanbiedingen worden dagelijks bijgewerkt</span><span>🇳🇱 Gemaakt voor Nederland</span></div>
+  </div>
+</footer>
+
+<!-- MODAL -->
+<div class="modal-overlay" id="modalOverlay" onclick="closeModalOutside(event)">
+  <div class="modal" id="modalContent"></div>
+</div>
+
+<!-- BOODSCHAPPENLIJST PANEL -->
+<div class="cart-backdrop" id="cartBackdrop" onclick="closeCart()"></div>
+<div class="cart-panel" id="cartPanel">
+  <div class="cart-header">
+    <h3>🛒 Boodschappenlijst</h3>
+    <button class="cart-close" onclick="closeCart()">✕</button>
+  </div>
+  <div class="cart-body" id="cartBody"></div>
+  <div class="cart-footer" id="cartFooter"></div>
+</div>
+
+<!-- TOAST -->
+<div class="toast" id="toast"></div>
+
+<script>
+// ══════════════════════════════════════════════════════
+// DATA
+// ══════════════════════════════════════════════════════
+
+// Ingrediënten hebben:
+//   qty:      hoeveelheid voor basisrecept (bijv. 4 eieren voor 2 personen)
+//   unit:     eenheid die schaalt (g, ml, stuks, el, etc.)
+//   perPersoon: hoeveel van dit ingrediënt per persoon nodig is
+//   inkoop:   wat je daadwerkelijk koopt in de winkel (onveranderlijk)
+//   price:    prijs van het inkooppakket
+//
+// Bij het aanpassen van personen:
+//   - gebruiksHoeveelheid = perPersoon * aantalPersonen (wordt getoond in recept)
+//   - inkoopHoeveelheid = inkoop (staat vast, je koopt altijd een hele verpakking)
+//   - prijs schaalt MEE (meer personen = meer verpakkingen nodig)
+
+const recipes = [
+  {
+    id: '1', name: 'Spaghetti Bolognese', emoji: '🍝',
+    gradient: 'linear-gradient(135deg, #F4A261, #E76F51)',
+    desc: 'Klassieke Italiaanse bolognese met rundergehakt uit de AH aanbieding.',
+    time: 25, persons: 4, difficulty: 'Makkelijk',
+    priceNow: 1.85, priceWas: 3.25, totalNow: 7.40, totalWas: 13.00, saving: 5.60,
+    tags: ['aanbieding','student'], diets: [], supermarkts: ['AH','Jumbo'],
+    ingredients: [
+      // name, emoji, perPersoon, unit, inkoop (wat je koopt), inkoopEenheid, prijsPerInkoop, aantalInkoop (per basisrecept), deal, sm
+      { name:'Rundergehakt',   emoji:'🥩', perPersoon:100, unit:'g',     inkoop:'500g pak',      inkoopQty:500, prijsPerPak:2.99, pakkenBase:1, deal:true,  sm:'AH'   },
+      { name:'Spaghetti',      emoji:'🍝', perPersoon:75,  unit:'g',     inkoop:'500g pak',      inkoopQty:500, prijsPerPak:0.49, pakkenBase:1, deal:true,  sm:'Lidl' },
+      { name:'Tomatensaus',    emoji:'🥫', perPersoon:100, unit:'ml',    inkoop:'400ml blik',    inkoopQty:400, prijsPerPak:0.79, pakkenBase:1, deal:false, sm:'Aldi' },
+      { name:'Ui',             emoji:'🧅', perPersoon:0.5, unit:'stuks', inkoop:'1 stuk',        inkoopQty:1,   prijsPerPak:0.15, pakkenBase:1, deal:false, sm:'Dirk' },
+      { name:'Knoflook',       emoji:'🧄', perPersoon:0.5, unit:'teentjes', inkoop:'1 bol',     inkoopQty:8,   prijsPerPak:0.25, pakkenBase:1, deal:false, sm:'Dirk' },
+      { name:'Geraspte kaas',  emoji:'🧀', perPersoon:25,  unit:'g',     inkoop:'150g zakje',    inkoopQty:150, prijsPerPak:1.49, pakkenBase:1, deal:true,  sm:'AH'   },
+    ],
+    steps: [
+      'Breng een grote pan water aan de kook met een snufje zout.',
+      'Pel en snijd de ui fijn. Pers de knoflookteentjes.',
+      'Verhit wat olie in een koekenpan op middelhoog vuur. Fruit de ui glazig (ca. 3 min).',
+      'Voeg de knoflook toe en bak 1 minuut mee.',
+      'Voeg het rundergehakt toe en bak rul en bruin (ca. 5 min).',
+      'Giet de tomatensaus erbij, roer goed door. Laat 10 minuten sudderen op laag vuur.',
+      'Kook intussen de spaghetti volgens de verpakking (al dente).',
+      'Giet de pasta af en schep de bolognese eroverheen. Bestrooi met geraspte kaas.',
+    ],
+    allergens: {gluten:true,lactose:true,noten:false,pinda:false,ei:false,soja:false,vis:false,schaaldieren:false},
+    nutrition: {kcal:520, eiwit:28, koolh:62, vet:16},
+  },
+  {
+    id: '2', name: 'Kipfilet Wokschotel', emoji: '🥘',
+    gradient: 'linear-gradient(135deg, #84A98C, #52796F)',
+    desc: 'Snelle wokschotel met kipfilet, seizoensgroenten en rijst.',
+    time: 20, persons: 3, difficulty: 'Makkelijk',
+    priceNow: 2.10, priceWas: 3.80, totalNow: 6.30, totalWas: 11.40, saving: 5.10,
+    tags: ['aanbieding','snel'], diets: [], supermarkts: ['Jumbo'],
+    ingredients: [
+      { name:'Kipfilet',        emoji:'🍗', perPersoon:130, unit:'g',   inkoop:'400g pak',    inkoopQty:400, prijsPerPak:3.49, pakkenBase:1, deal:true,  sm:'Jumbo' },
+      { name:'Rijst',           emoji:'🍚', perPersoon:100, unit:'g',   inkoop:'1kg zak',     inkoopQty:1000,prijsPerPak:1.29, pakkenBase:1, deal:false, sm:'Aldi'  },
+      { name:'Roerbakgroenten', emoji:'🥦', perPersoon:130, unit:'g',   inkoop:'400g zak',    inkoopQty:400, prijsPerPak:1.29, pakkenBase:1, deal:false, sm:'AH'   },
+      { name:'Ketjap',          emoji:'🫙', perPersoon:1,   unit:'el',  inkoop:'1 fles',      inkoopQty:1,   prijsPerPak:1.29, pakkenBase:1, deal:false, sm:'AH'   },
+      { name:'Knoflook',        emoji:'🧄', perPersoon:0.5, unit:'teentjes', inkoop:'1 bol', inkoopQty:8,   prijsPerPak:0.25, pakkenBase:1, deal:false, sm:'Dirk' },
+    ],
+    steps: [
+      'Kook de rijst volgens de verpakking (ca. 12 minuten).',
+      'Snijd de kipfilet in reepjes van ca. 2 cm.',
+      'Verhit een wokpan op hoog vuur met wat olie.',
+      'Wok de kip 4-5 minuten tot gaar en goudbruin.',
+      'Voeg de roerbakgroenten toe en wok 3 minuten mee.',
+      'Breng op smaak met ketjap, knoflook en eventueel chilisaus.',
+      'Serveer over de rijst.',
+    ],
+    allergens: {gluten:true,lactose:false,noten:false,pinda:false,ei:false,soja:true,vis:false,schaaldieren:false},
+    nutrition: {kcal:410, eiwit:38, koolh:45, vet:8},
+  },
+  {
+    id: '3', name: 'Vegetarische Chili', emoji: '🌶️',
+    gradient: 'linear-gradient(135deg, #E63946, #9B2335)',
+    desc: 'Stevige chili zonder vlees vol proteïne. Warm, vullend en goedkoop.',
+    time: 30, persons: 4, difficulty: 'Makkelijk',
+    priceNow: 1.45, priceWas: 2.20, totalNow: 5.80, totalWas: 8.80, saving: 3.00,
+    tags: ['vegetarisch','budget','student'], diets: ['vegan','vegetarisch'], supermarkts: ['Lidl','Aldi'],
+    ingredients: [
+      { name:'Kidneybonen',     emoji:'🫘', perPersoon:0.5, unit:'blik', inkoop:'1 blik (400g)', inkoopQty:1,   prijsPerPak:0.55, pakkenBase:2, deal:true,  sm:'Lidl' },
+      { name:'Gepelde tomaten', emoji:'🍅', perPersoon:100, unit:'g',    inkoop:'400g blik',     inkoopQty:400, prijsPerPak:0.59, pakkenBase:1, deal:false, sm:'Aldi' },
+      { name:'Paprika',         emoji:'🫑', perPersoon:0.5, unit:'stuks',inkoop:'1 stuk',        inkoopQty:1,   prijsPerPak:0.40, pakkenBase:2, deal:false, sm:'AH'   },
+      { name:'Mais',            emoji:'🌽', perPersoon:0.25,unit:'blik', inkoop:'1 blik (300g)', inkoopQty:1,   prijsPerPak:0.55, pakkenBase:1, deal:false, sm:'Aldi' },
+      { name:'Ui',              emoji:'🧅', perPersoon:0.25,unit:'stuks',inkoop:'1 stuk',        inkoopQty:1,   prijsPerPak:0.15, pakkenBase:1, deal:false, sm:'Dirk' },
+      { name:'Chilikruiden',    emoji:'🌶️', perPersoon:0.25,unit:'zakje',inkoop:'1 zakje',      inkoopQty:1,   prijsPerPak:0.49, pakkenBase:1, deal:false, sm:'Aldi' },
+    ],
+    steps: [
+      'Snipper de ui en snijd de paprika in kleine blokjes.',
+      'Fruit de ui in een pan met wat olie.',
+      'Voeg de paprika toe en bak 3 minuten mee.',
+      'Giet de tomaten, bonen en mais erbij.',
+      'Voeg het chilikruiden-zakje toe en roer alles goed door.',
+      'Laat 20 minuten sudderen op laag vuur.',
+      'Proef en breng op smaak met peper en zout.',
+      'Serveer met rijst, brood of tortillachips.',
+    ],
+    allergens: {gluten:false,lactose:false,noten:false,pinda:false,ei:false,soja:false,vis:false,schaaldieren:false},
+    nutrition: {kcal:320, eiwit:16, koolh:54, vet:4},
+  },
+  {
+    id: '4', name: 'Aardappelsoep', emoji: '🥣',
+    gradient: 'linear-gradient(135deg, #F9C74F, #F8961E)',
+    desc: 'Romige aardappelsoep met spekjes. Simpel, vullend en heerlijk bij koud weer.',
+    time: 35, persons: 4, difficulty: 'Gemiddeld',
+    priceNow: 1.20, priceWas: 2.10, totalNow: 4.80, totalWas: 8.40, saving: 3.60,
+    tags: ['budget','student'], diets: [], supermarkts: ['Plus','AH'],
+    ingredients: [
+      { name:'Aardappelen',     emoji:'🥔', perPersoon:150, unit:'g',   inkoop:'1kg zak',     inkoopQty:1000, prijsPerPak:0.89, pakkenBase:1, deal:true,  sm:'Plus' },
+      { name:'Spekblokjes',     emoji:'🥓', perPersoon:25,  unit:'g',   inkoop:'150g bakje',  inkoopQty:150,  prijsPerPak:1.09, pakkenBase:1, deal:true,  sm:'AH'   },
+      { name:'Groentebouillon', emoji:'🫙', perPersoon:250, unit:'ml',  inkoop:'1 liter',     inkoopQty:1000, prijsPerPak:0.49, pakkenBase:1, deal:false, sm:'Aldi' },
+      { name:'Ui',              emoji:'🧅', perPersoon:0.25,unit:'stuks',inkoop:'1 stuk',     inkoopQty:1,    prijsPerPak:0.15, pakkenBase:1, deal:false, sm:'Dirk' },
+      { name:'Kookroom',        emoji:'🥛', perPersoon:25,  unit:'ml',  inkoop:'200ml pak',   inkoopQty:200,  prijsPerPak:0.59, pakkenBase:1, deal:false, sm:'Lidl' },
+    ],
+    steps: [
+      'Schil en snijd de aardappelen in blokjes van ca. 2cm.',
+      'Snipper de ui fijn.',
+      'Bak de spekblokjes knapperig in een soeppan. Leg apart.',
+      'Fruit de ui in het spekvet.',
+      'Voeg de aardappelen en bouillon toe. Breng aan de kook.',
+      'Laat 20 minuten koken tot de aardappelen zacht zijn.',
+      'Pureer de soep met een staafmixer.',
+      'Roer de kookroom erdoor. Proef en breng op smaak.',
+      'Verdeel over kommen en garneer met de spekblokjes.',
+    ],
+    allergens: {gluten:false,lactose:true,noten:false,pinda:false,ei:false,soja:false,vis:false,schaaldieren:false},
+    nutrition: {kcal:280, eiwit:10, koolh:38, vet:10},
+  },
+  {
+    id: '5', name: 'Omelet met Groenten', emoji: '🍳',
+    gradient: 'linear-gradient(135deg, #FFD60A, #F9C74F)',
+    desc: 'Snelle voedzame omelet met verse groenten. Ideaal als lunch of licht avondeten.',
+    time: 12, persons: 2, difficulty: 'Makkelijk',
+    priceNow: 1.30, priceWas: 2.00, totalNow: 2.60, totalWas: 4.00, saving: 1.40,
+    tags: ['snel','vegetarisch','budget'], diets: ['vegetarisch'], supermarkts: ['Plus'],
+    ingredients: [
+      // Eieren: je gebruikt 2 per persoon maar koopt altijd een pak van 10
+      { name:'Eieren',          emoji:'🥚', perPersoon:2,   unit:'stuks',inkoop:'10 stuks pak', inkoopQty:10,  prijsPerPak:1.99, pakkenBase:1, deal:true,  sm:'Plus' },
+      { name:'Paprika',         emoji:'🫑', perPersoon:0.5, unit:'stuks',inkoop:'1 stuk',       inkoopQty:1,   prijsPerPak:0.40, pakkenBase:1, deal:false, sm:'AH'   },
+      { name:'Spinazie',        emoji:'🥬', perPersoon:50,  unit:'g',    inkoop:'300g zak',     inkoopQty:300, prijsPerPak:1.49, pakkenBase:1, deal:false, sm:'Lidl' },
+      { name:'Geraspte kaas',   emoji:'🧀', perPersoon:25,  unit:'g',    inkoop:'150g zakje',   inkoopQty:150, prijsPerPak:1.49, pakkenBase:1, deal:true,  sm:'AH'   },
+    ],
+    steps: [
+      'Kluts de eieren in een kom met zout en peper.',
+      'Snijd de paprika in kleine stukjes.',
+      'Verhit wat boter in een koekenpan.',
+      'Bak de paprika 2 minuten aan.',
+      'Giet het eimengsel erover en leg de spinazie erop.',
+      'Laat de omelet stollen op laag vuur. Bestrooi met kaas.',
+      'Vouw dubbel en serveer direct.',
+    ],
+    allergens: {gluten:false,lactose:true,noten:false,pinda:false,ei:true,soja:false,vis:false,schaaldieren:false},
+    nutrition: {kcal:290, eiwit:22, koolh:8, vet:18},
+  },
+  {
+    id: '6', name: 'Erwtensoep (Snert)', emoji: '🍵',
+    gradient: 'linear-gradient(135deg, #52B788, #2D6A4F)',
+    desc: 'Traditionele Nederlandse snert. Dik, vullend en goedkoop voor de hele familie.',
+    time: 90, persons: 6, difficulty: 'Gemiddeld',
+    priceNow: 0.95, priceWas: 1.80, totalNow: 5.70, totalWas: 10.80, saving: 5.10,
+    tags: ['budget','aanbieding'], diets: [], supermarkts: ['Jumbo','AH'],
+    ingredients: [
+      { name:'Spliterwten',   emoji:'🫘', perPersoon:85,  unit:'g',    inkoop:'500g zak',     inkoopQty:500, prijsPerPak:0.89, pakkenBase:1, deal:true,  sm:'Jumbo' },
+      { name:'Rookworst',     emoji:'🌭', perPersoon:0.17,unit:'stuks',inkoop:'1 rookworst',  inkoopQty:1,   prijsPerPak:2.49, pakkenBase:1, deal:true,  sm:'AH'   },
+      { name:'Knolselderij',  emoji:'🥕', perPersoon:35,  unit:'g',    inkoop:'1 knol (400g)',inkoopQty:400, prijsPerPak:0.79, pakkenBase:1, deal:false, sm:'Dirk' },
+      { name:'Prei',          emoji:'🥬', perPersoon:0.17,unit:'stuks',inkoop:'1 prei',       inkoopQty:1,   prijsPerPak:0.49, pakkenBase:1, deal:false, sm:'AH'   },
+      { name:'Aardappelen',   emoji:'🥔', perPersoon:35,  unit:'g',    inkoop:'1kg zak',      inkoopQty:1000,prijsPerPak:0.89, pakkenBase:1, deal:false, sm:'Aldi' },
+    ],
+    steps: [
+      'Week de spliterwten 1 uur van tevoren (of gebruik snelkookerwten).',
+      'Breng de erwten met 1,5 liter water aan de kook.',
+      'Schil de aardappelen en knolselderij, snijd in blokjes.',
+      'Voeg groenten toe na 20 minuten koken.',
+      'Snijd de rookworst in plakjes en voeg toe na 45 minuten.',
+      'Blijf roeren om aanbranden te voorkomen.',
+      'De soep is klaar als hij mooi dik is.',
+      'Breng op smaak met peper en zout.',
+    ],
+    allergens: {gluten:false,lactose:false,noten:false,pinda:false,ei:false,soja:false,vis:false,schaaldieren:false},
+    nutrition: {kcal:380, eiwit:24, koolh:52, vet:8},
+  },
+];
+
+// Fallback dummy deals — worden overschreven door loadDeals() zodra de scraper draait
+let deals = [
+  {id:'d1', naam:'Rundergehakt 500g', emoji:'🥩', sm:'ah',    smLabel:'Albert Heijn', prijsNu:2.99, prijsWas:4.99, kortingPct:40, cat:'Vlees',   recept:'1'},
+  {id:'d2', naam:'Kipfilet 400g',     emoji:'🍗', sm:'jumbo', smLabel:'Jumbo',        prijsNu:3.49, prijsWas:5.49, kortingPct:36, cat:'Vlees',   recept:'2'},
+  {id:'d3', naam:'Pasta 500g',        emoji:'🍝', sm:'lidl',  smLabel:'Lidl',         prijsNu:0.59, prijsWas:0.99, kortingPct:40, cat:'Droog',   recept:'1'},
+  {id:'d4', naam:'Geraspte kaas 150g',emoji:'🧀', sm:'ah',    smLabel:'Albert Heijn', prijsNu:1.49, prijsWas:2.49, kortingPct:40, cat:'Zuivel',  recept:'1'},
+  {id:'d5', naam:'Tomatensaus 400ml', emoji:'🥫', sm:'aldi',  smLabel:'Aldi',         prijsNu:0.79, prijsWas:1.29, kortingPct:39, cat:'Sauzen',  recept:'1'},
+  {id:'d6', naam:'Eieren 10 stuks',   emoji:'🥚', sm:'plus',  smLabel:'Plus',         prijsNu:1.99, prijsWas:2.89, kortingPct:31, cat:'Zuivel',  recept:'5'},
+  {id:'d7', naam:'Uien 1kg',          emoji:'🧅', sm:'dirk',  smLabel:'Dirk',         prijsNu:0.69, prijsWas:1.19, kortingPct:42, cat:'Groente', recept:''},
+  {id:'d8', naam:'Aardappelen 1kg',   emoji:'🥔', sm:'plus',  smLabel:'Plus',         prijsNu:0.89, prijsWas:1.49, kortingPct:40, cat:'Groente', recept:'4'},
+  {id:'d9', naam:'Kidneybonen 2-pak', emoji:'🫘', sm:'lidl',  smLabel:'Lidl',         prijsNu:0.99, prijsWas:1.69, kortingPct:41, cat:'Droog',   recept:'3'},
+  {id:'d10',naam:'Spliterwten 500g',  emoji:'🫘', sm:'jumbo', smLabel:'Jumbo',        prijsNu:0.89, prijsWas:1.49, kortingPct:40, cat:'Droog',   recept:'6'},
+  {id:'d11',naam:'Spekblokjes 150g',  emoji:'🥓', sm:'ah',    smLabel:'Albert Heijn', prijsNu:1.09, prijsWas:1.89, kortingPct:42, cat:'Vlees',   recept:'4'},
+  {id:'d12',naam:'Rookworst',         emoji:'🌭', sm:'ah',    smLabel:'Albert Heijn', prijsNu:2.49, prijsWas:3.99, kortingPct:38, cat:'Vlees',   recept:'6'},
+];
+
+const supermarkten = [
+  {id:'ah',    naam:'Albert Heijn', emoji:'🛒', kleur:'#E8500A', bg:'#FFF0E0', tagline:'Jouw dagelijkse boodschappen', deals:5, recepten:24, avgBesparing:38},
+  {id:'jumbo', naam:'Jumbo',        emoji:'🛒', kleur:'#C8860A', bg:'#FFF9E0', tagline:'Altijd de laagste prijs',      deals:4, recepten:18, avgBesparing:32},
+  {id:'lidl',  naam:'Lidl',         emoji:'🛒', kleur:'#0D3FA6', bg:'#E0EAFF', tagline:'Vers & voordelig',              deals:3, recepten:15, avgBesparing:41},
+  {id:'aldi',  naam:'Aldi',         emoji:'🛒', kleur:'#005CA8', bg:'#E0F0FF', tagline:'Gewoon goede kwaliteit',       deals:3, recepten:12, avgBesparing:35},
+  {id:'plus',  naam:'Plus',         emoji:'🛒', kleur:'#008000', bg:'#E0F8E0', tagline:'Meer dan verwacht',            deals:3, recepten:10, avgBesparing:29},
+  {id:'dirk',  naam:'Dirk',         emoji:'🛒', kleur:'#B00000', bg:'#FFE8E8', tagline:'Spotgoedkoop',                 deals:2, recepten:8,  avgBesparing:44},
+];
+
+const weekDagen = ['Maandag','Dinsdag','Woensdag','Donderdag','Vrijdag','Zaterdag','Zondag'];
+
+// ══════════════════════════════════════════════════════
+// STATE
+// ══════════════════════════════════════════════════════
+let activeFilter = 'all';
+let personsState = {};
+let cartItems = [];
+let plannerMeals = {}; // {dayIndex: [{recipeId, persons}]}
+let activeSMFilter = 'all';
+
+// ══════════════════════════════════════════════════════
+// INGREDIENT SCALING LOGIC
+// ══════════════════════════════════════════════════════
+
+function formatQty(val, unit) {
+  // Format a number cleanly: remove trailing .0, show fractions for common cases
+  if (unit === 'stuks' || unit === 'blik' || unit === 'zakje') {
+    if (val < 1) {
+      const fracs = [[0.25,'¼'],[0.33,'⅓'],[0.5,'½'],[0.67,'⅔'],[0.75,'¾']];
+      const f = fracs.find(f => Math.abs(f[0]-val) < 0.05);
+      return f ? f[1] : val.toFixed(1);
+    }
+    return Number.isInteger(val) ? val : val.toFixed(1);
+  }
+  if (val >= 1000 && (unit === 'g' || unit === 'ml')) {
+    return (val/1000).toFixed(val%1000===0?0:1) + (unit==='g'?' kg':' liter');
+  }
+  return Math.round(val) + ' ' + unit;
+}
+
+function calcIngredients(recipe, targetPersons) {
+  const base = recipe.persons;
+  const ratio = targetPersons / base;
+
+  return recipe.ingredients.map(ing => {
+    // Gebruikshoeveelheid: schaalt lineair met personen
+    const useQty = ing.perPersoon * targetPersons;
+    const useFormatted = formatQty(useQty, ing.unit);
+
+    // Inkoophoeveelheid: hoeveel pakken/stuks je moet kopen
+    // Bereken op basis van hoeveel van inkoopQty je per persoon nodig hebt
+    // Pakken nodig = ceil(useQty / inkoopQty)
+    let pakkenNodig;
+    if (ing.unit === 'stuks' || ing.unit === 'blik' || ing.unit === 'zakje') {
+      // Discrete items: altijd naar boven afronden
+      pakkenNodig = Math.ceil(useQty / ing.inkoopQty);
+    } else {
+      // Gewicht/volume: bereken hoeveel pakken
+      pakkenNodig = Math.ceil(useQty / ing.inkoopQty);
+    }
+    pakkenNodig = Math.max(1, pakkenNodig);
+
+    const prijs = pakkenNodig * ing.prijsPerPak;
+    const inkoopLabel = pakkenNodig === 1 ? ing.inkoop : `${pakkenNodig}× ${ing.inkoop}`;
+
+    return { ...ing, useQty, useFormatted, pakkenNodig, prijs, inkoopLabel };
+  });
+}
+
+function calcTotals(recipe, targetPersons) {
+  const ings = calcIngredients(recipe, targetPersons);
+  const totalNow = ings.reduce((s, i) => s + i.prijs, 0);
+  const baseTotalWas = recipe.totalWas;
+  const ratio = targetPersons / recipe.persons;
+  const totalWas = baseTotalWas * ratio;
+  const saving = Math.max(0, totalWas - totalNow);
+  const pricePerPerson = totalNow / targetPersons;
+  return { ings, totalNow, totalWas, saving, pricePerPerson };
+}
+
+// ══════════════════════════════════════════════════════
+// NAVIGATION
+// ══════════════════════════════════════════════════════
+function showPage(page) {
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+  document.getElementById('page-' + page).classList.add('active');
+  document.querySelectorAll('.nav-links a').forEach(a => a.classList.remove('active'));
+  const navEl = document.getElementById('nav-' + page);
+  if (navEl) navEl.classList.add('active');
+  window.scrollTo({top:0, behavior:'smooth'});
+
+  if (page === 'aanbiedingen') renderDealsPage();
+  if (page === 'planner')      renderPlanner();
+  if (page === 'supermarkten') renderSupermarkten();
+}
+
+// ══════════════════════════════════════════════════════
+// HOME — RECIPE GRID
+// ══════════════════════════════════════════════════════
+function renderRecipes(list) {
+  const grid = document.getElementById('recipeGrid');
+  grid.innerHTML = list.map(r => `
+    <div class="recipe-card" onclick="openModal('${r.id}')">
+      <div class="card-img" style="background:${r.gradient}">
+        ${r.emoji}
+        ${r.saving > 0 ? `<div class="card-deal-badge">💰 Bespaar €${r.saving.toFixed(2)}</div>` : ''}
+        <div class="card-time-badge">⏱ ${r.time} min</div>
+      </div>
+      <div class="card-body">
+        <div class="card-tags">
+          ${r.tags.includes('aanbieding') ? '<span class="card-tag">🏷️ Aanbieding</span>' : ''}
+          ${r.diets.includes('vegan') ? '<span class="card-tag green">🌱 Vegan</span>' : ''}
+          ${r.diets.includes('vegetarisch') ? '<span class="card-tag green">🥦 Vegetarisch</span>' : ''}
+          <span class="card-tag gold">${r.difficulty}</span>
+        </div>
+        <div class="card-title">${r.name}</div>
+        <div class="card-desc">${r.desc}</div>
+        <div class="card-footer">
+          <div class="card-price">
+            <div class="price-person">€${r.priceNow.toFixed(2)}</div>
+            <div class="price-label">per persoon</div>
+          </div>
+          <div style="display:flex;flex-direction:column;align-items:flex-end;gap:0.4rem">
+            <div class="card-persons">👤 ${r.persons} p. · ${r.ingredients.length} ing.</div>
+            <div class="card-sm-logos">
+              ${r.supermarkts.map(s=>`<div class="sm-dot sm-${s.toLowerCase()}">${s}</div>`).join('')}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  `).join('');
+}
+
+function filterRecipes() {
+  const q = document.getElementById('searchInput').value.toLowerCase();
+  let list = recipes;
+  if (activeFilter !== 'all') {
+    list = list.filter(r => {
+      if (activeFilter === 'aanbieding') return r.tags.includes('aanbieding');
+      if (activeFilter === 'snel')       return r.time <= 20;
+      if (activeFilter === 'vegetarisch') return r.diets.includes('vegetarisch') || r.diets.includes('vegan');
+      if (activeFilter === 'vegan')       return r.diets.includes('vegan');
+      if (activeFilter === 'budget')      return r.priceNow < 3;
+      if (activeFilter === 'student')     return r.tags.includes('student');
+      return true;
+    });
+  }
+  if (q) list = list.filter(r => r.name.toLowerCase().includes(q) || r.desc.toLowerCase().includes(q));
+  renderRecipes(list);
+}
+
+function setFilter(f, el) {
+  activeFilter = f;
+  document.querySelectorAll('#page-home .chip').forEach(c => c.classList.remove('active'));
+  el.classList.add('active');
+  filterRecipes();
+}
+
+function setFilterCat(f) {
+  activeFilter = f;
+  document.querySelectorAll('#page-home .chip').forEach(c => c.classList.remove('active'));
+  filterRecipes();
+  document.getElementById('recepten').scrollIntoView({behavior:'smooth'});
+}
+
+// ══════════════════════════════════════════════════════
+// DEALS STRIP (homepage)
+// ══════════════════════════════════════════════════════
+function renderDealsStrip() {
+  const container = document.getElementById('dealsScrollHome');
+  container.innerHTML = deals.map(d => `
+    <div class="deal-pill" onclick="${d.recept ? `openModal('${d.recept}')` : ''}">
+      <span class="deal-pill-emoji">${d.emoji}</span>
+      <div class="deal-pill-info">
+        <div class="deal-pill-name">${d.naam}</div>
+        <div class="deal-pill-sm">${d.smLabel}</div>
+      </div>
+      <div class="deal-pill-price">
+        <div class="deal-pill-new">€${d.prijsNu.toFixed(2)}</div>
+        ${d.prijsWas > 0 ? `<div class="deal-pill-old">€${d.prijsWas.toFixed(2)}</div>` : d.korting ? `<div style="font-size:0.7rem;color:var(--green);font-weight:700">${d.korting}</div>` : ''}
+      </div>
+    </div>
+  `).join('');
+}
+
+// ══════════════════════════════════════════════════════
+// MODAL
+// ══════════════════════════════════════════════════════
+const allergenNames = {gluten:'Gluten',lactose:'Lactose',noten:'Noten',pinda:'Pinda',ei:'Ei',soja:'Soja',vis:'Vis',schaaldieren:'Schaaldieren'};
+
+function openModal(id) {
+  const r = recipes.find(x => x.id === id);
+  if (!r) return;
+  if (!personsState[id]) personsState[id] = r.persons;
+  renderModal(r);
+  document.getElementById('modalOverlay').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function renderModal(r) {
+  const p = personsState[r.id];
+  const { ings, totalNow, totalWas, saving, pricePerPerson } = calcTotals(r, p);
+
+  document.getElementById('modalContent').innerHTML = `
+    <button class="modal-close" onclick="closeModal()">✕</button>
+    <div class="modal-hero" style="background:${r.gradient}">
+      ${r.emoji}
+      <div class="modal-hero-info">
+        <div class="modal-badge">⏱ ${r.time} min</div>
+        <div class="modal-badge">⭐ ${r.difficulty}</div>
+        ${r.diets.map(d=>`<div class="modal-badge">🌿 ${d.charAt(0).toUpperCase()+d.slice(1)}</div>`).join('')}
+      </div>
+    </div>
+    <div class="modal-body">
+      <div class="modal-title">${r.name}</div>
+      <div class="modal-meta">
+        <span>👤 ${p} personen</span>
+        <span>🧾 ${r.ingredients.length} ingrediënten</span>
+        <span>🔥 ${r.nutrition.kcal} kcal p.p.</span>
+        <span>🏷️ ${r.supermarkts.join(', ')}</span>
+      </div>
+
+      <div class="persons-adjuster">
+        <span class="adj-label">Aantal personen:</span>
+        <button class="adj-btn" onclick="adjustPersons('${r.id}',-1)">−</button>
+        <span class="adj-count">${p}</span>
+        <button class="adj-btn" onclick="adjustPersons('${r.id}',1)">+</button>
+        <span style="font-size:0.78rem;color:#888;margin-left:0.25rem">Hoeveelheden en prijzen worden automatisch aangepast</span>
+      </div>
+
+      <div class="modal-grid">
+        <div>
+          <div class="modal-section-title">🛒 Ingrediënten</div>
+          <ul class="ingredient-list">
+            ${ings.map(ing => `
+              <li class="ingredient-item">
+                <div class="ing-left">
+                  <div class="ing-name">${ing.emoji} ${ing.name}</div>
+                  <div class="ing-qty-recept">Gebruik: ${ing.useFormatted}</div>
+                  <div class="ing-qty-inkoop">🛍 Kopen: ${ing.inkoopLabel}</div>
+                </div>
+                <div class="ing-right">
+                  ${ing.deal ? '<span class="ing-deal">Deal</span>' : ''}
+                  <span class="ing-price">€${ing.prijs.toFixed(2)}</span>
+                  <span class="sm-badge sm-${ing.sm.toLowerCase()}">${ing.sm}</span>
+                </div>
+              </li>
+            `).join('')}
+          </ul>
+        </div>
+        <div>
+          <div class="modal-section-title">👨‍🍳 Bereiding</div>
+          <ol class="steps-list">
+            ${r.steps.map((s,i) => `
+              <li class="step-item">
+                <div class="step-num">${i+1}</div>
+                <div class="step-text">${s}</div>
+              </li>
+            `).join('')}
+          </ol>
+        </div>
+        <div>
+          <div class="modal-section-title">⚠️ Allergenen</div>
+          <div class="allergen-grid">
+            ${Object.entries(r.allergens).map(([k,v]) => {
+              const cls = v ? "allergen-yes" : "allergen-no";
+              const icon = v ? "⚠️" : "✅";
+              return `<div class="allergen-item ${cls}">${icon} ${allergenNames[k]}</div>`;
+            }).join('')}
+          </div>
+          <div style="margin-top:1.5rem">
+            <div class="modal-section-title">📊 Voedingswaarden p.p.</div>
+            <div class="nutrition-grid">
+              <div class="nutrition-item"><div class="nut-val">${r.nutrition.kcal}</div><div class="nut-label">Calorieën</div></div>
+              <div class="nutrition-item"><div class="nut-val">${r.nutrition.eiwit}g</div><div class="nut-label">Eiwitten</div></div>
+              <div class="nutrition-item"><div class="nut-val">${r.nutrition.koolh}g</div><div class="nut-label">Koolhydraten</div></div>
+              <div class="nutrition-item"><div class="nut-val">${r.nutrition.vet}g</div><div class="nut-label">Vetten</div></div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="price-summary">
+            <div class="modal-section-title" style="margin-bottom:1rem">💶 Prijsoverzicht</div>
+            <div class="price-summary-grid">
+              <div><div class="ps-val strike">€${totalWas.toFixed(2)}</div><div class="ps-label">Normale prijs (${p}p)</div></div>
+              <div><div class="ps-val orange">€${totalNow.toFixed(2)}</div><div class="ps-label">Met aanbiedingen</div></div>
+              <div><div class="ps-val green">€${saving.toFixed(2)}</div><div class="ps-label">Jij bespaart!</div></div>
+            </div>
+            <div style="margin-top:1.25rem;padding-top:1rem;border-top:1px solid rgba(232,80,10,0.15);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:0.5rem">
+              <span style="font-size:0.85rem;color:#666">Per persoon: <strong style="color:var(--orange)">€${pricePerPerson.toFixed(2)}</strong></span>
+              <button class="btn-primary" style="padding:0.6rem 1.25rem;font-size:0.85rem" onclick="addToCart('${r.id}')">
+                🛒 Voeg toe aan lijst
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  `;
+}
+
+function adjustPersons(id, delta) {
+  personsState[id] = Math.max(1, Math.min(12, (personsState[id] || recipes.find(r=>r.id===id).persons) + delta));
+  const r = recipes.find(x => x.id === id);
+  renderModal(r);
+}
+
+function closeModal() {
+  document.getElementById('modalOverlay').classList.remove('open');
+  document.body.style.overflow = '';
+}
+function closeModalOutside(e) {
+  if (e.target === document.getElementById('modalOverlay')) closeModal();
+}
+
+// ══════════════════════════════════════════════════════
+// BOODSCHAPPENLIJST (CART)
+// ══════════════════════════════════════════════════════
+function addToCart(recipeId) {
+  const r = recipes.find(x => x.id === recipeId);
+  const p = personsState[recipeId] || r.persons;
+  const { ings, totalNow } = calcTotals(r, p);
+
+  // Check of recept al in lijst zit
+  const existing = cartItems.findIndex(ci => ci.recipeId === recipeId);
+  if (existing >= 0) {
+    cartItems.splice(existing, 1);
+    showToast(`🗑️ "${r.name}" verwijderd uit lijst`);
+  } else {
+    cartItems.push({ recipeId, recipeName: r.name, persons: p, ingredients: ings, totalNow, emoji: r.emoji });
+    showToast(`✅ "${r.name}" toegevoegd aan boodschappenlijst`);
+  }
+  updateCartCount();
+}
+
+function openCart() {
+  renderCart();
+  document.getElementById('cartPanel').classList.add('open');
+  document.getElementById('cartBackdrop').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeCart() {
+  document.getElementById('cartPanel').classList.remove('open');
+  document.getElementById('cartBackdrop').classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+function renderCart() {
+  const body = document.getElementById('cartBody');
+  const footer = document.getElementById('cartFooter');
+
+  if (cartItems.length === 0) {
+    body.innerHTML = `<div class="cart-empty"><span class="cart-empty-icon">🛒</span><p style="font-weight:600;margin-bottom:0.5rem">Lijst is leeg</p><p style="font-size:0.85rem">Voeg recepten toe via de receptenpagina.</p></div>`;
+    footer.innerHTML = '';
+    return;
+  }
+
+  // Groepeer per recept, toon ingrediënten
+  let html = '';
+  let grandTotal = 0;
+
+  cartItems.forEach(ci => {
+    grandTotal += ci.totalNow;
+    html += `<div class="cart-group">
+      <div class="cart-group-title">${ci.emoji} ${ci.recipeName} <span style="background:var(--orange-pale);color:var(--orange);border-radius:6px;padding:0.1rem 0.4rem;font-weight:600">👤 ${ci.persons} p.</span></div>`;
+    ci.ingredients.forEach((ing, idx) => {
+      const itemId = ci.recipeId + "-" + idx;
+      const checked = (window.checkedItems || {})[itemId];
+      const checkedClass = checked ? "checked" : "";
+      const checkedTextClass = checked ? "checked-text" : "";
+      const checkIcon = checked ? "✓" : "";
+      html += `<div class="cart-item">
+        <div class="cart-item-check ${checkedClass}" onclick="toggleCartItem('${itemId}',this)">${checkIcon}</div>
+        <div class="cart-item-info">
+          <div class="cart-item-name ${checkedTextClass}">${ing.emoji} ${ing.name}</div>
+          <div class="cart-item-detail">${ing.inkoopLabel} · ${ing.sm}</div>
+        </div>
+        <span class="cart-item-price">€${ing.prijs.toFixed(2)}</span>
+      </div>`;
+    });
+    html += `<div style="text-align:right;padding:0.4rem 0 0;font-size:0.8rem;color:var(--ink-soft)">Subtotaal: <strong style="color:var(--orange)">€${ci.totalNow.toFixed(2)}</strong>
+      <button class="cart-item-remove" onclick="removeFromCart('${ci.recipeId}')" title="Verwijder recept">✕</button>
+    </div></div>`;
+  });
+
+  body.innerHTML = html;
+  footer.innerHTML = `
+    <div class="cart-total-row">
+      <span class="cart-total-label">Totaal boodschappen</span>
+      <span class="cart-total-val">€${grandTotal.toFixed(2)}</span>
+    </div>
+    <div class="cart-actions">
+      <button class="btn-cart-print" onclick="window.print()">🖨️ Print lijst</button>
+      <button class="btn-primary" style="flex:1;justify-content:center;padding:0.75rem" onclick="closeCart()">Klaar</button>
+    </div>
+    <div style="text-align:center;margin-top:0.5rem">
+      <button class="btn-cart-clear" onclick="clearCart()">Lijst leegmaken</button>
+    </div>
+  `;
+}
+
+function toggleCartItem(itemId, el) {
+  if (!window.checkedItems) window.checkedItems = {};
+  window.checkedItems[itemId] = !window.checkedItems[itemId];
+  renderCart();
+}
+
+function removeFromCart(recipeId) {
+  cartItems = cartItems.filter(ci => ci.recipeId !== recipeId);
+  updateCartCount();
+  renderCart();
+}
+
+function clearCart() {
+  cartItems = [];
+  window.checkedItems = {};
+  updateCartCount();
+  renderCart();
+}
+
+function updateCartCount() {
+  const el = document.getElementById('cartCount');
+  if (cartItems.length > 0) {
+    el.textContent = cartItems.length;
+    el.style.display = 'flex';
+  } else {
+    el.style.display = 'none';
+  }
+}
+
+// ══════════════════════════════════════════════════════
+// AANBIEDINGEN PAGE
+// ══════════════════════════════════════════════════════
+function renderDealsPage() {
+  // SM filter knoppen
+  const filterRow = document.getElementById('smFilterRow');
+  const allActive = activeSMFilter === 'all' ? "active" : "";
+  filterRow.innerHTML = `
+    <button class="chip ${allActive}" onclick="setSMFilter('all',this)">Alle supermarkten</button>
+    ${supermarkten.map(sm => {
+      const smActive = activeSMFilter === sm.id ? "active" : "";
+      return `<button class="chip ${smActive}" onclick="setSMFilter('${sm.id}',this)">
+        <span class="sm-badge sm-${sm.id}" style="margin-right:0.25rem">${sm.naam.substring(0,2).toUpperCase()}</span> ${sm.naam}
+      </button>`;
+    }).join('')}
+  `;
+
+  const filtered = activeSMFilter === 'all' ? deals : deals.filter(d => d.sm === activeSMFilter);
+  const grid = document.getElementById('dealsGrid');
+  grid.innerHTML = filtered.map(d => {
+    const pct = (d.kortingPct && isFinite(d.kortingPct) && d.kortingPct > 0 && d.kortingPct < 100)
+      ? d.kortingPct
+      : (d.prijsWas > 0 && d.prijsNu > 0 && d.prijsNu < d.prijsWas)
+        ? Math.round((1 - d.prijsNu/d.prijsWas) * 100)
+        : 0;
+    const smInfo = supermarkten.find(s => s.id === d.sm);
+    return `
+    <div class="deal-card" onclick="${d.recept ? `openModal('${d.recept}')` : ''}">
+      <div class="deal-card-img" style="background:${smInfo?.bg||'#f5f5f5'}">
+        ${d.emoji}
+        ${pct > 0 ? `<div class="deal-pct">-${pct}%</div>` : ''}
+      </div>
+      <div class="deal-card-body">
+        <div class="deal-card-name">${d.naam}</div>
+        <div class="deal-card-sm"><span class="sm-badge sm-${d.sm}">${smInfo?.naam||d.sm}</span> · ${d.cat}</div>
+        <div class="deal-card-prices">
+          <div class="deal-price-now">€${d.prijsNu.toFixed(2)}</div>
+          ${d.prijsWas > 0
+            ? `<div class="deal-price-was">€${d.prijsWas.toFixed(2)}</div>`
+            : d.korting
+              ? `<div style="font-size:0.75rem;color:var(--green);font-weight:700">${d.korting}</div>`
+              : ''}
+        </div>
+        ${d.recept ? `<div style="margin-top:0.5rem;font-size:0.72rem;color:var(--orange);font-weight:600">→ Bekijk recept</div>` : ''}
+      </div>
+    </div>`;
+  }).join('');
+}
+
+function setSMFilter(id, el) {
+  activeSMFilter = id;
+  renderDealsPage();
+}
+
+// ══════════════════════════════════════════════════════
+// WEEKPLANNER PAGE
+// ══════════════════════════════════════════════════════
+function renderPlanner() {
+  const grid = document.getElementById('plannerGrid');
+  const today = new Date().getDay(); // 0=Sun, 1=Mon
+  const todayIdx = today === 0 ? 6 : today - 1;
+
+  grid.innerHTML = weekDagen.map((dag, i) => {
+    const meals = plannerMeals[i] || [];
+    const isToday = i === todayIdx;
+    const todayClass = isToday ? "today" : "";
+    const todayLabel = isToday ? `<span style="font-size:0.65rem">Vandaag</span>` : "";
+    return `<div class="planner-day">
+      <div class="planner-day-header ${todayClass}">
+        <span>${dag.substring(0,2)}</span>
+        ${todayLabel}
+      </div>
+      <div class="planner-slot">
+        ${meals.map((m,mi) => {
+          const r = recipes.find(x=>x.id===m.recipeId);
+          if (!r) return '';
+          const {totalNow} = calcTotals(r, m.persons);
+          return `<div class="planner-meal" onclick="openModal('${r.id}')">
+            <div>${r.emoji} ${r.name}</div>
+            <div class="planner-meal-price">€${totalNow.toFixed(2)} · ${m.persons}p</div>
+          </div>`;
+        }).join('')}
+        <button class="planner-add-btn" onclick="scrollToPlannerRecipes(${i})">+ Maaltijd toevoegen</button>
+      </div>
+    </div>`;
+  }).join('');
+
+  updatePlannerSummary();
+
+  // Mini recipe grid for planner
+  const pGrid = document.getElementById('plannerRecipeGrid');
+  pGrid.innerHTML = recipes.map(r => `
+    <div class="recipe-card" onclick="addToPlanner('${r.id}')">
+      <div class="card-img" style="background:${r.gradient}">
+        ${r.emoji}
+        <div class="card-time-badge">⏱ ${r.time} min</div>
+      </div>
+      <div class="card-body">
+        <div class="card-title" style="font-size:0.95rem">${r.name}</div>
+        <div class="card-footer" style="padding-top:0.5rem">
+          <div class="price-person" style="font-size:1rem">€${r.priceNow.toFixed(2)} p.p.</div>
+          <button class="btn-primary" style="padding:0.4rem 0.875rem;font-size:0.78rem" onclick="event.stopPropagation();addToPlanner('${r.id}')">+ Toevoegen</button>
+        </div>
+      </div>
+    </div>
+  `).join('');
+}
+
+function scrollToPlannerRecipes(dayIdx) {
+  window.pendingPlannerDay = dayIdx;
+  document.querySelector('#page-planner [style*="margin-top:1.5rem"]').scrollIntoView({behavior:'smooth'});
+}
+
+function addToPlanner(recipeId) {
+  const day = window.pendingPlannerDay !== undefined ? window.pendingPlannerDay : new Date().getDay() === 0 ? 6 : new Date().getDay() - 1;
+  if (!plannerMeals[day]) plannerMeals[day] = [];
+  plannerMeals[day].push({ recipeId, persons: 2 });
+  window.pendingPlannerDay = undefined;
+  const r = recipes.find(x=>x.id===recipeId);
+  showToast(`📅 ${r.name} toegevoegd aan ${weekDagen[day]}`);
+  renderPlanner();
+}
+
+function updatePlannerSummary() {
+  let total = 0, saved = 0, mealCount = 0;
+  for (const day in plannerMeals) {
+    for (const m of plannerMeals[day]) {
+      const r = recipes.find(x=>x.id===m.recipeId);
+      if (!r) continue;
+      const {totalNow, saving} = calcTotals(r, m.persons);
+      total += totalNow;
+      saved += saving;
+      mealCount++;
+    }
+  }
+  const days = Object.keys(plannerMeals).filter(d => plannerMeals[d].length > 0).length;
+  document.getElementById('planTotal').textContent = '€' + total.toFixed(2);
+  document.getElementById('planSaving').textContent = '€' + saved.toFixed(2);
+  document.getElementById('planMeals').textContent = mealCount;
+  document.getElementById('planPerDay').textContent = days > 0 ? '€' + (total/days).toFixed(2) : '€0,00';
+}
+
+// ══════════════════════════════════════════════════════
+// SUPERMARKTEN PAGE
+// ══════════════════════════════════════════════════════
+function renderSupermarkten() {
+  const container = document.getElementById('supermarktCards');
+  container.innerHTML = supermarkten.map(sm => `
+    <div class="supermarkt-card" onclick="setSMFilterAndGo('${sm.id}')">
+      <div class="sm-card-header">
+        <div class="sm-logo-big" style="background:${sm.bg};color:${sm.kleur}">${sm.emoji}</div>
+        <div>
+          <div class="sm-card-name">${sm.naam}</div>
+          <div class="sm-card-tagline">${sm.tagline}</div>
+        </div>
+      </div>
+      <div class="sm-stats">
+        <div class="sm-stat"><div class="sm-stat-val">${sm.deals}</div><div class="sm-stat-label">Aanbiedingen</div></div>
+        <div class="sm-stat"><div class="sm-stat-val">${sm.recepten}</div><div class="sm-stat-label">Recepten</div></div>
+        <div class="sm-stat"><div class="sm-stat-val">${sm.avgBesparing}%</div><div class="sm-stat-label">Gem. besparing</div></div>
+        <div class="sm-stat"><div class="sm-stat-val" style="font-size:0.8rem">Nu open</div><div class="sm-stat-label">Status</div></div>
+      </div>
+      <div style="margin-top:1rem">
+        <button class="btn-primary" style="width:100%;justify-content:center;font-size:0.875rem" onclick="event.stopPropagation();setSMFilterAndGo('${sm.id}')">
+          Bekijk aanbiedingen →
+        </button>
+      </div>
+    </div>
+  `).join('');
+}
+
+function setSMFilterAndGo(smId) {
+  activeSMFilter = smId;
+  showPage('aanbiedingen');
+}
+
+// ══════════════════════════════════════════════════════
+// TOAST
+// ══════════════════════════════════════════════════════
+function showToast(msg) {
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.classList.add('show');
+  setTimeout(() => t.classList.remove('show'), 3000);
+}
+
+// ══════════════════════════════════════════════════════
+// LIVE DEALS LADEN
+// ══════════════════════════════════════════════════════
+
+// Pad naar de scraper output — pas aan naar jouw server setup:
+//   '/data/deals-frontend.json'   (productie, zelfde domein)
+//   './data/deals-frontend.json'  (lokaal testen)
+const DEALS_URL = './data/deals-frontend.json';
+
+const smNamen = { ah:'Albert Heijn', jumbo:'Jumbo', lidl:'Lidl', aldi:'Aldi', plus:'Plus', dirk:'Dirk' };
+
+function pickEmoji(naam, cat) {
+  const t = (naam + ' ' + cat).toLowerCase();
+  if (/kip/.test(t))                    return '🍗';
+  if (/gehakt|runder/.test(t))          return '🥩';
+  if (/rookworst|worst/.test(t))        return '🌭';
+  if (/spek|bacon/.test(t))             return '🥓';
+  if (/zalm/.test(t))                   return '🐟';
+  if (/garnaal|scampi/.test(t))         return '🦐';
+  if (/ei\b|eieren/.test(t))            return '🥚';
+  if (/kaas/.test(t))                   return '🧀';
+  if (/melk|room|yoghurt/.test(t))      return '🥛';
+  if (/pasta|spaghetti|penne/.test(t))  return '🍝';
+  if (/rijst/.test(t))                  return '🍚';
+  if (/brood/.test(t))                  return '🍞';
+  if (/tomaat|tomatensaus/.test(t))     return '🍅';
+  if (/paprika/.test(t))                return '🫑';
+  if (/ui\b|uien/.test(t))              return '🧅';
+  if (/knoflook/.test(t))               return '🧄';
+  if (/aardappel/.test(t))              return '🥔';
+  if (/broccoli/.test(t))               return '🥦';
+  if (/wortel/.test(t))                 return '🥕';
+  if (/spinazie|sla/.test(t))           return '🥬';
+  if (/champignon/.test(t))             return '🍄';
+  if (/bonen|linzen|erwten/.test(t))    return '🫘';
+  if (/mais/.test(t))                   return '🌽';
+  if (/chocola/.test(t))                return '🍫';
+  if (/chips/.test(t))                  return '🍟';
+  if (/bier/.test(t))                   return '🍺';
+  if (/wijn/.test(t))                   return '🍷';
+  return '🛒';
+}
+
+function koppelAanRecept(trefwoorden) {
+  if (!trefwoorden || trefwoorden.length === 0) return null;
+  let beste = null, besteScore = 0;
+  for (const r of recipes) {
+    let score = 0;
+    for (const ing of r.ingredients) {
+      const ingNaam = ing.name.toLowerCase();
+      for (const tag of trefwoorden) {
+        if (ingNaam.includes(tag) || tag.includes(ingNaam.split(' ')[0])) score++;
+      }
+    }
+    if (score > besteScore) { besteScore = score; beste = r.id; }
+  }
+  return besteScore > 0 ? beste : null;
+}
+
+async function loadDeals() {
+  // Toon laadstatus in de deals strip
+  const strip = document.getElementById('dealsScrollHome');
+  if (strip) strip.innerHTML = '<div style="padding:1rem;color:var(--ink-soft);font-size:0.85rem">🔄 Aanbiedingen laden...</div>';
+
+  try {
+    const res = await fetch(DEALS_URL + '?t=' + Date.now()); // cache-busting
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+
+    const data = await res.json();
+
+    // deals-frontend.json is een platte array van compacte objecten
+    deals = data.map(d => ({
+      id:         d.id,
+      naam:       d.naam,
+      emoji:      pickEmoji(d.naam, d.cat),
+      sm:         d.sm,
+      smLabel:    smNamen[d.sm] || d.sm,
+      prijsNu:    d.nu,
+      prijsWas:   d.was,
+      kortingPct: (d.pct && isFinite(d.pct) && d.pct > 0 && d.pct < 100) ? d.pct : 0,
+      korting:    d.korting || '',
+      cat:        d.cat,
+      afbeelding: d.img || '',
+      geldigTot:  d.tot || '',
+      trefwoorden: d.tags || [],
+      recept:     koppelAanRecept(d.tags),
+    }));
+
+    // Supermarkt statistieken live bijwerken
+    for (const sm of supermarkten) {
+      sm.deals = deals.filter(d => d.sm === sm.id).length;
+    }
+
+    console.log(`✅ ${deals.length} actuele aanbiedingen geladen`);
+
+    // Timestamp tonen
+    const ts = document.getElementById('dealsTimestamp');
+    if (ts) ts.textContent = 'Nu bijgewerkt · ' + new Date().toLocaleTimeString('nl-NL', {hour:'2-digit',minute:'2-digit'});
+
+  } catch (err) {
+    console.warn(`⚠️ Live deals niet beschikbaar (${err.message}) — dummy data actief`);
+    // deals array behoudt de dummy data — UI werkt gewoon door
+  }
+
+  // UI altijd verversen (met live of dummy data)
+  renderDealsStrip();
+  if (document.getElementById('page-aanbiedingen')?.classList.contains('active')) {
+    renderDealsPage();
+  }
+}
+
+// ══════════════════════════════════════════════════════
+// INIT
+// ══════════════════════════════════════════════════════
+renderRecipes(recipes);
+loadDeals();
+
+// Ververs elke 30 minuten automatisch
+setInterval(loadDeals, 30 * 60 * 1000);
+</script>
+</body>
+</html>

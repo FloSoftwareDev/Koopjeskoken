@@ -1,0 +1,621 @@
+{
+  "bijgewerkt": "2026-03-23T20:32:30.703Z",
+  "totaal": 30,
+  "perSupermarkt": {
+    "ah": 30,
+    "jumbo": 0,
+    "lidl": 0,
+    "aldi": 0,
+    "plus": 0,
+    "dirk": 0
+  },
+  "deals": [
+    {
+      "id": "ah-571233-5378",
+      "supermarkt": "ah",
+      "naam": "AH Pangasiusfilet",
+      "beschrijving": "ca. 350 g",
+      "categorie": "Vis",
+      "prijsNu": 3.49,
+      "prijsWas": 3.49,
+      "kortingPct": 0,
+      "korting": "",
+      "afbeelding": "https://static.ah.nl/dam/product/AHI_4354523130313639393833?revLabel=1&rendition=800x800_JPG_Q90&fileType=binary",
+      "geldigTot": "2026-03-29",
+      "geldigVanaf": "",
+      "merk": "",
+      "trefwoorden": [
+        "vis"
+      ],
+      "opgehaald": "2026-03-23T20:31:25.379Z"
+    },
+    {
+      "id": "ah-135532-5379",
+      "supermarkt": "ah",
+      "naam": "AH Pangasiusfilet tuinkruiden",
+      "beschrijving": "ca. 310 g",
+      "categorie": "Vis",
+      "prijsNu": 4.12,
+      "prijsWas": 4.12,
+      "kortingPct": 0,
+      "korting": "",
+      "afbeelding": "https://static.ah.nl/dam/product/AHI_4354523130303937393833?revLabel=1&rendition=800x800_JPG_Q90&fileType=binary",
+      "geldigTot": "2026-03-29",
+      "geldigVanaf": "",
+      "merk": "",
+      "trefwoorden": [
+        "vis",
+        "ui"
+      ],
+      "opgehaald": "2026-03-23T20:31:25.379Z"
+    },
+    {
+      "id": "ah-197753-5379",
+      "supermarkt": "ah",
+      "naam": "AH Pangasiusfilet knoflook-citroen",
+      "beschrijving": "ca. 400 g",
+      "categorie": "Vis",
+      "prijsNu": 4.87,
+      "prijsWas": 4.87,
+      "kortingPct": 0,
+      "korting": "",
+      "afbeelding": "https://static.ah.nl/dam/product/AHI_4354523130313639393832?revLabel=1&rendition=800x800_JPG_Q90&fileType=binary",
+      "geldigTot": "2026-03-29",
+      "geldigVanaf": "",
+      "merk": "",
+      "trefwoorden": [
+        "vis",
+        "knoflook"
+      ],
+      "opgehaald": "2026-03-23T20:31:25.379Z"
+    },
+    {
+      "id": "ah-571225-5379",
+      "supermarkt": "ah",
+      "naam": "AH Kabeljauwschnitzel 2 stuks",
+      "beschrijving": "180 g",
+      "categorie": "Vis",
+      "prijsNu": 2.54,
+      "prijsWas": 2.54,
+      "kortingPct": 0,
+      "korting": "",
+      "afbeelding": "https://static.ah.nl/dam/product/AHI_4354523130313130363433?revLabel=1&rendition=800x800_JPG_Q90&fileType=binary",
+      "geldigTot": "2026-03-29",
+      "geldigVanaf": "",
+      "merk": "",
+      "trefwoorden": [
+        "vis"
+      ],
+      "opgehaald": "2026-03-23T20:31:25.379Z"
+    },
+    {
+      "id": "ah-571234-5379",
+      "supermarkt": "ah",
+      "naam": "AH Pangasiusfilet",
+      "beschrijving": "ca. 175 g",
+      "categorie": "Vis",
+      "prijsNu": 2.18,
+      "prijsWas": 2.18,
+      "kortingPct": 0,
+      "korting": "",
+      "afbeelding": "https://static.ah.nl/dam/product/AHI_4354523130313639393834?revLabel=1&rendition=800x800_JPG_Q90&fileType=binary",
+      "geldigTot": "2026-03-29",
+      "geldigVanaf": "",
+      "merk": "",
+      "trefwoorden": [
+        "vis"
+      ],
+      "opgehaald": "2026-03-23T20:31:25.379Z"
+    },
+    {
+      "id": "ah-120041-5379",
+      "supermarkt": "ah",
+      "naam": "AH Kabeljauwburger gepaneerd",
+      "beschrijving": "2 stuks",
+      "categorie": "Vis",
+      "prijsNu": 2.71,
+      "prijsWas": 2.71,
+      "kortingPct": 0,
+      "korting": "",
+      "afbeelding": "https://static.ah.nl/dam/product/AHI_4354523130303937393233?revLabel=1&rendition=800x800_JPG_Q90&fileType=binary",
+      "geldigTot": "2026-03-29",
+      "geldigVanaf": "",
+      "merk": "",
+      "trefwoorden": [
+        "vis"
+      ],
+      "opgehaald": "2026-03-23T20:31:25.379Z"
+    },
+    {
+      "id": "ah-191096-5379",
+      "supermarkt": "ah",
+      "naam": "Iglo Vissticks",
+      "beschrijving": "20 stuks",
+      "categorie": "Vis",
+      "prijsNu": 4.19,
+      "prijsWas": 4.19,
+      "kortingPct": 0,
+      "korting": "",
+      "afbeelding": "https://static.ah.nl/dam/product/AHI_6258735046584f59516b7550384f4e72324a71577651?revLabel=1&rendition=800x800_JPG_Q90&fileType=binary",
+      "geldigTot": "2026-03-29",
+      "geldigVanaf": "",
+      "merk": "",
+      "trefwoorden": [
+        "vis"
+      ],
+      "opgehaald": "2026-03-23T20:31:25.379Z"
+    },
+    {
+      "id": "ah-168925-6090",
+      "supermarkt": "ah",
+      "naam": "Arla Biologisch halfvolle melk",
+      "beschrijving": "1 l",
+      "categorie": "Zuivel, eieren",
+      "prijsNu": 1.49,
+      "prijsWas": 1.49,
+      "kortingPct": 0,
+      "korting": "",
+      "afbeelding": "https://static.ah.nl/dam/product/AHI_36566d73574c48555136536159414f65684945644b41?revLabel=1&rendition=800x800_JPG_Q90&fileType=binary",
+      "geldigTot": "2026-03-29",
+      "geldigVanaf": "",
+      "merk": "",
+      "trefwoorden": [
+        "ei",
+        "melk",
+        "ui"
+      ],
+      "opgehaald": "2026-03-23T20:31:26.090Z"
+    },
+    {
+      "id": "ah-349195-6090",
+      "supermarkt": "ah",
+      "naam": "Arla Biologisch volle melk",
+      "beschrijving": "1 l",
+      "categorie": "Zuivel, eieren",
+      "prijsNu": 1.49,
+      "prijsWas": 1.49,
+      "kortingPct": 0,
+      "korting": "",
+      "afbeelding": "https://static.ah.nl/dam/product/AHI_2d644d634d77324e545657554b31386c557144785867?revLabel=1&rendition=800x800_JPG_Q90&fileType=binary",
+      "geldigTot": "2026-03-29",
+      "geldigVanaf": "",
+      "merk": "",
+      "trefwoorden": [
+        "ei",
+        "melk",
+        "ui"
+      ],
+      "opgehaald": "2026-03-23T20:31:26.090Z"
+    },
+    {
+      "id": "ah-218641-7107",
+      "supermarkt": "ah",
+      "naam": "AH Biologisch Rode bieten gekookt",
+      "beschrijving": "500 g",
+      "categorie": "Groente, aardappelen",
+      "prijsNu": 0.99,
+      "prijsWas": 0.99,
+      "kortingPct": 0,
+      "korting": "",
+      "afbeelding": "https://static.ah.nl/dam/product/AHI_7641633077765f3952544f33314a3734313338567951?revLabel=1&rendition=800x800_JPG_Q90&fileType=binary",
+      "geldigTot": "2026-03-29",
+      "geldigVanaf": "",
+      "merk": "",
+      "trefwoorden": [
+        "aardappel"
+      ],
+      "opgehaald": "2026-03-23T20:31:27.107Z"
+    },
+    {
+      "id": "ah-128148-7107",
+      "supermarkt": "ah",
+      "naam": "AH Geschrapte worteltjes grootverpakking",
+      "beschrijving": "500 g",
+      "categorie": "Groente, aardappelen",
+      "prijsNu": 1.07,
+      "prijsWas": 1.07,
+      "kortingPct": 0,
+      "korting": "",
+      "afbeelding": "https://static.ah.nl/dam/product/AHI_4354523130313832353038?revLabel=1&rendition=800x800_JPG_Q90&fileType=binary",
+      "geldigTot": "2026-03-29",
+      "geldigVanaf": "",
+      "merk": "",
+      "trefwoorden": [
+        "aardappel",
+        "wortel"
+      ],
+      "opgehaald": "2026-03-23T20:31:27.107Z"
+    },
+    {
+      "id": "ah-216517-7472",
+      "supermarkt": "ah",
+      "naam": "AH Aardbeien",
+      "beschrijving": "400 g",
+      "categorie": "Fruit, verse sappen",
+      "prijsNu": 2.99,
+      "prijsWas": 2.99,
+      "kortingPct": 0,
+      "korting": "",
+      "afbeelding": "https://static.ah.nl/dam/product/AHI_72335267624c3474516a692d6b6e79656f546e755877?revLabel=1&rendition=800x800_JPG_Q90&fileType=binary",
+      "geldigTot": "2026-03-29",
+      "geldigVanaf": "",
+      "merk": "",
+      "trefwoorden": [
+        "ei",
+        "ui"
+      ],
+      "opgehaald": "2026-03-23T20:31:27.472Z"
+    },
+    {
+      "id": "ah-383655-7472",
+      "supermarkt": "ah",
+      "naam": "AH Conference bak",
+      "beschrijving": "1 kg",
+      "categorie": "Fruit, verse sappen",
+      "prijsNu": 1.57,
+      "prijsWas": 1.57,
+      "kortingPct": 0,
+      "korting": "",
+      "afbeelding": "https://static.ah.nl/dam/product/AHI_43545239383837303030?revLabel=1&rendition=800x800_JPG_Q90&fileType=binary",
+      "geldigTot": "2026-03-29",
+      "geldigVanaf": "",
+      "merk": "",
+      "trefwoorden": [
+        "ui"
+      ],
+      "opgehaald": "2026-03-23T20:31:27.472Z"
+    },
+    {
+      "id": "ah-129242-7472",
+      "supermarkt": "ah",
+      "naam": "AH Groene kiwi's",
+      "beschrijving": "1 kg",
+      "categorie": "Fruit, verse sappen",
+      "prijsNu": 2.99,
+      "prijsWas": 2.99,
+      "kortingPct": 0,
+      "korting": "",
+      "afbeelding": "https://static.ah.nl/dam/product/AHI_43545239393339353231?revLabel=1&rendition=800x800_JPG_Q90&fileType=binary",
+      "geldigTot": "2026-03-29",
+      "geldigVanaf": "",
+      "merk": "",
+      "trefwoorden": [
+        "ui"
+      ],
+      "opgehaald": "2026-03-23T20:31:27.472Z"
+    },
+    {
+      "id": "ah-123209-7472",
+      "supermarkt": "ah",
+      "naam": "AH Elstar zak",
+      "beschrijving": "1,5 kg",
+      "categorie": "Fruit, verse sappen",
+      "prijsNu": 1.76,
+      "prijsWas": 1.76,
+      "kortingPct": 0,
+      "korting": "",
+      "afbeelding": "https://static.ah.nl/dam/product/AHI_484a746a76526b595467714a78763078316c6d524677?revLabel=1&rendition=800x800_JPG_Q90&fileType=binary",
+      "geldigTot": "2026-03-29",
+      "geldigVanaf": "",
+      "merk": "",
+      "trefwoorden": [
+        "ui"
+      ],
+      "opgehaald": "2026-03-23T20:31:27.472Z"
+    },
+    {
+      "id": "ah-106260-7472",
+      "supermarkt": "ah",
+      "naam": "AH Mandarijnen groot",
+      "beschrijving": "1,5 kg",
+      "categorie": "Fruit, verse sappen",
+      "prijsNu": 3.49,
+      "prijsWas": 3.49,
+      "kortingPct": 0,
+      "korting": "",
+      "afbeelding": "https://static.ah.nl/dam/product/AHI_43545239393336393437?revLabel=1&rendition=800x800_JPG_Q90&fileType=binary",
+      "geldigTot": "2026-03-29",
+      "geldigVanaf": "",
+      "merk": "",
+      "trefwoorden": [
+        "ui"
+      ],
+      "opgehaald": "2026-03-23T20:31:27.472Z"
+    },
+    {
+      "id": "ah-117190-7472",
+      "supermarkt": "ah",
+      "naam": "Pink Lady Appels schaal",
+      "beschrijving": "4 stuks",
+      "categorie": "Fruit, verse sappen",
+      "prijsNu": 2.62,
+      "prijsWas": 2.62,
+      "kortingPct": 0,
+      "korting": "",
+      "afbeelding": "https://static.ah.nl/dam/product/AHI_43545239353935393435?revLabel=4&rendition=800x800_JPG_Q90&fileType=binary",
+      "geldigTot": "2026-03-29",
+      "geldigVanaf": "",
+      "merk": "",
+      "trefwoorden": [
+        "ui"
+      ],
+      "opgehaald": "2026-03-23T20:31:27.472Z"
+    },
+    {
+      "id": "ah-604800-8156",
+      "supermarkt": "ah",
+      "naam": "Melkunie Breaker cheesecake fram. yoghurt 6-pack",
+      "beschrijving": "6 stuks",
+      "categorie": "Zuivel, eieren",
+      "prijsNu": 7.47,
+      "prijsWas": 7.47,
+      "kortingPct": 0,
+      "korting": "",
+      "afbeelding": "https://static.ah.nl/dam/product/AHI_55624e7351353077516961316c6d6b657536474a3641?revLabel=1&rendition=800x800_JPG_Q90&fileType=binary",
+      "geldigTot": "2026-03-29",
+      "geldigVanaf": "",
+      "merk": "",
+      "trefwoorden": [
+        "ei",
+        "melk",
+        "yoghurt",
+        "ui"
+      ],
+      "opgehaald": "2026-03-23T20:31:28.157Z"
+    },
+    {
+      "id": "ah-604808-8157",
+      "supermarkt": "ah",
+      "naam": "Melkunie Breaker zero peach 6-pack",
+      "beschrijving": "6 stuks",
+      "categorie": "Zuivel, eieren",
+      "prijsNu": 7.47,
+      "prijsWas": 7.47,
+      "kortingPct": 0,
+      "korting": "",
+      "afbeelding": "https://static.ah.nl/dam/product/AHI_5942756e705f4834534953343733666b697a56374251?revLabel=1&rendition=800x800_JPG_Q90&fileType=binary",
+      "geldigTot": "2026-03-29",
+      "geldigVanaf": "",
+      "merk": "",
+      "trefwoorden": [
+        "ei",
+        "melk",
+        "ui"
+      ],
+      "opgehaald": "2026-03-23T20:31:28.157Z"
+    },
+    {
+      "id": "ah-579113-8157",
+      "supermarkt": "ah",
+      "naam": "Unox Good Noodles Kip 6-pack",
+      "beschrijving": "6 stuks",
+      "categorie": "Soepen, sauzen, kruiden, olie",
+      "prijsNu": 3.57,
+      "prijsWas": 3.57,
+      "kortingPct": 0,
+      "korting": "",
+      "afbeelding": "https://static.ah.nl/dam/product/AHI_364d6754484b78665473536b4c4a4d503856335f6c41?revLabel=1&rendition=800x800_JPG_Q90&fileType=binary",
+      "geldigTot": "2026-03-29",
+      "geldigVanaf": "",
+      "merk": "",
+      "trefwoorden": [
+        "kip",
+        "ui"
+      ],
+      "opgehaald": "2026-03-23T20:31:28.157Z"
+    },
+    {
+      "id": "ah-604807-8157",
+      "supermarkt": "ah",
+      "naam": "Melkunie Breaker zero banaan yoghurt 6-pack",
+      "beschrijving": "6 stuks",
+      "categorie": "Zuivel, eieren",
+      "prijsNu": 7.47,
+      "prijsWas": 7.47,
+      "kortingPct": 0,
+      "korting": "",
+      "afbeelding": "https://static.ah.nl/dam/product/AHI_355765784a366179516f75574b6852307068596b3741?revLabel=1&rendition=800x800_JPG_Q90&fileType=binary",
+      "geldigTot": "2026-03-29",
+      "geldigVanaf": "",
+      "merk": "",
+      "trefwoorden": [
+        "ei",
+        "melk",
+        "yoghurt",
+        "ui"
+      ],
+      "opgehaald": "2026-03-23T20:31:28.157Z"
+    },
+    {
+      "id": "ah-604806-8157",
+      "supermarkt": "ah",
+      "naam": "Melkunie Breaker zero aardbei yoghurt 6-pack",
+      "beschrijving": "6 stuks",
+      "categorie": "Zuivel, eieren",
+      "prijsNu": 7.47,
+      "prijsWas": 7.47,
+      "kortingPct": 0,
+      "korting": "",
+      "afbeelding": "https://static.ah.nl/dam/product/AHI_4e774f66366b3952534b79505a76782d476d51547777?revLabel=1&rendition=800x800_JPG_Q90&fileType=binary",
+      "geldigTot": "2026-03-29",
+      "geldigVanaf": "",
+      "merk": "",
+      "trefwoorden": [
+        "ei",
+        "melk",
+        "yoghurt",
+        "ui"
+      ],
+      "opgehaald": "2026-03-23T20:31:28.157Z"
+    },
+    {
+      "id": "ah-561662-8157",
+      "supermarkt": "ah",
+      "naam": "Melkunie Breaker aardbei yoghurt 6-pack",
+      "beschrijving": "6 stuks",
+      "categorie": "Zuivel, eieren",
+      "prijsNu": 7.47,
+      "prijsWas": 7.47,
+      "kortingPct": 0,
+      "korting": "",
+      "afbeelding": "https://static.ah.nl/dam/product/AHI_38652d7150376d6d5172366445344f6370594a4e3051?revLabel=1&rendition=800x800_JPG_Q90&fileType=binary",
+      "geldigTot": "2026-03-29",
+      "geldigVanaf": "",
+      "merk": "",
+      "trefwoorden": [
+        "ei",
+        "melk",
+        "yoghurt",
+        "ui"
+      ],
+      "opgehaald": "2026-03-23T20:31:28.157Z"
+    },
+    {
+      "id": "ah-561669-8157",
+      "supermarkt": "ah",
+      "naam": "Melkunie Breaker banaan yoghurt 6-pack",
+      "beschrijving": "6 stuks",
+      "categorie": "Zuivel, eieren",
+      "prijsNu": 7.47,
+      "prijsWas": 7.47,
+      "kortingPct": 0,
+      "korting": "",
+      "afbeelding": "https://static.ah.nl/dam/product/AHI_4f4d435753723231516a6d4364354f53684c4a4b3477?revLabel=1&rendition=800x800_JPG_Q90&fileType=binary",
+      "geldigTot": "2026-03-29",
+      "geldigVanaf": "",
+      "merk": "",
+      "trefwoorden": [
+        "ei",
+        "melk",
+        "yoghurt",
+        "ui"
+      ],
+      "opgehaald": "2026-03-23T20:31:28.157Z"
+    },
+    {
+      "id": "ah-594662-8157",
+      "supermarkt": "ah",
+      "naam": "Melkunie Breaker banaan yoghurt 4-pack",
+      "beschrijving": "4 stuks",
+      "categorie": "Zuivel, eieren",
+      "prijsNu": 4.98,
+      "prijsWas": 4.98,
+      "kortingPct": 0,
+      "korting": "",
+      "afbeelding": "https://static.ah.nl/dam/product/AHI_4f717764653931375242434d664236745a2d544e6b67?revLabel=1&rendition=800x800_JPG_Q90&fileType=binary",
+      "geldigTot": "2026-03-29",
+      "geldigVanaf": "",
+      "merk": "",
+      "trefwoorden": [
+        "ei",
+        "melk",
+        "yoghurt",
+        "ui"
+      ],
+      "opgehaald": "2026-03-23T20:31:28.157Z"
+    },
+    {
+      "id": "ah-607910-8157",
+      "supermarkt": "ah",
+      "naam": "Snelle Jelle Kruidkoek naturel 10-pack",
+      "beschrijving": "2 stuks",
+      "categorie": "Ontbijtgranen, beleg",
+      "prijsNu": 5.2,
+      "prijsWas": 5.2,
+      "kortingPct": 0,
+      "korting": "",
+      "afbeelding": "https://static.ah.nl/dam/product/AHI_766a644e32647361537043566235366f4e5a59716467?revLabel=1&rendition=800x800_JPG_Q90&fileType=binary",
+      "geldigTot": "2999-12-31",
+      "geldigVanaf": "",
+      "merk": "",
+      "trefwoorden": [
+        "ui"
+      ],
+      "opgehaald": "2026-03-23T20:31:28.157Z"
+    },
+    {
+      "id": "ah-2194-8484",
+      "supermarkt": "ah",
+      "naam": "Zonnatura Wortelsap",
+      "beschrijving": "0,75 l",
+      "categorie": "Fruit, verse sappen",
+      "prijsNu": 2.17,
+      "prijsWas": 2.17,
+      "kortingPct": 0,
+      "korting": "",
+      "afbeelding": "https://static.ah.nl/dam/product/AHI_6334374455494f44523061345669684e567a47682d51?revLabel=1&rendition=800x800_JPG_Q90&fileType=binary",
+      "geldigTot": "2026-03-29",
+      "geldigVanaf": "",
+      "merk": "",
+      "trefwoorden": [
+        "ui",
+        "wortel"
+      ],
+      "opgehaald": "2026-03-23T20:31:28.484Z"
+    },
+    {
+      "id": "ah-609665-8835",
+      "supermarkt": "ah",
+      "naam": "Arla Biologisch volle melk 4-pack",
+      "beschrijving": "4 stuks",
+      "categorie": "Zuivel, eieren",
+      "prijsNu": 5.96,
+      "prijsWas": 5.96,
+      "kortingPct": 0,
+      "korting": "",
+      "afbeelding": "https://static.ah.nl/dam/product/AHI_3865654b376a43435139324e2d337636396937625841?revLabel=1&rendition=800x800_JPG_Q90&fileType=binary",
+      "geldigTot": "2026-03-29",
+      "geldigVanaf": "",
+      "merk": "",
+      "trefwoorden": [
+        "ei",
+        "melk",
+        "ui"
+      ],
+      "opgehaald": "2026-03-23T20:31:28.835Z"
+    },
+    {
+      "id": "ah-594705-8835",
+      "supermarkt": "ah",
+      "naam": "Arla Biologisch volle melk 3-pack",
+      "beschrijving": "3 stuks",
+      "categorie": "Zuivel, eieren",
+      "prijsNu": 7.26,
+      "prijsWas": 7.26,
+      "kortingPct": 0,
+      "korting": "",
+      "afbeelding": "https://static.ah.nl/dam/product/AHI_743263355950696f51427976756b6471615569366c77?revLabel=1&rendition=800x800_JPG_Q90&fileType=binary",
+      "geldigTot": "2999-12-31",
+      "geldigVanaf": "",
+      "merk": "",
+      "trefwoorden": [
+        "ei",
+        "melk",
+        "ui"
+      ],
+      "opgehaald": "2026-03-23T20:31:28.835Z"
+    },
+    {
+      "id": "ah-582008-8835",
+      "supermarkt": "ah",
+      "naam": "Melkunie Breaker Aardbei yoghurt 4-pack",
+      "beschrijving": "4 stuks",
+      "categorie": "Zuivel, eieren",
+      "prijsNu": 4.98,
+      "prijsWas": 4.98,
+      "kortingPct": 0,
+      "korting": "",
+      "afbeelding": "https://static.ah.nl/dam/product/AHI_4f30706365575339514a755736394a4a653745375577?revLabel=1&rendition=800x800_JPG_Q90&fileType=binary",
+      "geldigTot": "2026-03-29",
+      "geldigVanaf": "",
+      "merk": "",
+      "trefwoorden": [
+        "ei",
+        "melk",
+        "yoghurt",
+        "ui"
+      ],
+      "opgehaald": "2026-03-23T20:31:28.835Z"
+    }
+  ]
+}
