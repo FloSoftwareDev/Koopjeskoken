@@ -284,7 +284,7 @@ async function fetchJumbo() {
     const browser = await getBrowser();
     const pagina  = await browser.newPage();
 
-    await pagina.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36');
+    await pagina.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36');
     await pagina.setViewport({ width: 1280, height: 800 });
     await pagina.setRequestInterception(true);
     pagina.on('request', req => {
@@ -292,33 +292,53 @@ async function fetchJumbo() {
       else req.continue();
     });
 
-    await pagina.goto('https://www.jumbo.com/aanbiedingen/', { waitUntil: 'networkidle2', timeout: 30000 });
-    await pagina.waitForSelector('[class*="ProductCard"], [data-testid*="product"]', { timeout: 15000 }).catch(() => {});
+    await pagina.goto('https://www.jumbo.com/aanbiedingen/nu', { waitUntil: 'networkidle2', timeout: 30000 });
+    await pagina.waitForSelector('.card-promotion', { timeout: 15000 }).catch(() => {});
     await new Promise(r => setTimeout(r, 2000));
 
-    // Scrape producten direct via browser context
     const producten = await pagina.evaluate(() => {
-      const cards = document.querySelectorAll('[class*="ProductCard"], [data-testid*="product-card"], article[class*="product"]');
+      const cards = document.querySelectorAll('.card-promotion');
       return Array.from(cards).map(card => {
-        const naam    = card.querySelector('[class*="title"], [class*="name"], h2, h3')?.textContent?.trim() || '';
-        const prijsEl = card.querySelector('[class*="current-price"], [class*="sale"], [class*="promo"], [data-testid*="price"]');
-        const wasEl   = card.querySelector('[class*="was-price"], [class*="strike"], [class*="original"], del');
-        const img     = card.querySelector('img')?.src || '';
-        const korting = card.querySelector('[class*="badge"], [class*="sticker"], [class*="label"]')?.textContent?.trim() || '';
-
-        return { naam, prijs: prijsEl?.textContent?.trim() || '', was: wasEl?.textContent?.trim() || '', img, korting };
-      }).filter(p => p.naam && p.prijs);
+        const volleTekst = card.textContent.replace(/\s+/g, ' ').trim();
+        const naamEl = card.querySelector('.item-text, [class*="title"], [class*="name"], h2, h3');
+        const naam = naamEl?.textContent?.trim() || '';
+        const img  = card.querySelector('img')?.src || '';
+        return { naam, volleTekst, img };
+      }).filter(p => p.volleTekst.length > 3);
     });
 
     await pagina.close();
 
     for (const p of producten) {
-      const prijsNu  = parseNLPrice(p.prijs);
-      const prijsWas = parseNLPrice(p.was);
-      if (!p.naam || prijsNu <= 0) continue;
+      let prijsNu = 0;
+      let naam = p.naam;
+      let kortingLabel = '';
+
+      const voorMatch  = p.volleTekst.match(/(\d+)\s+voor\s+(\d+[,.]\d{2})/i);
+      const prijsMatch = p.volleTekst.match(/(\d+[,.]\d{2})/);
+
+      if (voorMatch) {
+        const aantal = parseInt(voorMatch[1]);
+        const totaal = parseFloat(voorMatch[2].replace(',', '.'));
+        prijsNu = Math.round((totaal / aantal) * 100) / 100;
+        kortingLabel = `${voorMatch[1]} voor €${voorMatch[2]}`;
+      } else if (prijsMatch) {
+        prijsNu = parseFloat(prijsMatch[1].replace(',', '.'));
+      }
+
+      if (!naam) {
+        naam = p.volleTekst
+          .replace(/(\d+\s+voor\s+)?\d+[,.]\d{2}/gi, '')
+          .replace(/\b(ma|di|wo|do|vr|za|zo)\s+\d+\s+\w+(\s+t\/m\s+\w+\s+\d+\s+\w+)?/gi, '')
+          .replace(/\s+/g, ' ').trim().slice(0, 60);
+      }
+
+      if (!naam || prijsNu <= 0) continue;
+
       deals.push(normalizeProduct({
-        naam: p.naam, prijsNu, prijsWas,
-        korting: p.korting, afbeelding: p.img,
+        naam, prijsNu, prijsWas: 0,
+        korting: kortingLabel,
+        afbeelding: p.img,
         categorie: 'Jumbo Aanbieding',
       }, 'jumbo'));
     }
@@ -332,9 +352,6 @@ async function fetchJumbo() {
   }
 }
 
-// ═══════════════════════════════════════════════
-// LIDL — Puppeteer
-// ═══════════════════════════════════════════════
 
 async function fetchLidl() {
   console.log('🔵 Lidl: aanbiedingen ophalen via Puppeteer...');
@@ -344,7 +361,7 @@ async function fetchLidl() {
     const browser = await getBrowser();
     const pagina  = await browser.newPage();
 
-    await pagina.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36');
+    await pagina.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36');
     await pagina.setViewport({ width: 1280, height: 800 });
     await pagina.setRequestInterception(true);
     pagina.on('request', req => {
@@ -352,33 +369,63 @@ async function fetchLidl() {
       else req.continue();
     });
 
-    await pagina.goto('https://www.lidl.nl/c/aanbiedingen/s10006388', { waitUntil: 'networkidle2', timeout: 30000 });
-    await pagina.waitForSelector('[class*="offer"], [class*="product"], [class*="tile"]', { timeout: 15000 }).catch(() => {});
-    await new Promise(r => setTimeout(r, 2000));
+    // Lidl blokkeert vaak — probeer met een langere wachttijd
+    await pagina.goto('https://www. .nl/c/aanbiedingen/a10008785', { waitUntil: 'domcontentloaded', timeout: 30000 });
+    await new Promise(r => setTimeout(r, 5000));
 
     const producten = await pagina.evaluate(() => {
-      const cards = document.querySelectorAll('[class*="offer-card"], [class*="OfferCard"], [class*="product-tile"], [class*="ProductTile"]');
-      return Array.from(cards).map(card => {
-        const naam    = card.querySelector('[class*="title"], [class*="headline"], h2, h3')?.textContent?.trim() || '';
-        const prijsEl = card.querySelector('[class*="price__main"], [class*="price-main"], [class*="current"]');
-        const wasEl   = card.querySelector('[class*="price__struck"], [class*="strike"], [class*="was"], del');
-        const korting = card.querySelector('[class*="badge"], [class*="discount"]')?.textContent?.trim() || '';
-        const img     = card.querySelector('img')?.src || '';
-        return { naam, prijs: prijsEl?.textContent?.trim() || '', was: wasEl?.textContent?.trim() || '', korting, img };
-      }).filter(p => p.naam && p.prijs);
+      // Lidl laadt producten via __NEXT_DATA__ of window state
+      // Probeer eerst JSON data uit de pagina te halen
+      const nextData = document.getElementById('__NEXT_DATA__');
+      if (nextData) {
+        try {
+          const data = JSON.parse(nextData.textContent);
+          const pages = data?.props?.pageProps;
+          const offers = pages?.offers || pages?.products || pages?.items || [];
+          if (offers.length > 0) return { type: 'json', offers };
+        } catch(e) {}
+      }
+
+      // Fallback: zoek product tiles in DOM
+      const tiles = document.querySelectorAll('[class*="offer-card"], [class*="OfferCard"], [class*="product-grid"] > *');
+      return {
+        type: 'html',
+        offers: Array.from(tiles).map(tile => ({
+          naam:    tile.querySelector('[class*="title"], [class*="headline"], h2, h3')?.textContent?.trim() || '',
+          prijs:   tile.querySelector('[class*="price__main"], [class*="price-main"]')?.textContent?.trim() || '',
+          was:     tile.querySelector('[class*="struck"], [class*="strike"], del')?.textContent?.trim() || '',
+          korting: tile.querySelector('[class*="badge"], [class*="discount"]')?.textContent?.trim() || '',
+        })).filter(p => p.naam),
+      };
     });
 
     await pagina.close();
 
-    for (const p of producten) {
-      const prijsNu  = parseNLPrice(p.prijs);
-      const prijsWas = parseNLPrice(p.was);
-      if (!p.naam || prijsNu <= 0) continue;
-      deals.push(normalizeProduct({
-        naam: p.naam, prijsNu, prijsWas,
-        korting: p.korting, afbeelding: p.img,
-        categorie: 'Lidl Aanbieding',
-      }, 'lidl'));
+    if (producten.type === 'json') {
+      producten.offers.forEach(o => {
+        const naam = o.fullTitle || o.name || o.title || '';
+        const prijsNu = parseNLPrice(o.price?.price || o.currentPrice || 0);
+        if (naam && prijsNu > 0) {
+          deals.push(normalizeProduct({
+            naam, prijsNu,
+            prijsWas: parseNLPrice(o.price?.recommendedRetailPrice || o.originalPrice || 0),
+            korting:  o.discount?.description || o.badgeText || '',
+            categorie: 'Lidl Aanbieding',
+          }, 'lidl'));
+        }
+      });
+    } else {
+      producten.offers.forEach(p => {
+        const prijsNu = parseNLPrice(p.prijs);
+        if (p.naam && prijsNu > 0) {
+          deals.push(normalizeProduct({
+            naam: p.naam, prijsNu,
+            prijsWas: parseNLPrice(p.was),
+            korting: p.korting,
+            categorie: 'Lidl Aanbieding',
+          }, 'lidl'));
+        }
+      });
     }
 
     console.log(`  ✅ Lidl: ${deals.length} aanbiedingen`);
@@ -390,10 +437,6 @@ async function fetchLidl() {
   }
 }
 
-// ═══════════════════════════════════════════════
-// ALDI — Puppeteer
-// ═══════════════════════════════════════════════
-
 async function fetchAldi() {
   console.log('🔵 Aldi: aanbiedingen ophalen via Puppeteer...');
   const deals = [];
@@ -402,7 +445,7 @@ async function fetchAldi() {
     const browser = await getBrowser();
     const pagina  = await browser.newPage();
 
-    await pagina.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36');
+    await pagina.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36');
     await pagina.setViewport({ width: 1280, height: 800 });
     await pagina.setRequestInterception(true);
     pagina.on('request', req => {
@@ -411,18 +454,26 @@ async function fetchAldi() {
     });
 
     await pagina.goto('https://www.aldi.nl/aanbiedingen.html', { waitUntil: 'networkidle2', timeout: 30000 });
-    await pagina.waitForSelector('[class*="tile"], [class*="product"], [class*="offer"]', { timeout: 15000 }).catch(() => {});
+    await pagina.waitForSelector('.product-tile', { timeout: 15000 }).catch(() => {});
     await new Promise(r => setTimeout(r, 2000));
 
     const producten = await pagina.evaluate(() => {
-      const cards = document.querySelectorAll('[class*="mod-article-tile"], [class*="product-tile"], [class*="offer-tile"]');
-      return Array.from(cards).map(card => {
-        const naam    = card.querySelector('[class*="headline"], [class*="title"], h2, h3')?.textContent?.trim() || '';
-        const prijsEl = card.querySelector('[class*="price__main"], [class*="current-price"], [class*="price-main"]');
-        const wasEl   = card.querySelector('[class*="price__struck"], [class*="strike"], del');
-        const korting = card.querySelector('[class*="badge"], [class*="discount-badge"]')?.textContent?.trim() || '';
-        const img     = card.querySelector('img')?.src || '';
-        return { naam, prijs: prijsEl?.textContent?.trim() || '', was: wasEl?.textContent?.trim() || '', korting, img };
+      const tiles = document.querySelectorAll('.product-tile');
+      return Array.from(tiles).map(tile => {
+        const naam    = tile.querySelector('[class*="title"], [class*="name"], h2, h3, [class*="headline"]')?.textContent?.trim() || '';
+        // Prijs: tag__label--price bevat de aanbiedingsprijs
+        const prijsEl = tile.querySelector('.tag__label.tag__label--price, [class*="tag__label--price"]');
+        const wasEl   = tile.querySelector('.tag__cross-price, [class*="cross-price"]');
+        const pctEl   = tile.querySelector('[class*="tag__price-tag--discount"], [class*="discount-tag"]');
+        const img     = tile.querySelector('img')?.src || '';
+        const korting = pctEl?.textContent?.trim() || tile.querySelector('.tile__banner')?.textContent?.trim() || '';
+
+        return {
+          naam,
+          prijs:   prijsEl?.textContent?.trim() || '',
+          was:     wasEl?.textContent?.trim() || '',
+          korting, img,
+        };
       }).filter(p => p.naam && p.prijs);
     });
 
@@ -448,10 +499,6 @@ async function fetchAldi() {
   }
 }
 
-// ═══════════════════════════════════════════════
-// PLUS — Puppeteer
-// ═══════════════════════════════════════════════
-
 async function fetchPlus() {
   console.log('🟢 Plus: aanbiedingen ophalen via Puppeteer...');
   const deals = [];
@@ -460,7 +507,7 @@ async function fetchPlus() {
     const browser = await getBrowser();
     const pagina  = await browser.newPage();
 
-    await pagina.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36');
+    await pagina.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36');
     await pagina.setViewport({ width: 1280, height: 800 });
     await pagina.setRequestInterception(true);
     pagina.on('request', req => {
@@ -469,30 +516,49 @@ async function fetchPlus() {
     });
 
     await pagina.goto('https://www.plus.nl/aanbiedingen', { waitUntil: 'networkidle2', timeout: 30000 });
-    await pagina.waitForSelector('[class*="product"], [class*="offer"], [class*="card"]', { timeout: 15000 }).catch(() => {});
+    await pagina.waitForSelector('.plp-item-wrapper', { timeout: 15000 }).catch(() => {});
     await new Promise(r => setTimeout(r, 2000));
 
     const producten = await pagina.evaluate(() => {
-      const cards = document.querySelectorAll('[class*="product-card"], [class*="offer-card"], [class*="ProductCard"]');
-      return Array.from(cards).map(card => {
-        const naam    = card.querySelector('[class*="title"], [class*="name"], h2, h3')?.textContent?.trim() || '';
-        const prijsEl = card.querySelector('[class*="sale-price"], [class*="promo"], [class*="current"]');
-        const wasEl   = card.querySelector('[class*="was"], [class*="strike"], [class*="original"], del');
-        const korting = card.querySelector('[class*="badge"], [class*="label"]')?.textContent?.trim() || '';
-        const img     = card.querySelector('img')?.src || '';
-        return { naam, prijs: prijsEl?.textContent?.trim() || '', was: wasEl?.textContent?.trim() || '', korting, img };
-      }).filter(p => p.naam && p.prijs);
+      const items = document.querySelectorAll('.plp-item-wrapper');
+      return Array.from(items).map(item => {
+        const naam      = item.querySelector('.plp-item-name')?.textContent?.trim() || '';
+        const promoEl   = item.querySelector('.promo-offer-label, [class*="promo-offer"]');
+        const promoTxt  = promoEl?.textContent?.trim() || '';
+
+        // Prijs staat soms in de promo tekst: "2 VOOR 2.99"
+        const prijsEl   = item.querySelector('.plp-item-price, [class*="plp-item-price"]');
+        const prijsTxt  = prijsEl?.textContent?.trim() || promoTxt;
+
+        const img       = item.querySelector('img')?.src || '';
+        const wasEl     = item.querySelector('[class*="previous"], [class*="was"], del');
+
+        return { naam, prijsTxt, promoTxt, was: wasEl?.textContent?.trim() || '', img };
+      }).filter(p => p.naam);
     });
 
     await pagina.close();
 
     for (const p of producten) {
-      const prijsNu  = parseNLPrice(p.prijs);
-      const prijsWas = parseNLPrice(p.was);
+      let prijsNu  = 0;
+      let prijsWas = parseNLPrice(p.was);
+      let kortingLabel = p.promoTxt;
+
+      // Patroon: "2 VOOR 2.99" of "3 VOOR 5.00"
+      const voorMatch = p.promoTxt.match(/(\d+)\s+VOOR\s+(\d+[,.]\d{2})/i);
+      if (voorMatch) {
+        const aantal = parseInt(voorMatch[1]);
+        const totaal = parseFloat(voorMatch[2].replace(',', '.'));
+        prijsNu = Math.round((totaal / aantal) * 100) / 100;
+      } else {
+        prijsNu = parseNLPrice(p.prijsTxt);
+      }
+
       if (!p.naam || prijsNu <= 0) continue;
+
       deals.push(normalizeProduct({
         naam: p.naam, prijsNu, prijsWas,
-        korting: p.korting, afbeelding: p.img,
+        korting: kortingLabel, afbeelding: p.img,
         categorie: 'Plus Aanbieding',
       }, 'plus'));
     }
@@ -506,10 +572,6 @@ async function fetchPlus() {
   }
 }
 
-// ═══════════════════════════════════════════════
-// DIRK — Puppeteer
-// ═══════════════════════════════════════════════
-
 async function fetchDirk() {
   console.log('🔴 Dirk: aanbiedingen ophalen via Puppeteer...');
   const deals = [];
@@ -518,7 +580,7 @@ async function fetchDirk() {
     const browser = await getBrowser();
     const pagina  = await browser.newPage();
 
-    await pagina.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36');
+    await pagina.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36');
     await pagina.setViewport({ width: 1280, height: 800 });
     await pagina.setRequestInterception(true);
     pagina.on('request', req => {
@@ -527,29 +589,72 @@ async function fetchDirk() {
     });
 
     await pagina.goto('https://www.dirk.nl/aanbiedingen', { waitUntil: 'networkidle2', timeout: 30000 });
-    await pagina.waitForSelector('[class*="product"], [class*="folder"], [class*="offer"]', { timeout: 15000 }).catch(() => {});
+    await pagina.waitForSelector('article', { timeout: 15000 }).catch(() => {});
     await new Promise(r => setTimeout(r, 2000));
 
     const producten = await pagina.evaluate(() => {
-      const cards = document.querySelectorAll('[class*="product-card"], [class*="folder-product"], [class*="ProductCard"]');
-      return Array.from(cards).map(card => {
-        const naam    = card.querySelector('[class*="name"], [class*="title"], h2, h3')?.textContent?.trim() || '';
-        const prijsEl = card.querySelector('[class*="current"], [class*="sale"], [class*="promo"]');
-        const wasEl   = card.querySelector('[class*="was"], [class*="old"], [class*="strike"], del');
-        const korting = card.querySelector('[class*="badge"], [class*="discount"]')?.textContent?.trim() || '';
-        const img     = card.querySelector('img')?.src || '';
-        return { naam, prijs: prijsEl?.textContent?.trim() || '', was: wasEl?.textContent?.trim() || '', korting, img };
-      }).filter(p => p.naam && p.prijs);
+      // Dirk gebruikt <article> elementen per aanbieding
+      // Prijs is opgebouwd uit .price-label (tekst) + .price-large + .price-small (eurocenten)
+      const articles = document.querySelectorAll('article');
+      return Array.from(articles).map(art => {
+        // Naam: eerste tekst die geen prijs is
+        const naamEl = art.querySelector('[class*="title"], [class*="name"], h2, h3, p');
+        let naam = naamEl?.textContent?.trim() || '';
+
+        // Volledige tekst als fallback voor naam
+        const volleTekst = art.textContent.replace(/\s+/g, ' ').trim();
+
+        // Prijs: price-large = euro deel, price-small = cent deel
+        const prijsGroot = art.querySelector('.price-large')?.textContent?.trim() || '';
+        const prijsKlein = art.querySelector('.price-small')?.textContent?.trim() || '';
+        const prijsLabel = art.querySelector('.price-label, .regular-price')?.textContent?.trim() || '';
+
+        // Bouw prijs op: "99" + "." + "0" → "0.99" of "1" + "." + "99" → "1.99"
+        let prijsTxt = '';
+        if (prijsGroot && prijsKlein) {
+          // price-large is het geheel getal, price-small zijn de centen
+          prijsTxt = `${prijsGroot}.${prijsKlein.padEnd(2,'0')}`;
+        }
+
+        // Was-prijs uit label: "van 1.19" → 1.19
+        let wasTxt = '';
+        const vanMatch = prijsLabel.match(/van\s+(\d+[.,]\d{2})/i);
+        if (vanMatch) wasTxt = vanMatch[1];
+
+        const img = art.querySelector('img')?.src || '';
+        const korting = art.querySelector('.label, [class*="actie"], [class*="korting"]')?.textContent?.trim() || '';
+
+        return { naam, volleTekst, prijsTxt, wasTxt, img, korting };
+      }).filter(p => p.volleTekst.length > 3);
     });
 
     await pagina.close();
 
     for (const p of producten) {
-      const prijsNu  = parseNLPrice(p.prijs);
-      const prijsWas = parseNLPrice(p.was);
-      if (!p.naam || prijsNu <= 0) continue;
+      let prijsNu  = parseNLPrice(p.prijsTxt);
+      const prijsWas = parseNLPrice(p.wasTxt);
+
+      // Als prijs niet gevonden via price-large/small, probeer uit volledige tekst
+      if (prijsNu <= 0) {
+        const match = p.volleTekst.match(/(\d+[,.]\d{2})/);
+        if (match) prijsNu = parseNLPrice(match[1]);
+      }
+
+      // Naam: als leeg, haal het uit de volledige tekst (verwijder prijs en ACTIE)
+      let naam = p.naam;
+      if (!naam || naam.length < 3) {
+        naam = p.volleTekst
+          .replace(/ACTIE\s+van\s+\d+[.,]\d{2}/gi, '')
+          .replace(/\d+[,.]\d{2}/g, '')
+          .replace(/\s+/g, ' ')
+          .trim()
+          .slice(0, 60);
+      }
+
+      if (!naam || prijsNu <= 0) continue;
+
       deals.push(normalizeProduct({
-        naam: p.naam, prijsNu, prijsWas,
+        naam, prijsNu, prijsWas,
         korting: p.korting, afbeelding: p.img,
         categorie: 'Dirk Aanbieding',
       }, 'dirk'));
@@ -564,7 +669,7 @@ async function fetchDirk() {
   }
 }
 
-// Browser afsluiten na alle scrapers
+
 async function cleanup() {
   await sluitBrowser();
 }

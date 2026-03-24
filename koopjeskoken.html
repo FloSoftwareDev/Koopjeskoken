@@ -18,6 +18,118 @@
   * { margin:0; padding:0; box-sizing:border-box; }
   html { scroll-behavior: smooth; }
   body { font-family:'DM Sans',sans-serif; background:var(--cream); color:var(--ink); overflow-x:hidden; }
+  /* AUTH OVERLAY */
+  #authOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0,0,0,0.65);
+    backdrop-filter: blur(10px);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    z-index: 9999;
+}
+
+.auth-box {
+    background: white;
+    padding: 32px;
+    border-radius: 20px;
+    width: min(380px, 90vw);
+    text-align: center;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border);
+}
+
+.auth-box h2 {
+    margin-bottom: 1rem;
+    font-size: 1.45rem;
+    color: var(--ink);
+}
+
+.auth-box label {
+    display: block;
+    text-align: left;
+    margin: 0.6rem 0 0.25rem;
+    font-size: 0.85rem;
+    color: var(--ink-soft);
+}
+
+.auth-email {
+    display: none;
+}
+
+.auth-email.visible {
+    display: block;
+}
+
+.auth-box input {
+    width: 100%;
+    margin: 0.25rem 0 0.85rem;
+    padding: 0.7rem 0.75rem;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    font-size: 0.95rem;
+}
+
+.auth-box input:focus {
+    outline: 2px solid var(--orange-light);
+    border-color: var(--orange);
+}
+
+.auth-controls {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+    margin-top: 0.15rem;
+    font-size: 0.85rem;
+    color: var(--ink-soft);
+}
+
+.auth-box button {
+    width: 100%;
+    padding: 0.85rem;
+    margin-top: 0.8rem;
+    background: var(--orange);
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
+}
+
+.auth-box button:disabled {
+    background: #c4c4c4;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.auth-box button:hover:not(:disabled) {
+    background: var(--orange-light);
+    transform: translateY(-1px);
+}
+
+#authMessage {
+    min-height: 1.2rem;
+    margin-top: 0.55rem;
+    color: var(--ink-soft);
+    font-size: 0.85rem;
+}
+
+#authMessage.error { color: #c03638; }
+#authMessage.success { color: #2a7a3b; }
+
+#toggleText span {
+    color: var(--orange);
+    cursor: pointer;
+}
 
   /* ── NAV ── */
   nav { position:sticky; top:0; z-index:100; background:rgba(255,248,240,0.95); backdrop-filter:blur(12px); border-bottom:1px solid var(--border); padding:0 clamp(1rem,4vw,3rem); }
@@ -27,10 +139,39 @@
   .nav-links { display:flex; gap:2rem; list-style:none; }
   .nav-links a { text-decoration:none; color:var(--ink-soft); font-size:0.9rem; font-weight:500; transition:color 0.2s; cursor:pointer; }
   .nav-links a:hover, .nav-links a.active { color:var(--orange); }
-  .nav-right { display:flex; align-items:center; gap:1rem; }
-  .btn-nav { background:var(--orange); color:white; border:none; border-radius:100px; padding:0.5rem 1.25rem; font-family:'DM Sans',sans-serif; font-size:0.875rem; font-weight:600; cursor:pointer; transition:all 0.2s; text-decoration:none; position:relative; }
+  .nav-right { display:flex; align-items:center; gap:0.5rem; }
+  .btn-nav { background:var(--orange); color:white; border:none; border-radius:100px; padding:0.4rem 0.95rem; font-family:'DM Sans',sans-serif; font-size:0.8rem; font-weight:600; cursor:pointer; transition:all 0.2s; text-decoration:none; position:relative; }
   .btn-nav:hover { background:var(--orange-light); transform:translateY(-1px); }
   .btn-nav .cart-count { position:absolute; top:-6px; right:-6px; background:var(--green); color:white; border-radius:50%; width:18px; height:18px; font-size:0.65rem; font-weight:800; display:flex; align-items:center; justify-content:center; }
+
+  body.dark {
+    /* Alleen tekstkleur aanpassen, achtergrond blijft cream */
+    color:#f2f2f2;
+  }
+  body.dark nav { background: rgba(40,35,30,0.95); border-color: rgba(100,90,80,0.35); }
+  body.dark .auth-box { background:#2a2520; border-color: rgba(255,255,255,0.2); color:#f2f2f2; box-shadow: 0 8px 32px rgba(0,0,0,0.5); }
+  body.dark .auth-box h2 { color:#ffffff; }
+  body.dark .auth-box label { color:#e8e8e8; }
+  body.dark .auth-box input { background:#3a3520; color:#f2f2f2; border-color:#6a6555; }
+  body.dark .auth-box input:focus { border-color:#ff8a4c; }
+  body.dark .auth-box button { background: #ff8a4c; color:#ffffff; }
+  body.dark .auth-box button:hover { background: #ff6b2b; }
+  body.dark #authMessage { color:#e8e8e8; }
+  body.dark #authMessage.error { color:#ff6b6b; }
+  body.dark #authMessage.success { color:#4ade80; }
+  body.dark #toggleText { color:#d1d1d1; }
+  body.dark #passwordHint { color:#d1d1d1; }
+  .register-only { display: none; }
+  .register-only.visible { display: inline; }
+  body.dark .btn-nav { background:#4a4535; color:#fff; }
+  body.dark .btn-nav:hover { background:#6a6555; }
+  body.dark .hero-card-main, body.dark .site-section, body.dark .page, body.dark .planner-day, body.dark .supermarkt-card, body.dark .cart-panel, body.dark .hero-float, body.dark .search-box, body.dark .recipe-card, body.dark .deal-card { background:#2a2520 !important; color:#e8e8e8; border-color: rgba(255,255,255,0.15) !important; }
+  body.dark .hero-desc, body.dark .stat-label, body.dark .nav-links a, body.dark .card-desc, body.dark .price-label { color: #d1d1d1; }
+  body.dark .btn-primary, body.dark .btn-secondary, body.dark .chip { background:#4a4535; color:#fff; border-color:#6a6555; }
+  body.dark .btn-secondary, body.dark .chip { background:#2a2520; color:#e8e8e8; }
+  body.dark .card-time-badge { background:rgba(42,37,32,0.9); color:#e8e8e8; }
+  body.dark .deal-badge { background:#2a7a3b; color:#e8e8e8; }
+  body.dark .float-label { color:#d1d1d1; }
 
   /* ── PAGE SECTIONS (shown/hidden) ── */
   .page { display:none; }
@@ -339,8 +480,291 @@
   }
 </style>
 </head>
-<body>
+<script>
+let isLogin = true;
+let isLoggedIn = false;
+let currentUsername = null;
+let authOverlay;
+let authMessage;
 
+const apiRoot = (() => {
+    // If `live-server` on :5500 is used, redirect API calls to XAMPP PHP host
+    if (window.location.host.includes('127.0.0.1:5500') || window.location.host.includes('localhost:5500')) {
+        return 'http://127.0.0.1/Koopjeskoken/api';
+    }
+
+    // If project folder in URL path, use that path at same origin.
+    const p = window.location.pathname.toLowerCase();
+    if (p.includes('/koopjeskoken')) {
+        return window.location.origin + '/Koopjeskoken/api';
+    }
+
+    // Default API at root
+    return window.location.origin + '/api';
+})();
+
+function setAuthMessage(text, type) {
+    if (!authMessage) return;
+    authMessage.textContent = text;
+    authMessage.className = type ? type : '';
+}
+
+function toggleAuth() {
+    isLogin = !isLogin;
+
+    const emailContainer = document.getElementById('emailContainer');
+    if (emailContainer) emailContainer.classList.toggle('visible', !isLogin);
+
+    const passwordHint = document.getElementById('passwordHint');
+    if (passwordHint) passwordHint.classList.toggle('visible', !isLogin);
+
+    document.getElementById('authTitle').innerText = isLogin ? 'Login' : 'Register';
+    document.getElementById('authSubmitButton').innerText = isLogin ? 'Login' : 'Register';
+
+    document.getElementById('toggleText').innerHTML = isLogin
+        ? 'Geen account? <span onclick="toggleAuth()">Registreren</span>'
+        : 'Heb je al een account? <span onclick="toggleAuth()">Login</span>';
+
+    setAuthMessage('', '');
+}
+
+function showAuth() {
+    if (!authOverlay) return;
+    authOverlay.style.display = 'flex';
+
+    if (!isLogin) {
+        isLogin = true;
+        document.getElementById('authTitle').innerText = 'Login';
+        document.getElementById('authSubmitButton').innerText = 'Login';
+        document.getElementById('toggleText').innerHTML = 'Geen account? <span onclick="toggleAuth()">Registreren</span>';
+        const emailContainer = document.getElementById('emailContainer');
+        if (emailContainer) emailContainer.classList.remove('visible');
+    }
+}
+
+async function logout() {
+    try {
+        const res = await fetch(`${apiRoot}/logout.php`, { method: 'POST' });
+        const data = await res.json();
+        if (data.success) {
+            isLoggedIn = false;
+            currentUsername = null;
+            setAuthMessage('Je bent uitgelogd.', 'success');
+            updateAuthUI();
+            if (authOverlay) authOverlay.style.display = 'flex';
+        }
+    } catch (error) {
+        console.error(error);
+        setAuthMessage('Uitloggen mislukt.', 'error');
+    }
+}
+
+function updateAuthUI() {
+    const authTrigger = document.getElementById('authTrigger');
+    const logoutBtn = document.getElementById('logoutBtn');
+
+    if (isLoggedIn) {
+        if (authTrigger) authTrigger.style.display = 'none';
+        if (logoutBtn) logoutBtn.style.display = 'inline-flex';
+        setAuthMessage(`Ingelogd als ${currentUsername || 'gebruiker'}.`, 'success');
+    } else {
+        if (authTrigger) authTrigger.style.display = 'inline-flex';
+        if (logoutBtn) logoutBtn.style.display = 'none';
+        setAuthMessage('', '');
+    }
+}
+
+function toggleTheme() {
+    const isDark = document.body.classList.toggle('dark');
+    const themeToggle = document.getElementById('themeToggle');
+    if (themeToggle) {
+        themeToggle.textContent = isDark ? '☀️' : '🌙';
+        localStorage.setItem('theme', isDark ? 'dark' : 'light');
+    }
+}
+
+function initTheme() {
+    const saved = localStorage.getItem('theme');
+    let isDark = false;
+
+    if (saved) {
+        // Gebruiker heeft eerder een keuze gemaakt
+        isDark = saved === 'dark';
+    } else {
+        // Gebruik systeemvoorkeur als geen keuze is gemaakt
+        isDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    }
+
+    if (isDark) {
+        document.body.classList.add('dark');
+    } else {
+        document.body.classList.remove('dark');
+    }
+
+    const themeToggle = document.getElementById('themeToggle');
+    if (themeToggle) {
+        themeToggle.textContent = isDark ? '☀️' : '🌙';
+    }
+}
+
+function updatePasswordVisibility() {
+    const pwd = document.getElementById('password');
+    const icon = document.getElementById('showPasswordLabel');
+    if (pwd.type === 'password') {
+        pwd.type = 'text';
+        icon.textContent = 'Verberg';
+    } else {
+        pwd.type = 'password';
+        icon.textContent = 'Toon';
+    }
+}
+
+async function submitAuth(event) {
+    if (event) event.preventDefault();
+
+    const username = document.getElementById('username').value.trim();
+    const password = document.getElementById('password').value;
+    const email = document.getElementById('email') ? document.getElementById('email').value.trim() : '';
+    const submitBtn = document.getElementById('authSubmitButton');
+
+    if (!username || !password) {
+        setAuthMessage('Vul gebruikersnaam en wachtwoord in.', 'error');
+        return;
+    }
+
+    if (!isLogin) {
+        if (!email) {
+            setAuthMessage('Vul een geldig e-mailadres in.', 'error');
+            return;
+        }
+        if (password.length < 6) {
+            setAuthMessage('Wachtwoord moet minimaal 6 tekens bevatten.', 'error');
+            return;
+        }
+    }
+
+    submitBtn.disabled = true;
+    submitBtn.textContent = isLogin ? 'Even geduld...' : 'Registreren...';
+    setAuthMessage('', '');
+
+    try {
+        const url = isLogin ? `${apiRoot}/login.php` : `${apiRoot}/register.php`;
+        const rememberMe = document.getElementById('rememberMe')?.checked || false;
+        const payload = isLogin ? { username, password, remember_me: rememberMe } : { username, email, password };
+        console.debug('Auth request:', { url, method: 'POST', payload });
+        const res = await fetch(url, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(payload),
+        });
+
+        if (!res.ok) {
+            const text = await res.text();
+            let parsed;
+            try {
+                parsed = JSON.parse(text);
+            } catch (e) {
+                parsed = null;
+            }
+
+            const apiError = parsed?.error || parsed?.message || text || `HTTP ${res.status}`;
+            console.error('API fout', res.status, apiError);
+            setAuthMessage(apiError, 'error');
+            return;
+        }
+
+        const data = await res.json();
+
+        if (data.success) {
+            isLoggedIn = true;
+            currentUsername = username;
+            updateAuthUI();
+
+            setAuthMessage(isLogin ? 'Inloggen geslaagd! Je wordt doorgestuurd...' : 'Registratie geslaagd! Je kunt nu inloggen.', 'success');
+
+            setTimeout(() => {
+                if (authOverlay) authOverlay.style.display = 'none';
+                if (data.role === 'admin') window.location.href = '/Koopjeskoken/admin/dashboard.php';
+            }, 600);
+        } else {
+            setAuthMessage(data.error || 'Er is iets misgegaan, probeer opnieuw.', 'error');
+        }
+    } catch (error) {
+        console.error('Auth netwerkfout', error);
+        setAuthMessage('Kan geen verbinding maken met de server. Controleer XAMPP/PHP en URL.', 'error');
+    } finally {
+        submitBtn.disabled = false;
+        submitBtn.textContent = isLogin ? 'Login' : 'Register';
+    }
+}
+
+window.addEventListener('load', async () => {
+    authOverlay = document.getElementById('authOverlay');
+    authMessage = document.getElementById('authMessage');
+
+    try {
+        const res = await fetch(`${apiRoot}/check_session.php`);
+        const session = await res.json();
+        console.log('Session check result:', session);
+
+        if (session.logged_in) {
+            isLoggedIn = true;
+            currentUsername = session.username || null;
+            console.log('User is logged in as:', currentUsername);
+            if (authOverlay) authOverlay.style.display = 'none';
+        } else {
+            console.log('User is not logged in');
+        }
+    } catch (e) {
+        console.error('Session check failed:', e);
+    }
+
+    updateAuthUI();
+    initTheme();
+
+    const passwordHint = document.getElementById('passwordHint');
+    if (passwordHint) passwordHint.classList.remove('visible'); // Start hidden for login mode
+
+    const authForm = document.getElementById('authForm');
+    if (authForm) authForm.addEventListener('submit', submitAuth);
+
+    const showPasswordCheckbox = document.getElementById('showPasswordCheckbox');
+    if (showPasswordCheckbox) showPasswordCheckbox.addEventListener('change', updatePasswordVisibility);
+});
+</script>
+<body>
+  <!-- LOGIN BOX -->
+<div id="authOverlay">
+    <div class="auth-box" role="dialog" aria-modal="true" aria-labelledby="authTitle">
+        <h2 id="authTitle">Login</h2>
+
+        <form id="authForm" novalidate>
+            <label for="username">Gebruikersnaam</label>
+            <input type="text" id="username" name="username" placeholder="Gebruikersnaam" autocomplete="username" required>
+
+            <div class="auth-email" id="emailContainer">
+                <label for="email">E-mailadres</label>
+                <input type="email" id="email" name="email" placeholder="E-mailadres" autocomplete="email">
+            </div>
+
+            <label for="password">Wachtwoord</label>
+            <input type="password" id="password" name="password" placeholder="Wachtwoord" autocomplete="current-password" required>
+
+            <div class="auth-controls">
+                <label for="rememberMe">Onthoud mij</label>
+                <input type="checkbox" id="rememberMe" name="rememberMe" />
+                <label id="showPasswordLabel" for="showPasswordCheckbox">Toon</label>
+                <input type="checkbox" id="showPasswordCheckbox" aria-label="Wachtwoord tonen" />
+                <small id="passwordHint" class="register-only">Minimaal 6 tekens</small>
+            </div>
+
+            <button type="submit" id="authSubmitButton">Login</button>
+            <div id="authMessage" aria-live="polite"></div>
+        </form>
+
+        <p id="toggleText">Geen account? <span onclick="toggleAuth()">Registreren</span></p>
+    </div>
+</div>
 <!-- NAV -->
 <nav>
   <div class="nav-inner">
@@ -353,6 +777,9 @@
     </ul>
     <div class="nav-right">
       <button class="btn-nav" onclick="openCart()">🛒 Boodschappenlijst<span class="cart-count" id="cartCount" style="display:none">0</span></button>
+      <button class="btn-nav" id="authTrigger" onclick="showAuth()">🔐 Login</button>
+      <button class="btn-nav" id="logoutBtn" onclick="logout()" style="display:none">🚪 Logout</button>
+      <button class="btn-nav" id="themeToggle" onclick="toggleTheme()">🌙</button>
     </div>
   </div>
 </nav>
