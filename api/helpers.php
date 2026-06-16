@@ -5,17 +5,23 @@
 
 // ── Headers ──────────────────────────────────────────────────────────────────
 
-function setCorsHeaders(): void {
-    // Adjust the allowed origin to match your actual front-end URL in production.
-    $allowedOrigins = [
+function getAllowedOrigins(): array {
+    $env = getenv('CORS_ALLOWED_ORIGINS');
+    if ($env !== false && $env !== '') {
+        return array_map('trim', explode(',', $env));
+    }
+    return [
         'http://localhost',
         'http://127.0.0.1',
         'http://127.0.0.1:5500',
         'http://localhost:5500',
     ];
+}
+
+function setCorsHeaders(): void {
     $origin = $_SERVER['HTTP_ORIGIN'] ?? '';
 
-    if (in_array($origin, $allowedOrigins, true)) {
+    if (in_array($origin, getAllowedOrigins(), true)) {
         header('Access-Control-Allow-Origin: ' . $origin);
         header('Access-Control-Allow-Credentials: true');
     }
@@ -37,18 +43,27 @@ function handleOptions(): void {
 
 // ── Session ───────────────────────────────────────────────────────────────────
 
+const IDLE_TIMEOUT = 30 * 60; // 30 minutes of inactivity expires the session
+
 function startSecureSession(bool $rememberMe = false): void {
     if (session_status() === PHP_SESSION_NONE) {
-        $lifetime = $rememberMe ? 30 * 24 * 60 * 60 : 0; // 30 days if remember me, else session only
+        $lifetime = $rememberMe ? 30 * 24 * 60 * 60 : 0;
         session_set_cookie_params([
             'lifetime' => $lifetime,
             'path'     => '/',
-            'secure'   => false,   // set to false for local HTTP development
+            'secure'   => false,   // set to true in production (HTTPS)
             'httponly' => true,
             'samesite' => 'Strict',
         ]);
         session_start();
     }
+
+    if (isset($_SESSION['last_active']) && (time() - $_SESSION['last_active']) > IDLE_TIMEOUT) {
+        session_unset();
+        session_destroy();
+        session_start();
+    }
+    $_SESSION['last_active'] = time();
 }
 
 // ── CSRF ──────────────────────────────────────────────────────────────────────

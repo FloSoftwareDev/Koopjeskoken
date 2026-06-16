@@ -1,10 +1,8 @@
 <?php
-// Ideally these come from environment variables or a config file outside the web root.
-// For local dev you can keep them here, but never commit real credentials.
 define('DB_HOST', 'localhost');
-define('DB_USER', 'root');
-define('DB_PASS', '');
-define('DB_NAME', 'koopjeskoken');
+define('DB_USER', 'u82149p138748_koopjeskoken');
+define('DB_PASS', 'j2JTRwpM4zbNpYREpLU6');
+define('DB_NAME', 'u82149p138748_koopjeskoken');
 
 function getDb(): mysqli {
     static $conn = null;

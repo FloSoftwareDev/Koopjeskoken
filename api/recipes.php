@@ -14,12 +14,7 @@ $conn   = getDb();
 if ($method === 'GET') {
     $stmt   = $conn->prepare('SELECT id, title, description, ingredients, instructions, created_at FROM recipes ORDER BY created_at DESC');
     $stmt->execute();
-    $result = $stmt->get_result();
-
-    $recipes = [];
-    while ($row = $result->fetch_assoc()) {
-        $recipes[] = $row;
-    }
+    $recipes = $stmt->get_result()->fetch_all(MYSQLI_ASSOC);
     $stmt->close();
 
     echo json_encode($recipes);
@@ -59,6 +54,50 @@ if ($method === 'POST') {
     exit;
 }
 
+// ── PUT /recipes.php?id=X — admin only, update a recipe ─────────────────────
+if ($method === 'PUT') {
+    requireAdmin();
+    verifyCsrfToken();
+
+    $id = filter_input(INPUT_GET, 'id', FILTER_VALIDATE_INT);
+    if (!$id) {
+        http_response_code(400);
+        echo json_encode(['error' => 'Valid recipe id is required']);
+        exit;
+    }
+
+    $data = getJsonBody();
+    requireFields($data, ['title', 'description', 'ingredients', 'instructions']);
+
+    $title        = trim($data['title']);
+    $description  = trim($data['description']);
+    $ingredients  = trim($data['ingredients']);
+    $instructions = trim($data['instructions']);
+
+    if (strlen($title) > 255) {
+        http_response_code(422);
+        echo json_encode(['error' => 'Title is too long (max 255 characters)']);
+        exit;
+    }
+
+    $stmt = $conn->prepare(
+        'UPDATE recipes SET title=?, description=?, ingredients=?, instructions=? WHERE id=?'
+    );
+    $stmt->bind_param('ssssi', $title, $description, $ingredients, $instructions, $id);
+    $stmt->execute();
+    $affected = $stmt->affected_rows;
+    $stmt->close();
+
+    if ($affected === 0) {
+        http_response_code(404);
+        echo json_encode(['error' => 'Recipe not found']);
+        exit;
+    }
+
+    echo json_encode(['success' => true]);
+    exit;
+}
+
 // ── DELETE /recipes.php?id=X — admin only ────────────────────────────────────
 if ($method === 'DELETE') {
     requireAdmin();
@@ -74,13 +113,14 @@ if ($method === 'DELETE') {
     $stmt = $conn->prepare('DELETE FROM recipes WHERE id = ?');
     $stmt->bind_param('i', $id);
     $stmt->execute();
+    $affected = $stmt->affected_rows;
+    $stmt->close();
 
-    if ($stmt->affected_rows === 0) {
+    if ($affected === 0) {
         http_response_code(404);
         echo json_encode(['error' => 'Recipe not found']);
         exit;
     }
-    $stmt->close();
 
     echo json_encode(['success' => true]);
     exit;

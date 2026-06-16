@@ -33,7 +33,7 @@ function normalizeProduct(raw, supermarkt) {
   const naam = (raw.naam || '').trim();
 
   return {
-    id:           `${supermarkt}-${raw.id || naam.toLowerCase().replace(/[^a-z0-9]/g,'-').slice(0,30)}-${Date.now()%10000}`,
+    id:           `${supermarkt}-${(raw.id || naam.toLowerCase().replace(/[^a-z0-9]/g,'-').slice(0,40))}`,
     supermarkt,
     naam,
     beschrijving: (raw.beschrijving || '').trim(),
@@ -124,12 +124,12 @@ async function getAHToken() {
     { headers: { 'Content-Type': 'application/json', ...AH_HEADERS }, timeout: 10000 }
   );
   ahToken = res.data.access_token;
-  ahTokenExpiry = Date.now() + (res.data.expires_in - 300) * 1000;
+  ahTokenExpiry = Date.now() + Math.max(60, (res.data.expires_in ?? 3600) - 300) * 1000;
   return ahToken;
 }
 
 async function fetchAH() {
-  console.log('🛒 Albert Heijn: aanbiedingen ophalen...');
+  console.log('Albert Heijn: aanbiedingen ophalen...');
   const deals = [];
   const gezien = new Set();
 
@@ -154,17 +154,26 @@ async function fetchAH() {
 
         for (const item of producten) {
           const p = item.product || item;
-          if (!p?.title || gezien.has(p.webshopId)) continue;
+          if (!p?.title) continue;
+
+          // webshopId can be undefined for some items; fall back to id.
+          // Without a stable key, skip rather than risk duplicates or dropped batches.
+          const productId = p.webshopId ?? p.id;
+          if (!productId || gezien.has(productId)) continue;
 
           const heeftBonus = p.discount || p.bonusPrice || p.isBonus
             || p.isBonusPeriod || (p.priceLabel?.was && p.priceLabel?.now);
           if (!heeftBonus) continue;
 
-          gezien.add(p.webshopId);
+          gezien.add(productId);
 
-          // priceLabel.now = normale prijs, priceLabel.was = bonusprijs
-          const prijsWas = parseFloat(p.priceLabel?.now?.amount || p.currentPrice || 0);
-          let   prijsNu  = parseFloat(p.priceLabel?.was?.amount || p.bonusPrice?.amount || 0);
+          // AH API naming is inverted relative to normal Dutch:
+          // priceLabel.now  = the regular (pre-sale) price  → prijsWas
+          // priceLabel.was  = the bonus (sale) price        → prijsNu
+          const ahRegularPrice = parseFloat(p.priceLabel?.now?.amount || p.currentPrice || 0);
+          const ahBonusPrice   = parseFloat(p.priceLabel?.was?.amount || p.bonusPrice?.amount || 0);
+          const prijsWas = ahRegularPrice;
+          let   prijsNu  = ahBonusPrice;
 
           const kortingTekst = (p.discountDescription || p.shield?.text || '').toUpperCase();
 
@@ -203,11 +212,11 @@ async function fetchAH() {
       }
     }
 
-    console.log(`  ✅ AH: ${deals.length} aanbiedingen`);
+    console.log(`  AH: ${deals.length} aanbiedingen`);
     return deals;
 
   } catch (err) {
-    console.error(`  ❌ AH mislukt: ${err.message}`);
+    console.error(`  AH mislukt: ${err.message}`);
     return [];
   }
 }
@@ -222,7 +231,7 @@ async function getBrowser() {
   if (!puppeteer) throw new Error('Puppeteer niet geïnstalleerd. Voer uit: npm install puppeteer');
   if (!browserInstantie || !browserInstantie.connected) {
     browserInstantie = await puppeteer.launch({
-      headless: 'new',
+      headless: true,
       args: [
         '--no-sandbox',
         '--disable-setuid-sandbox',
@@ -242,34 +251,37 @@ async function sluitBrowser() {
   }
 }
 
-// Open een pagina, wacht tot producten geladen zijn, geef de HTML terug
-async function haalPaginaOp(url, wachtSelector, timeout = 20000) {
+async function openPage() {
   const browser = await getBrowser();
   const pagina  = await browser.newPage();
 
   await pagina.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36');
   await pagina.setViewport({ width: 1280, height: 800 });
-
-  // Blokkeer afbeeldingen/fonts om sneller te laden
   await pagina.setRequestInterception(true);
   pagina.on('request', req => {
-    const type = req.resourceType();
-    if (['image', 'font', 'media'].includes(type)) req.abort();
+    if (['image', 'font', 'media'].includes(req.resourceType())) req.abort();
     else req.continue();
   });
 
+  return pagina;
+}
+
+// Klik op een cookie/consent-knop als die zichtbaar is. Tolereert mislukken stil —
+// sommige pagina's hebben geen wall, of het cookie is al gezet via session reuse.
+async function accepteerCookies(pagina, naalden) {
   try {
-    await pagina.goto(url, { waitUntil: 'networkidle2', timeout });
-    if (wachtSelector) {
-      await pagina.waitForSelector(wachtSelector, { timeout: 15000 }).catch(() => {});
-    }
-    // Extra wacht voor lazy-load
-    await new Promise(r => setTimeout(r, 2000));
-    const html = await pagina.content();
-    return html;
-  } finally {
-    await pagina.close();
-  }
+    await pagina.evaluate(needles => {
+      const knoppen = document.querySelectorAll('button, a[role="button"]');
+      for (const b of knoppen) {
+        const t = (b.textContent || '').trim().toLowerCase();
+        if (needles.some(n => t.includes(n.toLowerCase()))) {
+          b.click();
+          return;
+        }
+      }
+    }, naalden);
+    await new Promise(r => setTimeout(r, 1500));
+  } catch {}
 }
 
 // ═══════════════════════════════════════════════
@@ -277,65 +289,67 @@ async function haalPaginaOp(url, wachtSelector, timeout = 20000) {
 // ═══════════════════════════════════════════════
 
 async function fetchJumbo() {
-  console.log('🟡 Jumbo: aanbiedingen ophalen via Puppeteer...');
+  console.log('Jumbo: aanbiedingen ophalen via Puppeteer...');
   const deals = [];
+  const gezienIds = new Set();
 
   try {
-    const browser = await getBrowser();
-    const pagina  = await browser.newPage();
+    const pagina = await openPage();
 
-    await pagina.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36');
-    await pagina.setViewport({ width: 1280, height: 800 });
-    await pagina.setRequestInterception(true);
-    pagina.on('request', req => {
-      if (['image','font','media'].includes(req.resourceType())) req.abort();
-      else req.continue();
-    });
-
-    await pagina.goto('https://www.jumbo.com/aanbiedingen/nu', { waitUntil: 'networkidle2', timeout: 30000 });
-    await pagina.waitForSelector('.card-promotion', { timeout: 15000 }).catch(() => {});
+    await pagina.goto('https://www.jumbo.com/aanbiedingen/nu', { waitUntil: 'domcontentloaded', timeout: 30000 });
     await new Promise(r => setTimeout(r, 2000));
+    await accepteerCookies(pagina, ['Akkoord', 'Alle toestaan', 'Accepteer']);
+    await pagina.waitForSelector('.card-promotion', { timeout: 15000 }).catch(() => {});
+    await new Promise(r => setTimeout(r, 1500));
 
     const producten = await pagina.evaluate(() => {
       const cards = document.querySelectorAll('.card-promotion');
       return Array.from(cards).map(card => {
         const volleTekst = card.textContent.replace(/\s+/g, ' ').trim();
-        const naamEl = card.querySelector('.item-text, [class*="title"], [class*="name"], h2, h3');
+        // Titel zit in een h3 met een geneste <a> — die <a> bevat alleen de naam
+        const naamEl = card.querySelector('h3 a, h3, [class*="title"]');
         const naam = naamEl?.textContent?.trim() || '';
+        const promoEl = card.querySelector('[data-testid="jum-tag"], .jum-tag');
+        const promoTxt = promoEl?.textContent?.trim() || '';
         const img  = card.querySelector('img')?.src || '';
-        return { naam, volleTekst, img };
-      }).filter(p => p.volleTekst.length > 3);
+        // Het <li>-element heeft een unieke id (productnummer); gebruik voor dedup
+        const id = card.id || '';
+        return { id, naam, promoTxt, volleTekst, img };
+      });
     });
 
     await pagina.close();
 
     for (const p of producten) {
       let prijsNu = 0;
-      let naam = p.naam;
-      let kortingLabel = '';
+      let kortingLabel = p.promoTxt;
 
-      const voorMatch  = p.volleTekst.match(/(\d+)\s+voor\s+(\d+[,.]\d{2})/i);
-      const prijsMatch = p.volleTekst.match(/(\d+[,.]\d{2})/);
-
+      // Patronen: "4 voor 10,00", "2 voor €4,50", "Nu 3,49", "€1,99"
+      const voorMatch = p.promoTxt.match(/(\d+)\s*voor\s*€?\s*(\d+[,.]\d{2})/i)
+        || p.volleTekst.match(/(\d+)\s*voor\s*€?\s*(\d+[,.]\d{2})/i);
       if (voorMatch) {
         const aantal = parseInt(voorMatch[1]);
         const totaal = parseFloat(voorMatch[2].replace(',', '.'));
-        prijsNu = Math.round((totaal / aantal) * 100) / 100;
-        kortingLabel = `${voorMatch[1]} voor €${voorMatch[2]}`;
-      } else if (prijsMatch) {
-        prijsNu = parseFloat(prijsMatch[1].replace(',', '.'));
+        if (aantal > 0) prijsNu = Math.round((totaal / aantal) * 100) / 100;
+        if (!kortingLabel) kortingLabel = `${aantal} voor €${voorMatch[2]}`;
+      } else {
+        const m = p.promoTxt.match(/(\d+[,.]\d{2})/) || p.volleTekst.match(/€?\s*(\d+[,.]\d{2})/);
+        if (m) prijsNu = parseFloat(m[1].replace(',', '.'));
       }
 
-      if (!naam) {
-        naam = p.volleTekst
-          .replace(/(\d+\s+voor\s+)?\d+[,.]\d{2}/gi, '')
-          .replace(/\b(ma|di|wo|do|vr|za|zo)\s+\d+\s+\w+(\s+t\/m\s+\w+\s+\d+\s+\w+)?/gi, '')
-          .replace(/\s+/g, ' ').trim().slice(0, 60);
-      }
+      const naam = p.naam || p.volleTekst
+        .replace(/(\d+\s*voor\s*€?\s*)?\d+[,.]\d{2}/gi, '')
+        .replace(/\b(ma|di|wo|do|vr|za|zo)\s+\d+\s+\w+(\s+t\/m\s+\w+\s+\d+\s+\w+)?/gi, '')
+        .replace(/\s+/g, ' ').trim().slice(0, 60);
 
       if (!naam || prijsNu <= 0) continue;
 
+      // Dedup: dezelfde id mag maar 1x in de output
+      if (p.id && gezienIds.has(p.id)) continue;
+      if (p.id) gezienIds.add(p.id);
+
       deals.push(normalizeProduct({
+        id: p.id || undefined,
         naam, prijsNu, prijsWas: 0,
         korting: kortingLabel,
         afbeelding: p.img,
@@ -343,181 +357,188 @@ async function fetchJumbo() {
       }, 'jumbo'));
     }
 
-    console.log(`  ✅ Jumbo: ${deals.length} aanbiedingen`);
+    console.log(`  Jumbo: ${deals.length} aanbiedingen`);
     return deals;
 
   } catch (err) {
-    console.error(`  ❌ Jumbo mislukt: ${err.message}`);
+    console.error(`  Jumbo mislukt: ${err.message}`);
     return [];
   }
 }
 
 
 async function fetchLidl() {
-  console.log('🔵 Lidl: aanbiedingen ophalen via Puppeteer...');
+  console.log('Lidl: aanbiedingen ophalen via Puppeteer...');
   const deals = [];
+  const gezienIds = new Set();
 
   try {
-    const browser = await getBrowser();
-    const pagina  = await browser.newPage();
+    const pagina = await openPage();
+    await pagina.goto('https://www.lidl.nl/c/aanbiedingen/a10008785', { waitUntil: 'domcontentloaded', timeout: 30000 });
+    await new Promise(r => setTimeout(r, 2500));
+    await accepteerCookies(pagina, ['Akkoord', 'Alle toestaan', 'Accepteren']);
+    await new Promise(r => setTimeout(r, 2000));
 
-    await pagina.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36');
-    await pagina.setViewport({ width: 1280, height: 800 });
-    await pagina.setRequestInterception(true);
-    pagina.on('request', req => {
-      if (['image','font','media'].includes(req.resourceType())) req.abort();
-      else req.continue();
-    });
-
-    // Lidl blokkeert vaak — probeer met een langere wachttijd
-    await pagina.goto('https://www. .nl/c/aanbiedingen/a10008785', { waitUntil: 'domcontentloaded', timeout: 30000 });
-    await new Promise(r => setTimeout(r, 5000));
-
-    const producten = await pagina.evaluate(() => {
-      // Lidl laadt producten via __NEXT_DATA__ of window state
-      // Probeer eerst JSON data uit de pagina te halen
-      const nextData = document.getElementById('__NEXT_DATA__');
-      if (nextData) {
-        try {
-          const data = JSON.parse(nextData.textContent);
-          const pages = data?.props?.pageProps;
-          const offers = pages?.offers || pages?.products || pages?.items || [];
-          if (offers.length > 0) return { type: 'json', offers };
-        } catch(e) {}
+    // Scroll om lazy-loaded tiles te laten renderen
+    await pagina.evaluate(async () => {
+      for (let i = 0; i < 6; i++) {
+        window.scrollTo(0, document.body.scrollHeight);
+        await new Promise(r => setTimeout(r, 700));
       }
+      window.scrollTo(0, 0);
+    });
+    await new Promise(r => setTimeout(r, 1000));
 
-      // Fallback: zoek product tiles in DOM
-      const tiles = document.querySelectorAll('[class*="offer-card"], [class*="OfferCard"], [class*="product-grid"] > *');
-      return {
-        type: 'html',
-        offers: Array.from(tiles).map(tile => ({
-          naam:    tile.querySelector('[class*="title"], [class*="headline"], h2, h3')?.textContent?.trim() || '',
-          prijs:   tile.querySelector('[class*="price__main"], [class*="price-main"]')?.textContent?.trim() || '',
-          was:     tile.querySelector('[class*="struck"], [class*="strike"], del')?.textContent?.trim() || '',
-          korting: tile.querySelector('[class*="badge"], [class*="discount"]')?.textContent?.trim() || '',
-        })).filter(p => p.naam),
-      };
+    // Elke product-card heeft een `data-gridbox-impression` met URL-encoded JSON
+    // (id, name, price, category enz.) — veel betrouwbaarder dan de zichtbare DOM.
+    const ruw = await pagina.evaluate(() => {
+      const cards = document.querySelectorAll('[data-gridbox-impression]');
+      return Array.from(cards).map(card => {
+        const link = card.querySelector('a[href*="/p/"]');
+        const titel = card.querySelector('[class*="product-grid-box__title"], [data-qa-label="product-grid-box-title"]');
+        const img   = card.querySelector('img')?.src || '';
+        return {
+          impression: card.getAttribute('data-gridbox-impression') || '',
+          href:       link?.getAttribute('href') || '',
+          titelDOM:   titel?.textContent?.trim() || '',
+          img,
+        };
+      });
     });
 
     await pagina.close();
 
-    if (producten.type === 'json') {
-      producten.offers.forEach(o => {
-        const naam = o.fullTitle || o.name || o.title || '';
-        const prijsNu = parseNLPrice(o.price?.price || o.currentPrice || 0);
-        if (naam && prijsNu > 0) {
-          deals.push(normalizeProduct({
-            naam, prijsNu,
-            prijsWas: parseNLPrice(o.price?.recommendedRetailPrice || o.originalPrice || 0),
-            korting:  o.discount?.description || o.badgeText || '',
-            categorie: 'Lidl Aanbieding',
-          }, 'lidl'));
-        }
-      });
-    } else {
-      producten.offers.forEach(p => {
-        const prijsNu = parseNLPrice(p.prijs);
-        if (p.naam && prijsNu > 0) {
-          deals.push(normalizeProduct({
-            naam: p.naam, prijsNu,
-            prijsWas: parseNLPrice(p.was),
-            korting: p.korting,
-            categorie: 'Lidl Aanbieding',
-          }, 'lidl'));
-        }
-      });
+    for (const r of ruw) {
+      let info;
+      try { info = JSON.parse(decodeURIComponent(r.impression)); } catch { continue; }
+
+      const id      = String(info.id || '');
+      const naam    = info.name || info.fullTitle || r.titelDOM || '';
+      const prijsNu = Number(info.price) || 0;
+      const cat     = info.wonCategoryPrimary?.split('/').pop() || info.categoryPrimary || 'Lidl Aanbieding';
+
+      if (!naam || prijsNu <= 0) continue;
+      if (id && gezienIds.has(id)) continue;
+      if (id) gezienIds.add(id);
+
+      deals.push(normalizeProduct({
+        id, naam, prijsNu,
+        prijsWas:  0,                 // Lidl toont de "was"-prijs niet in deze impression
+        korting:   info.promotionName || '',
+        afbeelding: r.img,
+        categorie: cat,
+      }, 'lidl'));
     }
 
-    console.log(`  ✅ Lidl: ${deals.length} aanbiedingen`);
+    console.log(`  Lidl: ${deals.length} aanbiedingen`);
     return deals;
 
   } catch (err) {
-    console.error(`  ❌ Lidl mislukt: ${err.message}`);
+    console.error(`  Lidl mislukt: ${err.message}`);
     return [];
   }
 }
 
 async function fetchAldi() {
-  console.log('🔵 Aldi: aanbiedingen ophalen via Puppeteer...');
+  console.log('Aldi: aanbiedingen ophalen via Puppeteer...');
   const deals = [];
+  const gezienIds = new Set();
 
   try {
-    const browser = await getBrowser();
-    const pagina  = await browser.newPage();
+    const pagina = await openPage();
 
-    await pagina.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36');
-    await pagina.setViewport({ width: 1280, height: 800 });
-    await pagina.setRequestInterception(true);
-    pagina.on('request', req => {
-      if (['image','font','media'].includes(req.resourceType())) req.abort();
-      else req.continue();
-    });
-
-    await pagina.goto('https://www.aldi.nl/aanbiedingen.html', { waitUntil: 'networkidle2', timeout: 30000 });
-    await pagina.waitForSelector('.product-tile', { timeout: 15000 }).catch(() => {});
+    await pagina.goto('https://www.aldi.nl/aanbiedingen.html', { waitUntil: 'domcontentloaded', timeout: 30000 });
     await new Promise(r => setTimeout(r, 2000));
+    await accepteerCookies(pagina, ['Akkoord', 'Alle toestaan', 'Accepteer']);
+    await pagina.waitForSelector('.product-tile', { timeout: 15000 }).catch(() => {});
+    await new Promise(r => setTimeout(r, 1500));
 
     const producten = await pagina.evaluate(() => {
       const tiles = document.querySelectorAll('.product-tile');
       return Array.from(tiles).map(tile => {
-        const naam    = tile.querySelector('[class*="title"], [class*="name"], h2, h3, [class*="headline"]')?.textContent?.trim() || '';
-        // Prijs: tag__label--price bevat de aanbiedingsprijs
-        const prijsEl = tile.querySelector('.tag__label.tag__label--price, [class*="tag__label--price"]');
-        const wasEl   = tile.querySelector('.tag__cross-price, [class*="cross-price"]');
-        const pctEl   = tile.querySelector('[class*="tag__price-tag--discount"], [class*="discount-tag"]');
-        const img     = tile.querySelector('img')?.src || '';
-        const korting = pctEl?.textContent?.trim() || tile.querySelector('.tile__banner')?.textContent?.trim() || '';
+        // BUGFIX: voorheen ving de selector [class*="name"] ook de lege
+        // .product-tile__content__upper__brand-name <p> — die staat VOOR de
+        // product-name h2, dus querySelector koos die als eerste match en
+        // gaf altijd '' terug.
+        const naam =
+             tile.querySelector('[data-testid$="-product-name"]')?.textContent?.trim()
+          || tile.querySelector('h2.product-tile__content__upper__product-name, [class*="product-name"]')?.textContent?.trim()
+          || tile.querySelector('h2, h3')?.textContent?.trim()
+          || '';
+
+        // Huidige prijs: span.tag__label.tag__label--price inside .tag__current
+        const prijsEl =
+             tile.querySelector('[data-testid$="-current-price-amount"]')
+          || tile.querySelector('.tag__current .tag__label--price, .tag__label.tag__label--price');
+
+        // Gestreepte was-prijs (niet altijd aanwezig)
+        const wasEl =
+             tile.querySelector('[data-testid$="-was-price-amount"]')
+          || tile.querySelector('.tag__cross-price, [class*="cross-price"], [class*="was-price"]');
+
+        // Promo-label ("VAN x.xx VOOR y.yy", "-25%", "OP=OP", ...)
+        const promoEl = tile.querySelector('.tag__promo .tag__label, [data-testid*="promo-label"], [class*="tag__price-tag--discount"]');
+
+        const img      = tile.querySelector('img')?.src || '';
+        const id       = tile.getAttribute('data-testid')?.match(/product-tile-(\d+)/)?.[1] || '';
 
         return {
-          naam,
+          id, naam,
           prijs:   prijsEl?.textContent?.trim() || '',
           was:     wasEl?.textContent?.trim() || '',
-          korting, img,
+          korting: promoEl?.textContent?.trim() || '',
+          img,
         };
-      }).filter(p => p.naam && p.prijs);
+      });
     });
 
     await pagina.close();
 
     for (const p of producten) {
       const prijsNu  = parseNLPrice(p.prijs);
-      const prijsWas = parseNLPrice(p.was);
+      let   prijsWas = parseNLPrice(p.was);
+
+      // Soms staat de was-prijs alleen in de promo-tekst: "VAN 2.99 VOOR 1.99"
+      if (!prijsWas && p.korting) {
+        const m = p.korting.match(/van\s+(\d+[.,]\d{2})/i);
+        if (m) prijsWas = parseNLPrice(m[1]);
+      }
+
       if (!p.naam || prijsNu <= 0) continue;
+
+      // Dedup: dezelfde tile-id mag maar 1x voorkomen
+      if (p.id && gezienIds.has(p.id)) continue;
+      if (p.id) gezienIds.add(p.id);
+
       deals.push(normalizeProduct({
+        id: p.id || undefined,
         naam: p.naam, prijsNu, prijsWas,
         korting: p.korting, afbeelding: p.img,
         categorie: 'Aldi Aanbieding',
       }, 'aldi'));
     }
 
-    console.log(`  ✅ Aldi: ${deals.length} aanbiedingen`);
+    console.log(`  Aldi: ${deals.length} aanbiedingen`);
     return deals;
 
   } catch (err) {
-    console.error(`  ❌ Aldi mislukt: ${err.message}`);
+    console.error(`  Aldi mislukt: ${err.message}`);
     return [];
   }
 }
 
 async function fetchPlus() {
-  console.log('🟢 Plus: aanbiedingen ophalen via Puppeteer...');
+  console.log('Plus: aanbiedingen ophalen via Puppeteer...');
   const deals = [];
 
   try {
-    const browser = await getBrowser();
-    const pagina  = await browser.newPage();
+    const pagina = await openPage();
 
-    await pagina.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36');
-    await pagina.setViewport({ width: 1280, height: 800 });
-    await pagina.setRequestInterception(true);
-    pagina.on('request', req => {
-      if (['image','font','media'].includes(req.resourceType())) req.abort();
-      else req.continue();
-    });
-
-    await pagina.goto('https://www.plus.nl/aanbiedingen', { waitUntil: 'networkidle2', timeout: 30000 });
-    await pagina.waitForSelector('.plp-item-wrapper', { timeout: 15000 }).catch(() => {});
+    await pagina.goto('https://www.plus.nl/aanbiedingen', { waitUntil: 'domcontentloaded', timeout: 30000 });
     await new Promise(r => setTimeout(r, 2000));
+    await accepteerCookies(pagina, ['Accepteer', 'Akkoord', 'Alle toestaan']);
+    await pagina.waitForSelector('.plp-item-wrapper', { timeout: 15000 }).catch(() => {});
+    await new Promise(r => setTimeout(r, 1500));
 
     const producten = await pagina.evaluate(() => {
       const items = document.querySelectorAll('.plp-item-wrapper');
@@ -563,30 +584,21 @@ async function fetchPlus() {
       }, 'plus'));
     }
 
-    console.log(`  ✅ Plus: ${deals.length} aanbiedingen`);
+    console.log(`  Plus: ${deals.length} aanbiedingen`);
     return deals;
 
   } catch (err) {
-    console.error(`  ❌ Plus mislukt: ${err.message}`);
+    console.error(`  Plus mislukt: ${err.message}`);
     return [];
   }
 }
 
 async function fetchDirk() {
-  console.log('🔴 Dirk: aanbiedingen ophalen via Puppeteer...');
+  console.log('Dirk: aanbiedingen ophalen via Puppeteer...');
   const deals = [];
 
   try {
-    const browser = await getBrowser();
-    const pagina  = await browser.newPage();
-
-    await pagina.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36');
-    await pagina.setViewport({ width: 1280, height: 800 });
-    await pagina.setRequestInterception(true);
-    pagina.on('request', req => {
-      if (['image','font','media'].includes(req.resourceType())) req.abort();
-      else req.continue();
-    });
+    const pagina = await openPage();
 
     await pagina.goto('https://www.dirk.nl/aanbiedingen', { waitUntil: 'networkidle2', timeout: 30000 });
     await pagina.waitForSelector('article', { timeout: 15000 }).catch(() => {});
@@ -613,7 +625,7 @@ async function fetchDirk() {
         let prijsTxt = '';
         if (prijsGroot && prijsKlein) {
           // price-large is het geheel getal, price-small zijn de centen
-          prijsTxt = `${prijsGroot}.${prijsKlein.padEnd(2,'0')}`;
+          prijsTxt = `${prijsGroot.trim()}.${prijsKlein.replace(/\D/g,'').padEnd(2,'0').slice(0,2)}`;
         }
 
         // Was-prijs uit label: "van 1.19" → 1.19
@@ -660,11 +672,11 @@ async function fetchDirk() {
       }, 'dirk'));
     }
 
-    console.log(`  ✅ Dirk: ${deals.length} aanbiedingen`);
+    console.log(`  Dirk: ${deals.length} aanbiedingen`);
     return deals;
 
   } catch (err) {
-    console.error(`  ❌ Dirk mislukt: ${err.message}`);
+    console.error(`  Dirk mislukt: ${err.message}`);
     return [];
   }
 }

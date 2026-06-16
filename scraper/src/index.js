@@ -16,8 +16,22 @@ const {
   fetchAldi, fetchPlus, fetchDirk, cleanup,
 } = require('./scrapers');
 
-const DATA_DIR = path.join(__dirname, '..', 'data');
+// Two levels up from src/ lands at the web root, so the web server can serve
+// deals-frontend.json directly at ./data/deals-frontend.json
+const DATA_DIR = path.join(__dirname, '..', '..', 'data');
 if (!fs.existsSync(DATA_DIR)) fs.mkdirSync(DATA_DIR, { recursive: true });
+
+async function withRetry(fn, attempts = 3, delayMs = 5000) {
+  for (let i = 0; i < attempts; i++) {
+    try {
+      return await fn();
+    } catch (err) {
+      if (i === attempts - 1) throw err;
+      console.warn(`  Poging ${i + 1} mislukt, opnieuw over ${delayMs / 1000}s: ${err.message}`);
+      await new Promise(r => setTimeout(r, delayMs));
+    }
+  }
+}
 
 const args      = process.argv.slice(2);
 const watchMode = args.includes('--watch');
@@ -35,7 +49,7 @@ const scrapers = [
 
 async function scrapeAll() {
   console.log('\n══════════════════════════════════════════════');
-  console.log(`🍽️  KoopjesKoken Scraper — ${new Date().toLocaleString('nl-NL')}`);
+  console.log(`KoopjesKoken Scraper — ${new Date().toLocaleString('nl-NL')}`);
   console.log('══════════════════════════════════════════════\n');
 
   const actief = smFilter
@@ -43,7 +57,7 @@ async function scrapeAll() {
     : scrapers;
 
   if (actief.length === 0) {
-    console.error(`❌ Onbekende supermarkt: "${smFilter}"`);
+    console.error(`Onbekende supermarkt: "${smFilter}"`);
     process.exit(1);
   }
 
@@ -54,7 +68,7 @@ async function scrapeAll() {
   // AH eerst (API), daarna Puppeteer scrapers één voor één
   for (const scraper of actief) {
     try {
-      const deals = await scraper.fn();
+      const deals = await withRetry(() => scraper.fn());
       stats[scraper.id] = deals.length;
       alleDeals.push(...deals);
       slaOp(`deals-${scraper.id}.json`, deals);
@@ -92,20 +106,20 @@ async function scrapeAll() {
 
   // Samenvatting
   console.log('\n══════════════════════════════════════════════');
-  console.log('📊 Resultaten:');
+  console.log('Resultaten:');
   for (const [sm, count] of Object.entries(stats)) {
-    console.log(`   ${count > 0 ? '✅' : '⚠️ '} ${sm.padEnd(8)}: ${count} aanbiedingen`);
+    console.log(`   ${count > 0 ? 'OK ' : '-- '} ${sm.padEnd(8)}: ${count} aanbiedingen`);
   }
   if (fouten.length > 0) {
-    console.log('\n⚠️  Fouten:');
-    fouten.forEach(f => console.log(`   ❌ ${f.supermarkt}: ${f.fout}`));
+    console.log('\nFouten:');
+    fouten.forEach(f => console.log(`   ${f.supermarkt}: ${f.fout}`));
   }
-  console.log(`\n🎯 Totaal: ${geldig.length} deals opgeslagen`);
-  console.log(`💾 ${DATA_DIR}`);
+  console.log(`\nTotaal: ${geldig.length} deals opgeslagen`);
+  console.log(`${DATA_DIR}`);
   console.log('══════════════════════════════════════════════\n');
 
   if (testMode) {
-    console.log('🧪 Eerste 3 deals:');
+    console.log('Eerste 3 deals:');
     geldig.slice(0, 3).forEach((d, i) => {
       console.log(`   ${i+1}. [${d.supermarkt}] ${d.naam} — €${d.prijsNu} (was €${d.prijsWas})`);
     });
@@ -118,7 +132,7 @@ function slaOp(bestand, data) {
   const p = path.join(DATA_DIR, bestand);
   fs.writeFileSync(p, JSON.stringify(data, null, 2), 'utf8');
   const kb = (fs.statSync(p).size / 1024).toFixed(1);
-  console.log(`   💾 Opgeslagen: ${bestand} (${kb} KB)`);
+  console.log(`   Opgeslagen: ${bestand} (${kb} KB)`);
 }
 
 if (watchMode) {

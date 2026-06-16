@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash",
+      "PowerShell",
+      "Read(//c/xampp/php/**)"
+    ]
+  }
+}

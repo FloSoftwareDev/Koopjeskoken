@@ -1,11 +1,20 @@
 <?php
+require_once __DIR__ . '/../auth_guard.php';
 require_once __DIR__ . '/../api/db.php';
 require_once __DIR__ . '/../api/helpers.php';
 
-startSecureSession();
 requireAdmin();
 
 $csrfToken = generateCsrfToken();
+
+// Derive the API base from the request so the dashboard works regardless of
+// where the project is mounted (localhost/Koopjeskoken vs localhost/app vs ...).
+$apiBase = rtrim(dirname(dirname($_SERVER['SCRIPT_NAME'])), '/') . '/api';
+
+// Per-request nonce for the CSP script-src. Any injected <script> without
+// this nonce is blocked by the browser even if escHtml() is somehow bypassed.
+$nonce = base64_encode(random_bytes(16));
+header("Content-Security-Policy: default-src 'none'; script-src 'nonce-{$nonce}'; style-src 'unsafe-inline'; connect-src 'self'; font-src 'self'");
 ?>
 <!DOCTYPE html>
 <html lang="nl">
@@ -21,7 +30,9 @@ $csrfToken = generateCsrfToken();
         #message { margin-top: 1rem; font-style: italic; }
         #recipes-list { margin-top: 2rem; }
         .recipe-item { border: 1px solid #ccc; padding: 1rem; margin-bottom: 1rem; }
+        .edit-btn   { background: #2980b9; color: #fff; border: none; padding: .4rem .8rem; cursor: pointer; margin-right: .4rem; }
         .delete-btn { background: #c0392b; color: #fff; border: none; padding: .4rem .8rem; cursor: pointer; }
+        .cancel-btn { margin-top: 1rem; margin-left: .5rem; padding: .6rem 1.4rem; cursor: pointer; }
     </style>
 </head>
 <body>
@@ -32,7 +43,7 @@ $csrfToken = generateCsrfToken();
 
 <hr>
 
-<h2>Recept toevoegen</h2>
+<h2 id="form-heading">Recept toevoegen</h2>
 
 <label for="title">Titel</label>
 <input id="title" type="text" maxlength="255" placeholder="Naam van het recept">
@@ -46,14 +57,16 @@ $csrfToken = generateCsrfToken();
 <label for="instructions">Bereidingswijze</label>
 <textarea id="instructions" rows="6" placeholder="Stap voor stap uitleg"></textarea>
 
-<button onclick="addRecipe()">Recept opslaan</button>
+<button id="save-btn" onclick="saveRecipe()">Recept opslaan</button>
+<button id="cancel-btn" class="cancel-btn" onclick="resetForm()" style="display:none">Annuleren</button>
 <div id="message"></div>
 
 <h2>Bestaande recepten</h2>
 <div id="recipes-list">Laden…</div>
 
-<script>
-    const CSRF = <?= json_encode($csrfToken) ?>;
+<script nonce="<?= htmlspecialchars($nonce) ?>">
+    const CSRF    = <?= json_encode($csrfToken) ?>;
+    const API_BASE = <?= json_encode($apiBase) ?>;
 
     async function apiFetch(url, options = {}) {
         options.headers = Object.assign({
@@ -66,7 +79,32 @@ $csrfToken = generateCsrfToken();
         return res;
     }
 
-    async function addRecipe() {
+    let editingId = null; // null = create mode, number = edit mode
+
+    function setEditMode(recipe) {
+        editingId = recipe.id;
+        document.getElementById('title').value        = recipe.title;
+        document.getElementById('description').value  = recipe.description;
+        document.getElementById('ingredients').value  = recipe.ingredients;
+        document.getElementById('instructions').value = recipe.instructions;
+        document.getElementById('form-heading').textContent = 'Recept bewerken';
+        document.getElementById('save-btn').textContent     = 'Wijzigingen opslaan';
+        document.getElementById('cancel-btn').style.display = 'inline';
+        document.getElementById('title').focus();
+    }
+
+    function resetForm() {
+        editingId = null;
+        ['title','description','ingredients','instructions'].forEach(id => {
+            document.getElementById(id).value = '';
+        });
+        document.getElementById('form-heading').textContent = 'Recept toevoegen';
+        document.getElementById('save-btn').textContent     = 'Recept opslaan';
+        document.getElementById('cancel-btn').style.display = 'none';
+        document.getElementById('message').textContent = '';
+    }
+
+    async function saveRecipe() {
         const title        = document.getElementById('title').value.trim();
         const description  = document.getElementById('description').value.trim();
         const ingredients  = document.getElementById('ingredients').value.trim();
@@ -78,18 +116,17 @@ $csrfToken = generateCsrfToken();
             return;
         }
 
-        const res = await apiFetch('/Koopjeskoken/api/recipes.php', {
-            method: 'POST',
-            body: JSON.stringify({ title, description, ingredients, instructions })
+        const isEdit = editingId !== null;
+        const url    = isEdit ? `${API_BASE}/recipes.php?id=${editingId}` : `${API_BASE}/recipes.php`;
+        const res    = await apiFetch(url, {
+            method: isEdit ? 'PUT' : 'POST',
+            body: JSON.stringify({ title, description, ingredients, instructions }),
         });
 
         const data = await res.json();
         if (data.success) {
-            msg.textContent = 'Recept opgeslagen!';
-            document.getElementById('title').value        = '';
-            document.getElementById('description').value  = '';
-            document.getElementById('ingredients').value  = '';
-            document.getElementById('instructions').value = '';
+            msg.textContent = isEdit ? 'Recept bijgewerkt!' : 'Recept opgeslagen!';
+            resetForm();
             loadRecipes();
         } else {
             msg.textContent = 'Fout: ' + (data.error || 'Onbekende fout');
@@ -97,7 +134,7 @@ $csrfToken = generateCsrfToken();
     }
 
     async function loadRecipes() {
-        const res  = await fetch('/Koopjeskoken/api/recipes.php', { credentials: 'include' });
+        const res  = await fetch(API_BASE + '/recipes.php', { credentials: 'include' });
         const list = await res.json();
         const container = document.getElementById('recipes-list');
 
@@ -107,17 +144,26 @@ $csrfToken = generateCsrfToken();
             <div class="recipe-item">
                 <strong>${escHtml(r.title)}</strong>
                 <p>${escHtml(r.description)}</p>
+                <button class="edit-btn"   onclick="editRecipe(${r.id})">Bewerken</button>
                 <button class="delete-btn" onclick="deleteRecipe(${r.id})">Verwijderen</button>
             </div>
         `).join('');
     }
 
+    async function editRecipe(id) {
+        const res  = await fetch(API_BASE + '/recipes.php', { credentials: 'include' });
+        const list = await res.json();
+        const recipe = list.find(r => r.id === id);
+        if (recipe) setEditMode(recipe);
+    }
+
     async function deleteRecipe(id) {
         if (!confirm('Weet je zeker dat je dit recept wilt verwijderen?')) return;
 
-        const res  = await apiFetch(`/Koopjeskoken/api/recipes.php?id=${id}`, { method: 'DELETE' });
+        const res  = await apiFetch(`${API_BASE}/recipes.php?id=${id}`, { method: 'DELETE' });
         const data = await res.json();
         if (data.success) {
+            if (editingId === id) resetForm();
             loadRecipes();
         } else {
             alert('Verwijderen mislukt: ' + (data.error || 'Onbekende fout'));
@@ -125,7 +171,7 @@ $csrfToken = generateCsrfToken();
     }
 
     async function logout() {
-        await apiFetch('/Koopjeskoken/api/logout.php', { method: 'POST' });
+        await apiFetch(API_BASE + '/logout.php', { method: 'POST' });
         location.href = '/login.html';
     }
 

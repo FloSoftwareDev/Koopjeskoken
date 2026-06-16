@@ -1,0 +1,13 @@
+/vendor/
+/data/ai-cache/
+/api/config.php
+/api/db_config.php
+/scraper/node_modules/
+/scraper/data/
+/scraper/upload.txt
+/scraper/upload.log
+/deploy.bat
+/deploy-preview.bat
+/DEV_NOTES.md
+/deploy-script.tmp.txt
+/remote-config-snapshot.tmp.php
