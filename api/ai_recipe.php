@@ -5,6 +5,7 @@ setCorsHeaders();
 setJsonHeaders();
 handleOptions();
 startSecureSession();
+requireAuth();
 
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     http_response_code(405);
@@ -12,8 +13,8 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     exit;
 }
 
-// Paid API call — keep the rate tight
-rateLimit('ai_recipe_' . ($_SERVER['REMOTE_ADDR'] ?? 'unknown'), 5, 3600);
+// Paid API call — rate-limited per session to keep cost predictable
+rateLimit('ai_recipe_' . ($_SESSION['user_id'] ?? $_SERVER['REMOTE_ADDR'] ?? 'unknown'), 5, 3600);
 
 $autoload = __DIR__ . '/../vendor/autoload.php';
 if (!file_exists($autoload)) {

@@ -48,10 +48,14 @@ const IDLE_TIMEOUT = 30 * 60; // 30 minutes of inactivity expires the session
 function startSecureSession(bool $rememberMe = false): void {
     if (session_status() === PHP_SESSION_NONE) {
         $lifetime = $rememberMe ? 30 * 24 * 60 * 60 : 0;
+        // Auto-detect HTTPS so cookies are marked Secure in production.
+        $isHttps = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off')
+                || (($_SERVER['SERVER_PORT'] ?? null) == 443)
+                || (($_SERVER['HTTP_X_FORWARDED_PROTO'] ?? '') === 'https');
         session_set_cookie_params([
             'lifetime' => $lifetime,
             'path'     => '/',
-            'secure'   => false,   // set to true in production (HTTPS)
+            'secure'   => $isHttps,
             'httponly' => true,
             'samesite' => 'Strict',
         ]);
