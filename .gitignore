@@ -11,3 +11,7 @@
 /DEV_NOTES.md
 /deploy-script.tmp.txt
 /remote-config-snapshot.tmp.php
+/migrate-once.php
+/migrate-recipes.sql
+/config.prod.php
+/.htaccess

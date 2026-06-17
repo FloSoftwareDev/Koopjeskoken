@@ -14,14 +14,14 @@
     "geldigVanaf": "",
     "merk": "",
     "trefwoorden": [],
-    "opgehaald": "2026-06-16T11:00:29.370Z"
+    "opgehaald": "2026-06-17T05:00:25.858Z"
   },
   {
     "id": "lidl-10028842",
     "supermarkt": "lidl",
     "naam": "Trostomaten",
     "beschrijving": "",
-    "categorie": "Groenten & fruit",
+    "categorie": "Groenten",
     "prijsNu": 0.89,
     "prijsWas": 0,
     "kortingPct": 0,
@@ -30,10 +30,8 @@
     "geldigTot": "",
     "geldigVanaf": "",
     "merk": "",
-    "trefwoorden": [
-      "ui"
-    ],
-    "opgehaald": "2026-06-16T11:00:29.370Z"
+    "trefwoorden": [],
+    "opgehaald": "2026-06-17T05:00:25.858Z"
   },
   {
     "id": "lidl-10028996",
@@ -50,7 +48,7 @@
     "geldigVanaf": "",
     "merk": "",
     "trefwoorden": [],
-    "opgehaald": "2026-06-16T11:00:29.370Z"
+    "opgehaald": "2026-06-17T05:00:25.858Z"
   },
   {
     "id": "lidl-10028844",
@@ -67,7 +65,7 @@
     "geldigVanaf": "",
     "merk": "",
     "trefwoorden": [],
-    "opgehaald": "2026-06-16T11:00:29.370Z"
+    "opgehaald": "2026-06-17T05:00:25.858Z"
   },
   {
     "id": "lidl-10028846",
@@ -84,14 +82,14 @@
     "geldigVanaf": "",
     "merk": "",
     "trefwoorden": [],
-    "opgehaald": "2026-06-16T11:00:29.370Z"
+    "opgehaald": "2026-06-17T05:00:25.858Z"
   },
   {
     "id": "lidl-10028848",
     "supermarkt": "lidl",
     "naam": "Corona Extra",
     "beschrijving": "",
-    "categorie": "Dranken",
+    "categorie": "Bier & Cider",
     "prijsNu": 9.99,
     "prijsWas": 0,
     "kortingPct": 0,
@@ -101,7 +99,7 @@
     "geldigVanaf": "",
     "merk": "",
     "trefwoorden": [],
-    "opgehaald": "2026-06-16T11:00:29.370Z"
+    "opgehaald": "2026-06-17T05:00:25.858Z"
   },
   {
     "id": "lidl-10028850",
@@ -118,7 +116,7 @@
     "geldigVanaf": "",
     "merk": "",
     "trefwoorden": [],
-    "opgehaald": "2026-06-16T11:00:29.370Z"
+    "opgehaald": "2026-06-17T05:00:25.858Z"
   },
   {
     "id": "lidl-10028852",
@@ -135,6 +133,6 @@
     "geldigVanaf": "",
     "merk": "",
     "trefwoorden": [],
-    "opgehaald": "2026-06-16T11:00:29.370Z"
+    "opgehaald": "2026-06-17T05:00:25.858Z"
   }
 ]

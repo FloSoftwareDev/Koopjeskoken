@@ -14,7 +14,7 @@
     "geldigVanaf": "",
     "merk": "",
     "trefwoorden": [],
-    "opgehaald": "2026-06-16T11:00:02.598Z"
+    "opgehaald": "2026-06-17T05:00:02.809Z"
   },
   {
     "id": "ah-578166",
@@ -31,7 +31,7 @@
     "geldigVanaf": "",
     "merk": "",
     "trefwoorden": [],
-    "opgehaald": "2026-06-16T11:00:02.599Z"
+    "opgehaald": "2026-06-17T05:00:02.809Z"
   },
   {
     "id": "ah-602339",
@@ -50,7 +50,7 @@
     "trefwoorden": [
       "kip"
     ],
-    "opgehaald": "2026-06-16T11:00:02.599Z"
+    "opgehaald": "2026-06-17T05:00:02.809Z"
   },
   {
     "id": "ah-566664",
@@ -69,7 +69,7 @@
     "trefwoorden": [
       "spek"
     ],
-    "opgehaald": "2026-06-16T11:00:02.599Z"
+    "opgehaald": "2026-06-17T05:00:02.809Z"
   },
   {
     "id": "ah-567361",
@@ -88,7 +88,7 @@
     "trefwoorden": [
       "kip"
     ],
-    "opgehaald": "2026-06-16T11:00:02.599Z"
+    "opgehaald": "2026-06-17T05:00:02.809Z"
   },
   {
     "id": "ah-598038",
@@ -107,7 +107,7 @@
     "trefwoorden": [
       "kip"
     ],
-    "opgehaald": "2026-06-16T11:00:02.599Z"
+    "opgehaald": "2026-06-17T05:00:02.809Z"
   },
   {
     "id": "ah-602333",
@@ -126,7 +126,7 @@
     "trefwoorden": [
       "kip"
     ],
-    "opgehaald": "2026-06-16T11:00:02.599Z"
+    "opgehaald": "2026-06-17T05:00:02.809Z"
   },
   {
     "id": "ah-601157",
@@ -145,7 +145,7 @@
     "trefwoorden": [
       "kip"
     ],
-    "opgehaald": "2026-06-16T11:00:02.599Z"
+    "opgehaald": "2026-06-17T05:00:02.809Z"
   },
   {
     "id": "ah-577829",
@@ -164,7 +164,7 @@
     "trefwoorden": [
       "kip"
     ],
-    "opgehaald": "2026-06-16T11:00:02.599Z"
+    "opgehaald": "2026-06-17T05:00:02.809Z"
   },
   {
     "id": "ah-578161",
@@ -181,7 +181,26 @@
     "geldigVanaf": "",
     "merk": "",
     "trefwoorden": [],
-    "opgehaald": "2026-06-16T11:00:02.599Z"
+    "opgehaald": "2026-06-17T05:00:02.809Z"
+  },
+  {
+    "id": "ah-601066",
+    "supermarkt": "ah",
+    "naam": "Marhaba Kipfilet 3-pack",
+    "beschrijving": "3 stuks",
+    "categorie": "Vleeswaren",
+    "prijsNu": 7.1,
+    "prijsWas": 7.1,
+    "kortingPct": 0,
+    "korting": "",
+    "afbeelding": "https://static.ah.nl/dam/product/AHI_6c556c61447a6765534c6d37306f6a6e694842575951?revLabel=1&rendition=800x800_JPG_Q90&fileType=binary",
+    "geldigTot": "2999-12-31",
+    "geldigVanaf": "",
+    "merk": "",
+    "trefwoorden": [
+      "kip"
+    ],
+    "opgehaald": "2026-06-17T05:00:02.809Z"
   },
   {
     "id": "ah-598470",
@@ -200,7 +219,7 @@
     "trefwoorden": [
       "spek"
     ],
-    "opgehaald": "2026-06-16T11:00:02.599Z"
+    "opgehaald": "2026-06-17T05:00:02.809Z"
   },
   {
     "id": "ah-603303",
@@ -219,7 +238,7 @@
     "trefwoorden": [
       "kip"
     ],
-    "opgehaald": "2026-06-16T11:00:02.599Z"
+    "opgehaald": "2026-06-17T05:00:02.810Z"
   },
   {
     "id": "ah-597600",
@@ -238,7 +257,7 @@
     "trefwoorden": [
       "kip"
     ],
-    "opgehaald": "2026-06-16T11:00:02.599Z"
+    "opgehaald": "2026-06-17T05:00:02.810Z"
   },
   {
     "id": "ah-598037",
@@ -257,27 +276,7 @@
     "trefwoorden": [
       "gehakt"
     ],
-    "opgehaald": "2026-06-16T11:00:02.599Z"
-  },
-  {
-    "id": "ah-577828",
-    "supermarkt": "ah",
-    "naam": "AH Scharrel kipgehakt gekruid 3-pack",
-    "beschrijving": "3 stuks",
-    "categorie": "Vlees",
-    "prijsNu": 10.77,
-    "prijsWas": 10.77,
-    "kortingPct": 0,
-    "korting": "",
-    "afbeelding": "https://static.ah.nl/dam/product/AHI_4354523130303836383739?revLabel=1&rendition=800x800_JPG_Q90&fileType=binary",
-    "geldigTot": "2999-12-31",
-    "geldigVanaf": "",
-    "merk": "",
-    "trefwoorden": [
-      "kip",
-      "ui"
-    ],
-    "opgehaald": "2026-06-16T11:00:02.599Z"
+    "opgehaald": "2026-06-17T05:00:02.810Z"
   },
   {
     "id": "ah-577858",
@@ -296,7 +295,26 @@
     "trefwoorden": [
       "kip"
     ],
-    "opgehaald": "2026-06-16T11:00:02.599Z"
+    "opgehaald": "2026-06-17T05:00:02.810Z"
+  },
+  {
+    "id": "ah-601145",
+    "supermarkt": "ah",
+    "naam": "Wahid Halal kipdijfilet 3-pack",
+    "beschrijving": "3 stuks",
+    "categorie": "Vlees",
+    "prijsNu": 16.22,
+    "prijsWas": 16.22,
+    "kortingPct": 0,
+    "korting": "",
+    "afbeelding": "https://static.ah.nl/dam/product/AHI_756e6643506f564a52533663586d52494b346f445941?revLabel=1&rendition=800x800_JPG_Q90&fileType=binary",
+    "geldigTot": "2999-12-31",
+    "geldigVanaf": "",
+    "merk": "",
+    "trefwoorden": [
+      "kip"
+    ],
+    "opgehaald": "2026-06-17T05:00:03.181Z"
   },
   {
     "id": "ah-568746",
@@ -316,7 +334,7 @@
       "kip",
       "ui"
     ],
-    "opgehaald": "2026-06-16T11:00:02.973Z"
+    "opgehaald": "2026-06-17T05:00:03.181Z"
   },
   {
     "id": "ah-597802",
@@ -335,7 +353,27 @@
     "trefwoorden": [
       "kip"
     ],
-    "opgehaald": "2026-06-16T11:00:02.973Z"
+    "opgehaald": "2026-06-17T05:00:03.181Z"
+  },
+  {
+    "id": "ah-577828",
+    "supermarkt": "ah",
+    "naam": "AH Scharrel kipgehakt gekruid 3-pack",
+    "beschrijving": "3 stuks",
+    "categorie": "Vlees",
+    "prijsNu": 10.77,
+    "prijsWas": 10.77,
+    "kortingPct": 0,
+    "korting": "",
+    "afbeelding": "https://static.ah.nl/dam/product/AHI_4354523130303836383739?revLabel=1&rendition=800x800_JPG_Q90&fileType=binary",
+    "geldigTot": "2999-12-31",
+    "geldigVanaf": "",
+    "merk": "",
+    "trefwoorden": [
+      "kip",
+      "ui"
+    ],
+    "opgehaald": "2026-06-17T05:00:03.181Z"
   },
   {
     "id": "ah-603274",
@@ -354,26 +392,7 @@
     "trefwoorden": [
       "kip"
     ],
-    "opgehaald": "2026-06-16T11:00:02.973Z"
-  },
-  {
-    "id": "ah-602955",
-    "supermarkt": "ah",
-    "naam": "AH Franse scharrelkip kipfilethaasjes 2pack",
-    "beschrijving": "2 stuks",
-    "categorie": "Vlees",
-    "prijsNu": 11.38,
-    "prijsWas": 11.38,
-    "kortingPct": 0,
-    "korting": "",
-    "afbeelding": "https://static.ah.nl/dam/product/AHI_724f4c586c705156524b4b4a41387174456250674a51?revLabel=1&rendition=800x800_JPG_Q90&fileType=binary",
-    "geldigTot": "2999-12-31",
-    "geldigVanaf": "",
-    "merk": "",
-    "trefwoorden": [
-      "kip"
-    ],
-    "opgehaald": "2026-06-16T11:00:02.973Z"
+    "opgehaald": "2026-06-17T05:00:03.181Z"
   },
   {
     "id": "ah-577928",
@@ -392,7 +411,7 @@
     "trefwoorden": [
       "kip"
     ],
-    "opgehaald": "2026-06-16T11:00:02.973Z"
+    "opgehaald": "2026-06-17T05:00:03.181Z"
   },
   {
     "id": "ah-596925",
@@ -411,7 +430,7 @@
     "trefwoorden": [
       "vis"
     ],
-    "opgehaald": "2026-06-16T11:00:03.357Z"
+    "opgehaald": "2026-06-17T05:00:03.543Z"
   },
   {
     "id": "ah-590412",
@@ -430,7 +449,7 @@
     "trefwoorden": [
       "vis"
     ],
-    "opgehaald": "2026-06-16T11:00:03.357Z"
+    "opgehaald": "2026-06-17T05:00:03.543Z"
   },
   {
     "id": "ah-598216",
@@ -450,7 +469,7 @@
       "zalm",
       "vis"
     ],
-    "opgehaald": "2026-06-16T11:00:03.357Z"
+    "opgehaald": "2026-06-17T05:00:03.543Z"
   },
   {
     "id": "ah-577878",
@@ -470,7 +489,7 @@
       "zalm",
       "vis"
     ],
-    "opgehaald": "2026-06-16T11:00:03.357Z"
+    "opgehaald": "2026-06-17T05:00:03.543Z"
   },
   {
     "id": "ah-610232",
@@ -490,7 +509,7 @@
       "zalm",
       "vis"
     ],
-    "opgehaald": "2026-06-16T11:00:03.357Z"
+    "opgehaald": "2026-06-17T05:00:03.543Z"
   },
   {
     "id": "ah-598204",
@@ -509,7 +528,7 @@
     "trefwoorden": [
       "vis"
     ],
-    "opgehaald": "2026-06-16T11:00:03.357Z"
+    "opgehaald": "2026-06-17T05:00:03.543Z"
   },
   {
     "id": "ah-615107",
@@ -528,7 +547,7 @@
     "trefwoorden": [
       "vis"
     ],
-    "opgehaald": "2026-06-16T11:00:03.357Z"
+    "opgehaald": "2026-06-17T05:00:03.543Z"
   },
   {
     "id": "ah-121444",
@@ -548,7 +567,7 @@
       "vis",
       "ui"
     ],
-    "opgehaald": "2026-06-16T11:00:03.357Z"
+    "opgehaald": "2026-06-17T05:00:03.543Z"
   },
   {
     "id": "ah-213328",
@@ -568,7 +587,7 @@
       "vis",
       "ui"
     ],
-    "opgehaald": "2026-06-16T11:00:03.357Z"
+    "opgehaald": "2026-06-17T05:00:03.543Z"
   },
   {
     "id": "ah-615108",
@@ -587,7 +606,7 @@
     "trefwoorden": [
       "vis"
     ],
-    "opgehaald": "2026-06-16T11:00:03.357Z"
+    "opgehaald": "2026-06-17T05:00:03.543Z"
   },
   {
     "id": "ah-615229",
@@ -606,26 +625,7 @@
     "trefwoorden": [
       "vis"
     ],
-    "opgehaald": "2026-06-16T11:00:03.357Z"
-  },
-  {
-    "id": "ah-608497",
-    "supermarkt": "ah",
-    "naam": "Milner Oud 30+ plakken 4-pack",
-    "beschrijving": "4 stuks",
-    "categorie": "Kaas",
-    "prijsNu": 12.55,
-    "prijsWas": 12.55,
-    "kortingPct": 0,
-    "korting": "",
-    "afbeelding": "https://static.ah.nl/dam/product/AHI_6a46316233336a4a51454354354234315f364b354b51?revLabel=1&rendition=800x800_JPG_Q90&fileType=binary",
-    "geldigTot": "2999-12-31",
-    "geldigVanaf": "",
-    "merk": "",
-    "trefwoorden": [
-      "kaas"
-    ],
-    "opgehaald": "2026-06-16T11:00:03.765Z"
+    "opgehaald": "2026-06-17T05:00:03.543Z"
   },
   {
     "id": "ah-608496",
@@ -644,7 +644,7 @@
     "trefwoorden": [
       "kaas"
     ],
-    "opgehaald": "2026-06-16T11:00:03.765Z"
+    "opgehaald": "2026-06-17T05:00:03.957Z"
   },
   {
     "id": "ah-602967",
@@ -663,7 +663,7 @@
     "trefwoorden": [
       "kaas"
     ],
-    "opgehaald": "2026-06-16T11:00:03.765Z"
+    "opgehaald": "2026-06-17T05:00:03.957Z"
   },
   {
     "id": "ah-602349",
@@ -682,26 +682,26 @@
     "trefwoorden": [
       "kaas"
     ],
-    "opgehaald": "2026-06-16T11:00:03.765Z"
+    "opgehaald": "2026-06-17T05:00:03.957Z"
   },
   {
-    "id": "ah-609542",
+    "id": "ah-608497",
     "supermarkt": "ah",
-    "naam": "Milner Jong 30+ plakken 4-pack",
+    "naam": "Milner Oud 30+ plakken 4-pack",
     "beschrijving": "4 stuks",
     "categorie": "Kaas",
-    "prijsNu": 9.49,
-    "prijsWas": 9.49,
+    "prijsNu": 12.55,
+    "prijsWas": 12.55,
     "kortingPct": 0,
     "korting": "",
-    "afbeelding": "https://static.ah.nl/dam/product/AHI_537265706f3277445233793637565639445241626951?revLabel=1&rendition=800x800_JPG_Q90&fileType=binary",
+    "afbeelding": "https://static.ah.nl/dam/product/AHI_6a46316233336a4a51454354354234315f364b354b51?revLabel=1&rendition=800x800_JPG_Q90&fileType=binary",
     "geldigTot": "2999-12-31",
     "geldigVanaf": "",
     "merk": "",
     "trefwoorden": [
       "kaas"
     ],
-    "opgehaald": "2026-06-16T11:00:03.765Z"
+    "opgehaald": "2026-06-17T05:00:03.957Z"
   },
   {
     "id": "ah-609548",
@@ -720,7 +720,7 @@
     "trefwoorden": [
       "kaas"
     ],
-    "opgehaald": "2026-06-16T11:00:03.765Z"
+    "opgehaald": "2026-06-17T05:00:03.957Z"
   },
   {
     "id": "ah-602964",
@@ -739,7 +739,7 @@
     "trefwoorden": [
       "kaas"
     ],
-    "opgehaald": "2026-06-16T11:00:03.765Z"
+    "opgehaald": "2026-06-17T05:00:03.957Z"
   },
   {
     "id": "ah-163846",
@@ -758,7 +758,7 @@
     "trefwoorden": [
       "kaas"
     ],
-    "opgehaald": "2026-06-16T11:00:03.765Z"
+    "opgehaald": "2026-06-17T05:00:03.957Z"
   },
   {
     "id": "ah-609672",
@@ -779,7 +779,7 @@
       "melk",
       "ui"
     ],
-    "opgehaald": "2026-06-16T11:00:04.151Z"
+    "opgehaald": "2026-06-17T05:00:04.353Z"
   },
   {
     "id": "ah-582865",
@@ -800,7 +800,7 @@
       "melk",
       "ui"
     ],
-    "opgehaald": "2026-06-16T11:00:04.151Z"
+    "opgehaald": "2026-06-17T05:00:04.353Z"
   },
   {
     "id": "ah-608455",
@@ -821,7 +821,7 @@
       "melk",
       "ui"
     ],
-    "opgehaald": "2026-06-16T11:00:04.151Z"
+    "opgehaald": "2026-06-17T05:00:04.353Z"
   },
   {
     "id": "ah-594705",
@@ -842,7 +842,7 @@
       "melk",
       "ui"
     ],
-    "opgehaald": "2026-06-16T11:00:04.151Z"
+    "opgehaald": "2026-06-17T05:00:04.353Z"
   },
   {
     "id": "ah-609411",
@@ -863,7 +863,7 @@
       "melk",
       "ui"
     ],
-    "opgehaald": "2026-06-16T11:00:04.151Z"
+    "opgehaald": "2026-06-17T05:00:04.353Z"
   },
   {
     "id": "ah-611232",
@@ -880,7 +880,7 @@
     "geldigVanaf": "",
     "merk": "",
     "trefwoorden": [],
-    "opgehaald": "2026-06-16T11:00:04.151Z"
+    "opgehaald": "2026-06-17T05:00:04.353Z"
   },
   {
     "id": "ah-609664",
@@ -901,7 +901,7 @@
       "melk",
       "ui"
     ],
-    "opgehaald": "2026-06-16T11:00:04.151Z"
+    "opgehaald": "2026-06-17T05:00:04.353Z"
   },
   {
     "id": "ah-609352",
@@ -922,7 +922,7 @@
       "melk",
       "ui"
     ],
-    "opgehaald": "2026-06-16T11:00:04.151Z"
+    "opgehaald": "2026-06-17T05:00:04.353Z"
   },
   {
     "id": "ah-568161",
@@ -939,7 +939,7 @@
     "geldigVanaf": "",
     "merk": "",
     "trefwoorden": [],
-    "opgehaald": "2026-06-16T11:00:04.151Z"
+    "opgehaald": "2026-06-17T05:00:04.353Z"
   },
   {
     "id": "ah-608453",
@@ -960,7 +960,7 @@
       "melk",
       "ui"
     ],
-    "opgehaald": "2026-06-16T11:00:04.151Z"
+    "opgehaald": "2026-06-17T05:00:04.353Z"
   },
   {
     "id": "ah-582868",
@@ -981,7 +981,7 @@
       "melk",
       "ui"
     ],
-    "opgehaald": "2026-06-16T11:00:04.151Z"
+    "opgehaald": "2026-06-17T05:00:04.353Z"
   },
   {
     "id": "ah-597486",
@@ -1001,7 +1001,7 @@
       "pasta",
       "rijst"
     ],
-    "opgehaald": "2026-06-16T11:00:04.512Z"
+    "opgehaald": "2026-06-17T05:00:04.775Z"
   },
   {
     "id": "ah-598385",
@@ -1018,7 +1018,7 @@
     "geldigVanaf": "",
     "merk": "",
     "trefwoorden": [],
-    "opgehaald": "2026-06-16T11:00:04.512Z"
+    "opgehaald": "2026-06-17T05:00:04.775Z"
   },
   {
     "id": "ah-578578",
@@ -1038,7 +1038,7 @@
       "pasta",
       "rijst"
     ],
-    "opgehaald": "2026-06-16T11:00:05.512Z"
+    "opgehaald": "2026-06-17T05:00:05.115Z"
   },
   {
     "id": "ah-597816",
@@ -1058,7 +1058,7 @@
       "pasta",
       "rijst"
     ],
-    "opgehaald": "2026-06-16T11:00:05.512Z"
+    "opgehaald": "2026-06-17T05:00:05.115Z"
   },
   {
     "id": "ah-609525",
@@ -1080,7 +1080,7 @@
       "ui",
       "rijst"
     ],
-    "opgehaald": "2026-06-16T11:00:05.512Z"
+    "opgehaald": "2026-06-17T05:00:05.115Z"
   },
   {
     "id": "ah-578603",
@@ -1100,26 +1100,7 @@
       "pasta",
       "rijst"
     ],
-    "opgehaald": "2026-06-16T11:00:05.512Z"
-  },
-  {
-    "id": "ah-615297",
-    "supermarkt": "ah",
-    "naam": "AH Wokgroente Chinees 2-pack",
-    "beschrijving": "2 stuks",
-    "categorie": "Groente, aardappelen",
-    "prijsNu": 4.54,
-    "prijsWas": 4.54,
-    "kortingPct": 0,
-    "korting": "",
-    "afbeelding": "https://static.ah.nl/dam/product/AHI_624e5a796976436d51324b64486c75474545424e5a67?revLabel=1&rendition=800x800_JPG_Q90&fileType=binary",
-    "geldigTot": "2999-12-31",
-    "geldigVanaf": "",
-    "merk": "",
-    "trefwoorden": [
-      "aardappel"
-    ],
-    "opgehaald": "2026-06-16T11:00:06.112Z"
+    "opgehaald": "2026-06-17T05:00:05.115Z"
   },
   {
     "id": "ah-567548",
@@ -1138,7 +1119,7 @@
     "trefwoorden": [
       "ui"
     ],
-    "opgehaald": "2026-06-16T11:00:06.112Z"
+    "opgehaald": "2026-06-17T05:00:05.475Z"
   },
   {
     "id": "ah-567052",
@@ -1157,7 +1138,27 @@
     "trefwoorden": [
       "aardappel"
     ],
-    "opgehaald": "2026-06-16T11:00:06.112Z"
+    "opgehaald": "2026-06-17T05:00:05.475Z"
+  },
+  {
+    "id": "ah-594732",
+    "supermarkt": "ah",
+    "naam": "AH Snoepgroente worteltjes 3-pack",
+    "beschrijving": "3 stuks",
+    "categorie": "Groente, aardappelen",
+    "prijsNu": 8.07,
+    "prijsWas": 8.07,
+    "kortingPct": 0,
+    "korting": "",
+    "afbeelding": "https://static.ah.nl/dam/product/AHI_4354523130313939303334?revLabel=1&rendition=800x800_JPG_Q90&fileType=binary",
+    "geldigTot": "2999-12-31",
+    "geldigVanaf": "",
+    "merk": "",
+    "trefwoorden": [
+      "aardappel",
+      "wortel"
+    ],
+    "opgehaald": "2026-06-17T05:00:05.475Z"
   },
   {
     "id": "ah-566924",
@@ -1177,7 +1178,7 @@
       "pasta",
       "rijst"
     ],
-    "opgehaald": "2026-06-16T11:00:06.112Z"
+    "opgehaald": "2026-06-17T05:00:05.475Z"
   },
   {
     "id": "ah-615295",
@@ -1198,7 +1199,7 @@
       "aardappel",
       "spinazie"
     ],
-    "opgehaald": "2026-06-16T11:00:06.112Z"
+    "opgehaald": "2026-06-17T05:00:05.475Z"
   },
   {
     "id": "ah-4102",
@@ -1217,26 +1218,45 @@
     "trefwoorden": [
       "aardappel"
     ],
-    "opgehaald": "2026-06-16T11:00:06.112Z"
+    "opgehaald": "2026-06-17T05:00:05.475Z"
   },
   {
-    "id": "ah-367212",
+    "id": "ah-609214",
     "supermarkt": "ah",
-    "naam": "Zespri Kiwi sungold",
-    "beschrijving": "750 g",
-    "categorie": "Fruit, verse sappen",
-    "prijsNu": 5.49,
-    "prijsWas": 5.49,
+    "naam": "Olvarit Knijpfruit 12+ mnd variatiemenu 15-pack",
+    "beschrijving": "per stuk",
+    "categorie": "Baby en kind",
+    "prijsNu": 16.84,
+    "prijsWas": 16.84,
     "kortingPct": 0,
     "korting": "",
-    "afbeelding": "https://static.ah.nl/dam/product/AHI_4354523130313834363833?revLabel=1&rendition=800x800_JPG_Q90&fileType=binary",
-    "geldigTot": "2026-06-21",
+    "afbeelding": "https://static.ah.nl/dam/product/AHI_625f4d627438715a526d4f5661344f457a6848384241?revLabel=1&rendition=800x800_JPG_Q90&fileType=binary",
+    "geldigTot": "2999-12-31",
     "geldigVanaf": "",
     "merk": "",
     "trefwoorden": [
       "ui"
     ],
-    "opgehaald": "2026-06-16T11:00:06.575Z"
+    "opgehaald": "2026-06-17T05:00:05.838Z"
+  },
+  {
+    "id": "ah-609215",
+    "supermarkt": "ah",
+    "naam": "Olvarit Knijpfruit/groente 12+mnd babyvoed 20pck",
+    "beschrijving": "per stuk",
+    "categorie": "Baby en kind",
+    "prijsNu": 22.46,
+    "prijsWas": 22.46,
+    "kortingPct": 0,
+    "korting": "",
+    "afbeelding": "https://static.ah.nl/dam/product/AHI_4b5056634b42433652386d7033484848735634745267?revLabel=1&rendition=800x800_JPG_Q90&fileType=binary",
+    "geldigTot": "2999-12-31",
+    "geldigVanaf": "",
+    "merk": "",
+    "trefwoorden": [
+      "ui"
+    ],
+    "opgehaald": "2026-06-17T05:00:05.838Z"
   },
   {
     "id": "ah-610237",
@@ -1255,7 +1275,26 @@
     "trefwoorden": [
       "ui"
     ],
-    "opgehaald": "2026-06-16T11:00:06.575Z"
+    "opgehaald": "2026-06-17T05:00:05.838Z"
+  },
+  {
+    "id": "ah-367212",
+    "supermarkt": "ah",
+    "naam": "Zespri Kiwi sungold",
+    "beschrijving": "750 g",
+    "categorie": "Fruit, verse sappen",
+    "prijsNu": 5.49,
+    "prijsWas": 5.49,
+    "kortingPct": 0,
+    "korting": "",
+    "afbeelding": "https://static.ah.nl/dam/product/AHI_4354523130313834363833?revLabel=1&rendition=800x800_JPG_Q90&fileType=binary",
+    "geldigTot": "2026-06-21",
+    "geldigVanaf": "",
+    "merk": "",
+    "trefwoorden": [
+      "ui"
+    ],
+    "opgehaald": "2026-06-17T05:00:05.838Z"
   },
   {
     "id": "ah-491168",
@@ -1275,7 +1314,7 @@
       "ei",
       "ui"
     ],
-    "opgehaald": "2026-06-16T11:00:06.575Z"
+    "opgehaald": "2026-06-17T05:00:05.838Z"
   },
   {
     "id": "ah-598453",
@@ -1294,7 +1333,7 @@
     "trefwoorden": [
       "ui"
     ],
-    "opgehaald": "2026-06-16T11:00:06.575Z"
+    "opgehaald": "2026-06-17T05:00:05.838Z"
   },
   {
     "id": "ah-519637",
@@ -1313,7 +1352,7 @@
     "trefwoorden": [
       "ui"
     ],
-    "opgehaald": "2026-06-16T11:00:06.575Z"
+    "opgehaald": "2026-06-17T05:00:05.838Z"
   },
   {
     "id": "ah-598392",
@@ -1332,7 +1371,7 @@
     "trefwoorden": [
       "ui"
     ],
-    "opgehaald": "2026-06-16T11:00:06.575Z"
+    "opgehaald": "2026-06-17T05:00:05.838Z"
   },
   {
     "id": "ah-598356",
@@ -1351,7 +1390,7 @@
     "trefwoorden": [
       "ui"
     ],
-    "opgehaald": "2026-06-16T11:00:06.575Z"
+    "opgehaald": "2026-06-17T05:00:05.838Z"
   },
   {
     "id": "ah-579452",
@@ -1370,7 +1409,7 @@
     "trefwoorden": [
       "ui"
     ],
-    "opgehaald": "2026-06-16T11:00:06.575Z"
+    "opgehaald": "2026-06-17T05:00:05.838Z"
   },
   {
     "id": "ah-221526",
@@ -1389,7 +1428,7 @@
     "trefwoorden": [
       "ui"
     ],
-    "opgehaald": "2026-06-16T11:00:06.575Z"
+    "opgehaald": "2026-06-17T05:00:05.838Z"
   },
   {
     "id": "ah-579712",
@@ -1408,7 +1447,7 @@
     "trefwoorden": [
       "ui"
     ],
-    "opgehaald": "2026-06-16T11:00:06.575Z"
+    "opgehaald": "2026-06-17T05:00:05.838Z"
   },
   {
     "id": "ah-416489",
@@ -1427,26 +1466,7 @@
     "trefwoorden": [
       "ui"
     ],
-    "opgehaald": "2026-06-16T11:00:06.575Z"
-  },
-  {
-    "id": "ah-567484",
-    "supermarkt": "ah",
-    "naam": "AH Focaccia mozzarella 2-pack",
-    "beschrijving": "2 stuks",
-    "categorie": "Bakkerij",
-    "prijsNu": 5.11,
-    "prijsWas": 5.11,
-    "kortingPct": 0,
-    "korting": "",
-    "afbeelding": "https://static.ah.nl/dam/product/AHI_4354523130303236333231?revLabel=1&rendition=800x800_JPG_Q90&fileType=binary",
-    "geldigTot": "2999-12-31",
-    "geldigVanaf": "",
-    "merk": "",
-    "trefwoorden": [
-      "kaas"
-    ],
-    "opgehaald": "2026-06-16T11:00:06.953Z"
+    "opgehaald": "2026-06-17T05:00:05.838Z"
   },
   {
     "id": "ah-598366",
@@ -1465,7 +1485,7 @@
     "trefwoorden": [
       "brood"
     ],
-    "opgehaald": "2026-06-16T11:00:06.953Z"
+    "opgehaald": "2026-06-17T05:00:06.248Z"
   },
   {
     "id": "ah-598414",
@@ -1482,7 +1502,7 @@
     "geldigVanaf": "",
     "merk": "",
     "trefwoorden": [],
-    "opgehaald": "2026-06-16T11:00:06.953Z"
+    "opgehaald": "2026-06-17T05:00:06.248Z"
   },
   {
     "id": "ah-598411",
@@ -1499,7 +1519,7 @@
     "geldigVanaf": "",
     "merk": "",
     "trefwoorden": [],
-    "opgehaald": "2026-06-16T11:00:06.953Z"
+    "opgehaald": "2026-06-17T05:00:06.248Z"
   },
   {
     "id": "ah-568750",
@@ -1516,7 +1536,7 @@
     "geldigVanaf": "",
     "merk": "",
     "trefwoorden": [],
-    "opgehaald": "2026-06-16T11:00:06.953Z"
+    "opgehaald": "2026-06-17T05:00:06.248Z"
   },
   {
     "id": "ah-598358",
@@ -1535,7 +1555,7 @@
     "trefwoorden": [
       "brood"
     ],
-    "opgehaald": "2026-06-16T11:00:06.953Z"
+    "opgehaald": "2026-06-17T05:00:06.248Z"
   },
   {
     "id": "ah-598407",
@@ -1552,7 +1572,7 @@
     "geldigVanaf": "",
     "merk": "",
     "trefwoorden": [],
-    "opgehaald": "2026-06-16T11:00:06.953Z"
+    "opgehaald": "2026-06-17T05:00:06.248Z"
   },
   {
     "id": "ah-572389",
@@ -1569,7 +1589,7 @@
     "geldigVanaf": "",
     "merk": "",
     "trefwoorden": [],
-    "opgehaald": "2026-06-16T11:00:07.391Z"
+    "opgehaald": "2026-06-17T05:00:06.633Z"
   },
   {
     "id": "ah-598350",
@@ -1588,7 +1608,26 @@
     "trefwoorden": [
       "ei"
     ],
-    "opgehaald": "2026-06-16T11:00:07.391Z"
+    "opgehaald": "2026-06-17T05:00:06.633Z"
+  },
+  {
+    "id": "ah-567484",
+    "supermarkt": "ah",
+    "naam": "AH Focaccia mozzarella 2-pack",
+    "beschrijving": "2 stuks",
+    "categorie": "Bakkerij",
+    "prijsNu": 5.11,
+    "prijsWas": 5.11,
+    "kortingPct": 0,
+    "korting": "",
+    "afbeelding": "https://static.ah.nl/dam/product/AHI_4354523130303236333231?revLabel=1&rendition=800x800_JPG_Q90&fileType=binary",
+    "geldigTot": "2999-12-31",
+    "geldigVanaf": "",
+    "merk": "",
+    "trefwoorden": [
+      "kaas"
+    ],
+    "opgehaald": "2026-06-17T05:00:06.633Z"
   },
   {
     "id": "ah-607679",
@@ -1608,7 +1647,7 @@
       "boter",
       "room"
     ],
-    "opgehaald": "2026-06-16T11:00:07.391Z"
+    "opgehaald": "2026-06-17T05:00:06.633Z"
   },
   {
     "id": "ah-611528",
@@ -1625,7 +1664,7 @@
     "geldigVanaf": "",
     "merk": "",
     "trefwoorden": [],
-    "opgehaald": "2026-06-16T11:00:07.391Z"
+    "opgehaald": "2026-06-17T05:00:06.633Z"
   },
   {
     "id": "ah-604808",
@@ -1646,7 +1685,7 @@
       "melk",
       "ui"
     ],
-    "opgehaald": "2026-06-16T11:00:07.391Z"
+    "opgehaald": "2026-06-17T05:00:06.633Z"
   },
   {
     "id": "ah-572388",
@@ -1663,7 +1702,7 @@
     "geldigVanaf": "",
     "merk": "",
     "trefwoorden": [],
-    "opgehaald": "2026-06-16T11:00:07.391Z"
+    "opgehaald": "2026-06-17T05:00:06.633Z"
   },
   {
     "id": "ah-611526",
@@ -1680,27 +1719,7 @@
     "geldigVanaf": "",
     "merk": "",
     "trefwoorden": [],
-    "opgehaald": "2026-06-16T11:00:07.391Z"
-  },
-  {
-    "id": "ah-594732",
-    "supermarkt": "ah",
-    "naam": "AH Snoepgroente worteltjes 3-pack",
-    "beschrijving": "3 stuks",
-    "categorie": "Groente, aardappelen",
-    "prijsNu": 8.07,
-    "prijsWas": 8.07,
-    "kortingPct": 0,
-    "korting": "",
-    "afbeelding": "https://static.ah.nl/dam/product/AHI_4354523130313939303334?revLabel=1&rendition=800x800_JPG_Q90&fileType=binary",
-    "geldigTot": "2999-12-31",
-    "geldigVanaf": "",
-    "merk": "",
-    "trefwoorden": [
-      "aardappel",
-      "wortel"
-    ],
-    "opgehaald": "2026-06-16T11:00:07.391Z"
+    "opgehaald": "2026-06-17T05:00:06.633Z"
   },
   {
     "id": "ah-604800",
@@ -1722,7 +1741,7 @@
       "yoghurt",
       "ui"
     ],
-    "opgehaald": "2026-06-16T11:00:07.391Z"
+    "opgehaald": "2026-06-17T05:00:06.633Z"
   },
   {
     "id": "ah-594731",
@@ -1741,7 +1760,7 @@
     "trefwoorden": [
       "aardappel"
     ],
-    "opgehaald": "2026-06-16T11:00:07.391Z"
+    "opgehaald": "2026-06-17T05:00:06.633Z"
   },
   {
     "id": "ah-584737",
@@ -1758,7 +1777,7 @@
     "geldigVanaf": "",
     "merk": "",
     "trefwoorden": [],
-    "opgehaald": "2026-06-16T11:00:07.391Z"
+    "opgehaald": "2026-06-17T05:00:06.633Z"
   },
   {
     "id": "ah-604807",
@@ -1780,7 +1799,7 @@
       "yoghurt",
       "ui"
     ],
-    "opgehaald": "2026-06-16T11:00:07.391Z"
+    "opgehaald": "2026-06-17T05:00:06.633Z"
   },
   {
     "id": "ah-595691",
@@ -1797,7 +1816,7 @@
     "geldigVanaf": "",
     "merk": "",
     "trefwoorden": [],
-    "opgehaald": "2026-06-16T11:00:07.391Z"
+    "opgehaald": "2026-06-17T05:00:06.633Z"
   },
   {
     "id": "ah-604806",
@@ -1819,7 +1838,7 @@
       "yoghurt",
       "ui"
     ],
-    "opgehaald": "2026-06-16T11:00:07.391Z"
+    "opgehaald": "2026-06-17T05:00:06.633Z"
   },
   {
     "id": "ah-612272",
@@ -1838,7 +1857,7 @@
     "trefwoorden": [
       "ui"
     ],
-    "opgehaald": "2026-06-16T11:00:07.762Z"
+    "opgehaald": "2026-06-17T05:00:06.971Z"
   },
   {
     "id": "ah-612135",
@@ -1857,7 +1876,7 @@
     "trefwoorden": [
       "ui"
     ],
-    "opgehaald": "2026-06-16T11:00:07.762Z"
+    "opgehaald": "2026-06-17T05:00:06.971Z"
   },
   {
     "id": "ah-615338",
@@ -1876,7 +1895,7 @@
     "trefwoorden": [
       "ui"
     ],
-    "opgehaald": "2026-06-16T11:00:07.762Z"
+    "opgehaald": "2026-06-17T05:00:06.971Z"
   },
   {
     "id": "ah-615339",
@@ -1895,7 +1914,7 @@
     "trefwoorden": [
       "ui"
     ],
-    "opgehaald": "2026-06-16T11:00:07.762Z"
+    "opgehaald": "2026-06-17T05:00:06.971Z"
   },
   {
     "id": "ah-615336",
@@ -1914,7 +1933,7 @@
     "trefwoorden": [
       "ui"
     ],
-    "opgehaald": "2026-06-16T11:00:07.762Z"
+    "opgehaald": "2026-06-17T05:00:06.971Z"
   },
   {
     "id": "ah-608899",
@@ -1933,7 +1952,7 @@
     "trefwoorden": [
       "ui"
     ],
-    "opgehaald": "2026-06-16T11:00:07.762Z"
+    "opgehaald": "2026-06-17T05:00:06.971Z"
   },
   {
     "id": "ah-612160",
@@ -1952,7 +1971,7 @@
     "trefwoorden": [
       "ui"
     ],
-    "opgehaald": "2026-06-16T11:00:07.762Z"
+    "opgehaald": "2026-06-17T05:00:06.971Z"
   },
   {
     "id": "ah-451130",
@@ -1971,7 +1990,7 @@
     "trefwoorden": [
       "ui"
     ],
-    "opgehaald": "2026-06-16T11:00:07.762Z"
+    "opgehaald": "2026-06-17T05:00:06.971Z"
   },
   {
     "id": "ah-607856",
@@ -1992,7 +2011,7 @@
       "yoghurt",
       "ui"
     ],
-    "opgehaald": "2026-06-16T11:00:08.151Z"
+    "opgehaald": "2026-06-17T05:00:07.352Z"
   },
   {
     "id": "ah-604676",
@@ -2011,7 +2030,7 @@
     "trefwoorden": [
       "ui"
     ],
-    "opgehaald": "2026-06-16T11:00:08.151Z"
+    "opgehaald": "2026-06-17T05:00:07.352Z"
   },
   {
     "id": "ah-609665",
@@ -2032,7 +2051,7 @@
       "melk",
       "ui"
     ],
-    "opgehaald": "2026-06-16T11:00:08.151Z"
+    "opgehaald": "2026-06-17T05:00:07.352Z"
   },
   {
     "id": "ah-608456",
@@ -2053,7 +2072,7 @@
       "melk",
       "ui"
     ],
-    "opgehaald": "2026-06-16T11:00:08.151Z"
+    "opgehaald": "2026-06-17T05:00:07.352Z"
   },
   {
     "id": "ah-609406",
@@ -2074,6 +2093,6 @@
       "yoghurt",
       "ui"
     ],
-    "opgehaald": "2026-06-16T11:00:08.151Z"
+    "opgehaald": "2026-06-17T05:00:07.352Z"
   }
 ]

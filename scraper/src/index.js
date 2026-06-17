@@ -21,6 +21,73 @@ const {
 const DATA_DIR = path.join(__dirname, '..', '..', 'data');
 if (!fs.existsSync(DATA_DIR)) fs.mkdirSync(DATA_DIR, { recursive: true });
 
+// ── Non-food filter ─────────────────────────────────────────────────────────
+// Sluit verzorging, schoonmaak, hygiëne, huishouddier en huishouddiverse uit.
+// Werkt op productnaam — toegevoegde regex'en mogen geen voedingsproducten
+// raken (test naar false-positives bij elke uitbreiding).
+
+const NON_FOOD_PATTERNS = [
+  // Persoonlijke verzorging
+  /\b(deodorant|deospray|antitranspirant)\b/i,
+  /\b(tandpasta|tandenborstel|mondwater|flossdraad|gebitsreiniger)\b/i,
+  /\b(shampoo|conditioner|haarlak|haargel|haarmasker|haarverf|haaract|haarsp)\b/i,
+  /\b(douchegel|douchescha?u?im|douchecre|bodylotion|body\s*wash|body\s*lotion|handzeep|badschuim|badzout)\b/i,
+  /\b(scheermes|scheergel|scheerschuim|scheercre|scheerkop|aftershave)\b/i,
+  /\b(parfum|eau\s*de\s*(toilette|parfum|cologne)|geurspr)\b/i,
+  /\b(mascara|lipstick|lippenstift|foundation|nagellak|oogschaduw|make[-\s]?up|wimper|kohl|concealer|primer)\b/i,
+  /\b(zonnebrand|zonneolie|after[-\s]?sun)\b/i,
+  /\b(handcre|gezichtscre|dagcre|nachtcre|oogcre|voetencre)\b/i,
+
+  // Schoonmaak
+  /\b(wasmiddel|wasverzachter|wasparfum|wasstrips|wastablett|wascaps|wasgel|wasvloeibaar|wastrommel)\b/i,
+  /\b(afwasmiddel|vaatwas(tablett|caps|middel|gel|tabs)?|glansspoel|machinereiniger)\b/i,
+  /\b(allesreiniger|schoonmaak|vlekverwijder|ontkalk|bleek|chloor|ammoniak|kalk\s*remover)\b/i,
+  /\b(toiletreiniger|badreiniger|keukenreiniger|wc[-\s]?reiniger|glasreiniger|vloerreiniger|tegelreiniger)\b/i,
+  /\b(luchtverfris|wcblok|geurkaars)\b/i,
+  /\b(vuilniszak|afvalzak|vriezerzak|diepvrieszak)\b/i,
+  /\b(microvezeldoek|sponsj|schuursponsj|spons|werkdoek)\b/i,
+
+  // Hygiëne / medisch (niet-eet)
+  /\b(maandverband|tampon|inlegkruis|incontinent|panty\s*liner)\b/i,
+  /\b(condoom|condooms|glijmiddel)\b/i,
+  /\b(pleister|verband|gaasje|wattenstaaf|wattenschijfje|kompres)\b/i,
+
+  // Baby (non-food)
+  /\b(luier|luiers|billendoekje|babydoekje|babylotion|babyolie|babyzeep|kinderzeep)\b/i,
+
+  // Dier
+  /\b(katten?(voer|brok|bakvulling|grit|snack)|honden?(voer|brok|snack|sticks|kluif)|dieren\s*voer|kibble|kattenmelk)\b/i,
+  /\b(vogelvoer|vissenvoer|aquariumvoer|knaagdier(voer|en))\b/i,
+
+  // Papier huishouden
+  /\b(toiletpapier|wc[-\s]?papier|keukenpapier|keukenrol|zakdoekjes|tissues|servet)\b/i,
+
+  // Overig huishouden
+  /\b(batterij(en)?|gloeilamp|ledlamp|halogeenlamp|wegwerp\s*(maagzuur)?)\b/i,
+  /\b(tape|plakband|lijm(kit|stift)?|nieten|nietmachine|paperclip)\b/i,
+];
+
+const NON_FOOD_BRANDS = [
+  // Schoonmaak
+  'robijn','persil','ariel','dreft','vanish','calgon','glorix','wc eend','wc-eend',
+  'cif','ajax','mr proper','mr. proper','glassex','andy','lenor','quickwash',
+  // Verzorging
+  'odorex','rexona','sanex','axe','old spice','gillette','wilkinson sword','veet',
+  'andrelon','elvive','schwarzkopf','pantene','garnier','head & shoulders',
+  // Hygiëne / baby
+  'always','tena','carefree','pampers','libero','huggies',
+  // Dier
+  'felix','whiskas','sheba','pedigree','bonzo','frolic','pro plan','royal canin',
+  'hill\'s','eukanuba','iams','dreamies','kitekat','cesar',
+];
+
+function isFood(naam) {
+  if (NON_FOOD_PATTERNS.some(r => r.test(naam))) return false;
+  const lower = naam.toLowerCase();
+  if (NON_FOOD_BRANDS.some(b => lower.includes(b))) return false;
+  return true;
+}
+
 async function withRetry(fn, attempts = 3, delayMs = 5000) {
   for (let i = 0; i < attempts; i++) {
     try {
@@ -83,7 +150,7 @@ async function scrapeAll() {
 
   // Filter en sorteer
   const geldig = alleDeals.filter(d =>
-    d.naam && d.naam.length > 2 && d.prijsNu > 0 && d.prijsNu < 500
+    d.naam && d.naam.length > 2 && d.prijsNu > 0 && d.prijsNu < 500 && isFood(d.naam)
   );
   geldig.sort((a, b) => b.kortingPct - a.kortingPct);
 

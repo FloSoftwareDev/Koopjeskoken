@@ -200,7 +200,7 @@
       <div><div class="plan-sum-val" id="planMeals">0</div><div class="plan-sum-label">Maaltijden gepland</div></div>
       <div><div class="plan-sum-val" id="planPerDay">€0,00</div><div class="plan-sum-label">Gemiddeld per dag</div></div>
     </div>
-    <div style="margin-top:1.5rem;background:white;border-radius:var(--radius);border:1px solid var(--border);padding:1.5rem">
+    <div class="planner-recipes-wrap">
       <div class="modal-section-title">Voeg recept toe aan planner</div>
       <div class="recipe-grid" id="plannerRecipeGrid"></div>
     </div>

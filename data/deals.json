@@ -1,13 +1,13 @@
 {
-  "bijgewerkt": "2026-06-16T11:00:47.959Z",
-  "totaal": 325,
+  "bijgewerkt": "2026-06-17T05:00:40.937Z",
+  "totaal": 336,
   "perSupermarkt": {
-    "ah": 108,
-    "jumbo": 23,
+    "ah": 109,
+    "jumbo": 38,
     "lidl": 8,
     "aldi": 67,
-    "plus": 30,
-    "dirk": 89
+    "plus": 29,
+    "dirk": 97
   },
   "deals": [
     {
@@ -27,7 +27,7 @@
       "trefwoorden": [
         "ui"
       ],
-      "opgehaald": "2026-06-16T11:00:40.957Z"
+      "opgehaald": "2026-06-17T05:00:36.454Z"
     },
     {
       "id": "plus-biologisch-plus-en-plus-kies---mix-snoep",
@@ -44,58 +44,24 @@
       "geldigVanaf": "",
       "merk": "",
       "trefwoorden": [],
-      "opgehaald": "2026-06-16T11:00:40.957Z"
+      "opgehaald": "2026-06-17T05:00:36.454Z"
     },
     {
-      "id": "plus-coca-cola--fanta-en-sprite",
+      "id": "plus-alle-plus-verse-pizza-s",
       "supermarkt": "plus",
-      "naam": "Coca-Cola, Fanta en Sprite",
+      "naam": "Alle PLUS Verse pizza's",
       "beschrijving": "",
       "categorie": "Plus Aanbieding",
-      "prijsNu": 0.5,
-      "prijsWas": 1.7,
-      "kortingPct": 71,
-      "korting": "2 VOOR 1.00",
-      "afbeelding": "https://images.ctfassets.net/s0lodsnpsezb/4433_89_M/f120c95d3a7c095eeaeea8f08709aa15/4433_89.png?w=120&h=120&fit=pad&fm=webp&q=85",
+      "prijsNu": 3.5,
+      "prijsWas": 10.98,
+      "kortingPct": 68,
+      "korting": "2 VOOR 6.99",
+      "afbeelding": "https://images.ctfassets.net/s0lodsnpsezb/4434_70_M/20f97c8ac92d9a63dfbe9313f3c30fde/4434_70.png?w=120&h=120&fit=pad&fm=webp&q=85",
       "geldigTot": "",
       "geldigVanaf": "",
       "merk": "",
       "trefwoorden": [],
-      "opgehaald": "2026-06-16T11:00:40.956Z"
-    },
-    {
-      "id": "dirk-odorex-deodorant",
-      "supermarkt": "dirk",
-      "naam": "Odorex deodorant",
-      "beschrijving": "",
-      "categorie": "Dirk Aanbieding",
-      "prijsNu": 1.49,
-      "prijsWas": 4.75,
-      "kortingPct": 69,
-      "korting": "ACTIE van 4.75",
-      "afbeelding": "https://web-fileserver.dirk.nl/offers/2%2F0%2F8%2F6%2F3%2F1%2FOdorex%20deodorant%20v1_639160098465600340.png?width=190",
-      "geldigTot": "",
-      "geldigVanaf": "",
-      "merk": "",
-      "trefwoorden": [],
-      "opgehaald": "2026-06-16T11:00:47.704Z"
-    },
-    {
-      "id": "dirk-robijn-wasmiddel",
-      "supermarkt": "dirk",
-      "naam": "Robijn wasmiddel",
-      "beschrijving": "",
-      "categorie": "Dirk Aanbieding",
-      "prijsNu": 4.99,
-      "prijsWas": 13.89,
-      "kortingPct": 64,
-      "korting": "ACTIE van 13.89",
-      "afbeelding": "https://web-fileserver.dirk.nl/offers/9%2F0%2F8%2F6%2F3%2F1%2FRobijn%20wasmiddel%20v1_639160108387203009.png?width=190",
-      "geldigTot": "",
-      "geldigVanaf": "",
-      "merk": "",
-      "trefwoorden": [],
-      "opgehaald": "2026-06-16T11:00:47.704Z"
+      "opgehaald": "2026-06-17T05:00:36.454Z"
     },
     {
       "id": "plus-plus-kies---mix-verse-soep",
@@ -112,26 +78,58 @@
       "geldigVanaf": "",
       "merk": "",
       "trefwoorden": [],
-      "opgehaald": "2026-06-16T11:00:40.957Z"
+      "opgehaald": "2026-06-17T05:00:36.454Z"
     },
     {
-      "id": "dirk-parodontax-tandpasta",
+      "id": "dirk-witte-asperges-verpakt",
       "supermarkt": "dirk",
-      "naam": "Parodontax tandpasta",
+      "naam": "Witte asperges verpakt",
       "beschrijving": "",
       "categorie": "Dirk Aanbieding",
-      "prijsNu": 2.89,
-      "prijsWas": 6.99,
-      "kortingPct": 59,
-      "korting": "ACTIE van 6.99",
-      "afbeelding": "https://web-fileserver.dirk.nl/offers/4%2F0%2F8%2F6%2F3%2F1%2FParodontax%20tandpasta_639160110829452474.png?width=190",
+      "prijsNu": 1.99,
+      "prijsWas": 4.99,
+      "kortingPct": 60,
+      "korting": "ACTIE van 4.99",
+      "afbeelding": "https://web-fileserver.dirk.nl/artikelen%2F424300_2026-06-17_04-02-12-110_9d904fcc-e03c-473b-9898-d8cb75e74344.png?width=190",
       "geldigTot": "",
       "geldigVanaf": "",
       "merk": "",
-      "trefwoorden": [
-        "pasta"
-      ],
-      "opgehaald": "2026-06-16T11:00:47.704Z"
+      "trefwoorden": [],
+      "opgehaald": "2026-06-17T05:00:40.729Z"
+    },
+    {
+      "id": "dirk-unox-soep",
+      "supermarkt": "dirk",
+      "naam": "Unox soep",
+      "beschrijving": "",
+      "categorie": "Dirk Aanbieding",
+      "prijsNu": 1.99,
+      "prijsWas": 4.75,
+      "kortingPct": 58,
+      "korting": "ACTIE van 4.75",
+      "afbeelding": "https://web-fileserver.dirk.nl/offers/0%2F5%2F9%2F6%2F3%2F1%2FUnox%20soep_639166115875526488.png?width=190",
+      "geldigTot": "",
+      "geldigVanaf": "",
+      "merk": "",
+      "trefwoorden": [],
+      "opgehaald": "2026-06-17T05:00:40.730Z"
+    },
+    {
+      "id": "plus-plus-bananen-fairtrade",
+      "supermarkt": "plus",
+      "naam": "PLUS Bananen Fairtrade",
+      "beschrijving": "",
+      "categorie": "Plus Aanbieding",
+      "prijsNu": 0.99,
+      "prijsWas": 2.25,
+      "kortingPct": 56,
+      "korting": "0.99 PER KILO",
+      "afbeelding": "https://images.ctfassets.net/s0lodsnpsezb/113651_M/63db0eabf5dd487f2694a258006af620/113651.png?w=120&h=120&fit=pad&fm=webp&q=85",
+      "geldigTot": "",
+      "geldigVanaf": "",
+      "merk": "",
+      "trefwoorden": [],
+      "opgehaald": "2026-06-17T05:00:36.454Z"
     },
     {
       "id": "plus-plus-kies---mix-oosterse-maaltijd",
@@ -148,41 +146,58 @@
       "geldigVanaf": "",
       "merk": "",
       "trefwoorden": [],
-      "opgehaald": "2026-06-16T11:00:40.957Z"
+      "opgehaald": "2026-06-17T05:00:36.454Z"
     },
     {
-      "id": "dirk-robijn-wasparfum",
+      "id": "dirk-alpro-mild---creamy-of-drinks",
       "supermarkt": "dirk",
-      "naam": "Robijn wasparfum",
+      "naam": "Alpro mild & creamy of drinks",
       "beschrijving": "",
       "categorie": "Dirk Aanbieding",
-      "prijsNu": 2.99,
-      "prijsWas": 6.65,
+      "prijsNu": 1.29,
+      "prijsWas": 2.89,
       "kortingPct": 55,
-      "korting": "ACTIE van 6.65",
-      "afbeelding": "https://web-fileserver.dirk.nl/offers/0%2F1%2F8%2F6%2F3%2F1%2FRobijn%20wasparfum_639160109028417438.png?width=190",
+      "korting": "ACTIE van 2.89",
+      "afbeelding": "https://web-fileserver.dirk.nl/offers/3%2F2%2F9%2F6%2F3%2F1%2FAlpro%20mild%20%26%20creamy%20of%20drinks_639166132686733312.png?width=190",
       "geldigTot": "",
       "geldigVanaf": "",
       "merk": "",
       "trefwoorden": [],
-      "opgehaald": "2026-06-16T11:00:47.704Z"
+      "opgehaald": "2026-06-17T05:00:40.730Z"
     },
     {
-      "id": "dirk-wagner-piccolinis",
+      "id": "dirk-hertog-ijs-oranje-vanille",
       "supermarkt": "dirk",
-      "naam": "Wagner Piccolinis",
+      "naam": "Hertog Ijs oranje vanille",
       "beschrijving": "",
       "categorie": "Dirk Aanbieding",
-      "prijsNu": 1.69,
-      "prijsWas": 3.65,
-      "kortingPct": 54,
-      "korting": "ACTIE van 3.65",
-      "afbeelding": "https://web-fileserver.dirk.nl/offers/4%2F7%2F7%2F6%2F3%2F1%2FWagner%20Piccolinis_639160122295161306.png?width=190",
+      "prijsNu": 2.49,
+      "prijsWas": 5.49,
+      "kortingPct": 55,
+      "korting": "ACTIE van 5.49",
+      "afbeelding": "https://web-fileserver.dirk.nl/artikelen%2F258196_1_491041_639147090759238955.png?width=190",
       "geldigTot": "",
       "geldigVanaf": "",
       "merk": "",
       "trefwoorden": [],
-      "opgehaald": "2026-06-16T11:00:47.704Z"
+      "opgehaald": "2026-06-17T05:00:40.730Z"
+    },
+    {
+      "id": "dirk-pepsi-of-rivella",
+      "supermarkt": "dirk",
+      "naam": "Pepsi of Rivella",
+      "beschrijving": "",
+      "categorie": "Dirk Aanbieding",
+      "prijsNu": 1.29,
+      "prijsWas": 2.79,
+      "kortingPct": 54,
+      "korting": "ACTIE van 2.79",
+      "afbeelding": "https://web-fileserver.dirk.nl/offers/9%2F5%2F9%2F6%2F3%2F1%2FPepsi%20of%20Rivella_639166129684184209.png?width=190",
+      "geldigTot": "",
+      "geldigVanaf": "",
+      "merk": "",
+      "trefwoorden": [],
+      "opgehaald": "2026-06-17T05:00:40.730Z"
     },
     {
       "id": "aldi-1",
@@ -201,7 +216,7 @@
       "trefwoorden": [
         "paprika"
       ],
-      "opgehaald": "2026-06-16T11:00:35.710Z"
+      "opgehaald": "2026-06-17T05:00:31.222Z"
     },
     {
       "id": "plus-uit-de-keuken-van-plus-kies---mix-combi-",
@@ -220,7 +235,43 @@
       "trefwoorden": [
         "ui"
       ],
-      "opgehaald": "2026-06-16T11:00:40.957Z"
+      "opgehaald": "2026-06-17T05:00:36.454Z"
+    },
+    {
+      "id": "dirk-gouda-s-glorie-saus-of-mad-sauce",
+      "supermarkt": "dirk",
+      "naam": "Gouda's Glorie saus of Mad sauce",
+      "beschrijving": "",
+      "categorie": "Dirk Aanbieding",
+      "prijsNu": 1.49,
+      "prijsWas": 3.15,
+      "kortingPct": 53,
+      "korting": "ACTIE van 3.15",
+      "afbeelding": "https://web-fileserver.dirk.nl/offers/7%2F4%2F9%2F6%2F3%2F1%2FGouda%E2%80%99s%20Glorie%20saus%20of%20Mad%20sauce_639166115991206325.png?width=190",
+      "geldigTot": "",
+      "geldigVanaf": "",
+      "merk": "",
+      "trefwoorden": [
+        "kaas"
+      ],
+      "opgehaald": "2026-06-17T05:00:40.730Z"
+    },
+    {
+      "id": "dirk-appelsientje-100--sap-of-vezelrijk",
+      "supermarkt": "dirk",
+      "naam": "Appelsientje 100% sap of vezelrijk",
+      "beschrijving": "",
+      "categorie": "Dirk Aanbieding",
+      "prijsNu": 1.49,
+      "prijsWas": 3.09,
+      "kortingPct": 52,
+      "korting": "ACTIE van 3.09",
+      "afbeelding": "https://web-fileserver.dirk.nl/offers/7%2F5%2F9%2F6%2F3%2F1%2FAppelsientje%20100%25%20sap%20of%20vezelrijk_639166128681966232.png?width=190",
+      "geldigTot": "",
+      "geldigVanaf": "",
+      "merk": "",
+      "trefwoorden": [],
+      "opgehaald": "2026-06-17T05:00:40.730Z"
     },
     {
       "id": "plus-plus-kies---mix-ontbijtverrijkers",
@@ -237,77 +288,41 @@
       "geldigVanaf": "",
       "merk": "",
       "trefwoorden": [],
-      "opgehaald": "2026-06-16T11:00:40.957Z"
+      "opgehaald": "2026-06-17T05:00:36.454Z"
     },
     {
-      "id": "dirk-oatly-haverdrink",
+      "id": "dirk-jean-b-ton-mayonaise",
       "supermarkt": "dirk",
-      "naam": "Oatly haverdrink",
+      "naam": "Jean Bâton Mayonaise",
       "beschrijving": "",
       "categorie": "Dirk Aanbieding",
-      "prijsNu": 1.79,
-      "prijsWas": 3.65,
+      "prijsNu": 1.39,
+      "prijsWas": 2.85,
       "kortingPct": 51,
-      "korting": "ACTIE van 3.65",
-      "afbeelding": "https://web-fileserver.dirk.nl/offers/7%2F6%2F7%2F6%2F3%2F1%2FOatly%20haverdrink_639160100242873914.png?width=190",
+      "korting": "ACTIE van 2.85",
+      "afbeelding": "https://web-fileserver.dirk.nl/artikelen%2F258026_1_477147_639144384488093494.png?width=190",
       "geldigTot": "",
       "geldigVanaf": "",
       "merk": "",
       "trefwoorden": [],
-      "opgehaald": "2026-06-16T11:00:47.704Z"
+      "opgehaald": "2026-06-17T05:00:40.730Z"
     },
     {
-      "id": "dirk-oatly-haverdrink",
-      "supermarkt": "dirk",
-      "naam": "Oatly haverdrink",
-      "beschrijving": "",
-      "categorie": "Dirk Aanbieding",
-      "prijsNu": 1.79,
-      "prijsWas": 3.65,
-      "kortingPct": 51,
-      "korting": "ACTIE van 3.65",
-      "afbeelding": "https://web-fileserver.dirk.nl/offers/7%2F6%2F7%2F6%2F3%2F1%2FOatly%20haverdrink_639160100242873914.png?width=190",
-      "geldigTot": "",
-      "geldigVanaf": "",
-      "merk": "",
-      "trefwoorden": [],
-      "opgehaald": "2026-06-16T11:00:47.704Z"
-    },
-    {
-      "id": "aldi-61",
-      "supermarkt": "aldi",
-      "naam": "Quickwash afwasmiddel",
-      "beschrijving": "",
-      "categorie": "Aldi Aanbieding",
-      "prijsNu": 3,
-      "prijsWas": 5.98,
-      "kortingPct": 50,
-      "korting": "2 VOOR",
-      "afbeelding": "https://s7g10.scene7.com/is/image/aldinord/product_1216090_main_cms_2_nl_nl_quickwash_afwasmiddel_cw01_2024?bfc=on&wid=1440&fmt=webp-alpha",
-      "geldigTot": "",
-      "geldigVanaf": "",
-      "merk": "",
-      "trefwoorden": [
-        "ui"
-      ],
-      "opgehaald": "2026-06-16T11:00:35.710Z"
-    },
-    {
-      "id": "plus-plus-bitterballen",
+      "id": "plus-plus-watermeloen-eetrijp",
       "supermarkt": "plus",
-      "naam": "PLUS Bitterballen",
+      "naam": "PLUS Watermeloen eetrijp",
       "beschrijving": "",
       "categorie": "Plus Aanbieding",
-      "prijsNu": 2.5,
-      "prijsWas": 4.99,
+      "prijsNu": 3,
+      "prijsWas": 5.99,
       "kortingPct": 50,
-      "korting": "50 % KORTING",
-      "afbeelding": "https://images.ctfassets.net/s0lodsnpsezb/609935_M/46f41261ce700226dc967aab8b117270/609935.png?w=120&h=120&fit=pad&fm=webp&q=85",
+      "korting": "",
+      "afbeelding": "https://images.ctfassets.net/s0lodsnpsezb/828703_M/82fcae0450476adfe0ad9fc396bfc312/828703.png?w=120&h=120&fit=pad&fm=webp&q=85",
       "geldigTot": "",
       "geldigVanaf": "",
       "merk": "",
       "trefwoorden": [],
-      "opgehaald": "2026-06-16T11:00:40.957Z"
+      "opgehaald": "2026-06-17T05:00:36.454Z"
     },
     {
       "id": "plus-plus-nederlandse-aardbeien",
@@ -326,252 +341,275 @@
       "trefwoorden": [
         "ei"
       ],
-      "opgehaald": "2026-06-16T11:00:40.957Z"
+      "opgehaald": "2026-06-17T05:00:36.454Z"
     },
     {
-      "id": "plus-no-fairytales-tortilla",
+      "id": "plus-plus-salade",
       "supermarkt": "plus",
-      "naam": "No Fairytales Tortilla",
+      "naam": "PLUS Salade",
       "beschrijving": "",
       "categorie": "Plus Aanbieding",
-      "prijsNu": 3,
-      "prijsWas": 5.98,
+      "prijsNu": 3.3,
+      "prijsWas": 6.58,
       "kortingPct": 50,
       "korting": "1+1 GRATIS",
-      "afbeelding": "https://images.ctfassets.net/s0lodsnpsezb/4433_140_M/3f08c427e96a9604450abddccc4bab44/4433_140.png?w=120&h=120&fit=pad&fm=webp&q=85",
+      "afbeelding": "https://images.ctfassets.net/s0lodsnpsezb/4434_169_M/8713d70f1bbee4bc5d87ea9536798e0e/4434_169.png?w=120&h=120&fit=pad&fm=webp&q=85",
+      "geldigTot": "",
+      "geldigVanaf": "",
+      "merk": "",
+      "trefwoorden": [],
+      "opgehaald": "2026-06-17T05:00:36.454Z"
+    },
+    {
+      "id": "dirk-spa-fruit",
+      "supermarkt": "dirk",
+      "naam": "Spa Fruit",
+      "beschrijving": "",
+      "categorie": "Dirk Aanbieding",
+      "prijsNu": 1.19,
+      "prijsWas": 2.39,
+      "kortingPct": 50,
+      "korting": "ACTIE van 2.39",
+      "afbeelding": "https://web-fileserver.dirk.nl/offers/0%2F6%2F9%2F6%2F3%2F1%2FSpa%20Fruit_639166119238219350.png?width=190",
+      "geldigTot": "",
+      "geldigVanaf": "",
+      "merk": "",
+      "trefwoorden": [
+        "ui"
+      ],
+      "opgehaald": "2026-06-17T05:00:40.730Z"
+    },
+    {
+      "id": "dirk-sportlife-kauwgom",
+      "supermarkt": "dirk",
+      "naam": "Sportlife kauwgom",
+      "beschrijving": "",
+      "categorie": "Dirk Aanbieding",
+      "prijsNu": 1.69,
+      "prijsWas": 3.35,
+      "kortingPct": 50,
+      "korting": "ACTIE van 3.35",
+      "afbeelding": "https://web-fileserver.dirk.nl/offers/5%2F5%2F9%2F6%2F3%2F1%2FSportlife%20kauwgom_639166130059746018.png?width=190",
+      "geldigTot": "",
+      "geldigVanaf": "",
+      "merk": "",
+      "trefwoorden": [],
+      "opgehaald": "2026-06-17T05:00:40.730Z"
+    },
+    {
+      "id": "dirk-granarolo-grana-padano-of-parmigiano-reg",
+      "supermarkt": "dirk",
+      "naam": "Granarolo Grana Padano of Parmigiano Reggiano",
+      "beschrijving": "",
+      "categorie": "Dirk Aanbieding",
+      "prijsNu": 2.49,
+      "prijsWas": 4.75,
+      "kortingPct": 48,
+      "korting": "ACTIE van 4.75",
+      "afbeelding": "https://web-fileserver.dirk.nl/offers/6%2F2%2F9%2F6%2F3%2F1%2FGranarolo%20Grana%20Padano%20of%20Parmigiano%20Reggiano_639166121079078255.png?width=190",
+      "geldigTot": "",
+      "geldigVanaf": "",
+      "merk": "",
+      "trefwoorden": [],
+      "opgehaald": "2026-06-17T05:00:40.730Z"
+    },
+    {
+      "id": "dirk-fitmeals-of-jan-american-pancakes",
+      "supermarkt": "dirk",
+      "naam": "Fitmeals of Jan American pancakes",
+      "beschrijving": "",
+      "categorie": "Dirk Aanbieding",
+      "prijsNu": 1.49,
+      "prijsWas": 2.89,
+      "kortingPct": 48,
+      "korting": "ACTIE van 2.89",
+      "afbeelding": "https://web-fileserver.dirk.nl/offers/5%2F2%2F9%2F6%2F3%2F1%2FFitmeals%20of%20Jan%20American%20pancakes_639166127156649613.png?width=190",
+      "geldigTot": "",
+      "geldigVanaf": "",
+      "merk": "",
+      "trefwoorden": [],
+      "opgehaald": "2026-06-17T05:00:40.730Z"
+    },
+    {
+      "id": "dirk-nestl--choclait-chips-melk",
+      "supermarkt": "dirk",
+      "naam": "Nestlé Choclait chips melk",
+      "beschrijving": "",
+      "categorie": "Dirk Aanbieding",
+      "prijsNu": 1.99,
+      "prijsWas": 3.85,
+      "kortingPct": 48,
+      "korting": "ACTIE van 3.85",
+      "afbeelding": "https://web-fileserver.dirk.nl/artikelen%2F223167_1_418490_638797198087446236.png?width=190",
+      "geldigTot": "",
+      "geldigVanaf": "",
+      "merk": "",
+      "trefwoorden": [
+        "melk"
+      ],
+      "opgehaald": "2026-06-17T05:00:40.730Z"
+    },
+    {
+      "id": "dirk-johma-brood--en-toastsalade",
+      "supermarkt": "dirk",
+      "naam": "Johma brood- en toastsalade",
+      "beschrijving": "",
+      "categorie": "Dirk Aanbieding",
+      "prijsNu": 1.99,
+      "prijsWas": 3.75,
+      "kortingPct": 47,
+      "korting": "ACTIE van 3.75",
+      "afbeelding": "https://web-fileserver.dirk.nl/offers/0%2F2%2F9%2F6%2F3%2F1%2FJohma%20brood-%20en%20toastsalade%20v2_639166113053600825.png?width=190",
       "geldigTot": "",
       "geldigVanaf": "",
       "merk": "",
       "trefwoorden": [
         "brood"
       ],
-      "opgehaald": "2026-06-16T11:00:40.957Z"
+      "opgehaald": "2026-06-17T05:00:40.730Z"
     },
     {
-      "id": "dirk-zuivelhoeve-boer-n-yoghurt",
+      "id": "dirk-premier-actie-mosselen-medium",
       "supermarkt": "dirk",
-      "naam": "Zuivelhoeve Boer'n yoghurt",
-      "beschrijving": "",
-      "categorie": "Dirk Aanbieding",
-      "prijsNu": 1.49,
-      "prijsWas": 2.99,
-      "kortingPct": 50,
-      "korting": "ACTIE van 2.99",
-      "afbeelding": "https://web-fileserver.dirk.nl/offers/0%2F6%2F7%2F6%2F3%2F1%2FZuivelhoeve%20Boer%E2%80%99n%20yoghurt_639160100787715385.png?width=190",
-      "geldigTot": "",
-      "geldigVanaf": "",
-      "merk": "",
-      "trefwoorden": [
-        "yoghurt",
-        "ui"
-      ],
-      "opgehaald": "2026-06-16T11:00:47.704Z"
-    },
-    {
-      "id": "plus-lay-s-flatchips",
-      "supermarkt": "plus",
-      "naam": "Lay's Flatchips",
-      "beschrijving": "",
-      "categorie": "Plus Aanbieding",
-      "prijsNu": 0.99,
-      "prijsWas": 1.95,
-      "kortingPct": 49,
-      "korting": "",
-      "afbeelding": "https://images.ctfassets.net/s0lodsnpsezb/4433_9_M/f17140220c1e8dee0941ada2eb18ad43/4433_9.png?w=120&h=120&fit=pad&fm=webp&q=85",
-      "geldigTot": "",
-      "geldigVanaf": "",
-      "merk": "",
-      "trefwoorden": [],
-      "opgehaald": "2026-06-16T11:00:40.957Z"
-    },
-    {
-      "id": "dirk-de-vegetarische-slager",
-      "supermarkt": "dirk",
-      "naam": "De Vegetarische Slager",
-      "beschrijving": "",
-      "categorie": "Dirk Aanbieding",
-      "prijsNu": 2.49,
-      "prijsWas": 4.85,
-      "kortingPct": 49,
-      "korting": "ACTIE van 4.85",
-      "afbeelding": "https://web-fileserver.dirk.nl/offers/3%2F3%2F7%2F6%2F3%2F1%2FDe%20Vegetarische%20Slager__639160106208712677.png?width=190",
-      "geldigTot": "",
-      "geldigVanaf": "",
-      "merk": "",
-      "trefwoorden": [],
-      "opgehaald": "2026-06-16T11:00:47.704Z"
-    },
-    {
-      "id": "dirk-felix-kattenvoer",
-      "supermarkt": "dirk",
-      "naam": "Felix kattenvoer",
-      "beschrijving": "",
-      "categorie": "Dirk Aanbieding",
-      "prijsNu": 3.49,
-      "prijsWas": 6.89,
-      "kortingPct": 49,
-      "korting": "ACTIE van 6.89",
-      "afbeelding": "https://web-fileserver.dirk.nl/offers/7%2F0%2F8%2F6%2F3%2F1%2FFelix%20kattenvoer_639160098588407695.png?width=190",
-      "geldigTot": "",
-      "geldigVanaf": "",
-      "merk": "",
-      "trefwoorden": [],
-      "opgehaald": "2026-06-16T11:00:47.704Z"
-    },
-    {
-      "id": "dirk-mediterrano-focaccia",
-      "supermarkt": "dirk",
-      "naam": "Mediterrano focaccia",
-      "beschrijving": "",
-      "categorie": "Dirk Aanbieding",
-      "prijsNu": 1.29,
-      "prijsWas": 2.49,
-      "kortingPct": 48,
-      "korting": "ACTIE van 2.49",
-      "afbeelding": "https://web-fileserver.dirk.nl/offers/7%2F1%2F8%2F6%2F3%2F1%2FMediterrano%20focaccia_639160106056840267.png?width=190",
-      "geldigTot": "",
-      "geldigVanaf": "",
-      "merk": "",
-      "trefwoorden": [],
-      "opgehaald": "2026-06-16T11:00:47.704Z"
-    },
-    {
-      "id": "dirk-conimex-pindasoep",
-      "supermarkt": "dirk",
-      "naam": "Conimex Pindasoep",
-      "beschrijving": "",
-      "categorie": "Dirk Aanbieding",
-      "prijsNu": 1.99,
-      "prijsWas": 3.79,
-      "kortingPct": 47,
-      "korting": "ACTIE van 3.79",
-      "afbeelding": "https://web-fileserver.dirk.nl/artikelen%2F11445_1_371108_638245800210235596.png?width=190",
-      "geldigTot": "",
-      "geldigVanaf": "",
-      "merk": "",
-      "trefwoorden": [],
-      "opgehaald": "2026-06-16T11:00:47.704Z"
-    },
-    {
-      "id": "dirk-tena-discreet",
-      "supermarkt": "dirk",
-      "naam": "Tena Discreet",
+      "naam": "Premier Actie mosselen medium",
       "beschrijving": "",
       "categorie": "Dirk Aanbieding",
       "prijsNu": 2.99,
-      "prijsWas": 5.65,
-      "kortingPct": 47,
-      "korting": "ACTIE van 5.65",
-      "afbeelding": "https://web-fileserver.dirk.nl/offers/5%2F0%2F8%2F6%2F3%2F1%2FTena%20Discreet_639160105333687860.png?width=190",
+      "prijsWas": 5.49,
+      "kortingPct": 46,
+      "korting": "ACTIE van 5.49",
+      "afbeelding": "https://web-fileserver.dirk.nl/artikelen%2F234018_1_476019_638949960269319227.png?width=190",
       "geldigTot": "",
       "geldigVanaf": "",
       "merk": "",
       "trefwoorden": [],
-      "opgehaald": "2026-06-16T11:00:47.704Z"
+      "opgehaald": "2026-06-17T05:00:40.729Z"
     },
     {
-      "id": "plus-plus-puntpaprika-rood",
-      "supermarkt": "plus",
-      "naam": "PLUS Puntpaprika rood",
+      "id": "dirk-friesche-vlag-koffiemelk",
+      "supermarkt": "dirk",
+      "naam": "Friesche Vlag koffiemelk",
       "beschrijving": "",
-      "categorie": "Plus Aanbieding",
-      "prijsNu": 1.99,
-      "prijsWas": 3.59,
-      "kortingPct": 45,
-      "korting": "",
-      "afbeelding": "https://images.ctfassets.net/s0lodsnpsezb/455440_M/7c30daf0096b07697331841ff3b2d8e6/455440.png?w=120&h=120&fit=pad&fm=webp&q=85",
+      "categorie": "Dirk Aanbieding",
+      "prijsNu": 1.19,
+      "prijsWas": 2.19,
+      "kortingPct": 46,
+      "korting": "ACTIE van 2.19",
+      "afbeelding": "https://web-fileserver.dirk.nl/offers/2%2F4%2F9%2F6%2F3%2F1%2FFriesche%20Vlag%20koffiemelk_639166115310114416.png?width=190",
       "geldigTot": "",
       "geldigVanaf": "",
       "merk": "",
       "trefwoorden": [
-        "paprika"
+        "melk"
       ],
-      "opgehaald": "2026-06-16T11:00:40.957Z"
+      "opgehaald": "2026-06-17T05:00:40.730Z"
     },
     {
-      "id": "dirk-innocent-sap-of-smoothie",
+      "id": "dirk-nescaf--dolce-gusto-koffiecups",
       "supermarkt": "dirk",
-      "naam": "Innocent sap of smoothie",
+      "naam": "Nescafé Dolce Gusto koffiecups",
       "beschrijving": "",
       "categorie": "Dirk Aanbieding",
-      "prijsNu": 1.49,
-      "prijsWas": 2.69,
-      "kortingPct": 45,
-      "korting": "ACTIE van 2.69",
-      "afbeelding": "https://web-fileserver.dirk.nl/offers/3%2F5%2F7%2F6%2F3%2F1%2FInnocent%20sap%20of%20smoothie_639160100056819930.png?width=190",
+      "prijsNu": 3.49,
+      "prijsWas": 6.49,
+      "kortingPct": 46,
+      "korting": "ACTIE van 6.49",
+      "afbeelding": "https://web-fileserver.dirk.nl/offers/3%2F5%2F9%2F6%2F3%2F1%2FNescaf%C3%A9%20Dolce%20Gusto%20koffiecups_639166128524188377.png?width=190",
       "geldigTot": "",
       "geldigVanaf": "",
       "merk": "",
       "trefwoorden": [],
-      "opgehaald": "2026-06-16T11:00:47.704Z"
+      "opgehaald": "2026-06-17T05:00:40.730Z"
     },
     {
-      "id": "dirk-daim--oreo--toblerone-of-biscoff-ijs",
+      "id": "dirk-stegeman-worst",
       "supermarkt": "dirk",
-      "naam": "Daim, Oreo, Toblerone of Biscoff ijs",
+      "naam": "Stegeman worst",
       "beschrijving": "",
       "categorie": "Dirk Aanbieding",
-      "prijsNu": 2.49,
-      "prijsWas": 4.49,
-      "kortingPct": 45,
-      "korting": "ACTIE van 4.49",
-      "afbeelding": "https://web-fileserver.dirk.nl/offers/5%2F6%2F7%2F6%2F3%2F1%2FDaim%2C%20Oreo%2C%20Toblerone%20of%20Biscoff%20ijs_639160099926416901.png?width=190",
+      "prijsNu": 2.79,
+      "prijsWas": 4.95,
+      "kortingPct": 44,
+      "korting": "ACTIE van 4.95",
+      "afbeelding": "https://web-fileserver.dirk.nl/offers/9%2F4%2F9%2F6%2F3%2F1%2FStegeman%20worst_639166115192489970.png?width=190",
       "geldigTot": "",
       "geldigVanaf": "",
       "merk": "",
-      "trefwoorden": [],
-      "opgehaald": "2026-06-16T11:00:47.704Z"
+      "trefwoorden": [
+        "worst"
+      ],
+      "opgehaald": "2026-06-17T05:00:40.730Z"
     },
     {
-      "id": "plus-plus-snoeptomaten-en--komkommers",
+      "id": "plus-plus-nederlandse-kruimige-en-vastkokende",
       "supermarkt": "plus",
-      "naam": "PLUS Snoeptomaten en -komkommers",
+      "naam": "PLUS Nederlandse Kruimige en vastkokende aardappels",
       "beschrijving": "",
       "categorie": "Plus Aanbieding",
-      "prijsNu": 3.5,
-      "prijsWas": 5.99,
-      "kortingPct": 42,
-      "korting": "",
-      "afbeelding": "https://images.ctfassets.net/s0lodsnpsezb/4433_215_M/939ec5cbfc65881e1c6ab409b4d383d1/4433_215.png?w=120&h=120&fit=pad&fm=webp&q=85",
-      "geldigTot": "",
-      "geldigVanaf": "",
-      "merk": "",
-      "trefwoorden": [],
-      "opgehaald": "2026-06-16T11:00:40.957Z"
-    },
-    {
-      "id": "dirk-hero-jam",
-      "supermarkt": "dirk",
-      "naam": "Hero jam",
-      "beschrijving": "",
-      "categorie": "Dirk Aanbieding",
       "prijsNu": 1.99,
-      "prijsWas": 3.35,
-      "kortingPct": 41,
-      "korting": "ACTIE van 3.35",
-      "afbeelding": "https://web-fileserver.dirk.nl/offers/6%2F6%2F7%2F6%2F3%2F1%2FHero%20jam__639160120185611753.png?width=190",
+      "prijsWas": 3.49,
+      "kortingPct": 43,
+      "korting": "",
+      "afbeelding": "https://images.ctfassets.net/s0lodsnpsezb/4434_167_M/b39acfced0aa837f525a04e23e907f86/4434_167.png?w=120&h=120&fit=pad&fm=webp&q=85",
       "geldigTot": "",
       "geldigVanaf": "",
       "merk": "",
-      "trefwoorden": [],
-      "opgehaald": "2026-06-16T11:00:47.704Z"
+      "trefwoorden": [
+        "ui",
+        "aardappel"
+      ],
+      "opgehaald": "2026-06-17T05:00:36.454Z"
     },
     {
-      "id": "dirk-c-te-d-or-chocolade",
+      "id": "dirk-arla-skyr",
       "supermarkt": "dirk",
-      "naam": "Côte d'Or chocolade",
+      "naam": "Arla Skyr",
       "beschrijving": "",
       "categorie": "Dirk Aanbieding",
-      "prijsNu": 3.29,
-      "prijsWas": 5.55,
-      "kortingPct": 41,
-      "korting": "ACTIE van 5.55",
-      "afbeelding": "https://web-fileserver.dirk.nl/offers/5%2F7%2F7%2F6%2F3%2F1%2FC%C3%B4te%20d%E2%80%99Or%20chocolade_639160120735246644.png?width=190",
+      "prijsNu": 1.19,
+      "prijsWas": 2.09,
+      "kortingPct": 43,
+      "korting": "ACTIE van 2.09",
+      "afbeelding": "https://web-fileserver.dirk.nl/offers/4%2F2%2F9%2F6%2F3%2F1%2FArla%20Skyr_639166104959578653.png?width=190",
       "geldigTot": "",
       "geldigVanaf": "",
       "merk": "",
       "trefwoorden": [],
-      "opgehaald": "2026-06-16T11:00:47.704Z"
+      "opgehaald": "2026-06-17T05:00:40.730Z"
+    },
+    {
+      "id": "dirk-mora-oven---airfryer",
+      "supermarkt": "dirk",
+      "naam": "Mora Oven & Airfryer",
+      "beschrijving": "",
+      "categorie": "Dirk Aanbieding",
+      "prijsNu": 2.69,
+      "prijsWas": 4.75,
+      "kortingPct": 43,
+      "korting": "ACTIE van 4.75",
+      "afbeelding": "https://web-fileserver.dirk.nl/offers/3%2F9%2F8%2F6%2F3%2F1%2FMora%20Oven%20%26%20Airfryer_639166129552001327.png?width=190",
+      "geldigTot": "",
+      "geldigVanaf": "",
+      "merk": "",
+      "trefwoorden": [],
+      "opgehaald": "2026-06-17T05:00:40.730Z"
+    },
+    {
+      "id": "plus-plus-frambozen",
+      "supermarkt": "plus",
+      "naam": "PLUS Frambozen",
+      "beschrijving": "",
+      "categorie": "Plus Aanbieding",
+      "prijsNu": 2.99,
+      "prijsWas": 4.99,
+      "kortingPct": 40,
+      "korting": "",
+      "afbeelding": "https://images.ctfassets.net/s0lodsnpsezb/170036_M/3db1f055e646727c9065a6e0da5f2159/170036.png?w=120&h=120&fit=pad&fm=webp&q=85",
+      "geldigTot": "",
+      "geldigVanaf": "",
+      "merk": "",
+      "trefwoorden": [],
+      "opgehaald": "2026-06-17T05:00:36.454Z"
     },
     {
       "id": "plus-plus-kersen",
@@ -588,65 +626,61 @@
       "geldigVanaf": "",
       "merk": "",
       "trefwoorden": [],
-      "opgehaald": "2026-06-16T11:00:40.957Z"
+      "opgehaald": "2026-06-17T05:00:36.454Z"
     },
     {
-      "id": "plus-plus-fruitpunch-en-meloenmix",
+      "id": "plus-plus-snoeptomaten-rood",
       "supermarkt": "plus",
-      "naam": "PLUS Fruitpunch en meloenmix",
+      "naam": "PLUS Snoeptomaten rood",
       "beschrijving": "",
       "categorie": "Plus Aanbieding",
+      "prijsNu": 1.99,
+      "prijsWas": 3.29,
+      "kortingPct": 40,
+      "korting": "",
+      "afbeelding": "https://images.ctfassets.net/s0lodsnpsezb/180860_M/bfb19bf859a6f0f04cc39b5d08de6629/180860.png?w=120&h=120&fit=pad&fm=webp&q=85",
+      "geldigTot": "",
+      "geldigVanaf": "",
+      "merk": "",
+      "trefwoorden": [],
+      "opgehaald": "2026-06-17T05:00:36.454Z"
+    },
+    {
+      "id": "dirk-starbucks-koffiecups",
+      "supermarkt": "dirk",
+      "naam": "Starbucks koffiecups",
+      "beschrijving": "",
+      "categorie": "Dirk Aanbieding",
       "prijsNu": 2.99,
       "prijsWas": 4.99,
       "kortingPct": 40,
-      "korting": "",
-      "afbeelding": "https://images.ctfassets.net/s0lodsnpsezb/4433_216_M/3b1ae8a852bc47e58728c52bbc531512/4433_216.png?w=120&h=120&fit=pad&fm=webp&q=85",
+      "korting": "ACTIE van 4.99",
+      "afbeelding": "https://web-fileserver.dirk.nl/offers/6%2F5%2F9%2F6%2F3%2F1%2FStarbucks%20koffiecups%20v1_639166115457261361.png?width=190",
       "geldigTot": "",
       "geldigVanaf": "",
       "merk": "",
-      "trefwoorden": [
-        "ui"
-      ],
-      "opgehaald": "2026-06-16T11:00:40.957Z"
+      "trefwoorden": [],
+      "opgehaald": "2026-06-17T05:00:40.730Z"
     },
     {
-      "id": "dirk-daily-chef-pastasaus-of-gevulde-pasta",
+      "id": "dirk-vergeer-geraspte-kaas",
       "supermarkt": "dirk",
-      "naam": "Daily Chef pastasaus of gevulde pasta",
+      "naam": "Vergeer geraspte kaas",
       "beschrijving": "",
       "categorie": "Dirk Aanbieding",
-      "prijsNu": 1.49,
-      "prijsWas": 2.49,
-      "kortingPct": 40,
-      "korting": "ACTIE van 2.49",
-      "afbeelding": "https://web-fileserver.dirk.nl/offers/7%2F5%2F7%2F6%2F3%2F1%2FDaily%20Chef%20pastasaus_639160105767888324.png?width=190",
+      "prijsNu": 1.69,
+      "prijsWas": 2.79,
+      "kortingPct": 39,
+      "korting": "ACTIE van 2.79",
+      "afbeelding": "https://web-fileserver.dirk.nl/offers/8%2F2%2F9%2F6%2F3%2F1%2FVergeer%20geraspte%20kaas_639166119976005252.png?width=190",
       "geldigTot": "",
       "geldigVanaf": "",
       "merk": "",
       "trefwoorden": [
-        "pasta",
-        "tomatensaus"
+        "kaas",
+        "geraspte kaas"
       ],
-      "opgehaald": "2026-06-16T11:00:47.704Z"
-    },
-    {
-      "id": "dirk-klene-suikervrij",
-      "supermarkt": "dirk",
-      "naam": "Klene suikervrij",
-      "beschrijving": "",
-      "categorie": "Dirk Aanbieding",
-      "prijsNu": 1.49,
-      "prijsWas": 2.49,
-      "kortingPct": 40,
-      "korting": "ACTIE van 2.49",
-      "afbeelding": "https://web-fileserver.dirk.nl/offers/7%2F7%2F7%2F6%2F3%2F1%2FKlene%20suikervrij_639160103583042795.png?width=190",
-      "geldigTot": "",
-      "geldigVanaf": "",
-      "merk": "",
-      "trefwoorden": [
-        "ui"
-      ],
-      "opgehaald": "2026-06-16T11:00:47.704Z"
+      "opgehaald": "2026-06-17T05:00:40.730Z"
     },
     {
       "id": "aldi-14",
@@ -663,132 +697,130 @@
       "geldigVanaf": "",
       "merk": "",
       "trefwoorden": [],
-      "opgehaald": "2026-06-16T11:00:35.710Z"
+      "opgehaald": "2026-06-17T05:00:31.222Z"
     },
     {
-      "id": "dirk-snelle-jelle-kruidkoek",
+      "id": "dirk-alesie-basmati-rijst",
       "supermarkt": "dirk",
-      "naam": "Snelle Jelle kruidkoek",
+      "naam": "Alesie Basmati rijst",
       "beschrijving": "",
       "categorie": "Dirk Aanbieding",
-      "prijsNu": 1.79,
-      "prijsWas": 2.79,
-      "kortingPct": 36,
-      "korting": "ACTIE van 2.79",
-      "afbeelding": "https://web-fileserver.dirk.nl/offers/3%2F7%2F7%2F6%2F3%2F1%2FSnelle%20Jelle%20kruidkoek_639160091871898205.png?width=190",
+      "prijsNu": 3.99,
+      "prijsWas": 6.45,
+      "kortingPct": 38,
+      "korting": "ACTIE van 6.45",
+      "afbeelding": "https://web-fileserver.dirk.nl/artikelen%2F21422_1_396161_637188382515138781.png?width=190",
       "geldigTot": "",
       "geldigVanaf": "",
       "merk": "",
       "trefwoorden": [
-        "ui"
+        "rijst"
       ],
-      "opgehaald": "2026-06-16T11:00:47.704Z"
+      "opgehaald": "2026-06-17T05:00:40.730Z"
     },
     {
-      "id": "dirk-lavazza-koffiebonen-crema-e-gusto-tradit",
+      "id": "dirk-hero-b-tween",
       "supermarkt": "dirk",
-      "naam": "Lavazza Koffiebonen crema e gusto tradition",
+      "naam": "Hero B'tween",
       "beschrijving": "",
       "categorie": "Dirk Aanbieding",
-      "prijsNu": 12.99,
-      "prijsWas": 20.35,
-      "kortingPct": 36,
-      "korting": "ACTIE van 20.35",
-      "afbeelding": "https://web-fileserver.dirk.nl/artikelen%2F235743_1_247045_639056190247712550.png?width=190",
+      "prijsNu": 1.69,
+      "prijsWas": 2.69,
+      "kortingPct": 37,
+      "korting": "ACTIE van 2.69",
+      "afbeelding": "https://web-fileserver.dirk.nl/offers/2%2F5%2F9%2F6%2F3%2F1%2FHero%20B%E2%80%99tween_639166133025079246.png?width=190",
       "geldigTot": "",
       "geldigVanaf": "",
       "merk": "",
       "trefwoorden": [],
-      "opgehaald": "2026-06-16T11:00:47.704Z"
+      "opgehaald": "2026-06-17T05:00:40.730Z"
     },
     {
-      "id": "plus-eat-me-mango",
+      "id": "dirk-cheetos--hamka-s--pomtips-of-mama-mia-s",
+      "supermarkt": "dirk",
+      "naam": "Cheetos, Hamka's, Pomtips of Mama Mia's",
+      "beschrijving": "",
+      "categorie": "Dirk Aanbieding",
+      "prijsNu": 1.49,
+      "prijsWas": 2.35,
+      "kortingPct": 37,
+      "korting": "ACTIE van 2.35",
+      "afbeelding": "https://web-fileserver.dirk.nl/offers/2%2F7%2F9%2F6%2F3%2F1%2FCheetos%2C%20Hamka%E2%80%99s%2C%20Pomtips%20of%20Mama%20Mia%E2%80%99s_639166134480416827.png?width=190",
+      "geldigTot": "",
+      "geldigVanaf": "",
+      "merk": "",
+      "trefwoorden": [],
+      "opgehaald": "2026-06-17T05:00:40.730Z"
+    },
+    {
+      "id": "plus-plus-snijbonen--ongesneden-en-nederlands",
       "supermarkt": "plus",
-      "naam": "Eat Me Mango",
+      "naam": "PLUS Snijbonen (ongesneden en Nederlandse Witlof",
       "beschrijving": "",
       "categorie": "Plus Aanbieding",
-      "prijsNu": 2.49,
-      "prijsWas": 3.85,
+      "prijsNu": 1.49,
+      "prijsWas": 2.29,
       "kortingPct": 35,
       "korting": "",
-      "afbeelding": "https://images.ctfassets.net/s0lodsnpsezb/389647_M/18e8a6c451746839d52a376f20c0f6b3/389647.png?w=120&h=120&fit=pad&fm=webp&q=85",
+      "afbeelding": "https://images.ctfassets.net/s0lodsnpsezb/4434_179_M/4c1f324568548dc401a878c961853d6f/4434_179.png?w=120&h=120&fit=pad&fm=webp&q=85",
       "geldigTot": "",
       "geldigVanaf": "",
       "merk": "",
       "trefwoorden": [],
-      "opgehaald": "2026-06-16T11:00:40.957Z"
+      "opgehaald": "2026-06-17T05:00:36.454Z"
     },
     {
-      "id": "dirk-apetina-witte-kaas",
+      "id": "dirk-bits---bites-tapas",
       "supermarkt": "dirk",
-      "naam": "Apetina witte kaas",
+      "naam": "Bits & Bites Tapas",
       "beschrijving": "",
       "categorie": "Dirk Aanbieding",
-      "prijsNu": 1.99,
-      "prijsWas": 3.05,
+      "prijsNu": 1.29,
+      "prijsWas": 1.99,
       "kortingPct": 35,
-      "korting": "ACTIE van 3.05",
-      "afbeelding": "https://web-fileserver.dirk.nl/offers/5%2F5%2F7%2F6%2F3%2F1%2FApetina%20witte%20kaas_639160103146331542.png?width=190",
-      "geldigTot": "",
-      "geldigVanaf": "",
-      "merk": "",
-      "trefwoorden": [
-        "kaas"
-      ],
-      "opgehaald": "2026-06-16T11:00:47.704Z"
-    },
-    {
-      "id": "dirk-abrikozen-verpakt",
-      "supermarkt": "dirk",
-      "naam": "Abrikozen verpakt",
-      "beschrijving": "",
-      "categorie": "Dirk Aanbieding",
-      "prijsNu": 1.99,
-      "prijsWas": 2.99,
-      "kortingPct": 33,
-      "korting": "ACTIE van 2.99",
-      "afbeelding": "https://web-fileserver.dirk.nl/artikelen%2F268588_2026-06-16_04-07-07-715_eb450d66-3515-4853-ba95-5b07e4b049cd.png?width=190",
+      "korting": "VR, ZA & ZO actie van 1.99",
+      "afbeelding": "https://web-fileserver.dirk.nl/offers/9%2F1%2F0%2F7%2F3%2F1%2FTapas_639166129186531611.png?width=190",
       "geldigTot": "",
       "geldigVanaf": "",
       "merk": "",
       "trefwoorden": [],
-      "opgehaald": "2026-06-16T11:00:47.704Z"
+      "opgehaald": "2026-06-17T05:00:40.730Z"
     },
     {
-      "id": "dirk-karvan-c-vitam",
+      "id": "dirk-heinz-spagheroni-of-tomato-frito-creatio",
       "supermarkt": "dirk",
-      "naam": "Karvan Cévitam",
+      "naam": "Heinz Spagheroni of Tomato Frito Creations",
       "beschrijving": "",
       "categorie": "Dirk Aanbieding",
-      "prijsNu": 2.89,
-      "prijsWas": 4.29,
-      "kortingPct": 33,
-      "korting": "ACTIE van 4.29",
-      "afbeelding": "https://web-fileserver.dirk.nl/offers/3%2F8%2F7%2F6%2F3%2F1%2FKarvan%20C%C3%A9vitam%20V2_639160121298934880.png?width=190",
-      "geldigTot": "",
-      "geldigVanaf": "",
-      "merk": "",
-      "trefwoorden": [],
-      "opgehaald": "2026-06-16T11:00:47.704Z"
-    },
-    {
-      "id": "dirk-duyvis-nootjes",
-      "supermarkt": "dirk",
-      "naam": "Duyvis nootjes",
-      "beschrijving": "",
-      "categorie": "Dirk Aanbieding",
-      "prijsNu": 1.99,
-      "prijsWas": 2.95,
-      "kortingPct": 33,
-      "korting": "ACTIE van 2.95",
-      "afbeelding": "https://web-fileserver.dirk.nl/offers/0%2F2%2F8%2F6%2F3%2F1%2FDuyvis%20nootjes_639160119798336408.png?width=190",
+      "prijsNu": 1.49,
+      "prijsWas": 2.25,
+      "kortingPct": 34,
+      "korting": "ACTIE van 2.25",
+      "afbeelding": "https://web-fileserver.dirk.nl/offers/8%2F4%2F9%2F6%2F3%2F1%2FHeinz%20Spagheroni%20of%20Tomato%20Frito%20Creations%20v1_639166115752965301.png?width=190",
       "geldigTot": "",
       "geldigVanaf": "",
       "merk": "",
       "trefwoorden": [
-        "vis"
+        "ei"
       ],
-      "opgehaald": "2026-06-16T11:00:47.704Z"
+      "opgehaald": "2026-06-17T05:00:40.730Z"
+    },
+    {
+      "id": "dirk-wasa-kn-ckebr-d",
+      "supermarkt": "dirk",
+      "naam": "Wasa knäckebröd",
+      "beschrijving": "",
+      "categorie": "Dirk Aanbieding",
+      "prijsNu": 1.29,
+      "prijsWas": 1.92,
+      "kortingPct": 33,
+      "korting": "ACTIE van 1.92",
+      "afbeelding": "https://web-fileserver.dirk.nl/offers/5%2F4%2F9%2F6%2F3%2F1%2FWasa%20kn%C3%A4ckebr%C3%B6d_639166121433711780.png?width=190",
+      "geldigTot": "",
+      "geldigVanaf": "",
+      "merk": "",
+      "trefwoorden": [],
+      "opgehaald": "2026-06-17T05:00:40.730Z"
     },
     {
       "id": "aldi-16",
@@ -807,79 +839,75 @@
       "trefwoorden": [
         "brood"
       ],
-      "opgehaald": "2026-06-16T11:00:35.710Z"
+      "opgehaald": "2026-06-17T05:00:31.222Z"
     },
     {
-      "id": "plus-plus-verspakket-wereld-cupsalon-en-spagh",
-      "supermarkt": "plus",
-      "naam": "PLUS Verspakket Wereld Cupsalon en Spaghetti Goalognese",
+      "id": "dirk-1-de-beste-prosciutto-crudo-of-jamon-ser",
+      "supermarkt": "dirk",
+      "naam": "1 de Beste Prosciutto crudo of jamon serrano",
       "beschrijving": "",
-      "categorie": "Plus Aanbieding",
-      "prijsNu": 4,
-      "prijsWas": 5.89,
+      "categorie": "Dirk Aanbieding",
+      "prijsNu": 2.99,
+      "prijsWas": 4.39,
       "kortingPct": 32,
-      "korting": "",
-      "afbeelding": "https://images.ctfassets.net/s0lodsnpsezb/4433_212_M/f4429b287bf133c2d75c8966ab0052e2/4433_212.png?w=120&h=120&fit=pad&fm=webp&q=85",
-      "geldigTot": "",
-      "geldigVanaf": "",
-      "merk": "",
-      "trefwoorden": [
-        "pasta"
-      ],
-      "opgehaald": "2026-06-16T11:00:40.957Z"
-    },
-    {
-      "id": "plus-plus-broccoli",
-      "supermarkt": "plus",
-      "naam": "PLUS Broccoli",
-      "beschrijving": "",
-      "categorie": "Plus Aanbieding",
-      "prijsNu": 0.89,
-      "prijsWas": 1.29,
-      "kortingPct": 31,
-      "korting": "500 GRAM 0.89",
-      "afbeelding": "https://images.ctfassets.net/s0lodsnpsezb/114122_M/959bc26ed367c3c403b5f7ced5dec73d/114122.png?w=120&h=120&fit=pad&fm=webp&q=85",
-      "geldigTot": "",
-      "geldigVanaf": "",
-      "merk": "",
-      "trefwoorden": [
-        "broccoli"
-      ],
-      "opgehaald": "2026-06-16T11:00:40.957Z"
-    },
-    {
-      "id": "dirk-bits---bites-tapas",
-      "supermarkt": "dirk",
-      "naam": "Bits & Bites Tapas",
-      "beschrijving": "",
-      "categorie": "Dirk Aanbieding",
-      "prijsNu": 1.59,
-      "prijsWas": 2.29,
-      "kortingPct": 31,
-      "korting": "ACTIE van 2.29",
-      "afbeelding": "https://web-fileserver.dirk.nl/offers/2%2F1%2F8%2F6%2F3%2F1%2FTapas_639160102877163084.png?width=190",
+      "korting": "VR, ZA & ZO actie van 4.39",
+      "afbeelding": "https://web-fileserver.dirk.nl/offers/8%2F1%2F0%2F7%2F3%2F1%2FProsciutto%20crudo%20of%20jamon%20serrano_639166114563516909.png?width=190",
       "geldigTot": "",
       "geldigVanaf": "",
       "merk": "",
       "trefwoorden": [],
-      "opgehaald": "2026-06-16T11:00:47.704Z"
+      "opgehaald": "2026-06-17T05:00:40.729Z"
     },
     {
-      "id": "dirk-lay-s-chips",
+      "id": "dirk-lu-mini-crackers",
       "supermarkt": "dirk",
-      "naam": "Lay's chips",
+      "naam": "LU mini crackers",
       "beschrijving": "",
       "categorie": "Dirk Aanbieding",
-      "prijsNu": 1.99,
-      "prijsWas": 2.89,
-      "kortingPct": 31,
-      "korting": "ACTIE van 2.89",
-      "afbeelding": "https://web-fileserver.dirk.nl/offers/1%2F2%2F8%2F6%2F3%2F1%2FLay%E2%80%99s%20chips_639160119639651436.png?width=190",
+      "prijsNu": 1.49,
+      "prijsWas": 2.19,
+      "kortingPct": 32,
+      "korting": "ACTIE van 2.19",
+      "afbeelding": "https://web-fileserver.dirk.nl/offers/3%2F4%2F9%2F6%2F3%2F1%2FLU%20mini%20crackers_639166130855873270.png?width=190",
       "geldigTot": "",
       "geldigVanaf": "",
       "merk": "",
       "trefwoorden": [],
-      "opgehaald": "2026-06-16T11:00:47.704Z"
+      "opgehaald": "2026-06-17T05:00:40.730Z"
+    },
+    {
+      "id": "dirk-lu-mini-crackers",
+      "supermarkt": "dirk",
+      "naam": "LU mini crackers",
+      "beschrijving": "",
+      "categorie": "Dirk Aanbieding",
+      "prijsNu": 1.49,
+      "prijsWas": 2.19,
+      "kortingPct": 32,
+      "korting": "ACTIE van 2.19",
+      "afbeelding": "https://web-fileserver.dirk.nl/offers/3%2F4%2F9%2F6%2F3%2F1%2FLU%20mini%20crackers_639166130855873270.png?width=190",
+      "geldigTot": "",
+      "geldigVanaf": "",
+      "merk": "",
+      "trefwoorden": [],
+      "opgehaald": "2026-06-17T05:00:40.730Z"
+    },
+    {
+      "id": "dirk-trostomaten-los",
+      "supermarkt": "dirk",
+      "naam": "Trostomaten los",
+      "beschrijving": "",
+      "categorie": "Dirk Aanbieding",
+      "prijsNu": 1.38,
+      "prijsWas": 1.98,
+      "kortingPct": 30,
+      "korting": "ACTIE van 1.98",
+      "afbeelding": "https://web-fileserver.dirk.nl/artikelen%2F223624_1_245265_638798718217005970.png?width=190",
+      "geldigTot": "",
+      "geldigVanaf": "",
+      "merk": "",
+      "trefwoorden": [],
+      "opgehaald": "2026-06-17T05:00:40.729Z"
     },
     {
       "id": "aldi-7",
@@ -896,43 +924,98 @@
       "geldigVanaf": "",
       "merk": "",
       "trefwoorden": [],
-      "opgehaald": "2026-06-16T11:00:35.710Z"
+      "opgehaald": "2026-06-17T05:00:31.222Z"
     },
     {
-      "id": "plus-biologisch-plus-spinazie-biologisch",
+      "id": "plus-plus-druiven-rood-pitloos",
       "supermarkt": "plus",
-      "naam": "Biologisch PLUS Spinazie biologisch",
+      "naam": "PLUS Druiven rood pitloos",
       "beschrijving": "",
       "categorie": "Plus Aanbieding",
       "prijsNu": 1.99,
       "prijsWas": 2.79,
       "kortingPct": 29,
       "korting": "",
-      "afbeelding": "https://images.ctfassets.net/s0lodsnpsezb/536972_M/6f2514b02c21f3a86be7dc6404488176/536972.png?w=120&h=120&fit=pad&fm=webp&q=85",
+      "afbeelding": "https://images.ctfassets.net/s0lodsnpsezb/974201_M/4b512650c686c1b5d5cd1a61d1972b56/974201.png?w=120&h=120&fit=pad&fm=webp&q=85",
       "geldigTot": "",
       "geldigVanaf": "",
       "merk": "",
       "trefwoorden": [
-        "spinazie"
+        "ui"
       ],
-      "opgehaald": "2026-06-16T11:00:40.957Z"
+      "opgehaald": "2026-06-17T05:00:36.454Z"
     },
     {
-      "id": "dirk-nescaf--gold-oploskoffie",
+      "id": "dirk-aardbeienslof",
       "supermarkt": "dirk",
-      "naam": "Nescafé Gold oploskoffie",
+      "naam": "Aardbeienslof",
       "beschrijving": "",
       "categorie": "Dirk Aanbieding",
-      "prijsNu": 6.99,
-      "prijsWas": 9.75,
+      "prijsNu": 4.99,
+      "prijsWas": 6.99,
+      "kortingPct": 29,
+      "korting": "VR, ZA & ZO actie van 6.99",
+      "afbeelding": "https://web-fileserver.dirk.nl/artikelen%2F223482_1_384467_638798142680014512.png?width=190",
+      "geldigTot": "",
+      "geldigVanaf": "",
+      "merk": "",
+      "trefwoorden": [
+        "ei"
+      ],
+      "opgehaald": "2026-06-17T05:00:40.730Z"
+    },
+    {
+      "id": "plus-zespri-kiwi-gold",
+      "supermarkt": "plus",
+      "naam": "Zespri Kiwi gold",
+      "beschrijving": "",
+      "categorie": "Plus Aanbieding",
+      "prijsNu": 2.89,
+      "prijsWas": 3.99,
       "kortingPct": 28,
-      "korting": "ACTIE van 9.75",
-      "afbeelding": "https://web-fileserver.dirk.nl/artikelen%2F207209_1_390831_638683968515210364.png?width=190",
+      "korting": "500 GRAM 2.89",
+      "afbeelding": "https://images.ctfassets.net/s0lodsnpsezb/166366_M/b175288a8f9ebfd58d579260ffc4cee6/166366.png?w=120&h=120&fit=pad&fm=webp&q=85",
       "geldigTot": "",
       "geldigVanaf": "",
       "merk": "",
       "trefwoorden": [],
-      "opgehaald": "2026-06-16T11:00:47.704Z"
+      "opgehaald": "2026-06-17T05:00:36.454Z"
+    },
+    {
+      "id": "plus-neutraal-kastanjechampignons",
+      "supermarkt": "plus",
+      "naam": "Neutraal Kastanjechampignons",
+      "beschrijving": "",
+      "categorie": "Plus Aanbieding",
+      "prijsNu": 1.99,
+      "prijsWas": 2.75,
+      "kortingPct": 28,
+      "korting": "",
+      "afbeelding": "https://images.ctfassets.net/s0lodsnpsezb/281916_M/f92f8e2d1aa0dd99e83900942264c07b/281916.png?w=120&h=120&fit=pad&fm=webp&q=85",
+      "geldigTot": "",
+      "geldigVanaf": "",
+      "merk": "",
+      "trefwoorden": [
+        "champignon"
+      ],
+      "opgehaald": "2026-06-17T05:00:36.454Z"
+    },
+    {
+      "id": "dirk-1-de-beste-gebraden-gehakt-naturel-of-fi",
+      "supermarkt": "dirk",
+      "naam": "1 de Beste Gebraden gehakt naturel of fijne cervelaat",
+      "beschrijving": "",
+      "categorie": "Dirk Aanbieding",
+      "prijsNu": 1.69,
+      "prijsWas": 2.35,
+      "kortingPct": 28,
+      "korting": "ACTIE van 2.35",
+      "afbeelding": "https://web-fileserver.dirk.nl/offers/8%2F1%2F9%2F6%2F3%2F1%2FGebraden%20gehakt%20naturel%20of%20fijne%20cervelaat_639166114684605335.png?width=190",
+      "geldigTot": "",
+      "geldigVanaf": "",
+      "merk": "",
+      "trefwoorden": [],
+      "opgehaald": "2026-06-17T05:00:40.730Z"
     },
     {
       "id": "aldi-23",
@@ -949,7 +1032,7 @@
       "geldigVanaf": "",
       "merk": "",
       "trefwoorden": [],
-      "opgehaald": "2026-06-16T11:00:35.710Z"
+      "opgehaald": "2026-06-17T05:00:31.223Z"
     },
     {
       "id": "aldi-4",
@@ -966,7 +1049,7 @@
       "geldigVanaf": "",
       "merk": "",
       "trefwoorden": [],
-      "opgehaald": "2026-06-16T11:00:35.710Z"
+      "opgehaald": "2026-06-17T05:00:31.222Z"
     },
     {
       "id": "aldi-40",
@@ -985,7 +1068,7 @@
       "trefwoorden": [
         "ui"
       ],
-      "opgehaald": "2026-06-16T11:00:35.710Z"
+      "opgehaald": "2026-06-17T05:00:31.223Z"
     },
     {
       "id": "aldi-66",
@@ -1002,7 +1085,7 @@
       "geldigVanaf": "",
       "merk": "",
       "trefwoorden": [],
-      "opgehaald": "2026-06-16T11:00:35.710Z"
+      "opgehaald": "2026-06-17T05:00:31.223Z"
     },
     {
       "id": "aldi-67",
@@ -1019,79 +1102,58 @@
       "geldigVanaf": "",
       "merk": "",
       "trefwoorden": [],
-      "opgehaald": "2026-06-16T11:00:35.710Z"
+      "opgehaald": "2026-06-17T05:00:31.223Z"
     },
     {
-      "id": "plus-plus-nectarines--wilde-perziken-en-abrik",
+      "id": "plus-plus-verspakket",
       "supermarkt": "plus",
-      "naam": "PLUS Nectarines, wilde perziken en abrikozen",
+      "naam": "PLUS Verspakket",
       "beschrijving": "",
       "categorie": "Plus Aanbieding",
-      "prijsNu": 2.99,
-      "prijsWas": 3.99,
+      "prijsNu": 4.5,
+      "prijsWas": 5.99,
       "kortingPct": 25,
       "korting": "",
-      "afbeelding": "https://images.ctfassets.net/s0lodsnpsezb/4433_207_M/e36325ea22b4a74636046ec98644942a/4433_207.png?w=120&h=120&fit=pad&fm=webp&q=85",
+      "afbeelding": "https://images.ctfassets.net/s0lodsnpsezb/4434_171_M/a75ae9b58fa4b1934d42a609e6ccabaa/4434_171.png?w=120&h=120&fit=pad&fm=webp&q=85",
       "geldigTot": "",
       "geldigVanaf": "",
       "merk": "",
       "trefwoorden": [],
-      "opgehaald": "2026-06-16T11:00:40.957Z"
+      "opgehaald": "2026-06-17T05:00:36.454Z"
     },
     {
-      "id": "plus-alle-uit-de-keuken-van-plus-verse-pizza-",
+      "id": "plus-alle-danerolles-croissants",
       "supermarkt": "plus",
-      "naam": "Alle Uit de Keuken van PLUS Verse pizza's",
+      "naam": "Alle Danerolles Croissants",
       "beschrijving": "",
       "categorie": "Plus Aanbieding",
-      "prijsNu": 4.87,
-      "prijsWas": 6.49,
+      "prijsNu": 3.28,
+      "prijsWas": 4.38,
       "kortingPct": 25,
-      "korting": "25 % KORTING",
-      "afbeelding": "https://images.ctfassets.net/s0lodsnpsezb/4433_142_M/496df44fe2607f470e8e86edfc843c95/4433_142.png?w=120&h=120&fit=pad&fm=webp&q=85",
-      "geldigTot": "",
-      "geldigVanaf": "",
-      "merk": "",
-      "trefwoorden": [
-        "ui"
-      ],
-      "opgehaald": "2026-06-16T11:00:40.957Z"
-    },
-    {
-      "id": "dirk-snijbonen",
-      "supermarkt": "dirk",
-      "naam": "Snijbonen",
-      "beschrijving": "",
-      "categorie": "Dirk Aanbieding",
-      "prijsNu": 1.49,
-      "prijsWas": 1.99,
-      "kortingPct": 25,
-      "korting": "van 1.99",
-      "afbeelding": "https://web-fileserver.dirk.nl/artikelen%2F269375_2026-06-16_04-04-53-079_6981f731-11f8-4963-a428-640c2911e0c5.png?width=190",
+      "korting": "2E HALVE PRIJS",
+      "afbeelding": "https://images.ctfassets.net/s0lodsnpsezb/4434_108_M/81f9dea309def0ee36f4a3f409d29141/4434_108.png?w=120&h=120&fit=pad&fm=webp&q=85",
       "geldigTot": "",
       "geldigVanaf": "",
       "merk": "",
       "trefwoorden": [],
-      "opgehaald": "2026-06-16T11:00:47.704Z"
+      "opgehaald": "2026-06-17T05:00:36.454Z"
     },
     {
-      "id": "dirk-kruidenplanten",
+      "id": "dirk-reuze-rozijnen--of-mueslibollen",
       "supermarkt": "dirk",
-      "naam": "Kruidenplanten",
+      "naam": "Reuze rozijnen- of mueslibollen",
       "beschrijving": "",
       "categorie": "Dirk Aanbieding",
       "prijsNu": 1.49,
       "prijsWas": 1.99,
       "kortingPct": 25,
       "korting": "ACTIE van 1.99",
-      "afbeelding": "https://web-fileserver.dirk.nl/offers/1%2F3%2F7%2F6%2F3%2F1%2FKruidenplanten_639160110668070796.png?width=190",
+      "afbeelding": "https://web-fileserver.dirk.nl/offers/3%2F1%2F9%2F6%2F3%2F1%2FReuze%20rozijnen-%20of%20mueslibollen_639166121716999980.png?width=190",
       "geldigTot": "",
       "geldigVanaf": "",
       "merk": "",
-      "trefwoorden": [
-        "ui"
-      ],
-      "opgehaald": "2026-06-16T11:00:47.704Z"
+      "trefwoorden": [],
+      "opgehaald": "2026-06-17T05:00:40.730Z"
     },
     {
       "id": "aldi-22",
@@ -1108,7 +1170,7 @@
       "geldigVanaf": "",
       "merk": "",
       "trefwoorden": [],
-      "opgehaald": "2026-06-16T11:00:35.710Z"
+      "opgehaald": "2026-06-17T05:00:31.223Z"
     },
     {
       "id": "aldi-56",
@@ -1125,94 +1187,43 @@
       "geldigVanaf": "",
       "merk": "",
       "trefwoorden": [],
-      "opgehaald": "2026-06-16T11:00:35.710Z"
+      "opgehaald": "2026-06-17T05:00:31.223Z"
     },
     {
-      "id": "plus-plus-druiven-wit-pitloos",
+      "id": "plus-plus-worteltjes",
       "supermarkt": "plus",
-      "naam": "PLUS Druiven wit pitloos",
+      "naam": "PLUS Worteltjes",
       "beschrijving": "",
       "categorie": "Plus Aanbieding",
-      "prijsNu": 1.99,
-      "prijsWas": 2.59,
+      "prijsNu": 0.99,
+      "prijsWas": 1.29,
       "kortingPct": 23,
       "korting": "",
-      "afbeelding": "https://images.ctfassets.net/s0lodsnpsezb/679037_M/dab97982ec3b8a9b5659ddd0fe5bb4f2/679037.png?w=120&h=120&fit=pad&fm=webp&q=85",
+      "afbeelding": "https://images.ctfassets.net/s0lodsnpsezb/4434_170_M/3d82d39e5b10b6426695c5839bf19fd2/4434_170.png?w=120&h=120&fit=pad&fm=webp&q=85",
       "geldigTot": "",
       "geldigVanaf": "",
       "merk": "",
       "trefwoorden": [
-        "ui"
+        "wortel"
       ],
-      "opgehaald": "2026-06-16T11:00:40.957Z"
+      "opgehaald": "2026-06-17T05:00:36.454Z"
     },
     {
-      "id": "dirk-lay-s-chips-goals",
+      "id": "dirk-1-de-beste-vers-sap",
       "supermarkt": "dirk",
-      "naam": "Lay's Chips goals",
+      "naam": "1 de Beste Vers sap",
       "beschrijving": "",
       "categorie": "Dirk Aanbieding",
-      "prijsNu": 1.49,
-      "prijsWas": 1.93,
-      "kortingPct": 23,
-      "korting": "ACTIE van 1.93",
-      "afbeelding": "https://web-fileserver.dirk.nl/artikelen%2F435893_2026-06-16_04-03-56-917_c7f8797e-a5a1-46ac-bae3-28fad1934a6f.png?width=190",
-      "geldigTot": "",
-      "geldigVanaf": "",
-      "merk": "",
-      "trefwoorden": [],
-      "opgehaald": "2026-06-16T11:00:47.704Z"
-    },
-    {
-      "id": "dirk-soep-verspakket",
-      "supermarkt": "dirk",
-      "naam": "Soep verspakket",
-      "beschrijving": "",
-      "categorie": "Dirk Aanbieding",
-      "prijsNu": 3.49,
-      "prijsWas": 4.49,
+      "prijsNu": 1.99,
+      "prijsWas": 2.55,
       "kortingPct": 22,
-      "korting": "ACTIE van 4.49",
-      "afbeelding": "https://web-fileserver.dirk.nl/offers/?width=190",
+      "korting": "ACTIE van 2.55",
+      "afbeelding": "https://web-fileserver.dirk.nl/offers/9%2F2%2F9%2F6%2F3%2F1%2FVers%20sap_639166105746333700.png?width=190",
       "geldigTot": "",
       "geldigVanaf": "",
       "merk": "",
       "trefwoorden": [],
-      "opgehaald": "2026-06-16T11:00:47.704Z"
-    },
-    {
-      "id": "plus-plus-bloemkool",
-      "supermarkt": "plus",
-      "naam": "PLUS Bloemkool",
-      "beschrijving": "",
-      "categorie": "Plus Aanbieding",
-      "prijsNu": 1.39,
-      "prijsWas": 1.75,
-      "kortingPct": 21,
-      "korting": "",
-      "afbeelding": "https://images.ctfassets.net/s0lodsnpsezb/114209_M/0ea9a49f53d22aed9a2935f760164f1b/114209.png?w=120&h=120&fit=pad&fm=webp&q=85",
-      "geldigTot": "",
-      "geldigVanaf": "",
-      "merk": "",
-      "trefwoorden": [],
-      "opgehaald": "2026-06-16T11:00:40.957Z"
-    },
-    {
-      "id": "dirk-haribo-snoep",
-      "supermarkt": "dirk",
-      "naam": "Haribo snoep",
-      "beschrijving": "",
-      "categorie": "Dirk Aanbieding",
-      "prijsNu": 1.69,
-      "prijsWas": 2.15,
-      "kortingPct": 21,
-      "korting": "ACTIE van 2.15",
-      "afbeelding": "https://web-fileserver.dirk.nl/offers/6%2F7%2F7%2F6%2F3%2F1%2FHaribo%20snoep_639160104610799924.png?width=190",
-      "geldigTot": "",
-      "geldigVanaf": "",
-      "merk": "",
-      "trefwoorden": [],
-      "opgehaald": "2026-06-16T11:00:47.704Z"
+      "opgehaald": "2026-06-17T05:00:40.730Z"
     },
     {
       "id": "aldi-8",
@@ -1231,7 +1242,7 @@
       "trefwoorden": [
         "ei"
       ],
-      "opgehaald": "2026-06-16T11:00:35.710Z"
+      "opgehaald": "2026-06-17T05:00:31.222Z"
     },
     {
       "id": "aldi-15",
@@ -1248,7 +1259,7 @@
       "geldigVanaf": "",
       "merk": "",
       "trefwoorden": [],
-      "opgehaald": "2026-06-16T11:00:35.710Z"
+      "opgehaald": "2026-06-17T05:00:31.222Z"
     },
     {
       "id": "aldi-48",
@@ -1267,24 +1278,24 @@
       "trefwoorden": [
         "ei"
       ],
-      "opgehaald": "2026-06-16T11:00:35.710Z"
+      "opgehaald": "2026-06-17T05:00:31.223Z"
     },
     {
-      "id": "dirk-1-de-beste-mini-cherry-trostomaten",
+      "id": "dirk-vleeschmeesters-boerenschnitzel",
       "supermarkt": "dirk",
-      "naam": "1 de Beste Mini cherry trostomaten",
+      "naam": "Vleeschmeesters Boerenschnitzel",
       "beschrijving": "",
       "categorie": "Dirk Aanbieding",
       "prijsNu": 1.99,
       "prijsWas": 2.49,
       "kortingPct": 20,
       "korting": "ACTIE van 2.49",
-      "afbeelding": "https://web-fileserver.dirk.nl/artikelen%2F369608_2026-06-16_04-06-44-410_e0835a57-0e2e-43a9-9539-5e4878ce01e6.png?width=190",
+      "afbeelding": "https://web-fileserver.dirk.nl/artikelen%2F239080_1_462151_638901714535279989.png?width=190",
       "geldigTot": "",
       "geldigVanaf": "",
       "merk": "",
       "trefwoorden": [],
-      "opgehaald": "2026-06-16T11:00:47.704Z"
+      "opgehaald": "2026-06-17T05:00:40.729Z"
     },
     {
       "id": "aldi-3",
@@ -1303,7 +1314,7 @@
       "trefwoorden": [
         "aardappel"
       ],
-      "opgehaald": "2026-06-16T11:00:35.710Z"
+      "opgehaald": "2026-06-17T05:00:31.222Z"
     },
     {
       "id": "aldi-10",
@@ -1320,7 +1331,7 @@
       "geldigVanaf": "",
       "merk": "",
       "trefwoorden": [],
-      "opgehaald": "2026-06-16T11:00:35.710Z"
+      "opgehaald": "2026-06-17T05:00:31.222Z"
     },
     {
       "id": "aldi-55",
@@ -1337,77 +1348,41 @@
       "geldigVanaf": "",
       "merk": "",
       "trefwoorden": [],
-      "opgehaald": "2026-06-16T11:00:35.710Z"
+      "opgehaald": "2026-06-17T05:00:31.223Z"
     },
     {
-      "id": "plus-plus-roerbak--en-wokgroenten",
+      "id": "plus-plus-lasagne",
       "supermarkt": "plus",
-      "naam": "PLUS Roerbak- en wokgroenten",
+      "naam": "PLUS Lasagne",
       "beschrijving": "",
       "categorie": "Plus Aanbieding",
-      "prijsNu": 1.89,
-      "prijsWas": 2.29,
+      "prijsNu": 2.49,
+      "prijsWas": 2.99,
       "kortingPct": 17,
       "korting": "",
-      "afbeelding": "https://images.ctfassets.net/s0lodsnpsezb/4433_214_M/d3aca8fa17d2a7263995c054e4077408/4433_214.png?w=120&h=120&fit=pad&fm=webp&q=85",
+      "afbeelding": "https://images.ctfassets.net/s0lodsnpsezb/4434_57_M/05a68dd423fa349a7ef51944c20d46b1/4434_57.png?w=120&h=120&fit=pad&fm=webp&q=85",
       "geldigTot": "",
       "geldigVanaf": "",
       "merk": "",
       "trefwoorden": [],
-      "opgehaald": "2026-06-16T11:00:40.957Z"
+      "opgehaald": "2026-06-17T05:00:36.454Z"
     },
     {
-      "id": "dirk-1-de-beste-spinazie-ongewassen",
-      "supermarkt": "dirk",
-      "naam": "1 de Beste Spinazie ongewassen",
+      "id": "plus-plus-maaltijdsalade-en-lichte-salade",
+      "supermarkt": "plus",
+      "naam": "PLUS Maaltijdsalade en lichte salade",
       "beschrijving": "",
-      "categorie": "Dirk Aanbieding",
-      "prijsNu": 1.49,
-      "prijsWas": 1.79,
+      "categorie": "Plus Aanbieding",
+      "prijsNu": 3.99,
+      "prijsWas": 4.79,
       "kortingPct": 17,
-      "korting": "van 1.79",
-      "afbeelding": "https://web-fileserver.dirk.nl/artikelen%2F248007_2026-06-16_04-06-33-829_afc1583e-28a5-4aa8-8f9f-e3f2166b5d36.png?width=190",
-      "geldigTot": "",
-      "geldigVanaf": "",
-      "merk": "",
-      "trefwoorden": [
-        "spinazie"
-      ],
-      "opgehaald": "2026-06-16T11:00:47.704Z"
-    },
-    {
-      "id": "dirk-gember-los",
-      "supermarkt": "dirk",
-      "naam": "Gember los",
-      "beschrijving": "",
-      "categorie": "Dirk Aanbieding",
-      "prijsNu": 4.98,
-      "prijsWas": 5.98,
-      "kortingPct": 17,
-      "korting": "ACTIE van 5.98",
-      "afbeelding": "https://web-fileserver.dirk.nl/artikelen%2F213510_1_247977_638732208731138555.png?width=190",
+      "korting": "",
+      "afbeelding": "https://images.ctfassets.net/s0lodsnpsezb/4434_55_M/906ba7ecda5ecc796de9d2e32457e990/4434_55.png?w=120&h=120&fit=pad&fm=webp&q=85",
       "geldigTot": "",
       "geldigVanaf": "",
       "merk": "",
       "trefwoorden": [],
-      "opgehaald": "2026-06-16T11:00:47.704Z"
-    },
-    {
-      "id": "dirk-vleeschmeesters-actie-magere-varkenslap-",
-      "supermarkt": "dirk",
-      "naam": "Vleeschmeesters Actie magere varkenslap 5 stuks",
-      "beschrijving": "",
-      "categorie": "Dirk Aanbieding",
-      "prijsNu": 7.49,
-      "prijsWas": 8.99,
-      "kortingPct": 17,
-      "korting": "ACTIE van 8.99",
-      "afbeelding": "https://web-fileserver.dirk.nl/artikelen%2F218690_1_474629_638774529683859556.png?width=190",
-      "geldigTot": "",
-      "geldigVanaf": "",
-      "merk": "",
-      "trefwoorden": [],
-      "opgehaald": "2026-06-16T11:00:47.704Z"
+      "opgehaald": "2026-06-17T05:00:36.454Z"
     },
     {
       "id": "aldi-13",
@@ -1427,43 +1402,43 @@
         "ei",
         "rijst"
       ],
-      "opgehaald": "2026-06-16T11:00:35.710Z"
+      "opgehaald": "2026-06-17T05:00:31.222Z"
     },
     {
-      "id": "dirk-1-de-beste-achterham-flinterdun",
+      "id": "dirk-zandvliet-gelderse-kookworst",
       "supermarkt": "dirk",
-      "naam": "1 de Beste Achterham flinterdun",
+      "naam": "Zandvliet Gelderse kookworst",
       "beschrijving": "",
       "categorie": "Dirk Aanbieding",
-      "prijsNu": 1.49,
-      "prijsWas": 1.75,
-      "kortingPct": 15,
-      "korting": "ACTIE van 1.75",
-      "afbeelding": "https://web-fileserver.dirk.nl/artikelen%2F242120_1_423076_638943033318114580.png?width=190",
-      "geldigTot": "",
-      "geldigVanaf": "",
-      "merk": "",
-      "trefwoorden": [],
-      "opgehaald": "2026-06-16T11:00:47.704Z"
-    },
-    {
-      "id": "dirk-1-de-beste-grillworst",
-      "supermarkt": "dirk",
-      "naam": "1 de Beste Grillworst",
-      "beschrijving": "",
-      "categorie": "Dirk Aanbieding",
-      "prijsNu": 1.69,
-      "prijsWas": 1.99,
-      "kortingPct": 15,
-      "korting": "ACTIE van 1.99",
-      "afbeelding": "https://web-fileserver.dirk.nl/offers/1%2F5%2F7%2F6%2F3%2F1%2FGrillworst_639160099090096751.png?width=190",
+      "prijsNu": 1.59,
+      "prijsWas": 1.89,
+      "kortingPct": 16,
+      "korting": "ACTIE van 1.89",
+      "afbeelding": "https://web-fileserver.dirk.nl/artikelen%2F58183_1_263638_637704036617209247.png?width=190",
       "geldigTot": "",
       "geldigVanaf": "",
       "merk": "",
       "trefwoorden": [
         "worst"
       ],
-      "opgehaald": "2026-06-16T11:00:47.704Z"
+      "opgehaald": "2026-06-17T05:00:40.730Z"
+    },
+    {
+      "id": "dirk-prim---verse-maaltijd",
+      "supermarkt": "dirk",
+      "naam": "Primá! verse maaltijd",
+      "beschrijving": "",
+      "categorie": "Dirk Aanbieding",
+      "prijsNu": 3.79,
+      "prijsWas": 4.49,
+      "kortingPct": 16,
+      "korting": "ACTIE van 4.49",
+      "afbeelding": "https://web-fileserver.dirk.nl/offers/7%2F2%2F9%2F6%2F3%2F1%2FPrim%C3%A1!%20verse%20maaltijd_639166127823965019.png?width=190",
+      "geldigTot": "",
+      "geldigVanaf": "",
+      "merk": "",
+      "trefwoorden": [],
+      "opgehaald": "2026-06-17T05:00:40.730Z"
     },
     {
       "id": "aldi-6",
@@ -1480,7 +1455,24 @@
       "geldigVanaf": "",
       "merk": "",
       "trefwoorden": [],
-      "opgehaald": "2026-06-16T11:00:35.710Z"
+      "opgehaald": "2026-06-17T05:00:31.222Z"
+    },
+    {
+      "id": "plus-biologisch-plus-rode-bieten-biologisch",
+      "supermarkt": "plus",
+      "naam": "Biologisch PLUS Rode bieten biologisch",
+      "beschrijving": "",
+      "categorie": "Plus Aanbieding",
+      "prijsNu": 1.19,
+      "prijsWas": 1.39,
+      "kortingPct": 14,
+      "korting": "",
+      "afbeelding": "https://images.ctfassets.net/s0lodsnpsezb/516970_M/2b3556574b214cbaa5484aba15315149/516970.png?w=120&h=120&fit=pad&fm=webp&q=85",
+      "geldigTot": "",
+      "geldigVanaf": "",
+      "merk": "",
+      "trefwoorden": [],
+      "opgehaald": "2026-06-17T05:00:36.454Z"
     },
     {
       "id": "plus-jan-wkaas-poffertjes",
@@ -1499,45 +1491,24 @@
       "trefwoorden": [
         "kaas"
       ],
-      "opgehaald": "2026-06-16T11:00:40.957Z"
+      "opgehaald": "2026-06-17T05:00:36.454Z"
     },
     {
-      "id": "dirk-1-de-beste-zoete-puntpaprika-rood",
+      "id": "dirk-1-de-beste-yorkham-gegrild",
       "supermarkt": "dirk",
-      "naam": "1 de Beste Zoete puntpaprika rood",
+      "naam": "1 de Beste Yorkham gegrild",
       "beschrijving": "",
       "categorie": "Dirk Aanbieding",
-      "prijsNu": 2.49,
-      "prijsWas": 2.89,
+      "prijsNu": 1.89,
+      "prijsWas": 2.19,
       "kortingPct": 14,
-      "korting": "ACTIE van 2.89",
-      "afbeelding": "https://web-fileserver.dirk.nl/artikelen%2F227352_1_479347_638836014578667522.png?width=190",
+      "korting": "ACTIE van 2.19",
+      "afbeelding": "https://web-fileserver.dirk.nl/artikelen%2F255052_1_471211_639105618466271671.png?width=190",
       "geldigTot": "",
       "geldigVanaf": "",
       "merk": "",
-      "trefwoorden": [
-        "paprika"
-      ],
-      "opgehaald": "2026-06-16T11:00:47.704Z"
-    },
-    {
-      "id": "dirk-vleeschmeesters-actie-kipdrumsticks-kore",
-      "supermarkt": "dirk",
-      "naam": "Vleeschmeesters Actie kipdrumsticks korean bbq",
-      "beschrijving": "",
-      "categorie": "Dirk Aanbieding",
-      "prijsNu": 2.99,
-      "prijsWas": 3.49,
-      "kortingPct": 14,
-      "korting": "ACTIE van 3.49",
-      "afbeelding": "https://web-fileserver.dirk.nl/artikelen%2F225480_1_478732_638817861698884926.png?width=190",
-      "geldigTot": "",
-      "geldigVanaf": "",
-      "merk": "",
-      "trefwoorden": [
-        "kip"
-      ],
-      "opgehaald": "2026-06-16T11:00:47.704Z"
+      "trefwoorden": [],
+      "opgehaald": "2026-06-17T05:00:40.730Z"
     },
     {
       "id": "aldi-21",
@@ -1556,145 +1527,64 @@
       "trefwoorden": [
         "pasta"
       ],
-      "opgehaald": "2026-06-16T11:00:35.710Z"
+      "opgehaald": "2026-06-17T05:00:31.223Z"
     },
     {
-      "id": "plus-plus-perssinaasappelen",
-      "supermarkt": "plus",
-      "naam": "PLUS Perssinaasappelen",
+      "id": "dirk-mini-broodjes-met-kruidenboter",
+      "supermarkt": "dirk",
+      "naam": "Mini broodjes met kruidenboter",
       "beschrijving": "",
-      "categorie": "Plus Aanbieding",
+      "categorie": "Dirk Aanbieding",
       "prijsNu": 1.99,
       "prijsWas": 2.29,
       "kortingPct": 13,
-      "korting": "",
-      "afbeelding": "https://images.ctfassets.net/s0lodsnpsezb/466223_M/e1e155e024e11e7e00ebe0998728ce85/466223.png?w=120&h=120&fit=pad&fm=webp&q=85",
-      "geldigTot": "",
-      "geldigVanaf": "",
-      "merk": "",
-      "trefwoorden": [],
-      "opgehaald": "2026-06-16T11:00:40.957Z"
-    },
-    {
-      "id": "plus-plus-citroenen--voordeelverpakking-",
-      "supermarkt": "plus",
-      "naam": "PLUS Citroenen (voordeelverpakking)",
-      "beschrijving": "",
-      "categorie": "Plus Aanbieding",
-      "prijsNu": 1.39,
-      "prijsWas": 1.59,
-      "kortingPct": 13,
-      "korting": "",
-      "afbeelding": "https://images.ctfassets.net/s0lodsnpsezb/321357_M/2c816e9a9400f7691fc050a7aed84adc/321357.png?w=120&h=120&fit=pad&fm=webp&q=85",
-      "geldigTot": "",
-      "geldigVanaf": "",
-      "merk": "",
-      "trefwoorden": [],
-      "opgehaald": "2026-06-16T11:00:40.957Z"
-    },
-    {
-      "id": "dirk-vleeschmeester-quarter-pounder-2-st-",
-      "supermarkt": "dirk",
-      "naam": "VLEESCHMEESTER Quarter pounder 2 st.",
-      "beschrijving": "",
-      "categorie": "Dirk Aanbieding",
-      "prijsNu": 3.49,
-      "prijsWas": 3.99,
-      "kortingPct": 13,
-      "korting": "ACTIE van 3.99",
-      "afbeelding": "https://web-fileserver.dirk.nl/artikelen%2F489968_2026-06-08_16-31-53-737_a0c7d227-5aae-4d92-9dc5-81bbd453236d.png?width=190",
-      "geldigTot": "",
-      "geldigVanaf": "",
-      "merk": "",
-      "trefwoorden": [],
-      "opgehaald": "2026-06-16T11:00:47.704Z"
-    },
-    {
-      "id": "dirk-bloemkool",
-      "supermarkt": "dirk",
-      "naam": "Bloemkool",
-      "beschrijving": "",
-      "categorie": "Dirk Aanbieding",
-      "prijsNu": 1.49,
-      "prijsWas": 1.69,
-      "kortingPct": 12,
-      "korting": "ACTIE van 1.69",
-      "afbeelding": "https://web-fileserver.dirk.nl/artikelen%2F268382_2026-06-16_04-03-03-021_9c11570d-9bc6-4a51-92de-a0412dd398c9.png?width=190",
-      "geldigTot": "",
-      "geldigVanaf": "",
-      "merk": "",
-      "trefwoorden": [],
-      "opgehaald": "2026-06-16T11:00:47.704Z"
-    },
-    {
-      "id": "dirk-rimboesauzen-hamburgersaus-squeeze",
-      "supermarkt": "dirk",
-      "naam": "RIMBOESAUZEN Hamburgersaus squeeze",
-      "beschrijving": "",
-      "categorie": "Dirk Aanbieding",
-      "prijsNu": 1.49,
-      "prijsWas": 1.69,
-      "kortingPct": 12,
-      "korting": "ACTIE van 1.69",
-      "afbeelding": "https://web-fileserver.dirk.nl/artikelen%2F208438_1_471961_638694993542640920.png?width=190",
-      "geldigTot": "",
-      "geldigVanaf": "",
-      "merk": "",
-      "trefwoorden": [],
-      "opgehaald": "2026-06-16T11:00:47.704Z"
-    },
-    {
-      "id": "plus-plus-verse-frites-en-zoete-aardappelfrit",
-      "supermarkt": "plus",
-      "naam": "PLUS Verse frites en zoete aardappelfrites",
-      "beschrijving": "",
-      "categorie": "Plus Aanbieding",
-      "prijsNu": 1.69,
-      "prijsWas": 1.89,
-      "kortingPct": 11,
-      "korting": "",
-      "afbeelding": "https://images.ctfassets.net/s0lodsnpsezb/4433_218_M/cc21cdc6ebed9fd5c259ab982df039f5/4433_218.png?w=120&h=120&fit=pad&fm=webp&q=85",
+      "korting": "ACTIE van 2.29",
+      "afbeelding": "https://web-fileserver.dirk.nl/artikelen%2F243735_1_484661_639020949247604942.png?width=190",
       "geldigTot": "",
       "geldigVanaf": "",
       "merk": "",
       "trefwoorden": [
-        "aardappel"
+        "boter",
+        "ui",
+        "brood"
       ],
-      "opgehaald": "2026-06-16T11:00:40.957Z"
+      "opgehaald": "2026-06-17T05:00:40.730Z"
     },
     {
-      "id": "plus-plus-hollandse-maaltijd",
-      "supermarkt": "plus",
-      "naam": "PLUS Hollandse maaltijd",
-      "beschrijving": "",
-      "categorie": "Plus Aanbieding",
-      "prijsNu": 3.99,
-      "prijsWas": 4.49,
-      "kortingPct": 11,
-      "korting": "",
-      "afbeelding": "https://images.ctfassets.net/s0lodsnpsezb/4433_141_M/04d07d5c7943610cce18ed7be6818442/4433_141.png?w=120&h=120&fit=pad&fm=webp&q=85",
-      "geldigTot": "",
-      "geldigVanaf": "",
-      "merk": "",
-      "trefwoorden": [],
-      "opgehaald": "2026-06-16T11:00:40.957Z"
-    },
-    {
-      "id": "dirk-lay-s-chips-oranje-fan-box",
+      "id": "dirk-knoflook",
       "supermarkt": "dirk",
-      "naam": "Lay's Chips oranje fan box",
+      "naam": "Knoflook",
       "beschrijving": "",
       "categorie": "Dirk Aanbieding",
-      "prijsNu": 7.99,
-      "prijsWas": 8.99,
+      "prijsNu": 1.49,
+      "prijsWas": 1.69,
+      "kortingPct": 12,
+      "korting": "ACTIE van 1.69",
+      "afbeelding": "https://web-fileserver.dirk.nl/artikelen%2F245725_1_484582_638996760810257798.png?width=190",
+      "geldigTot": "",
+      "geldigVanaf": "",
+      "merk": "",
+      "trefwoorden": [
+        "knoflook"
+      ],
+      "opgehaald": "2026-06-17T05:00:40.729Z"
+    },
+    {
+      "id": "plus-plus-mandarijnen",
+      "supermarkt": "plus",
+      "naam": "PLUS Mandarijnen",
+      "beschrijving": "",
+      "categorie": "Plus Aanbieding",
+      "prijsNu": 2.49,
+      "prijsWas": 2.79,
       "kortingPct": 11,
-      "korting": "ACTIE van 8.99",
-      "afbeelding": "https://web-fileserver.dirk.nl/artikelen%2F489515_2026-06-16_04-05-02-799_939fceec-d090-4923-ba08-7dc15c9caf88.png?width=190",
+      "korting": "",
+      "afbeelding": "https://images.ctfassets.net/s0lodsnpsezb/643874_M/cf1773b2a6d2281955f557eb703ee142/643874.png?w=120&h=120&fit=pad&fm=webp&q=85",
       "geldigTot": "",
       "geldigVanaf": "",
       "merk": "",
       "trefwoorden": [],
-      "opgehaald": "2026-06-16T11:00:47.704Z"
+      "opgehaald": "2026-06-17T05:00:36.454Z"
     },
     {
       "id": "aldi-5",
@@ -1711,41 +1601,24 @@
       "geldigVanaf": "",
       "merk": "",
       "trefwoorden": [],
-      "opgehaald": "2026-06-16T11:00:35.710Z"
+      "opgehaald": "2026-06-17T05:00:31.222Z"
     },
     {
-      "id": "dirk-bolicious-mini-appel-kaneelbollen",
-      "supermarkt": "dirk",
-      "naam": "Bolicious Mini appel-kaneelbollen",
-      "beschrijving": "",
-      "categorie": "Dirk Aanbieding",
-      "prijsNu": 1.79,
-      "prijsWas": 1.99,
-      "kortingPct": 10,
-      "korting": "ACTIE van 1.99",
-      "afbeelding": "https://web-fileserver.dirk.nl/artikelen%2F243473_1_482586_638961414341874355.png?width=190",
-      "geldigTot": "",
-      "geldigVanaf": "",
-      "merk": "",
-      "trefwoorden": [],
-      "opgehaald": "2026-06-16T11:00:47.704Z"
-    },
-    {
-      "id": "plus-plus-salade",
+      "id": "plus-plus-ijsbergsla",
       "supermarkt": "plus",
-      "naam": "PLUS Salade",
+      "naam": "PLUS IJsbergsla",
       "beschrijving": "",
       "categorie": "Plus Aanbieding",
-      "prijsNu": 2.99,
-      "prijsWas": 3.29,
+      "prijsNu": 0.99,
+      "prijsWas": 1.09,
       "kortingPct": 9,
       "korting": "",
-      "afbeelding": "https://images.ctfassets.net/s0lodsnpsezb/4433_220_M/52450fb53f2546dc30d9f35799048589/4433_220.png?w=120&h=120&fit=pad&fm=webp&q=85",
+      "afbeelding": "https://images.ctfassets.net/s0lodsnpsezb/4434_168_M/e7b22ecdfe189a0890f6af793fd19a5a/4434_168.png?w=120&h=120&fit=pad&fm=webp&q=85",
       "geldigTot": "",
       "geldigVanaf": "",
       "merk": "",
       "trefwoorden": [],
-      "opgehaald": "2026-06-16T11:00:40.957Z"
+      "opgehaald": "2026-06-17T05:00:36.454Z"
     },
     {
       "id": "aldi-60",
@@ -1762,77 +1635,117 @@
       "geldigVanaf": "",
       "merk": "",
       "trefwoorden": [],
-      "opgehaald": "2026-06-16T11:00:35.710Z"
+      "opgehaald": "2026-06-17T05:00:31.223Z"
     },
     {
-      "id": "dirk-cosmic-crisp",
+      "id": "dirk-zoete-aardappelen",
       "supermarkt": "dirk",
-      "naam": "Cosmic crisp",
+      "naam": "Zoete aardappelen",
       "beschrijving": "",
       "categorie": "Dirk Aanbieding",
-      "prijsNu": 1.89,
-      "prijsWas": 1.99,
+      "prijsNu": 2.58,
+      "prijsWas": 2.78,
+      "kortingPct": 7,
+      "korting": "ACTIE van 2.78",
+      "afbeelding": "https://web-fileserver.dirk.nl/artikelen%2F213526_1_268549_638732199682597376.png?width=190",
+      "geldigTot": "",
+      "geldigVanaf": "",
+      "merk": "",
+      "trefwoorden": [
+        "aardappel"
+      ],
+      "opgehaald": "2026-06-17T05:00:40.729Z"
+    },
+    {
+      "id": "dirk-bio--biologische-rode-bieten-gekookt",
+      "supermarkt": "dirk",
+      "naam": "Bio+ Biologische rode bieten gekookt",
+      "beschrijving": "",
+      "categorie": "Dirk Aanbieding",
+      "prijsNu": 1.19,
+      "prijsWas": 1.25,
       "kortingPct": 5,
-      "korting": "ACTIE van 1.99",
-      "afbeelding": "https://web-fileserver.dirk.nl/artikelen%2F436590_2026-06-16_04-01-55-222_069f4eee-da11-44ba-8a02-765d5bdc1343.png?width=190",
+      "korting": "ACTIE van 1.25",
+      "afbeelding": "https://web-fileserver.dirk.nl/artikelen%2F100966_2026-06-17_04-05-03-316_4e362a2d-40e8-4db4-bc0c-c8b957be2bf0.png?width=190",
       "geldigTot": "",
       "geldigVanaf": "",
       "merk": "",
       "trefwoorden": [],
-      "opgehaald": "2026-06-16T11:00:47.704Z"
+      "opgehaald": "2026-06-17T05:00:40.729Z"
     },
     {
-      "id": "dirk-eat-me-avocado-ready-to-eat",
+      "id": "dirk-jonagold-verpakt",
       "supermarkt": "dirk",
-      "naam": "Eat Me Avocado ready to eat",
+      "naam": "Jonagold verpakt",
       "beschrijving": "",
       "categorie": "Dirk Aanbieding",
-      "prijsNu": 2.39,
-      "prijsWas": 2.49,
-      "kortingPct": 4,
-      "korting": "van 2.49",
-      "afbeelding": "https://web-fileserver.dirk.nl/artikelen%2F248060_2026-06-16_04-01-37-622_576331d8-fe44-4058-9754-4dd99cae7f0e.png?width=190",
+      "prijsNu": 1.99,
+      "prijsWas": 2.09,
+      "kortingPct": 5,
+      "korting": "ACTIE van 2.09",
+      "afbeelding": "https://web-fileserver.dirk.nl/artikelen%2F100021_1_247732_638803911265230909.png?width=190",
       "geldigTot": "",
       "geldigVanaf": "",
       "merk": "",
       "trefwoorden": [],
-      "opgehaald": "2026-06-16T11:00:47.704Z"
+      "opgehaald": "2026-06-17T05:00:40.729Z"
     },
     {
-      "id": "dirk-1-de-beste-pitloze-rode-druiven",
+      "id": "dirk-vleeschmeesters-actie-kipfilet-3-stuks",
       "supermarkt": "dirk",
-      "naam": "1 de Beste Pitloze rode druiven",
+      "naam": "Vleeschmeesters Actie kipfilet 3 stuks",
+      "beschrijving": "",
+      "categorie": "Dirk Aanbieding",
+      "prijsNu": 6.47,
+      "prijsWas": 6.79,
+      "kortingPct": 5,
+      "korting": "ACTIE van 6.79",
+      "afbeelding": "https://web-fileserver.dirk.nl/artikelen%2F226638_1_475486_638829804474444549.png?width=190",
+      "geldigTot": "",
+      "geldigVanaf": "",
+      "merk": "",
+      "trefwoorden": [
+        "kip"
+      ],
+      "opgehaald": "2026-06-17T05:00:40.729Z"
+    },
+    {
+      "id": "dirk-1-de-beste-pitloze-witte-druiven",
+      "supermarkt": "dirk",
+      "naam": "1 de Beste Pitloze witte druiven",
       "beschrijving": "",
       "categorie": "Dirk Aanbieding",
       "prijsNu": 2.29,
       "prijsWas": 2.39,
       "kortingPct": 4,
-      "korting": "van 2.39",
-      "afbeelding": "https://web-fileserver.dirk.nl/artikelen%2F412118_2026-06-16_04-06-39-402_f689c035-42f7-44ab-bf03-e85a5774619f.png?width=190",
+      "korting": "ACTIE van 2.39",
+      "afbeelding": "https://web-fileserver.dirk.nl/artikelen%2F412119_2026-06-17_04-07-38-232_463b2251-56b3-4077-b3b0-c3c606826640.png?width=190",
       "geldigTot": "",
       "geldigVanaf": "",
       "merk": "",
       "trefwoorden": [
         "ui"
       ],
-      "opgehaald": "2026-06-16T11:00:47.704Z"
+      "opgehaald": "2026-06-17T05:00:40.729Z"
     },
     {
-      "id": "dirk-zespri-kiwi-sungold",
+      "id": "dirk-vleeschmeesters-actie-speklap-a-la-minut",
       "supermarkt": "dirk",
-      "naam": "Zespri Kiwi sungold",
+      "naam": "Vleeschmeesters Actie speklap a la minute gemarineerd 4 st.",
       "beschrijving": "",
       "categorie": "Dirk Aanbieding",
-      "prijsNu": 5.78,
-      "prijsWas": 5.98,
+      "prijsNu": 3.89,
+      "prijsWas": 3.99,
       "kortingPct": 3,
-      "korting": "ACTIE van 5.98",
-      "afbeelding": "https://web-fileserver.dirk.nl/artikelen%2F457377_2026-06-16_04-06-25-031_0935195f-2b79-4c86-af1f-66bde723cc23.png?width=190",
+      "korting": "ACTIE van 3.99",
+      "afbeelding": "https://web-fileserver.dirk.nl/artikelen%2F220550_1_457278_638775588242512916.png?width=190",
       "geldigTot": "",
       "geldigVanaf": "",
       "merk": "",
-      "trefwoorden": [],
-      "opgehaald": "2026-06-16T11:00:47.704Z"
+      "trefwoorden": [
+        "spek"
+      ],
+      "opgehaald": "2026-06-17T05:00:40.729Z"
     },
     {
       "id": "ah-597588",
@@ -1849,7 +1762,7 @@
       "geldigVanaf": "",
       "merk": "",
       "trefwoorden": [],
-      "opgehaald": "2026-06-16T11:00:02.598Z"
+      "opgehaald": "2026-06-17T05:00:02.809Z"
     },
     {
       "id": "ah-578166",
@@ -1866,7 +1779,7 @@
       "geldigVanaf": "",
       "merk": "",
       "trefwoorden": [],
-      "opgehaald": "2026-06-16T11:00:02.599Z"
+      "opgehaald": "2026-06-17T05:00:02.809Z"
     },
     {
       "id": "ah-602339",
@@ -1885,7 +1798,7 @@
       "trefwoorden": [
         "kip"
       ],
-      "opgehaald": "2026-06-16T11:00:02.599Z"
+      "opgehaald": "2026-06-17T05:00:02.809Z"
     },
     {
       "id": "ah-566664",
@@ -1904,7 +1817,7 @@
       "trefwoorden": [
         "spek"
       ],
-      "opgehaald": "2026-06-16T11:00:02.599Z"
+      "opgehaald": "2026-06-17T05:00:02.809Z"
     },
     {
       "id": "ah-567361",
@@ -1923,7 +1836,7 @@
       "trefwoorden": [
         "kip"
       ],
-      "opgehaald": "2026-06-16T11:00:02.599Z"
+      "opgehaald": "2026-06-17T05:00:02.809Z"
     },
     {
       "id": "ah-598038",
@@ -1942,7 +1855,7 @@
       "trefwoorden": [
         "kip"
       ],
-      "opgehaald": "2026-06-16T11:00:02.599Z"
+      "opgehaald": "2026-06-17T05:00:02.809Z"
     },
     {
       "id": "ah-602333",
@@ -1961,7 +1874,7 @@
       "trefwoorden": [
         "kip"
       ],
-      "opgehaald": "2026-06-16T11:00:02.599Z"
+      "opgehaald": "2026-06-17T05:00:02.809Z"
     },
     {
       "id": "ah-601157",
@@ -1980,7 +1893,7 @@
       "trefwoorden": [
         "kip"
       ],
-      "opgehaald": "2026-06-16T11:00:02.599Z"
+      "opgehaald": "2026-06-17T05:00:02.809Z"
     },
     {
       "id": "ah-577829",
@@ -1999,7 +1912,7 @@
       "trefwoorden": [
         "kip"
       ],
-      "opgehaald": "2026-06-16T11:00:02.599Z"
+      "opgehaald": "2026-06-17T05:00:02.809Z"
     },
     {
       "id": "ah-578161",
@@ -2016,7 +1929,26 @@
       "geldigVanaf": "",
       "merk": "",
       "trefwoorden": [],
-      "opgehaald": "2026-06-16T11:00:02.599Z"
+      "opgehaald": "2026-06-17T05:00:02.809Z"
+    },
+    {
+      "id": "ah-601066",
+      "supermarkt": "ah",
+      "naam": "Marhaba Kipfilet 3-pack",
+      "beschrijving": "3 stuks",
+      "categorie": "Vleeswaren",
+      "prijsNu": 7.1,
+      "prijsWas": 7.1,
+      "kortingPct": 0,
+      "korting": "",
+      "afbeelding": "https://static.ah.nl/dam/product/AHI_6c556c61447a6765534c6d37306f6a6e694842575951?revLabel=1&rendition=800x800_JPG_Q90&fileType=binary",
+      "geldigTot": "2999-12-31",
+      "geldigVanaf": "",
+      "merk": "",
+      "trefwoorden": [
+        "kip"
+      ],
+      "opgehaald": "2026-06-17T05:00:02.809Z"
     },
     {
       "id": "ah-598470",
@@ -2035,7 +1967,7 @@
       "trefwoorden": [
         "spek"
       ],
-      "opgehaald": "2026-06-16T11:00:02.599Z"
+      "opgehaald": "2026-06-17T05:00:02.809Z"
     },
     {
       "id": "ah-603303",
@@ -2054,7 +1986,7 @@
       "trefwoorden": [
         "kip"
       ],
-      "opgehaald": "2026-06-16T11:00:02.599Z"
+      "opgehaald": "2026-06-17T05:00:02.810Z"
     },
     {
       "id": "ah-597600",
@@ -2073,7 +2005,7 @@
       "trefwoorden": [
         "kip"
       ],
-      "opgehaald": "2026-06-16T11:00:02.599Z"
+      "opgehaald": "2026-06-17T05:00:02.810Z"
     },
     {
       "id": "ah-598037",
@@ -2092,27 +2024,7 @@
       "trefwoorden": [
         "gehakt"
       ],
-      "opgehaald": "2026-06-16T11:00:02.599Z"
-    },
-    {
-      "id": "ah-577828",
-      "supermarkt": "ah",
-      "naam": "AH Scharrel kipgehakt gekruid 3-pack",
-      "beschrijving": "3 stuks",
-      "categorie": "Vlees",
-      "prijsNu": 10.77,
-      "prijsWas": 10.77,
-      "kortingPct": 0,
-      "korting": "",
-      "afbeelding": "https://static.ah.nl/dam/product/AHI_4354523130303836383739?revLabel=1&rendition=800x800_JPG_Q90&fileType=binary",
-      "geldigTot": "2999-12-31",
-      "geldigVanaf": "",
-      "merk": "",
-      "trefwoorden": [
-        "kip",
-        "ui"
-      ],
-      "opgehaald": "2026-06-16T11:00:02.599Z"
+      "opgehaald": "2026-06-17T05:00:02.810Z"
     },
     {
       "id": "ah-577858",
@@ -2131,7 +2043,26 @@
       "trefwoorden": [
         "kip"
       ],
-      "opgehaald": "2026-06-16T11:00:02.599Z"
+      "opgehaald": "2026-06-17T05:00:02.810Z"
+    },
+    {
+      "id": "ah-601145",
+      "supermarkt": "ah",
+      "naam": "Wahid Halal kipdijfilet 3-pack",
+      "beschrijving": "3 stuks",
+      "categorie": "Vlees",
+      "prijsNu": 16.22,
+      "prijsWas": 16.22,
+      "kortingPct": 0,
+      "korting": "",
+      "afbeelding": "https://static.ah.nl/dam/product/AHI_756e6643506f564a52533663586d52494b346f445941?revLabel=1&rendition=800x800_JPG_Q90&fileType=binary",
+      "geldigTot": "2999-12-31",
+      "geldigVanaf": "",
+      "merk": "",
+      "trefwoorden": [
+        "kip"
+      ],
+      "opgehaald": "2026-06-17T05:00:03.181Z"
     },
     {
       "id": "ah-568746",
@@ -2151,7 +2082,7 @@
         "kip",
         "ui"
       ],
-      "opgehaald": "2026-06-16T11:00:02.973Z"
+      "opgehaald": "2026-06-17T05:00:03.181Z"
     },
     {
       "id": "ah-597802",
@@ -2170,7 +2101,27 @@
       "trefwoorden": [
         "kip"
       ],
-      "opgehaald": "2026-06-16T11:00:02.973Z"
+      "opgehaald": "2026-06-17T05:00:03.181Z"
+    },
+    {
+      "id": "ah-577828",
+      "supermarkt": "ah",
+      "naam": "AH Scharrel kipgehakt gekruid 3-pack",
+      "beschrijving": "3 stuks",
+      "categorie": "Vlees",
+      "prijsNu": 10.77,
+      "prijsWas": 10.77,
+      "kortingPct": 0,
+      "korting": "",
+      "afbeelding": "https://static.ah.nl/dam/product/AHI_4354523130303836383739?revLabel=1&rendition=800x800_JPG_Q90&fileType=binary",
+      "geldigTot": "2999-12-31",
+      "geldigVanaf": "",
+      "merk": "",
+      "trefwoorden": [
+        "kip",
+        "ui"
+      ],
+      "opgehaald": "2026-06-17T05:00:03.181Z"
     },
     {
       "id": "ah-603274",
@@ -2189,26 +2140,7 @@
       "trefwoorden": [
         "kip"
       ],
-      "opgehaald": "2026-06-16T11:00:02.973Z"
-    },
-    {
-      "id": "ah-602955",
-      "supermarkt": "ah",
-      "naam": "AH Franse scharrelkip kipfilethaasjes 2pack",
-      "beschrijving": "2 stuks",
-      "categorie": "Vlees",
-      "prijsNu": 11.38,
-      "prijsWas": 11.38,
-      "kortingPct": 0,
-      "korting": "",
-      "afbeelding": "https://static.ah.nl/dam/product/AHI_724f4c586c705156524b4b4a41387174456250674a51?revLabel=1&rendition=800x800_JPG_Q90&fileType=binary",
-      "geldigTot": "2999-12-31",
-      "geldigVanaf": "",
-      "merk": "",
-      "trefwoorden": [
-        "kip"
-      ],
-      "opgehaald": "2026-06-16T11:00:02.973Z"
+      "opgehaald": "2026-06-17T05:00:03.181Z"
     },
     {
       "id": "ah-577928",
@@ -2227,7 +2159,7 @@
       "trefwoorden": [
         "kip"
       ],
-      "opgehaald": "2026-06-16T11:00:02.973Z"
+      "opgehaald": "2026-06-17T05:00:03.181Z"
     },
     {
       "id": "ah-596925",
@@ -2246,7 +2178,7 @@
       "trefwoorden": [
         "vis"
       ],
-      "opgehaald": "2026-06-16T11:00:03.357Z"
+      "opgehaald": "2026-06-17T05:00:03.543Z"
     },
     {
       "id": "ah-590412",
@@ -2265,7 +2197,7 @@
       "trefwoorden": [
         "vis"
       ],
-      "opgehaald": "2026-06-16T11:00:03.357Z"
+      "opgehaald": "2026-06-17T05:00:03.543Z"
     },
     {
       "id": "ah-598216",
@@ -2285,7 +2217,7 @@
         "zalm",
         "vis"
       ],
-      "opgehaald": "2026-06-16T11:00:03.357Z"
+      "opgehaald": "2026-06-17T05:00:03.543Z"
     },
     {
       "id": "ah-577878",
@@ -2305,7 +2237,7 @@
         "zalm",
         "vis"
       ],
-      "opgehaald": "2026-06-16T11:00:03.357Z"
+      "opgehaald": "2026-06-17T05:00:03.543Z"
     },
     {
       "id": "ah-610232",
@@ -2325,7 +2257,7 @@
         "zalm",
         "vis"
       ],
-      "opgehaald": "2026-06-16T11:00:03.357Z"
+      "opgehaald": "2026-06-17T05:00:03.543Z"
     },
     {
       "id": "ah-598204",
@@ -2344,7 +2276,7 @@
       "trefwoorden": [
         "vis"
       ],
-      "opgehaald": "2026-06-16T11:00:03.357Z"
+      "opgehaald": "2026-06-17T05:00:03.543Z"
     },
     {
       "id": "ah-615107",
@@ -2363,7 +2295,7 @@
       "trefwoorden": [
         "vis"
       ],
-      "opgehaald": "2026-06-16T11:00:03.357Z"
+      "opgehaald": "2026-06-17T05:00:03.543Z"
     },
     {
       "id": "ah-121444",
@@ -2383,7 +2315,7 @@
         "vis",
         "ui"
       ],
-      "opgehaald": "2026-06-16T11:00:03.357Z"
+      "opgehaald": "2026-06-17T05:00:03.543Z"
     },
     {
       "id": "ah-213328",
@@ -2403,7 +2335,7 @@
         "vis",
         "ui"
       ],
-      "opgehaald": "2026-06-16T11:00:03.357Z"
+      "opgehaald": "2026-06-17T05:00:03.543Z"
     },
     {
       "id": "ah-615108",
@@ -2422,7 +2354,7 @@
       "trefwoorden": [
         "vis"
       ],
-      "opgehaald": "2026-06-16T11:00:03.357Z"
+      "opgehaald": "2026-06-17T05:00:03.543Z"
     },
     {
       "id": "ah-615229",
@@ -2441,26 +2373,7 @@
       "trefwoorden": [
         "vis"
       ],
-      "opgehaald": "2026-06-16T11:00:03.357Z"
-    },
-    {
-      "id": "ah-608497",
-      "supermarkt": "ah",
-      "naam": "Milner Oud 30+ plakken 4-pack",
-      "beschrijving": "4 stuks",
-      "categorie": "Kaas",
-      "prijsNu": 12.55,
-      "prijsWas": 12.55,
-      "kortingPct": 0,
-      "korting": "",
-      "afbeelding": "https://static.ah.nl/dam/product/AHI_6a46316233336a4a51454354354234315f364b354b51?revLabel=1&rendition=800x800_JPG_Q90&fileType=binary",
-      "geldigTot": "2999-12-31",
-      "geldigVanaf": "",
-      "merk": "",
-      "trefwoorden": [
-        "kaas"
-      ],
-      "opgehaald": "2026-06-16T11:00:03.765Z"
+      "opgehaald": "2026-06-17T05:00:03.543Z"
     },
     {
       "id": "ah-608496",
@@ -2479,7 +2392,7 @@
       "trefwoorden": [
         "kaas"
       ],
-      "opgehaald": "2026-06-16T11:00:03.765Z"
+      "opgehaald": "2026-06-17T05:00:03.957Z"
     },
     {
       "id": "ah-602967",
@@ -2498,7 +2411,7 @@
       "trefwoorden": [
         "kaas"
       ],
-      "opgehaald": "2026-06-16T11:00:03.765Z"
+      "opgehaald": "2026-06-17T05:00:03.957Z"
     },
     {
       "id": "ah-602349",
@@ -2517,26 +2430,26 @@
       "trefwoorden": [
         "kaas"
       ],
-      "opgehaald": "2026-06-16T11:00:03.765Z"
+      "opgehaald": "2026-06-17T05:00:03.957Z"
     },
     {
-      "id": "ah-609542",
+      "id": "ah-608497",
       "supermarkt": "ah",
-      "naam": "Milner Jong 30+ plakken 4-pack",
+      "naam": "Milner Oud 30+ plakken 4-pack",
       "beschrijving": "4 stuks",
       "categorie": "Kaas",
-      "prijsNu": 9.49,
-      "prijsWas": 9.49,
+      "prijsNu": 12.55,
+      "prijsWas": 12.55,
       "kortingPct": 0,
       "korting": "",
-      "afbeelding": "https://static.ah.nl/dam/product/AHI_537265706f3277445233793637565639445241626951?revLabel=1&rendition=800x800_JPG_Q90&fileType=binary",
+      "afbeelding": "https://static.ah.nl/dam/product/AHI_6a46316233336a4a51454354354234315f364b354b51?revLabel=1&rendition=800x800_JPG_Q90&fileType=binary",
       "geldigTot": "2999-12-31",
       "geldigVanaf": "",
       "merk": "",
       "trefwoorden": [
         "kaas"
       ],
-      "opgehaald": "2026-06-16T11:00:03.765Z"
+      "opgehaald": "2026-06-17T05:00:03.957Z"
     },
     {
       "id": "ah-609548",
@@ -2555,7 +2468,7 @@
       "trefwoorden": [
         "kaas"
       ],
-      "opgehaald": "2026-06-16T11:00:03.765Z"
+      "opgehaald": "2026-06-17T05:00:03.957Z"
     },
     {
       "id": "ah-602964",
@@ -2574,7 +2487,7 @@
       "trefwoorden": [
         "kaas"
       ],
-      "opgehaald": "2026-06-16T11:00:03.765Z"
+      "opgehaald": "2026-06-17T05:00:03.957Z"
     },
     {
       "id": "ah-163846",
@@ -2593,7 +2506,7 @@
       "trefwoorden": [
         "kaas"
       ],
-      "opgehaald": "2026-06-16T11:00:03.765Z"
+      "opgehaald": "2026-06-17T05:00:03.957Z"
     },
     {
       "id": "ah-609672",
@@ -2614,7 +2527,7 @@
         "melk",
         "ui"
       ],
-      "opgehaald": "2026-06-16T11:00:04.151Z"
+      "opgehaald": "2026-06-17T05:00:04.353Z"
     },
     {
       "id": "ah-582865",
@@ -2635,7 +2548,7 @@
         "melk",
         "ui"
       ],
-      "opgehaald": "2026-06-16T11:00:04.151Z"
+      "opgehaald": "2026-06-17T05:00:04.353Z"
     },
     {
       "id": "ah-608455",
@@ -2656,7 +2569,7 @@
         "melk",
         "ui"
       ],
-      "opgehaald": "2026-06-16T11:00:04.151Z"
+      "opgehaald": "2026-06-17T05:00:04.353Z"
     },
     {
       "id": "ah-594705",
@@ -2677,7 +2590,7 @@
         "melk",
         "ui"
       ],
-      "opgehaald": "2026-06-16T11:00:04.151Z"
+      "opgehaald": "2026-06-17T05:00:04.353Z"
     },
     {
       "id": "ah-609411",
@@ -2698,7 +2611,7 @@
         "melk",
         "ui"
       ],
-      "opgehaald": "2026-06-16T11:00:04.151Z"
+      "opgehaald": "2026-06-17T05:00:04.353Z"
     },
     {
       "id": "ah-611232",
@@ -2715,7 +2628,7 @@
       "geldigVanaf": "",
       "merk": "",
       "trefwoorden": [],
-      "opgehaald": "2026-06-16T11:00:04.151Z"
+      "opgehaald": "2026-06-17T05:00:04.353Z"
     },
     {
       "id": "ah-609664",
@@ -2736,7 +2649,7 @@
         "melk",
         "ui"
       ],
-      "opgehaald": "2026-06-16T11:00:04.151Z"
+      "opgehaald": "2026-06-17T05:00:04.353Z"
     },
     {
       "id": "ah-609352",
@@ -2757,7 +2670,7 @@
         "melk",
         "ui"
       ],
-      "opgehaald": "2026-06-16T11:00:04.151Z"
+      "opgehaald": "2026-06-17T05:00:04.353Z"
     },
     {
       "id": "ah-568161",
@@ -2774,7 +2687,7 @@
       "geldigVanaf": "",
       "merk": "",
       "trefwoorden": [],
-      "opgehaald": "2026-06-16T11:00:04.151Z"
+      "opgehaald": "2026-06-17T05:00:04.353Z"
     },
     {
       "id": "ah-608453",
@@ -2795,7 +2708,7 @@
         "melk",
         "ui"
       ],
-      "opgehaald": "2026-06-16T11:00:04.151Z"
+      "opgehaald": "2026-06-17T05:00:04.353Z"
     },
     {
       "id": "ah-582868",
@@ -2816,7 +2729,7 @@
         "melk",
         "ui"
       ],
-      "opgehaald": "2026-06-16T11:00:04.151Z"
+      "opgehaald": "2026-06-17T05:00:04.353Z"
     },
     {
       "id": "ah-597486",
@@ -2836,7 +2749,7 @@
         "pasta",
         "rijst"
       ],
-      "opgehaald": "2026-06-16T11:00:04.512Z"
+      "opgehaald": "2026-06-17T05:00:04.775Z"
     },
     {
       "id": "ah-598385",
@@ -2853,7 +2766,7 @@
       "geldigVanaf": "",
       "merk": "",
       "trefwoorden": [],
-      "opgehaald": "2026-06-16T11:00:04.512Z"
+      "opgehaald": "2026-06-17T05:00:04.775Z"
     },
     {
       "id": "ah-578578",
@@ -2873,7 +2786,7 @@
         "pasta",
         "rijst"
       ],
-      "opgehaald": "2026-06-16T11:00:05.512Z"
+      "opgehaald": "2026-06-17T05:00:05.115Z"
     },
     {
       "id": "ah-597816",
@@ -2893,7 +2806,7 @@
         "pasta",
         "rijst"
       ],
-      "opgehaald": "2026-06-16T11:00:05.512Z"
+      "opgehaald": "2026-06-17T05:00:05.115Z"
     },
     {
       "id": "ah-609525",
@@ -2915,7 +2828,7 @@
         "ui",
         "rijst"
       ],
-      "opgehaald": "2026-06-16T11:00:05.512Z"
+      "opgehaald": "2026-06-17T05:00:05.115Z"
     },
     {
       "id": "ah-578603",
@@ -2935,26 +2848,7 @@
         "pasta",
         "rijst"
       ],
-      "opgehaald": "2026-06-16T11:00:05.512Z"
-    },
-    {
-      "id": "ah-615297",
-      "supermarkt": "ah",
-      "naam": "AH Wokgroente Chinees 2-pack",
-      "beschrijving": "2 stuks",
-      "categorie": "Groente, aardappelen",
-      "prijsNu": 4.54,
-      "prijsWas": 4.54,
-      "kortingPct": 0,
-      "korting": "",
-      "afbeelding": "https://static.ah.nl/dam/product/AHI_624e5a796976436d51324b64486c75474545424e5a67?revLabel=1&rendition=800x800_JPG_Q90&fileType=binary",
-      "geldigTot": "2999-12-31",
-      "geldigVanaf": "",
-      "merk": "",
-      "trefwoorden": [
-        "aardappel"
-      ],
-      "opgehaald": "2026-06-16T11:00:06.112Z"
+      "opgehaald": "2026-06-17T05:00:05.115Z"
     },
     {
       "id": "ah-567548",
@@ -2973,7 +2867,7 @@
       "trefwoorden": [
         "ui"
       ],
-      "opgehaald": "2026-06-16T11:00:06.112Z"
+      "opgehaald": "2026-06-17T05:00:05.475Z"
     },
     {
       "id": "ah-567052",
@@ -2992,7 +2886,27 @@
       "trefwoorden": [
         "aardappel"
       ],
-      "opgehaald": "2026-06-16T11:00:06.112Z"
+      "opgehaald": "2026-06-17T05:00:05.475Z"
+    },
+    {
+      "id": "ah-594732",
+      "supermarkt": "ah",
+      "naam": "AH Snoepgroente worteltjes 3-pack",
+      "beschrijving": "3 stuks",
+      "categorie": "Groente, aardappelen",
+      "prijsNu": 8.07,
+      "prijsWas": 8.07,
+      "kortingPct": 0,
+      "korting": "",
+      "afbeelding": "https://static.ah.nl/dam/product/AHI_4354523130313939303334?revLabel=1&rendition=800x800_JPG_Q90&fileType=binary",
+      "geldigTot": "2999-12-31",
+      "geldigVanaf": "",
+      "merk": "",
+      "trefwoorden": [
+        "aardappel",
+        "wortel"
+      ],
+      "opgehaald": "2026-06-17T05:00:05.475Z"
     },
     {
       "id": "ah-566924",
@@ -3012,7 +2926,7 @@
         "pasta",
         "rijst"
       ],
-      "opgehaald": "2026-06-16T11:00:06.112Z"
+      "opgehaald": "2026-06-17T05:00:05.475Z"
     },
     {
       "id": "ah-615295",
@@ -3033,7 +2947,7 @@
         "aardappel",
         "spinazie"
       ],
-      "opgehaald": "2026-06-16T11:00:06.112Z"
+      "opgehaald": "2026-06-17T05:00:05.475Z"
     },
     {
       "id": "ah-4102",
@@ -3052,26 +2966,45 @@
       "trefwoorden": [
         "aardappel"
       ],
-      "opgehaald": "2026-06-16T11:00:06.112Z"
+      "opgehaald": "2026-06-17T05:00:05.475Z"
     },
     {
-      "id": "ah-367212",
+      "id": "ah-609214",
       "supermarkt": "ah",
-      "naam": "Zespri Kiwi sungold",
-      "beschrijving": "750 g",
-      "categorie": "Fruit, verse sappen",
-      "prijsNu": 5.49,
-      "prijsWas": 5.49,
+      "naam": "Olvarit Knijpfruit 12+ mnd variatiemenu 15-pack",
+      "beschrijving": "per stuk",
+      "categorie": "Baby en kind",
+      "prijsNu": 16.84,
+      "prijsWas": 16.84,
       "kortingPct": 0,
       "korting": "",
-      "afbeelding": "https://static.ah.nl/dam/product/AHI_4354523130313834363833?revLabel=1&rendition=800x800_JPG_Q90&fileType=binary",
-      "geldigTot": "2026-06-21",
+      "afbeelding": "https://static.ah.nl/dam/product/AHI_625f4d627438715a526d4f5661344f457a6848384241?revLabel=1&rendition=800x800_JPG_Q90&fileType=binary",
+      "geldigTot": "2999-12-31",
       "geldigVanaf": "",
       "merk": "",
       "trefwoorden": [
         "ui"
       ],
-      "opgehaald": "2026-06-16T11:00:06.575Z"
+      "opgehaald": "2026-06-17T05:00:05.838Z"
+    },
+    {
+      "id": "ah-609215",
+      "supermarkt": "ah",
+      "naam": "Olvarit Knijpfruit/groente 12+mnd babyvoed 20pck",
+      "beschrijving": "per stuk",
+      "categorie": "Baby en kind",
+      "prijsNu": 22.46,
+      "prijsWas": 22.46,
+      "kortingPct": 0,
+      "korting": "",
+      "afbeelding": "https://static.ah.nl/dam/product/AHI_4b5056634b42433652386d7033484848735634745267?revLabel=1&rendition=800x800_JPG_Q90&fileType=binary",
+      "geldigTot": "2999-12-31",
+      "geldigVanaf": "",
+      "merk": "",
+      "trefwoorden": [
+        "ui"
+      ],
+      "opgehaald": "2026-06-17T05:00:05.838Z"
     },
     {
       "id": "ah-610237",
@@ -3090,7 +3023,26 @@
       "trefwoorden": [
         "ui"
       ],
-      "opgehaald": "2026-06-16T11:00:06.575Z"
+      "opgehaald": "2026-06-17T05:00:05.838Z"
+    },
+    {
+      "id": "ah-367212",
+      "supermarkt": "ah",
+      "naam": "Zespri Kiwi sungold",
+      "beschrijving": "750 g",
+      "categorie": "Fruit, verse sappen",
+      "prijsNu": 5.49,
+      "prijsWas": 5.49,
+      "kortingPct": 0,
+      "korting": "",
+      "afbeelding": "https://static.ah.nl/dam/product/AHI_4354523130313834363833?revLabel=1&rendition=800x800_JPG_Q90&fileType=binary",
+      "geldigTot": "2026-06-21",
+      "geldigVanaf": "",
+      "merk": "",
+      "trefwoorden": [
+        "ui"
+      ],
+      "opgehaald": "2026-06-17T05:00:05.838Z"
     },
     {
       "id": "ah-491168",
@@ -3110,7 +3062,7 @@
         "ei",
         "ui"
       ],
-      "opgehaald": "2026-06-16T11:00:06.575Z"
+      "opgehaald": "2026-06-17T05:00:05.838Z"
     },
     {
       "id": "ah-598453",
@@ -3129,7 +3081,7 @@
       "trefwoorden": [
         "ui"
       ],
-      "opgehaald": "2026-06-16T11:00:06.575Z"
+      "opgehaald": "2026-06-17T05:00:05.838Z"
     },
     {
       "id": "ah-519637",
@@ -3148,7 +3100,7 @@
       "trefwoorden": [
         "ui"
       ],
-      "opgehaald": "2026-06-16T11:00:06.575Z"
+      "opgehaald": "2026-06-17T05:00:05.838Z"
     },
     {
       "id": "ah-598392",
@@ -3167,7 +3119,7 @@
       "trefwoorden": [
         "ui"
       ],
-      "opgehaald": "2026-06-16T11:00:06.575Z"
+      "opgehaald": "2026-06-17T05:00:05.838Z"
     },
     {
       "id": "ah-598356",
@@ -3186,7 +3138,7 @@
       "trefwoorden": [
         "ui"
       ],
-      "opgehaald": "2026-06-16T11:00:06.575Z"
+      "opgehaald": "2026-06-17T05:00:05.838Z"
     },
     {
       "id": "ah-579452",
@@ -3205,7 +3157,7 @@
       "trefwoorden": [
         "ui"
       ],
-      "opgehaald": "2026-06-16T11:00:06.575Z"
+      "opgehaald": "2026-06-17T05:00:05.838Z"
     },
     {
       "id": "ah-221526",
@@ -3224,7 +3176,7 @@
       "trefwoorden": [
         "ui"
       ],
-      "opgehaald": "2026-06-16T11:00:06.575Z"
+      "opgehaald": "2026-06-17T05:00:05.838Z"
     },
     {
       "id": "ah-579712",
@@ -3243,7 +3195,7 @@
       "trefwoorden": [
         "ui"
       ],
-      "opgehaald": "2026-06-16T11:00:06.575Z"
+      "opgehaald": "2026-06-17T05:00:05.838Z"
     },
     {
       "id": "ah-416489",
@@ -3262,26 +3214,7 @@
       "trefwoorden": [
         "ui"
       ],
-      "opgehaald": "2026-06-16T11:00:06.575Z"
-    },
-    {
-      "id": "ah-567484",
-      "supermarkt": "ah",
-      "naam": "AH Focaccia mozzarella 2-pack",
-      "beschrijving": "2 stuks",
-      "categorie": "Bakkerij",
-      "prijsNu": 5.11,
-      "prijsWas": 5.11,
-      "kortingPct": 0,
-      "korting": "",
-      "afbeelding": "https://static.ah.nl/dam/product/AHI_4354523130303236333231?revLabel=1&rendition=800x800_JPG_Q90&fileType=binary",
-      "geldigTot": "2999-12-31",
-      "geldigVanaf": "",
-      "merk": "",
-      "trefwoorden": [
-        "kaas"
-      ],
-      "opgehaald": "2026-06-16T11:00:06.953Z"
+      "opgehaald": "2026-06-17T05:00:05.838Z"
     },
     {
       "id": "ah-598366",
@@ -3300,7 +3233,7 @@
       "trefwoorden": [
         "brood"
       ],
-      "opgehaald": "2026-06-16T11:00:06.953Z"
+      "opgehaald": "2026-06-17T05:00:06.248Z"
     },
     {
       "id": "ah-598414",
@@ -3317,7 +3250,7 @@
       "geldigVanaf": "",
       "merk": "",
       "trefwoorden": [],
-      "opgehaald": "2026-06-16T11:00:06.953Z"
+      "opgehaald": "2026-06-17T05:00:06.248Z"
     },
     {
       "id": "ah-598411",
@@ -3334,7 +3267,7 @@
       "geldigVanaf": "",
       "merk": "",
       "trefwoorden": [],
-      "opgehaald": "2026-06-16T11:00:06.953Z"
+      "opgehaald": "2026-06-17T05:00:06.248Z"
     },
     {
       "id": "ah-568750",
@@ -3351,7 +3284,7 @@
       "geldigVanaf": "",
       "merk": "",
       "trefwoorden": [],
-      "opgehaald": "2026-06-16T11:00:06.953Z"
+      "opgehaald": "2026-06-17T05:00:06.248Z"
     },
     {
       "id": "ah-598358",
@@ -3370,7 +3303,7 @@
       "trefwoorden": [
         "brood"
       ],
-      "opgehaald": "2026-06-16T11:00:06.953Z"
+      "opgehaald": "2026-06-17T05:00:06.248Z"
     },
     {
       "id": "ah-598407",
@@ -3387,7 +3320,7 @@
       "geldigVanaf": "",
       "merk": "",
       "trefwoorden": [],
-      "opgehaald": "2026-06-16T11:00:06.953Z"
+      "opgehaald": "2026-06-17T05:00:06.248Z"
     },
     {
       "id": "ah-572389",
@@ -3404,7 +3337,7 @@
       "geldigVanaf": "",
       "merk": "",
       "trefwoorden": [],
-      "opgehaald": "2026-06-16T11:00:07.391Z"
+      "opgehaald": "2026-06-17T05:00:06.633Z"
     },
     {
       "id": "ah-598350",
@@ -3423,7 +3356,26 @@
       "trefwoorden": [
         "ei"
       ],
-      "opgehaald": "2026-06-16T11:00:07.391Z"
+      "opgehaald": "2026-06-17T05:00:06.633Z"
+    },
+    {
+      "id": "ah-567484",
+      "supermarkt": "ah",
+      "naam": "AH Focaccia mozzarella 2-pack",
+      "beschrijving": "2 stuks",
+      "categorie": "Bakkerij",
+      "prijsNu": 5.11,
+      "prijsWas": 5.11,
+      "kortingPct": 0,
+      "korting": "",
+      "afbeelding": "https://static.ah.nl/dam/product/AHI_4354523130303236333231?revLabel=1&rendition=800x800_JPG_Q90&fileType=binary",
+      "geldigTot": "2999-12-31",
+      "geldigVanaf": "",
+      "merk": "",
+      "trefwoorden": [
+        "kaas"
+      ],
+      "opgehaald": "2026-06-17T05:00:06.633Z"
     },
     {
       "id": "ah-607679",
@@ -3443,7 +3395,7 @@
         "boter",
         "room"
       ],
-      "opgehaald": "2026-06-16T11:00:07.391Z"
+      "opgehaald": "2026-06-17T05:00:06.633Z"
     },
     {
       "id": "ah-611528",
@@ -3460,7 +3412,7 @@
       "geldigVanaf": "",
       "merk": "",
       "trefwoorden": [],
-      "opgehaald": "2026-06-16T11:00:07.391Z"
+      "opgehaald": "2026-06-17T05:00:06.633Z"
     },
     {
       "id": "ah-604808",
@@ -3481,7 +3433,7 @@
         "melk",
         "ui"
       ],
-      "opgehaald": "2026-06-16T11:00:07.391Z"
+      "opgehaald": "2026-06-17T05:00:06.633Z"
     },
     {
       "id": "ah-572388",
@@ -3498,7 +3450,7 @@
       "geldigVanaf": "",
       "merk": "",
       "trefwoorden": [],
-      "opgehaald": "2026-06-16T11:00:07.391Z"
+      "opgehaald": "2026-06-17T05:00:06.633Z"
     },
     {
       "id": "ah-611526",
@@ -3515,27 +3467,7 @@
       "geldigVanaf": "",
       "merk": "",
       "trefwoorden": [],
-      "opgehaald": "2026-06-16T11:00:07.391Z"
-    },
-    {
-      "id": "ah-594732",
-      "supermarkt": "ah",
-      "naam": "AH Snoepgroente worteltjes 3-pack",
-      "beschrijving": "3 stuks",
-      "categorie": "Groente, aardappelen",
-      "prijsNu": 8.07,
-      "prijsWas": 8.07,
-      "kortingPct": 0,
-      "korting": "",
-      "afbeelding": "https://static.ah.nl/dam/product/AHI_4354523130313939303334?revLabel=1&rendition=800x800_JPG_Q90&fileType=binary",
-      "geldigTot": "2999-12-31",
-      "geldigVanaf": "",
-      "merk": "",
-      "trefwoorden": [
-        "aardappel",
-        "wortel"
-      ],
-      "opgehaald": "2026-06-16T11:00:07.391Z"
+      "opgehaald": "2026-06-17T05:00:06.633Z"
     },
     {
       "id": "ah-604800",
@@ -3557,7 +3489,7 @@
         "yoghurt",
         "ui"
       ],
-      "opgehaald": "2026-06-16T11:00:07.391Z"
+      "opgehaald": "2026-06-17T05:00:06.633Z"
     },
     {
       "id": "ah-594731",
@@ -3576,7 +3508,7 @@
       "trefwoorden": [
         "aardappel"
       ],
-      "opgehaald": "2026-06-16T11:00:07.391Z"
+      "opgehaald": "2026-06-17T05:00:06.633Z"
     },
     {
       "id": "ah-584737",
@@ -3593,7 +3525,7 @@
       "geldigVanaf": "",
       "merk": "",
       "trefwoorden": [],
-      "opgehaald": "2026-06-16T11:00:07.391Z"
+      "opgehaald": "2026-06-17T05:00:06.633Z"
     },
     {
       "id": "ah-604807",
@@ -3615,7 +3547,7 @@
         "yoghurt",
         "ui"
       ],
-      "opgehaald": "2026-06-16T11:00:07.391Z"
+      "opgehaald": "2026-06-17T05:00:06.633Z"
     },
     {
       "id": "ah-595691",
@@ -3632,7 +3564,7 @@
       "geldigVanaf": "",
       "merk": "",
       "trefwoorden": [],
-      "opgehaald": "2026-06-16T11:00:07.391Z"
+      "opgehaald": "2026-06-17T05:00:06.633Z"
     },
     {
       "id": "ah-604806",
@@ -3654,7 +3586,7 @@
         "yoghurt",
         "ui"
       ],
-      "opgehaald": "2026-06-16T11:00:07.391Z"
+      "opgehaald": "2026-06-17T05:00:06.633Z"
     },
     {
       "id": "ah-612272",
@@ -3673,7 +3605,7 @@
       "trefwoorden": [
         "ui"
       ],
-      "opgehaald": "2026-06-16T11:00:07.762Z"
+      "opgehaald": "2026-06-17T05:00:06.971Z"
     },
     {
       "id": "ah-612135",
@@ -3692,7 +3624,7 @@
       "trefwoorden": [
         "ui"
       ],
-      "opgehaald": "2026-06-16T11:00:07.762Z"
+      "opgehaald": "2026-06-17T05:00:06.971Z"
     },
     {
       "id": "ah-615338",
@@ -3711,7 +3643,7 @@
       "trefwoorden": [
         "ui"
       ],
-      "opgehaald": "2026-06-16T11:00:07.762Z"
+      "opgehaald": "2026-06-17T05:00:06.971Z"
     },
     {
       "id": "ah-615339",
@@ -3730,7 +3662,7 @@
       "trefwoorden": [
         "ui"
       ],
-      "opgehaald": "2026-06-16T11:00:07.762Z"
+      "opgehaald": "2026-06-17T05:00:06.971Z"
     },
     {
       "id": "ah-615336",
@@ -3749,7 +3681,7 @@
       "trefwoorden": [
         "ui"
       ],
-      "opgehaald": "2026-06-16T11:00:07.762Z"
+      "opgehaald": "2026-06-17T05:00:06.971Z"
     },
     {
       "id": "ah-608899",
@@ -3768,7 +3700,7 @@
       "trefwoorden": [
         "ui"
       ],
-      "opgehaald": "2026-06-16T11:00:07.762Z"
+      "opgehaald": "2026-06-17T05:00:06.971Z"
     },
     {
       "id": "ah-612160",
@@ -3787,7 +3719,7 @@
       "trefwoorden": [
         "ui"
       ],
-      "opgehaald": "2026-06-16T11:00:07.762Z"
+      "opgehaald": "2026-06-17T05:00:06.971Z"
     },
     {
       "id": "ah-451130",
@@ -3806,7 +3738,7 @@
       "trefwoorden": [
         "ui"
       ],
-      "opgehaald": "2026-06-16T11:00:07.762Z"
+      "opgehaald": "2026-06-17T05:00:06.971Z"
     },
     {
       "id": "ah-607856",
@@ -3827,7 +3759,7 @@
         "yoghurt",
         "ui"
       ],
-      "opgehaald": "2026-06-16T11:00:08.151Z"
+      "opgehaald": "2026-06-17T05:00:07.352Z"
     },
     {
       "id": "ah-604676",
@@ -3846,7 +3778,7 @@
       "trefwoorden": [
         "ui"
       ],
-      "opgehaald": "2026-06-16T11:00:08.151Z"
+      "opgehaald": "2026-06-17T05:00:07.352Z"
     },
     {
       "id": "ah-609665",
@@ -3867,7 +3799,7 @@
         "melk",
         "ui"
       ],
-      "opgehaald": "2026-06-16T11:00:08.151Z"
+      "opgehaald": "2026-06-17T05:00:07.352Z"
     },
     {
       "id": "ah-608456",
@@ -3888,7 +3820,7 @@
         "melk",
         "ui"
       ],
-      "opgehaald": "2026-06-16T11:00:08.151Z"
+      "opgehaald": "2026-06-17T05:00:07.352Z"
     },
     {
       "id": "ah-609406",
@@ -3909,82 +3841,233 @@
         "yoghurt",
         "ui"
       ],
-      "opgehaald": "2026-06-16T11:00:08.151Z"
+      "opgehaald": "2026-06-17T05:00:07.352Z"
     },
     {
-      "id": "jumbo-prei",
+      "id": "jumbo-filetlappen",
       "supermarkt": "jumbo",
-      "naam": "Prei",
+      "naam": "Filetlappen",
       "beschrijving": "",
       "categorie": "Jumbo Aanbieding",
-      "prijsNu": 0.5,
+      "prijsNu": 33.58,
       "prijsWas": 0,
       "kortingPct": 0,
-      "korting": "Alleen in de winkel 2 voor 1,00",
+      "korting": "Alleen in de winkel 33.58% korting",
+      "afbeelding": "",
+      "geldigTot": "",
+      "geldigVanaf": "",
+      "merk": "",
+      "trefwoorden": [],
+      "opgehaald": "2026-06-17T05:00:14.162Z"
+    },
+    {
+      "id": "jumbo-filetlappen",
+      "supermarkt": "jumbo",
+      "naam": "Filetlappen",
+      "beschrijving": "",
+      "categorie": "Jumbo Aanbieding",
+      "prijsNu": 25.77,
+      "prijsWas": 0,
+      "kortingPct": 0,
+      "korting": "Alleen in de winkel 25.77% korting",
+      "afbeelding": "",
+      "geldigTot": "",
+      "geldigVanaf": "",
+      "merk": "",
+      "trefwoorden": [],
+      "opgehaald": "2026-06-17T05:00:14.162Z"
+    },
+    {
+      "id": "jumbo-filetlappen",
+      "supermarkt": "jumbo",
+      "naam": "Filetlappen",
+      "beschrijving": "",
+      "categorie": "Jumbo Aanbieding",
+      "prijsNu": 8.9,
+      "prijsWas": 0,
+      "kortingPct": 0,
+      "korting": "Alleen in de winkel voor 8,90",
+      "afbeelding": "",
+      "geldigTot": "",
+      "geldigVanaf": "",
+      "merk": "",
+      "trefwoorden": [],
+      "opgehaald": "2026-06-17T05:00:14.162Z"
+    },
+    {
+      "id": "jumbo-filetlappen",
+      "supermarkt": "jumbo",
+      "naam": "Filetlappen",
+      "beschrijving": "",
+      "categorie": "Jumbo Aanbieding",
+      "prijsNu": 25.83,
+      "prijsWas": 0,
+      "kortingPct": 0,
+      "korting": "Alleen in de winkel 25.83% korting",
+      "afbeelding": "",
+      "geldigTot": "",
+      "geldigVanaf": "",
+      "merk": "",
+      "trefwoorden": [],
+      "opgehaald": "2026-06-17T05:00:14.162Z"
+    },
+    {
+      "id": "jumbo-midi-komkommers",
+      "supermarkt": "jumbo",
+      "naam": "Midi komkommers",
+      "beschrijving": "",
+      "categorie": "Jumbo Aanbieding",
+      "prijsNu": 1.29,
+      "prijsWas": 0,
+      "kortingPct": 0,
+      "korting": "Alleen in de winkel voor 1,29",
+      "afbeelding": "",
+      "geldigTot": "",
+      "geldigVanaf": "",
+      "merk": "",
+      "trefwoorden": [],
+      "opgehaald": "2026-06-17T05:00:14.162Z"
+    },
+    {
+      "id": "jumbo-filetlappen",
+      "supermarkt": "jumbo",
+      "naam": "Filetlappen",
+      "beschrijving": "",
+      "categorie": "Jumbo Aanbieding",
+      "prijsNu": 38.58,
+      "prijsWas": 0,
+      "kortingPct": 0,
+      "korting": "Alleen in de winkel 38.58% korting",
+      "afbeelding": "",
+      "geldigTot": "",
+      "geldigVanaf": "",
+      "merk": "",
+      "trefwoorden": [],
+      "opgehaald": "2026-06-17T05:00:14.162Z"
+    },
+    {
+      "id": "jumbo-filetlappen",
+      "supermarkt": "jumbo",
+      "naam": "Filetlappen",
+      "beschrijving": "",
+      "categorie": "Jumbo Aanbieding",
+      "prijsNu": 34.07,
+      "prijsWas": 0,
+      "kortingPct": 0,
+      "korting": "Alleen in de winkel 34.07% korting",
+      "afbeelding": "",
+      "geldigTot": "",
+      "geldigVanaf": "",
+      "merk": "",
+      "trefwoorden": [],
+      "opgehaald": "2026-06-17T05:00:14.162Z"
+    },
+    {
+      "id": "jumbo-filetlappen",
+      "supermarkt": "jumbo",
+      "naam": "Filetlappen",
+      "beschrijving": "",
+      "categorie": "Jumbo Aanbieding",
+      "prijsNu": 28.74,
+      "prijsWas": 0,
+      "kortingPct": 0,
+      "korting": "Alleen in de winkel 28.74% korting",
+      "afbeelding": "",
+      "geldigTot": "",
+      "geldigVanaf": "",
+      "merk": "",
+      "trefwoorden": [],
+      "opgehaald": "2026-06-17T05:00:14.162Z"
+    },
+    {
+      "id": "jumbo-jumbo-witte--bruine-of-volkoren-bollen",
+      "supermarkt": "jumbo",
+      "naam": "Jumbo witte, bruine of volkoren bollen",
+      "beschrijving": "",
+      "categorie": "Jumbo Aanbieding",
+      "prijsNu": 0.99,
+      "prijsWas": 0,
+      "kortingPct": 0,
+      "korting": "Alleen in de winkel voor 0,99",
       "afbeelding": "",
       "geldigTot": "",
       "geldigVanaf": "",
       "merk": "",
       "trefwoorden": [
-        "ei",
-        "prei"
+        "ui"
       ],
-      "opgehaald": "2026-06-16T11:00:15.312Z"
+      "opgehaald": "2026-06-17T05:00:14.163Z"
     },
     {
-      "id": "jumbo-3017621",
+      "id": "jumbo-sperziebonen",
       "supermarkt": "jumbo",
-      "naam": "Philadelphia",
+      "naam": "Sperziebonen",
+      "beschrijving": "",
+      "categorie": "Jumbo Aanbieding",
+      "prijsNu": 1.99,
+      "prijsWas": 0,
+      "kortingPct": 0,
+      "korting": "Alleen in de winkel voor 1,99",
+      "afbeelding": "",
+      "geldigTot": "",
+      "geldigVanaf": "",
+      "merk": "",
+      "trefwoorden": [],
+      "opgehaald": "2026-06-17T05:00:14.163Z"
+    },
+    {
+      "id": "jumbo-filetlappen",
+      "supermarkt": "jumbo",
+      "naam": "Filetlappen",
+      "beschrijving": "",
+      "categorie": "Jumbo Aanbieding",
+      "prijsNu": 24.26,
+      "prijsWas": 0,
+      "kortingPct": 0,
+      "korting": "Alleen in de winkel 24.26% korting",
+      "afbeelding": "",
+      "geldigTot": "",
+      "geldigVanaf": "",
+      "merk": "",
+      "trefwoorden": [],
+      "opgehaald": "2026-06-17T05:00:14.163Z"
+    },
+    {
+      "id": "jumbo-3017588",
+      "supermarkt": "jumbo",
+      "naam": "Zuivelhoeve yoghurt of vla",
+      "beschrijving": "",
+      "categorie": "Jumbo Aanbieding",
+      "prijsNu": 1.25,
+      "prijsWas": 0,
+      "kortingPct": 0,
+      "korting": "2 voor 2,50",
+      "afbeelding": "https://www.jumbo.com/INTERSHOP/static/WFS/Jumbo-Grocery-Site/-/Jumbo-Grocery/nl_NL/Images_Aanbiedingen/2026/Weekaanbiedingen/Week%2025/2026_WK25_87.png",
+      "geldigTot": "",
+      "geldigVanaf": "",
+      "merk": "",
+      "trefwoorden": [
+        "yoghurt",
+        "ui"
+      ],
+      "opgehaald": "2026-06-17T05:00:14.163Z"
+    },
+    {
+      "id": "jumbo-3017613",
+      "supermarkt": "jumbo",
+      "naam": "Lay's Max, Bugles, Doritos, Cheetos of Hamka's",
       "beschrijving": "",
       "categorie": "Jumbo Aanbieding",
       "prijsNu": 2,
       "prijsWas": 0,
       "kortingPct": 0,
-      "korting": "2 voor 3,99",
-      "afbeelding": "https://www.jumbo.com/INTERSHOP/static/WFS/Jumbo-Grocery-Site/-/Jumbo-Grocery/nl_NL/Images_Aanbiedingen/2026/Weekaanbiedingen/Week%2024/Weekaanbiedingen-Week-24_42.png",
+      "korting": "2 voor 4,00",
+      "afbeelding": "https://www.jumbo.com/INTERSHOP/static/WFS/Jumbo-Grocery-Site/-/Jumbo-Grocery/nl_NL/Images_Aanbiedingen/2026/Weekaanbiedingen/Week%2025/2026_WK25_59.png",
       "geldigTot": "",
       "geldigVanaf": "",
       "merk": "",
       "trefwoorden": [],
-      "opgehaald": "2026-06-16T11:00:15.312Z"
-    },
-    {
-      "id": "jumbo-3017522",
-      "supermarkt": "jumbo",
-      "naam": "Almhof yoghurt",
-      "beschrijving": "",
-      "categorie": "Jumbo Aanbieding",
-      "prijsNu": 1.5,
-      "prijsWas": 0,
-      "kortingPct": 0,
-      "korting": "2 voor 3,00",
-      "afbeelding": "https://www.jumbo.com/INTERSHOP/static/WFS/Jumbo-Grocery-Site/-/Jumbo-Grocery/nl_NL/Images_Aanbiedingen/2026/Weekaanbiedingen/Week%2024/Weekaanbiedingen-Week-24_18.png",
-      "geldigTot": "",
-      "geldigVanaf": "",
-      "merk": "",
-      "trefwoorden": [
-        "yoghurt"
-      ],
-      "opgehaald": "2026-06-16T11:00:15.312Z"
-    },
-    {
-      "id": "jumbo-3017699",
-      "supermarkt": "jumbo",
-      "naam": "Jumbo vegetarische kipstukjes of plantaardig gehakt, balletjes of shoarma",
-      "beschrijving": "",
-      "categorie": "Jumbo Aanbieding",
-      "prijsNu": 1.5,
-      "prijsWas": 0,
-      "kortingPct": 0,
-      "korting": "2 voor 3,00",
-      "afbeelding": "https://www.jumbo.com/INTERSHOP/static/WFS/Jumbo-Grocery-Site/-/Jumbo-Grocery/nl_NL/Images_Aanbiedingen/2026/Weekaanbiedingen/Week%2024/Weekaanbiedingen-Week-24_33.png",
-      "geldigTot": "",
-      "geldigVanaf": "",
-      "merk": "",
-      "trefwoorden": [
-        "kip"
-      ],
-      "opgehaald": "2026-06-16T11:00:15.312Z"
+      "opgehaald": "2026-06-17T05:00:14.163Z"
     },
     {
       "id": "jumbo-3016562",
@@ -4001,328 +4084,432 @@
       "geldigVanaf": "",
       "merk": "",
       "trefwoorden": [],
-      "opgehaald": "2026-06-16T11:00:15.312Z"
+      "opgehaald": "2026-06-17T05:00:14.163Z"
     },
     {
-      "id": "jumbo-3017257",
+      "id": "jumbo-3017666",
       "supermarkt": "jumbo",
-      "naam": "Gegrilde kip",
-      "beschrijving": "",
-      "categorie": "Jumbo Aanbieding",
-      "prijsNu": 4.99,
-      "prijsWas": 0,
-      "kortingPct": 0,
-      "korting": "voor 4,99",
-      "afbeelding": "https://www.jumbo.com/INTERSHOP/static/WFS/Jumbo-Grocery-Site/-/Jumbo-Grocery/nl_NL/Images_Aanbiedingen/2026/Weekaanbiedingen/Week%2024/Weekaanbiedingen-Week-24_35.png",
-      "geldigTot": "",
-      "geldigVanaf": "",
-      "merk": "",
-      "trefwoorden": [
-        "kip"
-      ],
-      "opgehaald": "2026-06-16T11:00:15.312Z"
-    },
-    {
-      "id": "jumbo-3018694",
-      "supermarkt": "jumbo",
-      "naam": "Prei",
-      "beschrijving": "",
-      "categorie": "Jumbo Aanbieding",
-      "prijsNu": 0.5,
-      "prijsWas": 0,
-      "kortingPct": 0,
-      "korting": "2 voor 1,00",
-      "afbeelding": "https://www.jumbo.com/INTERSHOP/static/WFS/Jumbo-Grocery-Site/-/Jumbo-Grocery/nl_NL/Images_Aanbiedingen/2026/Weekaanbiedingen/Week%2024/2026_WK24_64.png",
-      "geldigTot": "",
-      "geldigVanaf": "",
-      "merk": "",
-      "trefwoorden": [
-        "ei",
-        "prei"
-      ],
-      "opgehaald": "2026-06-16T11:00:15.312Z"
-    },
-    {
-      "id": "jumbo-3017442",
-      "supermarkt": "jumbo",
-      "naam": "Spinazie of sperziebonen",
-      "beschrijving": "",
-      "categorie": "Jumbo Aanbieding",
-      "prijsNu": 1.49,
-      "prijsWas": 0,
-      "kortingPct": 0,
-      "korting": "voor 1,49",
-      "afbeelding": "https://www.jumbo.com/INTERSHOP/static/WFS/Jumbo-Grocery-Site/-/Jumbo-Grocery/nl_NL/Images_Aanbiedingen/2026/Weekaanbiedingen/Week%2024/Weekaanbiedingen-Week-24_50.png",
-      "geldigTot": "",
-      "geldigVanaf": "",
-      "merk": "",
-      "trefwoorden": [
-        "spinazie"
-      ],
-      "opgehaald": "2026-06-16T11:00:15.312Z"
-    },
-    {
-      "id": "jumbo-3018713",
-      "supermarkt": "jumbo",
-      "naam": "Nederlandse aardbeien",
-      "beschrijving": "",
-      "categorie": "Jumbo Aanbieding",
-      "prijsNu": 2.99,
-      "prijsWas": 0,
-      "kortingPct": 0,
-      "korting": "voor 2,99",
-      "afbeelding": "https://www.jumbo.com/INTERSHOP/static/WFS/Jumbo-Grocery-Site/-/Jumbo-Grocery/nl_NL/Images_Aanbiedingen/2026/Weekaanbiedingen/Week%2024/Weekaanbiedingen-Week-24_58.png",
-      "geldigTot": "",
-      "geldigVanaf": "",
-      "merk": "",
-      "trefwoorden": [
-        "ei"
-      ],
-      "opgehaald": "2026-06-16T11:00:15.312Z"
-    },
-    {
-      "id": "jumbo-3018714",
-      "supermarkt": "jumbo",
-      "naam": "Perziken",
-      "beschrijving": "",
-      "categorie": "Jumbo Aanbieding",
-      "prijsNu": 2.99,
-      "prijsWas": 0,
-      "kortingPct": 0,
-      "korting": "voor 2,99",
-      "afbeelding": "https://www.jumbo.com/INTERSHOP/static/WFS/Jumbo-Grocery-Site/-/Jumbo-Grocery/nl_NL/Images_Aanbiedingen/2026/Weekaanbiedingen/Week%2024/Weekaanbiedingen-Week-24_03.png",
-      "geldigTot": "",
-      "geldigVanaf": "",
-      "merk": "",
-      "trefwoorden": [],
-      "opgehaald": "2026-06-16T11:00:15.312Z"
-    },
-    {
-      "id": "jumbo-3018734",
-      "supermarkt": "jumbo",
-      "naam": "Pitloze witte druiven",
-      "beschrijving": "",
-      "categorie": "Jumbo Aanbieding",
-      "prijsNu": 2.19,
-      "prijsWas": 0,
-      "kortingPct": 0,
-      "korting": "voor 2,19",
-      "afbeelding": "https://www.jumbo.com/INTERSHOP/static/WFS/Jumbo-Grocery-Site/-/Jumbo-Grocery/nl_NL/Images_Aanbiedingen/2026/Weekaanbiedingen/Week%2024/Weekaanbiedingen-Week-24_60.png",
-      "geldigTot": "",
-      "geldigVanaf": "",
-      "merk": "",
-      "trefwoorden": [
-        "ui"
-      ],
-      "opgehaald": "2026-06-16T11:00:15.312Z"
-    },
-    {
-      "id": "jumbo-3018735",
-      "supermarkt": "jumbo",
-      "naam": "Roma tomaten",
+      "naam": "Jumbo verse friet",
       "beschrijving": "",
       "categorie": "Jumbo Aanbieding",
       "prijsNu": 1.99,
       "prijsWas": 0,
       "kortingPct": 0,
       "korting": "voor 1,99",
-      "afbeelding": "https://www.jumbo.com/INTERSHOP/static/WFS/Jumbo-Grocery-Site/-/Jumbo-Grocery/nl_NL/Images_Aanbiedingen/2026/Weekaanbiedingen/Week%2024/Weekaanbiedingen-Week-24_04.png",
+      "afbeelding": "https://www.jumbo.com/INTERSHOP/static/WFS/Jumbo-Grocery-Site/-/Jumbo-Grocery/nl_NL/Images_Aanbiedingen/2026/Weekaanbiedingen/Week%2025/2026_WK25_54.png",
       "geldigTot": "",
       "geldigVanaf": "",
       "merk": "",
       "trefwoorden": [],
-      "opgehaald": "2026-06-16T11:00:15.312Z"
+      "opgehaald": "2026-06-17T05:00:14.163Z"
     },
     {
-      "id": "jumbo-3018736",
+      "id": "jumbo-3017668",
       "supermarkt": "jumbo",
-      "naam": "Bospeen",
-      "beschrijving": "",
-      "categorie": "Jumbo Aanbieding",
-      "prijsNu": 0.99,
-      "prijsWas": 0,
-      "kortingPct": 0,
-      "korting": "voor 0,99",
-      "afbeelding": "https://www.jumbo.com/INTERSHOP/static/WFS/Jumbo-Grocery-Site/-/Jumbo-Grocery/nl_NL/Images_Aanbiedingen/2026/Weekaanbiedingen/Week%2024/Weekaanbiedingen-Week-24_01.png",
-      "geldigTot": "",
-      "geldigVanaf": "",
-      "merk": "",
-      "trefwoorden": [],
-      "opgehaald": "2026-06-16T11:00:15.312Z"
-    },
-    {
-      "id": "jumbo-3018751",
-      "supermarkt": "jumbo",
-      "naam": "Witlof",
+      "naam": "Blue Band",
       "beschrijving": "",
       "categorie": "Jumbo Aanbieding",
       "prijsNu": 1.49,
       "prijsWas": 0,
       "kortingPct": 0,
       "korting": "voor 1,49",
-      "afbeelding": "https://www.jumbo.com/INTERSHOP/static/WFS/Jumbo-Grocery-Site/-/Jumbo-Grocery/nl_NL/Images_Aanbiedingen/2026/Weekaanbiedingen/Week%2024/Weekaanbiedingen-Week-24_61.png",
+      "afbeelding": "https://www.jumbo.com/INTERSHOP/static/WFS/Jumbo-Grocery-Site/-/Jumbo-Grocery/nl_NL/Images_Aanbiedingen/2026/Weekaanbiedingen/Week%2025/2026_WK25_21.png",
       "geldigTot": "",
       "geldigVanaf": "",
       "merk": "",
       "trefwoorden": [],
-      "opgehaald": "2026-06-16T11:00:15.312Z"
+      "opgehaald": "2026-06-17T05:00:14.163Z"
     },
     {
-      "id": "jumbo-3018767",
+      "id": "jumbo-3017784",
       "supermarkt": "jumbo",
-      "naam": "Kersen",
+      "naam": "Nescafé oploskoffie",
       "beschrijving": "",
       "categorie": "Jumbo Aanbieding",
-      "prijsNu": 2.99,
+      "prijsNu": 3,
       "prijsWas": 0,
       "kortingPct": 0,
-      "korting": "voor 2,99",
-      "afbeelding": "https://www.jumbo.com/INTERSHOP/static/WFS/Jumbo-Grocery-Site/-/Jumbo-Grocery/nl_NL/Images_Aanbiedingen/2026/Weekaanbiedingen/Week%2024/Weekaanbiedingen-Week-24_08.png",
+      "korting": "voor 3,00",
+      "afbeelding": "https://www.jumbo.com/INTERSHOP/static/WFS/Jumbo-Grocery-Site/-/Jumbo-Grocery/nl_NL/Images_Aanbiedingen/2026/Weekaanbiedingen/Week%2025/2026_WK25_66.png",
       "geldigTot": "",
       "geldigVanaf": "",
       "merk": "",
       "trefwoorden": [],
-      "opgehaald": "2026-06-16T11:00:15.312Z"
+      "opgehaald": "2026-06-17T05:00:14.163Z"
     },
     {
-      "id": "jumbo-3018768",
+      "id": "jumbo-3017688",
       "supermarkt": "jumbo",
-      "naam": "Blauwe bessen",
+      "naam": "Jumbo rauwkost",
       "beschrijving": "",
       "categorie": "Jumbo Aanbieding",
-      "prijsNu": 3.69,
+      "prijsNu": 1.49,
       "prijsWas": 0,
       "kortingPct": 0,
-      "korting": "voor 3,69",
-      "afbeelding": "https://www.jumbo.com/INTERSHOP/static/WFS/Jumbo-Grocery-Site/-/Jumbo-Grocery/nl_NL/Images_Aanbiedingen/2026/Weekaanbiedingen/Week%2024/Weekaanbiedingen-Week-24_59.png",
+      "korting": "voor 1,49",
+      "afbeelding": "https://www.jumbo.com/INTERSHOP/static/WFS/Jumbo-Grocery-Site/-/Jumbo-Grocery/nl_NL/Images_Aanbiedingen/2026/Weekaanbiedingen/Week%2025/2026_WK25_52.png",
       "geldigTot": "",
       "geldigVanaf": "",
       "merk": "",
       "trefwoorden": [],
-      "opgehaald": "2026-06-16T11:00:15.312Z"
+      "opgehaald": "2026-06-17T05:00:14.163Z"
     },
     {
-      "id": "jumbo-3018785",
+      "id": "jumbo-3017690",
       "supermarkt": "jumbo",
-      "naam": "Zoete punt paprika",
+      "naam": "Rucola, Veldsla of melanges",
       "beschrijving": "",
       "categorie": "Jumbo Aanbieding",
-      "prijsNu": 2.49,
+      "prijsNu": 1,
       "prijsWas": 0,
       "kortingPct": 0,
-      "korting": "voor 2,49",
-      "afbeelding": "https://www.jumbo.com/INTERSHOP/static/WFS/Jumbo-Grocery-Site/-/Jumbo-Grocery/nl_NL/Images_Aanbiedingen/2026/Weekaanbiedingen/Week%2024/Weekaanbiedingen-Week-24_06.png",
+      "korting": "voor 1,00",
+      "afbeelding": "https://www.jumbo.com/INTERSHOP/static/WFS/Jumbo-Grocery-Site/-/Jumbo-Grocery/nl_NL/Images_Aanbiedingen/2026/Weekaanbiedingen/Week%2025/2026_WK25_18.png",
+      "geldigTot": "",
+      "geldigVanaf": "",
+      "merk": "",
+      "trefwoorden": [],
+      "opgehaald": "2026-06-17T05:00:14.163Z"
+    },
+    {
+      "id": "jumbo-3018839",
+      "supermarkt": "jumbo",
+      "naam": "Nederlandse aardbeien",
+      "beschrijving": "",
+      "categorie": "Jumbo Aanbieding",
+      "prijsNu": 2.39,
+      "prijsWas": 0,
+      "kortingPct": 0,
+      "korting": "voor 2,39",
+      "afbeelding": "https://www.jumbo.com/INTERSHOP/static/WFS/Jumbo-Grocery-Site/-/Jumbo-Grocery/nl_NL/Images_Aanbiedingen/2026/Weekaanbiedingen/Week%2025/2026_WK25_11.png",
       "geldigTot": "",
       "geldigVanaf": "",
       "merk": "",
       "trefwoorden": [
-        "paprika"
+        "ei"
       ],
-      "opgehaald": "2026-06-16T11:00:15.312Z"
+      "opgehaald": "2026-06-17T05:00:14.163Z"
     },
     {
-      "id": "jumbo-3018787",
+      "id": "jumbo-3018933",
       "supermarkt": "jumbo",
-      "naam": "Tros cherry tomaten",
+      "naam": "Zoete punt paprika mix",
       "beschrijving": "",
       "categorie": "Jumbo Aanbieding",
       "prijsNu": 1.79,
       "prijsWas": 0,
       "kortingPct": 0,
       "korting": "voor 1,79",
-      "afbeelding": "https://www.jumbo.com/INTERSHOP/static/WFS/Jumbo-Grocery-Site/-/Jumbo-Grocery/nl_NL/Images_Aanbiedingen/2026/Weekaanbiedingen/Week%2024/Weekaanbiedingen-Week-24_05.png",
-      "geldigTot": "",
-      "geldigVanaf": "",
-      "merk": "",
-      "trefwoorden": [],
-      "opgehaald": "2026-06-16T11:00:15.312Z"
-    },
-    {
-      "id": "jumbo-3018790",
-      "supermarkt": "jumbo",
-      "naam": "Limoenen",
-      "beschrijving": "",
-      "categorie": "Jumbo Aanbieding",
-      "prijsNu": 1.29,
-      "prijsWas": 0,
-      "kortingPct": 0,
-      "korting": "voor 1,29",
-      "afbeelding": "https://www.jumbo.com/INTERSHOP/static/WFS/Jumbo-Grocery-Site/-/Jumbo-Grocery/nl_NL/Images_Aanbiedingen/2026/Weekaanbiedingen/Week%2024/Weekaanbiedingen-Week-24_02.png",
-      "geldigTot": "",
-      "geldigVanaf": "",
-      "merk": "",
-      "trefwoorden": [],
-      "opgehaald": "2026-06-16T11:00:15.312Z"
-    },
-    {
-      "id": "jumbo-3018801",
-      "supermarkt": "jumbo",
-      "naam": "Tessa appels",
-      "beschrijving": "",
-      "categorie": "Jumbo Aanbieding",
-      "prijsNu": 2.49,
-      "prijsWas": 0,
-      "kortingPct": 0,
-      "korting": "voor 2,49",
-      "afbeelding": "https://www.jumbo.com/INTERSHOP/static/WFS/Jumbo-Grocery-Site/-/Jumbo-Grocery/nl_NL/Images_Aanbiedingen/2026/Weekaanbiedingen/Week%2024/Weekaanbiedingen-Week-24_62.png",
-      "geldigTot": "",
-      "geldigVanaf": "",
-      "merk": "",
-      "trefwoorden": [],
-      "opgehaald": "2026-06-16T11:00:15.312Z"
-    },
-    {
-      "id": "jumbo-3017320",
-      "supermarkt": "jumbo",
-      "naam": "Alle ongekoelde maaltijdpakketten",
-      "beschrijving": "",
-      "categorie": "Jumbo Aanbieding",
-      "prijsNu": 1,
-      "prijsWas": 0,
-      "kortingPct": 0,
-      "korting": "1,00 korting",
-      "afbeelding": "https://www.jumbo.com/INTERSHOP/static/WFS/Jumbo-Grocery-Site/-/Jumbo-Grocery/nl_NL/Images_Aanbiedingen/2026/Weekaanbiedingen/Week%2024/Weekaanbiedingen-Week-24_15.png",
-      "geldigTot": "",
-      "geldigVanaf": "",
-      "merk": "",
-      "trefwoorden": [],
-      "opgehaald": "2026-06-16T11:00:15.312Z"
-    },
-    {
-      "id": "jumbo-3017390",
-      "supermarkt": "jumbo",
-      "naam": "Rundergehakt",
-      "beschrijving": "",
-      "categorie": "Jumbo Aanbieding",
-      "prijsNu": 3.5,
-      "prijsWas": 0,
-      "kortingPct": 0,
-      "korting": "2 voor 7,00",
-      "afbeelding": "https://www.jumbo.com/INTERSHOP/static/WFS/Jumbo-Grocery-Site/-/Jumbo-Grocery/nl_NL/Images_Aanbiedingen/2026/Weekaanbiedingen/Week%2024/Weekaanbiedingen-Week-24_46.png",
+      "afbeelding": "https://www.jumbo.com/INTERSHOP/static/WFS/Jumbo-Grocery-Site/-/Jumbo-Grocery/nl_NL/Images_Aanbiedingen/2026/Weekaanbiedingen/Week%2025/2026_WK25_10.png",
       "geldigTot": "",
       "geldigVanaf": "",
       "merk": "",
       "trefwoorden": [
-        "gehakt"
+        "paprika"
       ],
-      "opgehaald": "2026-06-16T11:00:15.312Z"
+      "opgehaald": "2026-06-17T05:00:14.163Z"
     },
     {
-      "id": "jumbo-3017391",
+      "id": "jumbo-3018957",
       "supermarkt": "jumbo",
-      "naam": "Varkensshoarma",
+      "naam": "Pitloze witte druiven",
       "beschrijving": "",
       "categorie": "Jumbo Aanbieding",
-      "prijsNu": 6,
+      "prijsNu": 1.99,
       "prijsWas": 0,
       "kortingPct": 0,
-      "korting": "voor 6,00",
-      "afbeelding": "https://www.jumbo.com/INTERSHOP/static/WFS/Jumbo-Grocery-Site/-/Jumbo-Grocery/nl_NL/Images_Aanbiedingen/2026/Weekaanbiedingen/Week%2024/Weekaanbiedingen-Week-24_53.png",
+      "korting": "voor 1,99",
+      "afbeelding": "https://www.jumbo.com/INTERSHOP/static/WFS/Jumbo-Grocery-Site/-/Jumbo-Grocery/nl_NL/Images_Aanbiedingen/2026/Weekaanbiedingen/Week%2025/2026_WK25_90.png",
+      "geldigTot": "",
+      "geldigVanaf": "",
+      "merk": "",
+      "trefwoorden": [
+        "ui"
+      ],
+      "opgehaald": "2026-06-17T05:00:14.163Z"
+    },
+    {
+      "id": "jumbo-3018958",
+      "supermarkt": "jumbo",
+      "naam": "Nectarines of wilde perziken",
+      "beschrijving": "",
+      "categorie": "Jumbo Aanbieding",
+      "prijsNu": 2.99,
+      "prijsWas": 0,
+      "kortingPct": 0,
+      "korting": "voor 2,99",
+      "afbeelding": "https://www.jumbo.com/INTERSHOP/static/WFS/Jumbo-Grocery-Site/-/Jumbo-Grocery/nl_NL/Images_Aanbiedingen/2026/Weekaanbiedingen/Week%2025/2026_WK25_91.png",
       "geldigTot": "",
       "geldigVanaf": "",
       "merk": "",
       "trefwoorden": [],
-      "opgehaald": "2026-06-16T11:00:15.312Z"
+      "opgehaald": "2026-06-17T05:00:14.163Z"
+    },
+    {
+      "id": "jumbo-3018959",
+      "supermarkt": "jumbo",
+      "naam": "Jonagold appels",
+      "beschrijving": "",
+      "categorie": "Jumbo Aanbieding",
+      "prijsNu": 1.49,
+      "prijsWas": 0,
+      "kortingPct": 0,
+      "korting": "voor 1,49",
+      "afbeelding": "https://www.jumbo.com/INTERSHOP/static/WFS/Jumbo-Grocery-Site/-/Jumbo-Grocery/nl_NL/Images_Aanbiedingen/2026/Weekaanbiedingen/Week%2025/2026_WK25_03.png",
+      "geldigTot": "",
+      "geldigVanaf": "",
+      "merk": "",
+      "trefwoorden": [],
+      "opgehaald": "2026-06-17T05:00:14.163Z"
+    },
+    {
+      "id": "jumbo-3018960",
+      "supermarkt": "jumbo",
+      "naam": "Abrikozen",
+      "beschrijving": "",
+      "categorie": "Jumbo Aanbieding",
+      "prijsNu": 2.99,
+      "prijsWas": 0,
+      "kortingPct": 0,
+      "korting": "voor 2,99",
+      "afbeelding": "https://www.jumbo.com/INTERSHOP/static/WFS/Jumbo-Grocery-Site/-/Jumbo-Grocery/nl_NL/Images_Aanbiedingen/2026/Weekaanbiedingen/Week%2025/2026_WK25_01.png",
+      "geldigTot": "",
+      "geldigVanaf": "",
+      "merk": "",
+      "trefwoorden": [],
+      "opgehaald": "2026-06-17T05:00:14.163Z"
+    },
+    {
+      "id": "jumbo-3018965",
+      "supermarkt": "jumbo",
+      "naam": "Bloemkool",
+      "beschrijving": "",
+      "categorie": "Jumbo Aanbieding",
+      "prijsNu": 1.79,
+      "prijsWas": 0,
+      "kortingPct": 0,
+      "korting": "voor 1,79",
+      "afbeelding": "https://www.jumbo.com/INTERSHOP/static/WFS/Jumbo-Grocery-Site/-/Jumbo-Grocery/nl_NL/Images_Aanbiedingen/2026/Weekaanbiedingen/Week%2025/2026_WK25_93.png",
+      "geldigTot": "",
+      "geldigVanaf": "",
+      "merk": "",
+      "trefwoorden": [],
+      "opgehaald": "2026-06-17T05:00:14.163Z"
+    },
+    {
+      "id": "jumbo-3018983",
+      "supermarkt": "jumbo",
+      "naam": "Handsinaasappelen",
+      "beschrijving": "",
+      "categorie": "Jumbo Aanbieding",
+      "prijsNu": 2.89,
+      "prijsWas": 0,
+      "kortingPct": 0,
+      "korting": "voor 2,89",
+      "afbeelding": "https://www.jumbo.com/INTERSHOP/static/WFS/Jumbo-Grocery-Site/-/Jumbo-Grocery/nl_NL/Images_Aanbiedingen/2026/Weekaanbiedingen/Week%2025/2026_WK25_92.png",
+      "geldigTot": "",
+      "geldigVanaf": "",
+      "merk": "",
+      "trefwoorden": [],
+      "opgehaald": "2026-06-17T05:00:14.163Z"
+    },
+    {
+      "id": "jumbo-3018984",
+      "supermarkt": "jumbo",
+      "naam": "Nieuwe oogst aardappelen",
+      "beschrijving": "",
+      "categorie": "Jumbo Aanbieding",
+      "prijsNu": 1.99,
+      "prijsWas": 0,
+      "kortingPct": 0,
+      "korting": "voor 1,99",
+      "afbeelding": "https://www.jumbo.com/INTERSHOP/static/WFS/Jumbo-Grocery-Site/-/Jumbo-Grocery/nl_NL/Images_Aanbiedingen/2026/Weekaanbiedingen/Week%2025/2026_WK25_06.png",
+      "geldigTot": "",
+      "geldigVanaf": "",
+      "merk": "",
+      "trefwoorden": [
+        "aardappel"
+      ],
+      "opgehaald": "2026-06-17T05:00:14.163Z"
+    },
+    {
+      "id": "jumbo-3018985",
+      "supermarkt": "jumbo",
+      "naam": "Looye honingtomaten",
+      "beschrijving": "",
+      "categorie": "Jumbo Aanbieding",
+      "prijsNu": 3.49,
+      "prijsWas": 0,
+      "kortingPct": 0,
+      "korting": "voor 3,49",
+      "afbeelding": "https://www.jumbo.com/INTERSHOP/static/WFS/Jumbo-Grocery-Site/-/Jumbo-Grocery/nl_NL/Images_Aanbiedingen/2026/Weekaanbiedingen/Week%2025/2026_WK25_04.png",
+      "geldigTot": "",
+      "geldigVanaf": "",
+      "merk": "",
+      "trefwoorden": [],
+      "opgehaald": "2026-06-17T05:00:14.163Z"
+    },
+    {
+      "id": "jumbo-3017651",
+      "supermarkt": "jumbo",
+      "naam": "Jumbo bolognese maaltijden",
+      "beschrijving": "",
+      "categorie": "Jumbo Aanbieding",
+      "prijsNu": 1.99,
+      "prijsWas": 0,
+      "kortingPct": 0,
+      "korting": "voor 1,99",
+      "afbeelding": "https://www.jumbo.com/INTERSHOP/static/WFS/Jumbo-Grocery-Site/-/Jumbo-Grocery/nl_NL/Images_Aanbiedingen/2026/Weekaanbiedingen/Week%2025/2026_WK25_47.png",
+      "geldigTot": "",
+      "geldigVanaf": "",
+      "merk": "",
+      "trefwoorden": [],
+      "opgehaald": "2026-06-17T05:00:14.163Z"
+    },
+    {
+      "id": "jumbo-3017812",
+      "supermarkt": "jumbo",
+      "naam": "Alle Garden Gourmet vleesvervangers",
+      "beschrijving": "",
+      "categorie": "Jumbo Aanbieding",
+      "prijsNu": 1.99,
+      "prijsWas": 0,
+      "kortingPct": 0,
+      "korting": "voor 1,99",
+      "afbeelding": "https://www.jumbo.com/INTERSHOP/static/WFS/Jumbo-Grocery-Site/-/Jumbo-Grocery/nl_NL/Images_Aanbiedingen/2026/Weekaanbiedingen/Week%2025/2026_WK25_38.png",
+      "geldigTot": "",
+      "geldigVanaf": "",
+      "merk": "",
+      "trefwoorden": [],
+      "opgehaald": "2026-06-17T05:00:14.163Z"
+    },
+    {
+      "id": "jumbo-3017846",
+      "supermarkt": "jumbo",
+      "naam": "Kipborrelhapjes grootverpakking",
+      "beschrijving": "",
+      "categorie": "Jumbo Aanbieding",
+      "prijsNu": 4.99,
+      "prijsWas": 0,
+      "kortingPct": 0,
+      "korting": "voor 4,99",
+      "afbeelding": "https://www.jumbo.com/INTERSHOP/static/WFS/Jumbo-Grocery-Site/-/Jumbo-Grocery/nl_NL/Images_Aanbiedingen/2026/Weekaanbiedingen/Week%2025/2026_WK25_58.png",
+      "geldigTot": "",
+      "geldigVanaf": "",
+      "merk": "",
+      "trefwoorden": [
+        "kip"
+      ],
+      "opgehaald": "2026-06-17T05:00:14.163Z"
+    },
+    {
+      "id": "jumbo-3017653",
+      "supermarkt": "jumbo",
+      "naam": "Jumbo airfryer borrelschalen",
+      "beschrijving": "",
+      "categorie": "Jumbo Aanbieding",
+      "prijsNu": 4.5,
+      "prijsWas": 0,
+      "kortingPct": 0,
+      "korting": "voor 4,50",
+      "afbeelding": "https://www.jumbo.com/INTERSHOP/static/WFS/Jumbo-Grocery-Site/-/Jumbo-Grocery/nl_NL/Images_Aanbiedingen/2026/Weekaanbiedingen/Week%2025/2026_WK25_45.png",
+      "geldigTot": "",
+      "geldigVanaf": "",
+      "merk": "",
+      "trefwoorden": [],
+      "opgehaald": "2026-06-17T05:00:14.163Z"
+    },
+    {
+      "id": "jumbo-3017675",
+      "supermarkt": "jumbo",
+      "naam": "Campina vla",
+      "beschrijving": "",
+      "categorie": "Jumbo Aanbieding",
+      "prijsNu": 1.75,
+      "prijsWas": 0,
+      "kortingPct": 0,
+      "korting": "2 voor 3,50",
+      "afbeelding": "https://www.jumbo.com/INTERSHOP/static/WFS/Jumbo-Grocery-Site/-/Jumbo-Grocery/nl_NL/Images_Aanbiedingen/2026/Weekaanbiedingen/Week%2025/2026_WK25_23.png",
+      "geldigTot": "",
+      "geldigVanaf": "",
+      "merk": "",
+      "trefwoorden": [],
+      "opgehaald": "2026-06-17T05:00:14.163Z"
+    },
+    {
+      "id": "jumbo-3017575",
+      "supermarkt": "jumbo",
+      "naam": "Optimel drinkyoghurt",
+      "beschrijving": "",
+      "categorie": "Jumbo Aanbieding",
+      "prijsNu": 1.5,
+      "prijsWas": 0,
+      "kortingPct": 0,
+      "korting": "2 voor 3,00",
+      "afbeelding": "https://www.jumbo.com/INTERSHOP/static/WFS/Jumbo-Grocery-Site/-/Jumbo-Grocery/nl_NL/Images_Aanbiedingen/2026/Weekaanbiedingen/Week%2025/2026_WK25_70.png",
+      "geldigTot": "",
+      "geldigVanaf": "",
+      "merk": "",
+      "trefwoorden": [
+        "yoghurt"
+      ],
+      "opgehaald": "2026-06-17T05:00:14.163Z"
+    },
+    {
+      "id": "jumbo-3017655",
+      "supermarkt": "jumbo",
+      "naam": "Melkunie Protein",
+      "beschrijving": "",
+      "categorie": "Jumbo Aanbieding",
+      "prijsNu": 1.25,
+      "prijsWas": 0,
+      "kortingPct": 0,
+      "korting": "2 voor 2,50",
+      "afbeelding": "https://www.jumbo.com/INTERSHOP/static/WFS/Jumbo-Grocery-Site/-/Jumbo-Grocery/nl_NL/Images_Aanbiedingen/2026/Weekaanbiedingen/Week%2025/2026_WK25_64.png",
+      "geldigTot": "",
+      "geldigVanaf": "",
+      "merk": "",
+      "trefwoorden": [
+        "ei",
+        "melk"
+      ],
+      "opgehaald": "2026-06-17T05:00:14.163Z"
+    },
+    {
+      "id": "jumbo-3017702",
+      "supermarkt": "jumbo",
+      "naam": "Danio kwark",
+      "beschrijving": "",
+      "categorie": "Jumbo Aanbieding",
+      "prijsNu": 2,
+      "prijsWas": 0,
+      "kortingPct": 0,
+      "korting": "2 voor 4,00",
+      "afbeelding": "https://www.jumbo.com/INTERSHOP/static/WFS/Jumbo-Grocery-Site/-/Jumbo-Grocery/nl_NL/Images_Aanbiedingen/2026/Weekaanbiedingen/Week%2025/2026_WK25_29.png",
+      "geldigTot": "",
+      "geldigVanaf": "",
+      "merk": "",
+      "trefwoorden": [
+        "yoghurt"
+      ],
+      "opgehaald": "2026-06-17T05:00:14.163Z"
+    },
+    {
+      "id": "jumbo-3017589",
+      "supermarkt": "jumbo",
+      "naam": "Oatly haverdrink",
+      "beschrijving": "",
+      "categorie": "Jumbo Aanbieding",
+      "prijsNu": 1.99,
+      "prijsWas": 0,
+      "kortingPct": 0,
+      "korting": "voor 1,99",
+      "afbeelding": "https://www.jumbo.com/INTERSHOP/static/WFS/Jumbo-Grocery-Site/-/Jumbo-Grocery/nl_NL/Images_Aanbiedingen/2026/Weekaanbiedingen/Week%2025/2026_WK25_68.png",
+      "geldigTot": "",
+      "geldigVanaf": "",
+      "merk": "",
+      "trefwoorden": [],
+      "opgehaald": "2026-06-17T05:00:14.163Z"
     },
     {
       "id": "lidl-10028840",
@@ -4339,14 +4526,14 @@
       "geldigVanaf": "",
       "merk": "",
       "trefwoorden": [],
-      "opgehaald": "2026-06-16T11:00:29.370Z"
+      "opgehaald": "2026-06-17T05:00:25.858Z"
     },
     {
       "id": "lidl-10028842",
       "supermarkt": "lidl",
       "naam": "Trostomaten",
       "beschrijving": "",
-      "categorie": "Groenten & fruit",
+      "categorie": "Groenten",
       "prijsNu": 0.89,
       "prijsWas": 0,
       "kortingPct": 0,
@@ -4355,10 +4542,8 @@
       "geldigTot": "",
       "geldigVanaf": "",
       "merk": "",
-      "trefwoorden": [
-        "ui"
-      ],
-      "opgehaald": "2026-06-16T11:00:29.370Z"
+      "trefwoorden": [],
+      "opgehaald": "2026-06-17T05:00:25.858Z"
     },
     {
       "id": "lidl-10028996",
@@ -4375,7 +4560,7 @@
       "geldigVanaf": "",
       "merk": "",
       "trefwoorden": [],
-      "opgehaald": "2026-06-16T11:00:29.370Z"
+      "opgehaald": "2026-06-17T05:00:25.858Z"
     },
     {
       "id": "lidl-10028844",
@@ -4392,7 +4577,7 @@
       "geldigVanaf": "",
       "merk": "",
       "trefwoorden": [],
-      "opgehaald": "2026-06-16T11:00:29.370Z"
+      "opgehaald": "2026-06-17T05:00:25.858Z"
     },
     {
       "id": "lidl-10028846",
@@ -4409,14 +4594,14 @@
       "geldigVanaf": "",
       "merk": "",
       "trefwoorden": [],
-      "opgehaald": "2026-06-16T11:00:29.370Z"
+      "opgehaald": "2026-06-17T05:00:25.858Z"
     },
     {
       "id": "lidl-10028848",
       "supermarkt": "lidl",
       "naam": "Corona Extra",
       "beschrijving": "",
-      "categorie": "Dranken",
+      "categorie": "Bier & Cider",
       "prijsNu": 9.99,
       "prijsWas": 0,
       "kortingPct": 0,
@@ -4426,7 +4611,7 @@
       "geldigVanaf": "",
       "merk": "",
       "trefwoorden": [],
-      "opgehaald": "2026-06-16T11:00:29.370Z"
+      "opgehaald": "2026-06-17T05:00:25.858Z"
     },
     {
       "id": "lidl-10028850",
@@ -4443,7 +4628,7 @@
       "geldigVanaf": "",
       "merk": "",
       "trefwoorden": [],
-      "opgehaald": "2026-06-16T11:00:29.370Z"
+      "opgehaald": "2026-06-17T05:00:25.858Z"
     },
     {
       "id": "lidl-10028852",
@@ -4460,7 +4645,7 @@
       "geldigVanaf": "",
       "merk": "",
       "trefwoorden": [],
-      "opgehaald": "2026-06-16T11:00:29.370Z"
+      "opgehaald": "2026-06-17T05:00:25.858Z"
     },
     {
       "id": "aldi-2",
@@ -4477,7 +4662,7 @@
       "geldigVanaf": "",
       "merk": "",
       "trefwoorden": [],
-      "opgehaald": "2026-06-16T11:00:35.710Z"
+      "opgehaald": "2026-06-17T05:00:31.222Z"
     },
     {
       "id": "aldi-9",
@@ -4494,7 +4679,7 @@
       "geldigVanaf": "",
       "merk": "",
       "trefwoorden": [],
-      "opgehaald": "2026-06-16T11:00:35.710Z"
+      "opgehaald": "2026-06-17T05:00:31.222Z"
     },
     {
       "id": "aldi-11",
@@ -4511,7 +4696,7 @@
       "geldigVanaf": "",
       "merk": "",
       "trefwoorden": [],
-      "opgehaald": "2026-06-16T11:00:35.710Z"
+      "opgehaald": "2026-06-17T05:00:31.222Z"
     },
     {
       "id": "aldi-12",
@@ -4530,7 +4715,7 @@
       "trefwoorden": [
         "ei"
       ],
-      "opgehaald": "2026-06-16T11:00:35.710Z"
+      "opgehaald": "2026-06-17T05:00:31.222Z"
     },
     {
       "id": "aldi-17",
@@ -4549,7 +4734,7 @@
       "trefwoorden": [
         "kaas"
       ],
-      "opgehaald": "2026-06-16T11:00:35.710Z"
+      "opgehaald": "2026-06-17T05:00:31.222Z"
     },
     {
       "id": "aldi-18",
@@ -4566,7 +4751,7 @@
       "geldigVanaf": "",
       "merk": "",
       "trefwoorden": [],
-      "opgehaald": "2026-06-16T11:00:35.710Z"
+      "opgehaald": "2026-06-17T05:00:31.223Z"
     },
     {
       "id": "aldi-19",
@@ -4583,7 +4768,7 @@
       "geldigVanaf": "",
       "merk": "",
       "trefwoorden": [],
-      "opgehaald": "2026-06-16T11:00:35.710Z"
+      "opgehaald": "2026-06-17T05:00:31.223Z"
     },
     {
       "id": "aldi-20",
@@ -4600,7 +4785,7 @@
       "geldigVanaf": "",
       "merk": "",
       "trefwoorden": [],
-      "opgehaald": "2026-06-16T11:00:35.710Z"
+      "opgehaald": "2026-06-17T05:00:31.223Z"
     },
     {
       "id": "aldi-24",
@@ -4619,7 +4804,7 @@
       "trefwoorden": [
         "ei"
       ],
-      "opgehaald": "2026-06-16T11:00:35.710Z"
+      "opgehaald": "2026-06-17T05:00:31.223Z"
     },
     {
       "id": "aldi-25",
@@ -4638,7 +4823,7 @@
       "trefwoorden": [
         "ei"
       ],
-      "opgehaald": "2026-06-16T11:00:35.710Z"
+      "opgehaald": "2026-06-17T05:00:31.223Z"
     },
     {
       "id": "aldi-26",
@@ -4657,7 +4842,7 @@
       "trefwoorden": [
         "ei"
       ],
-      "opgehaald": "2026-06-16T11:00:35.710Z"
+      "opgehaald": "2026-06-17T05:00:31.223Z"
     },
     {
       "id": "aldi-27",
@@ -4674,7 +4859,7 @@
       "geldigVanaf": "",
       "merk": "",
       "trefwoorden": [],
-      "opgehaald": "2026-06-16T11:00:35.710Z"
+      "opgehaald": "2026-06-17T05:00:31.223Z"
     },
     {
       "id": "aldi-28",
@@ -4691,7 +4876,7 @@
       "geldigVanaf": "",
       "merk": "",
       "trefwoorden": [],
-      "opgehaald": "2026-06-16T11:00:35.710Z"
+      "opgehaald": "2026-06-17T05:00:31.223Z"
     },
     {
       "id": "aldi-29",
@@ -4708,7 +4893,7 @@
       "geldigVanaf": "",
       "merk": "",
       "trefwoorden": [],
-      "opgehaald": "2026-06-16T11:00:35.710Z"
+      "opgehaald": "2026-06-17T05:00:31.223Z"
     },
     {
       "id": "aldi-30",
@@ -4727,7 +4912,7 @@
       "trefwoorden": [
         "ui"
       ],
-      "opgehaald": "2026-06-16T11:00:35.710Z"
+      "opgehaald": "2026-06-17T05:00:31.223Z"
     },
     {
       "id": "aldi-31",
@@ -4744,7 +4929,7 @@
       "geldigVanaf": "",
       "merk": "",
       "trefwoorden": [],
-      "opgehaald": "2026-06-16T11:00:35.710Z"
+      "opgehaald": "2026-06-17T05:00:31.223Z"
     },
     {
       "id": "aldi-32",
@@ -4763,7 +4948,7 @@
       "trefwoorden": [
         "pasta"
       ],
-      "opgehaald": "2026-06-16T11:00:35.710Z"
+      "opgehaald": "2026-06-17T05:00:31.223Z"
     },
     {
       "id": "aldi-33",
@@ -4782,7 +4967,7 @@
       "trefwoorden": [
         "brood"
       ],
-      "opgehaald": "2026-06-16T11:00:35.710Z"
+      "opgehaald": "2026-06-17T05:00:31.223Z"
     },
     {
       "id": "aldi-34",
@@ -4799,7 +4984,7 @@
       "geldigVanaf": "",
       "merk": "",
       "trefwoorden": [],
-      "opgehaald": "2026-06-16T11:00:35.710Z"
+      "opgehaald": "2026-06-17T05:00:31.223Z"
     },
     {
       "id": "aldi-35",
@@ -4816,7 +5001,7 @@
       "geldigVanaf": "",
       "merk": "",
       "trefwoorden": [],
-      "opgehaald": "2026-06-16T11:00:35.710Z"
+      "opgehaald": "2026-06-17T05:00:31.223Z"
     },
     {
       "id": "aldi-36",
@@ -4833,7 +5018,7 @@
       "geldigVanaf": "",
       "merk": "",
       "trefwoorden": [],
-      "opgehaald": "2026-06-16T11:00:35.710Z"
+      "opgehaald": "2026-06-17T05:00:31.223Z"
     },
     {
       "id": "aldi-37",
@@ -4850,7 +5035,7 @@
       "geldigVanaf": "",
       "merk": "",
       "trefwoorden": [],
-      "opgehaald": "2026-06-16T11:00:35.710Z"
+      "opgehaald": "2026-06-17T05:00:31.223Z"
     },
     {
       "id": "aldi-38",
@@ -4867,7 +5052,7 @@
       "geldigVanaf": "",
       "merk": "",
       "trefwoorden": [],
-      "opgehaald": "2026-06-16T11:00:35.710Z"
+      "opgehaald": "2026-06-17T05:00:31.223Z"
     },
     {
       "id": "aldi-39",
@@ -4884,7 +5069,7 @@
       "geldigVanaf": "",
       "merk": "",
       "trefwoorden": [],
-      "opgehaald": "2026-06-16T11:00:35.710Z"
+      "opgehaald": "2026-06-17T05:00:31.223Z"
     },
     {
       "id": "aldi-41",
@@ -4903,7 +5088,7 @@
       "trefwoorden": [
         "ui"
       ],
-      "opgehaald": "2026-06-16T11:00:35.710Z"
+      "opgehaald": "2026-06-17T05:00:31.223Z"
     },
     {
       "id": "aldi-42",
@@ -4920,7 +5105,7 @@
       "geldigVanaf": "",
       "merk": "",
       "trefwoorden": [],
-      "opgehaald": "2026-06-16T11:00:35.710Z"
+      "opgehaald": "2026-06-17T05:00:31.223Z"
     },
     {
       "id": "aldi-43",
@@ -4937,7 +5122,7 @@
       "geldigVanaf": "",
       "merk": "",
       "trefwoorden": [],
-      "opgehaald": "2026-06-16T11:00:35.710Z"
+      "opgehaald": "2026-06-17T05:00:31.223Z"
     },
     {
       "id": "aldi-44",
@@ -4954,7 +5139,7 @@
       "geldigVanaf": "",
       "merk": "",
       "trefwoorden": [],
-      "opgehaald": "2026-06-16T11:00:35.710Z"
+      "opgehaald": "2026-06-17T05:00:31.223Z"
     },
     {
       "id": "aldi-45",
@@ -4973,7 +5158,7 @@
       "trefwoorden": [
         "ei"
       ],
-      "opgehaald": "2026-06-16T11:00:35.710Z"
+      "opgehaald": "2026-06-17T05:00:31.223Z"
     },
     {
       "id": "aldi-46",
@@ -4990,7 +5175,7 @@
       "geldigVanaf": "",
       "merk": "",
       "trefwoorden": [],
-      "opgehaald": "2026-06-16T11:00:35.710Z"
+      "opgehaald": "2026-06-17T05:00:31.223Z"
     },
     {
       "id": "aldi-47",
@@ -5007,7 +5192,7 @@
       "geldigVanaf": "",
       "merk": "",
       "trefwoorden": [],
-      "opgehaald": "2026-06-16T11:00:35.710Z"
+      "opgehaald": "2026-06-17T05:00:31.223Z"
     },
     {
       "id": "aldi-49",
@@ -5024,7 +5209,7 @@
       "geldigVanaf": "",
       "merk": "",
       "trefwoorden": [],
-      "opgehaald": "2026-06-16T11:00:35.710Z"
+      "opgehaald": "2026-06-17T05:00:31.223Z"
     },
     {
       "id": "aldi-50",
@@ -5041,7 +5226,7 @@
       "geldigVanaf": "",
       "merk": "",
       "trefwoorden": [],
-      "opgehaald": "2026-06-16T11:00:35.710Z"
+      "opgehaald": "2026-06-17T05:00:31.223Z"
     },
     {
       "id": "aldi-51",
@@ -5058,7 +5243,7 @@
       "geldigVanaf": "",
       "merk": "",
       "trefwoorden": [],
-      "opgehaald": "2026-06-16T11:00:35.710Z"
+      "opgehaald": "2026-06-17T05:00:31.223Z"
     },
     {
       "id": "aldi-52",
@@ -5075,7 +5260,7 @@
       "geldigVanaf": "",
       "merk": "",
       "trefwoorden": [],
-      "opgehaald": "2026-06-16T11:00:35.710Z"
+      "opgehaald": "2026-06-17T05:00:31.223Z"
     },
     {
       "id": "aldi-53",
@@ -5092,7 +5277,7 @@
       "geldigVanaf": "",
       "merk": "",
       "trefwoorden": [],
-      "opgehaald": "2026-06-16T11:00:35.710Z"
+      "opgehaald": "2026-06-17T05:00:31.223Z"
     },
     {
       "id": "aldi-54",
@@ -5109,7 +5294,7 @@
       "geldigVanaf": "",
       "merk": "",
       "trefwoorden": [],
-      "opgehaald": "2026-06-16T11:00:35.710Z"
+      "opgehaald": "2026-06-17T05:00:31.223Z"
     },
     {
       "id": "aldi-57",
@@ -5126,41 +5311,7 @@
       "geldigVanaf": "",
       "merk": "",
       "trefwoorden": [],
-      "opgehaald": "2026-06-16T11:00:35.710Z"
-    },
-    {
-      "id": "aldi-58",
-      "supermarkt": "aldi",
-      "naam": "Eau de toilette",
-      "beschrijving": "",
-      "categorie": "Aldi Aanbieding",
-      "prijsNu": 3.99,
-      "prijsWas": 0,
-      "kortingPct": 0,
-      "korting": "OP=OP",
-      "afbeelding": "https://s7g10.scene7.com/is/image/aldinord/product_1242716_main_cms_36_nl_nl_eau_de_toilette_cw01_2024?bfc=on&wid=1440&fmt=webp-alpha",
-      "geldigTot": "",
-      "geldigVanaf": "",
-      "merk": "",
-      "trefwoorden": [],
-      "opgehaald": "2026-06-16T11:00:35.710Z"
-    },
-    {
-      "id": "aldi-59",
-      "supermarkt": "aldi",
-      "naam": "4-pack handzeep-blokken",
-      "beschrijving": "",
-      "categorie": "Aldi Aanbieding",
-      "prijsNu": 2.79,
-      "prijsWas": 0,
-      "kortingPct": 0,
-      "korting": "OP=OP",
-      "afbeelding": "https://s7g10.scene7.com/is/image/aldinord/product_1233698_main_cms_6_nl_nl_4_pack_handzeep_blokken_cw01_2024?bfc=on&wid=1440&fmt=webp-alpha",
-      "geldigTot": "",
-      "geldigVanaf": "",
-      "merk": "",
-      "trefwoorden": [],
-      "opgehaald": "2026-06-16T11:00:35.710Z"
+      "opgehaald": "2026-06-17T05:00:31.223Z"
     },
     {
       "id": "aldi-62",
@@ -5177,24 +5328,7 @@
       "geldigVanaf": "",
       "merk": "",
       "trefwoorden": [],
-      "opgehaald": "2026-06-16T11:00:35.710Z"
-    },
-    {
-      "id": "aldi-63",
-      "supermarkt": "aldi",
-      "naam": "Wasverzachter",
-      "beschrijving": "",
-      "categorie": "Aldi Aanbieding",
-      "prijsNu": 2.29,
-      "prijsWas": 0,
-      "kortingPct": 0,
-      "korting": "OP=OP",
-      "afbeelding": "https://s7g10.scene7.com/is/image/aldinord/product_1217206_main_cms_9_nl_nl_wasverzachter_cw01_2024?bfc=on&wid=1440&fmt=webp-alpha",
-      "geldigTot": "",
-      "geldigVanaf": "",
-      "merk": "",
-      "trefwoorden": [],
-      "opgehaald": "2026-06-16T11:00:35.710Z"
+      "opgehaald": "2026-06-17T05:00:31.223Z"
     },
     {
       "id": "aldi-64",
@@ -5211,133 +5345,77 @@
       "geldigVanaf": "",
       "merk": "",
       "trefwoorden": [],
-      "opgehaald": "2026-06-16T11:00:35.710Z"
+      "opgehaald": "2026-06-17T05:00:31.223Z"
     },
     {
-      "id": "aldi-65",
-      "supermarkt": "aldi",
-      "naam": "Wc-reiniger zeebries",
+      "id": "plus-plus-komkommer",
+      "supermarkt": "plus",
+      "naam": "PLUS Komkommer",
       "beschrijving": "",
-      "categorie": "Aldi Aanbieding",
-      "prijsNu": 1.79,
+      "categorie": "Plus Aanbieding",
+      "prijsNu": 0.5,
       "prijsWas": 0,
       "kortingPct": 0,
-      "korting": "OP=OP",
-      "afbeelding": "https://s7g10.scene7.com/is/image/aldinord/product_1238738_main_cms_1_nl_nl_wc_reiniger_zeebries_cw01_2024?bfc=on&wid=1440&fmt=webp-alpha",
+      "korting": "2 VOOR 0.99",
+      "afbeelding": "https://images.ctfassets.net/s0lodsnpsezb/369778_M/b4a2dfb0a72f6cad73dd139a8e4bb7f1/369778.png?w=120&h=120&fit=pad&fm=webp&q=85",
+      "geldigTot": "",
+      "geldigVanaf": "",
+      "merk": "",
+      "trefwoorden": [],
+      "opgehaald": "2026-06-17T05:00:36.454Z"
+    },
+    {
+      "id": "dirk-1-de-beste-gesneden-fruit",
+      "supermarkt": "dirk",
+      "naam": "1 de Beste Gesneden fruit",
+      "beschrijving": "",
+      "categorie": "Dirk Aanbieding",
+      "prijsNu": 2.99,
+      "prijsWas": 0,
+      "kortingPct": 0,
+      "korting": "VR, ZA & ZO actie",
+      "afbeelding": "https://web-fileserver.dirk.nl/offers/2%2F1%2F0%2F7%2F3%2F1%2FGesneden%20fruit_639166126670941699.png?width=190",
       "geldigTot": "",
       "geldigVanaf": "",
       "merk": "",
       "trefwoorden": [
-        "ei",
-        "kaas"
+        "ui"
       ],
-      "opgehaald": "2026-06-16T11:00:35.710Z"
+      "opgehaald": "2026-06-17T05:00:40.729Z"
     },
     {
-      "id": "dirk-1-de-beste-andijvie-fijn-kleinverpakking",
+      "id": "dirk-komkommer",
       "supermarkt": "dirk",
-      "naam": "1 de Beste Andijvie fijn kleinverpakking",
+      "naam": "Komkommer",
       "beschrijving": "",
       "categorie": "Dirk Aanbieding",
-      "prijsNu": 1.29,
-      "prijsWas": 1.29,
+      "prijsNu": 0.69,
+      "prijsWas": 0.69,
       "kortingPct": 0,
-      "korting": "ACTIE van 1.29",
-      "afbeelding": "https://web-fileserver.dirk.nl/artikelen%2F120936_1_247510_637904835202076631.png?width=190",
-      "geldigTot": "",
-      "geldigVanaf": "",
-      "merk": "",
-      "trefwoorden": [
-        "ei"
-      ],
-      "opgehaald": "2026-06-16T11:00:47.704Z"
-    },
-    {
-      "id": "dirk-1-de-beste-ijsbergsla",
-      "supermarkt": "dirk",
-      "naam": "1 de Beste IJsbergsla",
-      "beschrijving": "",
-      "categorie": "Dirk Aanbieding",
-      "prijsNu": 1.19,
-      "prijsWas": 1.19,
-      "kortingPct": 0,
-      "korting": "ACTIE van 1.19",
-      "afbeelding": "https://web-fileserver.dirk.nl/offers/6%2F2%2F7%2F6%2F3%2F1%2FIJsbergsl_639160124085015705.png?width=190",
+      "korting": "ACTIE van 0.69",
+      "afbeelding": "https://web-fileserver.dirk.nl/artikelen%2F268458_2026-06-17_04-06-53-633_36102d8a-3ab4-4656-84ff-a73e1d3e914b.png?width=190",
       "geldigTot": "",
       "geldigVanaf": "",
       "merk": "",
       "trefwoorden": [],
-      "opgehaald": "2026-06-16T11:00:47.704Z"
+      "opgehaald": "2026-06-17T05:00:40.729Z"
     },
     {
-      "id": "dirk-bio--shiitake",
+      "id": "dirk-1-de-beste-limoenen",
       "supermarkt": "dirk",
-      "naam": "Bio+ shiitake",
+      "naam": "1 de Beste Limoenen",
       "beschrijving": "",
       "categorie": "Dirk Aanbieding",
-      "prijsNu": 1.29,
-      "prijsWas": 0,
+      "prijsNu": 0.99,
+      "prijsWas": 0.99,
       "kortingPct": 0,
-      "korting": "ACTIE",
-      "afbeelding": "https://web-fileserver.dirk.nl/artikelen%2F228146_1_464187_638840334754163053.png?width=190",
+      "korting": "ACTIE van 0.99",
+      "afbeelding": "https://web-fileserver.dirk.nl/artikelen%2F183090_1_434526_638441013387717436.png?width=190",
       "geldigTot": "",
       "geldigVanaf": "",
       "merk": "",
       "trefwoorden": [],
-      "opgehaald": "2026-06-16T11:00:47.704Z"
-    },
-    {
-      "id": "dirk-wilde-perziken-of-nectarines",
-      "supermarkt": "dirk",
-      "naam": "Wilde perziken of nectarines",
-      "beschrijving": "",
-      "categorie": "Dirk Aanbieding",
-      "prijsNu": 1.89,
-      "prijsWas": 0,
-      "kortingPct": 0,
-      "korting": "ACTIE",
-      "afbeelding": "https://web-fileserver.dirk.nl/offers/9%2F2%2F7%2F6%2F3%2F1%2FWilde%20perziken%20of%20nectarines_639160111714473997.png?width=190",
-      "geldigTot": "",
-      "geldigVanaf": "",
-      "merk": "",
-      "trefwoorden": [],
-      "opgehaald": "2026-06-16T11:00:47.704Z"
-    },
-    {
-      "id": "dirk-kersen--blauwe-bessen-of-hollandse-aardb",
-      "supermarkt": "dirk",
-      "naam": "Kersen, blauwe bessen of Hollandse aardbeien",
-      "beschrijving": "",
-      "categorie": "Dirk Aanbieding",
-      "prijsNu": 2.69,
-      "prijsWas": 0,
-      "kortingPct": 0,
-      "korting": "ACTIE",
-      "afbeelding": "https://web-fileserver.dirk.nl/offers/0%2F3%2F7%2F6%2F3%2F1%2FKersen%2C%20blauwe%20bessen%20of%20Hollandse%20aardbeien_639160111249570378.png?width=190",
-      "geldigTot": "",
-      "geldigVanaf": "",
-      "merk": "",
-      "trefwoorden": [
-        "ei"
-      ],
-      "opgehaald": "2026-06-16T11:00:47.704Z"
-    },
-    {
-      "id": "dirk-hak-groente-of-appelmoes",
-      "supermarkt": "dirk",
-      "naam": "Hak groente of appelmoes",
-      "beschrijving": "",
-      "categorie": "Dirk Aanbieding",
-      "prijsNu": 2.85,
-      "prijsWas": 2.85,
-      "kortingPct": 0,
-      "korting": "ACTIE van 2.85",
-      "afbeelding": "https://web-fileserver.dirk.nl/offers/1%2F7%2F7%2F6%2F3%2F1%2FHak%20groente%20of%20appelmoes_639160092006832839.png?width=190",
-      "geldigTot": "",
-      "geldigVanaf": "",
-      "merk": "",
-      "trefwoorden": [],
-      "opgehaald": "2026-06-16T11:00:47.704Z"
+      "opgehaald": "2026-06-17T05:00:40.729Z"
     },
     {
       "id": "dirk-fresh---easy-verspakket-nachos",
@@ -5348,453 +5426,533 @@
       "prijsNu": 4.49,
       "prijsWas": 0,
       "kortingPct": 0,
-      "korting": "ACTIE",
+      "korting": "",
       "afbeelding": "https://web-fileserver.dirk.nl/artikelen%2F114961_1_438434_638237835993375899.png?width=190",
       "geldigTot": "",
       "geldigVanaf": "",
       "merk": "",
       "trefwoorden": [],
-      "opgehaald": "2026-06-16T11:00:47.704Z"
+      "opgehaald": "2026-06-17T05:00:40.729Z"
     },
     {
-      "id": "dirk-compaxo",
+      "id": "dirk-1-de-beste-waspeen",
       "supermarkt": "dirk",
-      "naam": "Compaxo",
+      "naam": "1 de Beste Waspeen",
       "beschrijving": "",
       "categorie": "Dirk Aanbieding",
-      "prijsNu": 1.99,
-      "prijsWas": 0,
+      "prijsNu": 0.99,
+      "prijsWas": 0.99,
       "kortingPct": 0,
-      "korting": "ACTIE",
-      "afbeelding": "https://web-fileserver.dirk.nl/offers/6%2F5%2F7%2F6%2F3%2F1%2FCompaxo__639160099250738069.png?width=190",
+      "korting": "ACTIE van 0.99",
+      "afbeelding": "https://web-fileserver.dirk.nl/artikelen%2F128182_1_427533_638323362121870478.png?width=190",
       "geldigTot": "",
       "geldigVanaf": "",
       "merk": "",
       "trefwoorden": [],
-      "opgehaald": "2026-06-16T11:00:47.704Z"
+      "opgehaald": "2026-06-17T05:00:40.729Z"
     },
     {
-      "id": "dirk-maasland-leverworst-xl",
+      "id": "dirk-de-vleeschmeesters-entrecote-of-ribeye",
       "supermarkt": "dirk",
-      "naam": "Maasland Leverworst XL",
+      "naam": "De Vleeschmeesters Entrecote of ribeye",
       "beschrijving": "",
       "categorie": "Dirk Aanbieding",
-      "prijsNu": 2.49,
+      "prijsNu": 4.99,
       "prijsWas": 0,
       "kortingPct": 0,
-      "korting": "ACTIE",
-      "afbeelding": "https://web-fileserver.dirk.nl/artikelen%2F172680_1_456179_638326128176892520.png?width=190",
+      "korting": "VR, ZA & ZO actie",
+      "afbeelding": "https://web-fileserver.dirk.nl/offers/5%2F1%2F0%2F7%2F3%2F1%2FEntrecote%20of%20ribeye_639166132529507725.png?width=190",
+      "geldigTot": "",
+      "geldigVanaf": "",
+      "merk": "",
+      "trefwoorden": [],
+      "opgehaald": "2026-06-17T05:00:40.729Z"
+    },
+    {
+      "id": "dirk-hardanger-lachs-actie-gerookte-zalm",
+      "supermarkt": "dirk",
+      "naam": "Hardanger lachs Actie gerookte zalm",
+      "beschrijving": "",
+      "categorie": "Dirk Aanbieding",
+      "prijsNu": 3.99,
+      "prijsWas": 0,
+      "kortingPct": 0,
+      "korting": "VR, ZA & ZO actie",
+      "afbeelding": "https://web-fileserver.dirk.nl/artikelen%2F250146_1_486383_639058854741613229.png?width=190",
       "geldigTot": "",
       "geldigVanaf": "",
       "merk": "",
       "trefwoorden": [
-        "worst"
+        "zalm"
       ],
-      "opgehaald": "2026-06-16T11:00:47.704Z"
+      "opgehaald": "2026-06-17T05:00:40.729Z"
     },
     {
-      "id": "dirk-appelflap",
+      "id": "dirk-sea-fresh-kabeljauwnuggets",
       "supermarkt": "dirk",
-      "naam": "Appelflap",
+      "naam": "Sea Fresh Kabeljauwnuggets",
       "beschrijving": "",
       "categorie": "Dirk Aanbieding",
-      "prijsNu": 0.88,
-      "prijsWas": 0.88,
-      "kortingPct": 0,
-      "korting": "ACTIE van 0.88",
-      "afbeelding": "https://web-fileserver.dirk.nl/artikelen%2F149163_1_24857_638255530135236007.png?width=190",
-      "geldigTot": "",
-      "geldigVanaf": "",
-      "merk": "",
-      "trefwoorden": [],
-      "opgehaald": "2026-06-16T11:00:47.704Z"
-    },
-    {
-      "id": "dirk-batard",
-      "supermarkt": "dirk",
-      "naam": "Batard",
-      "beschrijving": "",
-      "categorie": "Dirk Aanbieding",
-      "prijsNu": 1.49,
+      "prijsNu": 4.99,
       "prijsWas": 0,
       "kortingPct": 0,
       "korting": "ACTIE",
-      "afbeelding": "https://web-fileserver.dirk.nl/offers/1%2F4%2F7%2F6%2F3%2F1%2FBatard_639160106522599293.png?width=190",
+      "afbeelding": "https://web-fileserver.dirk.nl/artikelen%2F249095_1_486994_639071148081436779.png?width=190",
       "geldigTot": "",
       "geldigVanaf": "",
       "merk": "",
-      "trefwoorden": [],
-      "opgehaald": "2026-06-16T11:00:47.704Z"
+      "trefwoorden": [
+        "vis"
+      ],
+      "opgehaald": "2026-06-17T05:00:40.729Z"
     },
     {
-      "id": "dirk-loacker-classic-wafels",
+      "id": "dirk-dulce-sol-hamburger-broodjes-mini",
       "supermarkt": "dirk",
-      "naam": "Loacker classic wafels",
+      "naam": "Dulce Sol Hamburger broodjes mini",
       "beschrijving": "",
       "categorie": "Dirk Aanbieding",
       "prijsNu": 1.29,
       "prijsWas": 0,
       "kortingPct": 0,
       "korting": "ACTIE",
-      "afbeelding": "https://web-fileserver.dirk.nl/offers/9%2F7%2F7%2F6%2F3%2F1%2FLoacker%20classic%20wafels_639160104751891370.png?width=190",
-      "geldigTot": "",
-      "geldigVanaf": "",
-      "merk": "",
-      "trefwoorden": [],
-      "opgehaald": "2026-06-16T11:00:47.704Z"
-    },
-    {
-      "id": "dirk-gouda-s-glorie",
-      "supermarkt": "dirk",
-      "naam": "Gouda's Glorie",
-      "beschrijving": "",
-      "categorie": "Dirk Aanbieding",
-      "prijsNu": 2.55,
-      "prijsWas": 2.55,
-      "kortingPct": 0,
-      "korting": "ACTIE van 2.55",
-      "afbeelding": "https://web-fileserver.dirk.nl/offers/2%2F5%2F7%2F6%2F3%2F1%2FGouda%E2%80%99s%20Glorie__639160112631434466.png?width=190",
+      "afbeelding": "https://web-fileserver.dirk.nl/artikelen%2F491860_2026-06-16_10-49-14-596_1d6f2995-e380-4638-9793-2336317ae4ba.png?width=190",
       "geldigTot": "",
       "geldigVanaf": "",
       "merk": "",
       "trefwoorden": [
-        "kaas"
+        "brood"
       ],
-      "opgehaald": "2026-06-16T11:00:47.704Z"
+      "opgehaald": "2026-06-17T05:00:40.730Z"
     },
     {
-      "id": "dirk-optimel-drinkyoghurt",
+      "id": "dirk-boerenbrood",
       "supermarkt": "dirk",
-      "naam": "Optimel drinkyoghurt",
+      "naam": "Boerenbrood",
       "beschrijving": "",
       "categorie": "Dirk Aanbieding",
-      "prijsNu": 2.19,
-      "prijsWas": 2.19,
-      "kortingPct": 0,
-      "korting": "ACTIE van 2.19",
-      "afbeelding": "https://web-fileserver.dirk.nl/offers/8%2F5%2F7%2F6%2F3%2F1%2FOptimel%20drinkyoghurt_639160099808085183.png?width=190",
-      "geldigTot": "",
-      "geldigVanaf": "",
-      "merk": "",
-      "trefwoorden": [
-        "yoghurt"
-      ],
-      "opgehaald": "2026-06-16T11:00:47.704Z"
-    },
-    {
-      "id": "dirk-almhof-kwark",
-      "supermarkt": "dirk",
-      "naam": "Almhof kwark",
-      "beschrijving": "",
-      "categorie": "Dirk Aanbieding",
-      "prijsNu": 1.49,
+      "prijsNu": 1.69,
       "prijsWas": 0,
       "kortingPct": 0,
       "korting": "ACTIE",
-      "afbeelding": "https://web-fileserver.dirk.nl/offers/1%2F6%2F7%2F6%2F3%2F1%2FAlmhof%20kwark_639160099564043513.png?width=190",
+      "afbeelding": "https://web-fileserver.dirk.nl/offers/1%2F1%2F9%2F6%2F3%2F1%2FBoerenbrood_639166121582447698.png?width=190",
       "geldigTot": "",
       "geldigVanaf": "",
       "merk": "",
       "trefwoorden": [
-        "yoghurt"
+        "brood"
       ],
-      "opgehaald": "2026-06-16T11:00:47.704Z"
+      "opgehaald": "2026-06-17T05:00:40.730Z"
     },
     {
-      "id": "dirk-dr--oetker-wolkentoetje",
+      "id": "dirk-ronde-kaassuisse-of-ham-kaas-croissant",
       "supermarkt": "dirk",
-      "naam": "Dr. Oetker Wolkentoetje",
+      "naam": "Ronde kaassuisse of ham-kaas croissant",
       "beschrijving": "",
       "categorie": "Dirk Aanbieding",
-      "prijsNu": 0.79,
-      "prijsWas": 0.79,
+      "prijsNu": 0.99,
+      "prijsWas": 0.99,
       "kortingPct": 0,
-      "korting": "ACTIE van 0.79",
-      "afbeelding": "https://web-fileserver.dirk.nl/offers/2%2F6%2F7%2F6%2F3%2F1%2FDr.%20Oetker%20Wolkentoetje_639160122559966479.png?width=190",
-      "geldigTot": "",
-      "geldigVanaf": "",
-      "merk": "",
-      "trefwoorden": [],
-      "opgehaald": "2026-06-16T11:00:47.704Z"
-    },
-    {
-      "id": "dirk-m-llermilk",
-      "supermarkt": "dirk",
-      "naam": "Müllermilk",
-      "beschrijving": "",
-      "categorie": "Dirk Aanbieding",
-      "prijsNu": 1.89,
-      "prijsWas": 1.89,
-      "kortingPct": 0,
-      "korting": "ACTIE van 1.89",
-      "afbeelding": "https://web-fileserver.dirk.nl/offers/3%2F6%2F7%2F6%2F3%2F1%2FM%C3%BCllermilk__639160099677439665.png?width=190",
-      "geldigTot": "",
-      "geldigVanaf": "",
-      "merk": "",
-      "trefwoorden": [],
-      "opgehaald": "2026-06-16T11:00:47.704Z"
-    },
-    {
-      "id": "dirk-garlan-roomkaas",
-      "supermarkt": "dirk",
-      "naam": "Garlan roomkaas",
-      "beschrijving": "",
-      "categorie": "Dirk Aanbieding",
-      "prijsNu": 1.28,
-      "prijsWas": 1.28,
-      "kortingPct": 0,
-      "korting": "ACTIE van 1.28",
-      "afbeelding": "https://web-fileserver.dirk.nl/offers/3%2F1%2F8%2F6%2F3%2F1%2FGarlan%20roomkaas_639160122842233451.png?width=190",
+      "korting": "ACTIE van 0.99",
+      "afbeelding": "https://web-fileserver.dirk.nl/offers/4%2F1%2F9%2F6%2F3%2F1%2FRonde%20kaassuisse%20of%20ham-kaas%20croissant_639166121847175969.png?width=190",
       "geldigTot": "",
       "geldigVanaf": "",
       "merk": "",
       "trefwoorden": [
         "kaas",
-        "room"
+        "ui"
       ],
-      "opgehaald": "2026-06-16T11:00:47.704Z"
+      "opgehaald": "2026-06-17T05:00:40.730Z"
     },
     {
-      "id": "dirk-borrelkaas",
+      "id": "dirk-vers-zeeuwse-bolus",
       "supermarkt": "dirk",
-      "naam": "Borrelkaas",
-      "beschrijving": "",
-      "categorie": "Dirk Aanbieding",
-      "prijsNu": 3.49,
-      "prijsWas": 0,
-      "kortingPct": 0,
-      "korting": "ACTIE",
-      "afbeelding": "https://web-fileserver.dirk.nl/offers/5%2F1%2F8%2F6%2F3%2F1%2FBorrelkaas_639160102725437971.png?width=190",
-      "geldigTot": "",
-      "geldigVanaf": "",
-      "merk": "",
-      "trefwoorden": [
-        "kaas"
-      ],
-      "opgehaald": "2026-06-16T11:00:47.704Z"
-    },
-    {
-      "id": "dirk-coca-cola",
-      "supermarkt": "dirk",
-      "naam": "Coca-Cola",
-      "beschrijving": "",
-      "categorie": "Dirk Aanbieding",
-      "prijsNu": 1.79,
-      "prijsWas": 0,
-      "kortingPct": 0,
-      "korting": "ACTIE",
-      "afbeelding": "https://web-fileserver.dirk.nl/offers/4%2F2%2F7%2F6%2F3%2F1%2FCoca-Cola_639160105474137636.png?width=190",
-      "geldigTot": "",
-      "geldigVanaf": "",
-      "merk": "",
-      "trefwoorden": [],
-      "opgehaald": "2026-06-16T11:00:47.704Z"
-    },
-    {
-      "id": "dirk-aa-drink-of-addmoore",
-      "supermarkt": "dirk",
-      "naam": "AA Drink of Addmoore",
-      "beschrijving": "",
-      "categorie": "Dirk Aanbieding",
-      "prijsNu": 1.69,
-      "prijsWas": 1.69,
-      "kortingPct": 0,
-      "korting": "ACTIE van 1.69",
-      "afbeelding": "https://web-fileserver.dirk.nl/offers/1%2F8%2F7%2F6%2F3%2F1%2FAA%20Drink%20of%20Addmoore_639160117911051358.png?width=190",
-      "geldigTot": "",
-      "geldigVanaf": "",
-      "merk": "",
-      "trefwoorden": [],
-      "opgehaald": "2026-06-16T11:00:47.704Z"
-    },
-    {
-      "id": "dirk-dubbelfrisss-boost",
-      "supermarkt": "dirk",
-      "naam": "Dubbelfrisss Boost",
-      "beschrijving": "",
-      "categorie": "Dirk Aanbieding",
-      "prijsNu": 1.92,
-      "prijsWas": 1.92,
-      "kortingPct": 0,
-      "korting": "ACTIE van 1.92",
-      "afbeelding": "https://web-fileserver.dirk.nl/offers/2%2F8%2F7%2F6%2F3%2F1%2FDubbelfrisss%20Boost__639160105202130063.png?width=190",
-      "geldigTot": "",
-      "geldigVanaf": "",
-      "merk": "",
-      "trefwoorden": [],
-      "opgehaald": "2026-06-16T11:00:47.704Z"
-    },
-    {
-      "id": "dirk-lipton-ice-tea-of-hero-cassis",
-      "supermarkt": "dirk",
-      "naam": "Lipton ice tea of Hero cassis",
-      "beschrijving": "",
-      "categorie": "Dirk Aanbieding",
-      "prijsNu": 0.88,
-      "prijsWas": 0.88,
-      "kortingPct": 0,
-      "korting": "ACTIE van 0.88",
-      "afbeelding": "https://web-fileserver.dirk.nl/offers/4%2F8%2F7%2F6%2F3%2F1%2FLipton%20ice%20tea%20of%20Hero%20cassis_639165076303515315.png?width=190",
-      "geldigTot": "",
-      "geldigVanaf": "",
-      "merk": "",
-      "trefwoorden": [],
-      "opgehaald": "2026-06-16T11:00:47.704Z"
-    },
-    {
-      "id": "dirk-amstel-radler",
-      "supermarkt": "dirk",
-      "naam": "Amstel Radler",
+      "naam": "Vers Zeeuwse bolus",
       "beschrijving": "",
       "categorie": "Dirk Aanbieding",
       "prijsNu": 2.99,
       "prijsWas": 0,
       "kortingPct": 0,
       "korting": "ACTIE",
-      "afbeelding": "https://web-fileserver.dirk.nl/offers/5%2F8%2F7%2F6%2F3%2F1%2FAmstel%20Radler%200.0_639160109598700977.png?width=190",
+      "afbeelding": "https://web-fileserver.dirk.nl/artikelen%2F180741_1_462409_638441022498769413.png?width=190",
       "geldigTot": "",
       "geldigVanaf": "",
       "merk": "",
       "trefwoorden": [],
-      "opgehaald": "2026-06-16T11:00:47.704Z"
+      "opgehaald": "2026-06-17T05:00:40.730Z"
     },
     {
-      "id": "dirk-heineken-of-grolsch",
+      "id": "dirk-lu-petit-boterbiscuits-met-zeezout",
       "supermarkt": "dirk",
-      "naam": "Heineken of Grolsch",
+      "naam": "Lu Petit boterbiscuits met zeezout",
       "beschrijving": "",
       "categorie": "Dirk Aanbieding",
-      "prijsNu": 13.99,
+      "prijsNu": 2.39,
+      "prijsWas": 2.39,
+      "kortingPct": 0,
+      "korting": "ACTIE van 2.39",
+      "afbeelding": "https://web-fileserver.dirk.nl/artikelen%2F257280_1_490128_639138318729974285.png?width=190",
+      "geldigTot": "",
+      "geldigVanaf": "",
+      "merk": "",
+      "trefwoorden": [
+        "boter",
+        "ui"
+      ],
+      "opgehaald": "2026-06-17T05:00:40.730Z"
+    },
+    {
+      "id": "dirk-banketbakkers-tompouce-oranje",
+      "supermarkt": "dirk",
+      "naam": "Banketbakkers tompouce oranje",
+      "beschrijving": "",
+      "categorie": "Dirk Aanbieding",
+      "prijsNu": 2.49,
       "prijsWas": 0,
       "kortingPct": 0,
       "korting": "ACTIE",
-      "afbeelding": "https://web-fileserver.dirk.nl/offers/1%2F9%2F7%2F6%2F3%2F1%2FHeineken%20of%20Grolsch%20v1_639160101107131335.png?width=190",
+      "afbeelding": "https://web-fileserver.dirk.nl/artikelen%2F255548_1_489757_639119496241137907.png?width=190",
+      "geldigTot": "",
+      "geldigVanaf": "",
+      "merk": "",
+      "trefwoorden": [],
+      "opgehaald": "2026-06-17T05:00:40.730Z"
+    },
+    {
+      "id": "dirk-melkunie-breaker",
+      "supermarkt": "dirk",
+      "naam": "Melkunie Breaker",
+      "beschrijving": "",
+      "categorie": "Dirk Aanbieding",
+      "prijsNu": 1.66,
+      "prijsWas": 1.66,
+      "kortingPct": 0,
+      "korting": "ACTIE van 1.66",
+      "afbeelding": "https://web-fileserver.dirk.nl/offers/0%2F3%2F9%2F6%2F3%2F1%2FMelkunie%20Breaker%20v1_639166104631331340.png?width=190",
+      "geldigTot": "",
+      "geldigVanaf": "",
+      "merk": "",
+      "trefwoorden": [
+        "melk"
+      ],
+      "opgehaald": "2026-06-17T05:00:40.730Z"
+    },
+    {
+      "id": "dirk-zuivelhoeve-boer-n-vla",
+      "supermarkt": "dirk",
+      "naam": "Zuivelhoeve Boer'n vla",
+      "beschrijving": "",
+      "categorie": "Dirk Aanbieding",
+      "prijsNu": 1.98,
+      "prijsWas": 1.98,
+      "kortingPct": 0,
+      "korting": "ACTIE van 1.98",
+      "afbeelding": "https://web-fileserver.dirk.nl/offers/1%2F3%2F9%2F6%2F3%2F1%2FZuivelhoeve%20Boer%E2%80%99n%20vla_639166116137717181.png?width=190",
+      "geldigTot": "",
+      "geldigVanaf": "",
+      "merk": "",
+      "trefwoorden": [
+        "ui"
+      ],
+      "opgehaald": "2026-06-17T05:00:40.730Z"
+    },
+    {
+      "id": "dirk-leerdammer-kaas-extra-mild-50--plakken",
+      "supermarkt": "dirk",
+      "naam": "Leerdammer Kaas extra mild 50+ plakken",
+      "beschrijving": "",
+      "categorie": "Dirk Aanbieding",
+      "prijsNu": 2.39,
+      "prijsWas": 2.39,
+      "kortingPct": 0,
+      "korting": "ACTIE van 2.39",
+      "afbeelding": "https://web-fileserver.dirk.nl/artikelen%2F257878_1_489605_639141834701182247.png?width=190",
+      "geldigTot": "",
+      "geldigVanaf": "",
+      "merk": "",
+      "trefwoorden": [
+        "kaas"
+      ],
+      "opgehaald": "2026-06-17T05:00:40.730Z"
+    },
+    {
+      "id": "dirk-xxl-fit-yoghurt",
+      "supermarkt": "dirk",
+      "naam": "XXL Fit yoghurt",
+      "beschrijving": "",
+      "categorie": "Dirk Aanbieding",
+      "prijsNu": 1.99,
+      "prijsWas": 0,
+      "kortingPct": 0,
+      "korting": "ACTIE",
+      "afbeelding": "https://web-fileserver.dirk.nl/offers/0%2F4%2F9%2F6%2F3%2F1%2FXXL%20Fit%20yoghurt_639166106034350216.png?width=190",
+      "geldigTot": "",
+      "geldigVanaf": "",
+      "merk": "",
+      "trefwoorden": [
+        "yoghurt"
+      ],
+      "opgehaald": "2026-06-17T05:00:40.730Z"
+    },
+    {
+      "id": "dirk-buitenlandse-kaas",
+      "supermarkt": "dirk",
+      "naam": "Buitenlandse kaas",
+      "beschrijving": "",
+      "categorie": "Dirk Aanbieding",
+      "prijsNu": 2.49,
+      "prijsWas": 0,
+      "kortingPct": 0,
+      "korting": "ACTIE",
+      "afbeelding": "https://web-fileserver.dirk.nl/offers/5%2F6%2F9%2F6%2F3%2F1%2FBuitenlandse%20kaas_639166121196372506.png?width=190",
+      "geldigTot": "",
+      "geldigVanaf": "",
+      "merk": "",
+      "trefwoorden": [
+        "kaas",
+        "ui"
+      ],
+      "opgehaald": "2026-06-17T05:00:40.730Z"
+    },
+    {
+      "id": "dirk-pickwick-matcha-of-spicy-chai-latte",
+      "supermarkt": "dirk",
+      "naam": "Pickwick matcha of spicy chai latte",
+      "beschrijving": "",
+      "categorie": "Dirk Aanbieding",
+      "prijsNu": 3.49,
+      "prijsWas": 0,
+      "kortingPct": 0,
+      "korting": "ACTIE",
+      "afbeelding": "https://web-fileserver.dirk.nl/offers/9%2F3%2F9%2F6%2F3%2F1%2FPickwick%20matcha%20of%20spicy%20chai%20latte_639166131509537832.png?width=190",
+      "geldigTot": "",
+      "geldigVanaf": "",
+      "merk": "",
+      "trefwoorden": [],
+      "opgehaald": "2026-06-17T05:00:40.730Z"
+    },
+    {
+      "id": "dirk-neon-bag-in-box",
+      "supermarkt": "dirk",
+      "naam": "Neon bag-in-box",
+      "beschrijving": "",
+      "categorie": "Dirk Aanbieding",
+      "prijsNu": 8.99,
+      "prijsWas": 0,
+      "kortingPct": 0,
+      "korting": "ACTIE",
+      "afbeelding": "https://web-fileserver.dirk.nl/offers/4%2F6%2F9%2F6%2F3%2F1%2FNeon%20bag-in-box_639166123999633893.png?width=190",
+      "geldigTot": "",
+      "geldigVanaf": "",
+      "merk": "",
+      "trefwoorden": [],
+      "opgehaald": "2026-06-17T05:00:40.730Z"
+    },
+    {
+      "id": "dirk-1-de-beste-ice-tea-green",
+      "supermarkt": "dirk",
+      "naam": "1 de Beste Ice tea green",
+      "beschrijving": "",
+      "categorie": "Dirk Aanbieding",
+      "prijsNu": 1.25,
+      "prijsWas": 0,
+      "kortingPct": 0,
+      "korting": "",
+      "afbeelding": "https://web-fileserver.dirk.nl/artikelen%2F190595_1_458754_638513610974707259.png?width=190",
+      "geldigTot": "",
+      "geldigVanaf": "",
+      "merk": "",
+      "trefwoorden": [],
+      "opgehaald": "2026-06-17T05:00:40.730Z"
+    },
+    {
+      "id": "dirk-corona-extra-of-tripel-karmeliet",
+      "supermarkt": "dirk",
+      "naam": "Corona Extra of Tripel Karmeliet",
+      "beschrijving": "",
+      "categorie": "Dirk Aanbieding",
+      "prijsNu": 11.99,
+      "prijsWas": 0,
+      "kortingPct": 0,
+      "korting": "ACTIE",
+      "afbeelding": "https://web-fileserver.dirk.nl/offers/3%2F7%2F9%2F6%2F3%2F1%2FCorona%20Extra%20of%20Tripel%20Karmeliet%20V3_639166118734376983.png?width=190",
+      "geldigTot": "",
+      "geldigVanaf": "",
+      "merk": "",
+      "trefwoorden": [],
+      "opgehaald": "2026-06-17T05:00:40.730Z"
+    },
+    {
+      "id": "dirk-heineken-pils",
+      "supermarkt": "dirk",
+      "naam": "Heineken pils",
+      "beschrijving": "",
+      "categorie": "Dirk Aanbieding",
+      "prijsNu": 4.49,
+      "prijsWas": 0,
+      "kortingPct": 0,
+      "korting": "ACTIE",
+      "afbeelding": "https://web-fileserver.dirk.nl/offers/6%2F7%2F9%2F6%2F3%2F1%2FHeineken%20pils%20V3_639166117538052110.png?width=190",
       "geldigTot": "",
       "geldigVanaf": "",
       "merk": "",
       "trefwoorden": [
         "ei"
       ],
-      "opgehaald": "2026-06-16T11:00:47.704Z"
+      "opgehaald": "2026-06-17T05:00:40.730Z"
     },
     {
-      "id": "dirk-hertog-jan-pils",
+      "id": "dirk-hertog-jan-pils-of-0-0",
       "supermarkt": "dirk",
-      "naam": "Hertog Jan pils",
+      "naam": "Hertog Jan pils of 0.0",
       "beschrijving": "",
       "categorie": "Dirk Aanbieding",
-      "prijsNu": 6.74,
+      "prijsNu": 14.99,
       "prijsWas": 0,
       "kortingPct": 0,
       "korting": "ACTIE",
-      "afbeelding": "https://web-fileserver.dirk.nl/offers/6%2F9%2F7%2F6%2F3%2F1%2FHertog%20Jan%20pils%20v2_639160101900838343.png?width=190",
+      "afbeelding": "https://web-fileserver.dirk.nl/offers/9%2F7%2F9%2F6%2F3%2F1%2FHertog%20Jan%20pils%20of%200.0_639166117170323053.png?width=190",
       "geldigTot": "",
       "geldigVanaf": "",
       "merk": "",
       "trefwoorden": [],
-      "opgehaald": "2026-06-16T11:00:47.704Z"
+      "opgehaald": "2026-06-17T05:00:40.730Z"
     },
     {
-      "id": "dirk-i-am-wijn",
+      "id": "dirk-gato-negro",
       "supermarkt": "dirk",
-      "naam": "I Am wijn",
+      "naam": "Gato Negro",
       "beschrijving": "",
       "categorie": "Dirk Aanbieding",
       "prijsNu": 3.99,
       "prijsWas": 0,
       "kortingPct": 0,
       "korting": "ACTIE",
-      "afbeelding": "https://web-fileserver.dirk.nl/offers/9%2F9%2F7%2F6%2F3%2F1%2FI%20Am%20wijn_639160103820054308.png?width=190",
+      "afbeelding": "https://web-fileserver.dirk.nl/offers/5%2F8%2F9%2F6%2F3%2F1%2FGato%20Negro_639166128291704312.png?width=190",
       "geldigTot": "",
       "geldigVanaf": "",
       "merk": "",
       "trefwoorden": [],
-      "opgehaald": "2026-06-16T11:00:47.704Z"
+      "opgehaald": "2026-06-17T05:00:40.730Z"
     },
     {
-      "id": "dirk-stoney-creek",
+      "id": "dirk-hidden-river-of-mi-corazon",
       "supermarkt": "dirk",
-      "naam": "Stoney Creek",
+      "naam": "Hidden River of Mi Corazon",
       "beschrijving": "",
       "categorie": "Dirk Aanbieding",
-      "prijsNu": 3.39,
+      "prijsNu": 2.99,
       "prijsWas": 0,
       "kortingPct": 0,
       "korting": "ACTIE",
-      "afbeelding": "https://web-fileserver.dirk.nl/offers/4%2F1%2F8%2F6%2F3%2F1%2FStoney%20Creek_639160104479807812.png?width=190",
+      "afbeelding": "https://web-fileserver.dirk.nl/offers/6%2F8%2F9%2F6%2F3%2F1%2FHidden%20River%20of%20Mi%20Corazon_639166131221854184.png?width=190",
       "geldigTot": "",
       "geldigVanaf": "",
       "merk": "",
       "trefwoorden": [],
-      "opgehaald": "2026-06-16T11:00:47.704Z"
+      "opgehaald": "2026-06-17T05:00:40.730Z"
     },
     {
-      "id": "dirk-conimex-kroepoek",
+      "id": "dirk-silvo-mix-voor-mosselen",
       "supermarkt": "dirk",
-      "naam": "Conimex kroepoek",
+      "naam": "Silvo Mix voor mosselen",
       "beschrijving": "",
       "categorie": "Dirk Aanbieding",
-      "prijsNu": 1.69,
-      "prijsWas": 1.69,
+      "prijsNu": 1.49,
+      "prijsWas": 1.49,
       "kortingPct": 0,
-      "korting": "ACTIE van 1.69",
-      "afbeelding": "https://web-fileserver.dirk.nl/offers/4%2F6%2F7%2F6%2F3%2F1%2FConimex%20kroepoek_639160108523633140.png?width=190",
+      "korting": "ACTIE van 1.49",
+      "afbeelding": "https://web-fileserver.dirk.nl/artikelen%2F3854_1_246203_637719787548964790.png?width=190",
       "geldigTot": "",
       "geldigVanaf": "",
       "merk": "",
       "trefwoorden": [],
-      "opgehaald": "2026-06-16T11:00:47.704Z"
+      "opgehaald": "2026-06-17T05:00:40.730Z"
     },
     {
-      "id": "dirk-zaanse-saus",
+      "id": "dirk-1-de-beste-fritessaus",
       "supermarkt": "dirk",
-      "naam": "Zaanse saus",
+      "naam": "1 de Beste Fritessaus",
       "beschrijving": "",
       "categorie": "Dirk Aanbieding",
-      "prijsNu": 2.89,
-      "prijsWas": 2.89,
-      "kortingPct": 0,
-      "korting": "ACTIE van 2.89",
-      "afbeelding": "https://web-fileserver.dirk.nl/offers/9%2F6%2F7%2F6%2F3%2F1%2FZaanse%20saus_639160119370659438.png?width=190",
-      "geldigTot": "",
-      "geldigVanaf": "",
-      "merk": "",
-      "trefwoorden": [],
-      "opgehaald": "2026-06-16T11:00:47.704Z"
-    },
-    {
-      "id": "dirk-honig-soep",
-      "supermarkt": "dirk",
-      "naam": "Honig soep",
-      "beschrijving": "",
-      "categorie": "Dirk Aanbieding",
-      "prijsNu": 1.95,
-      "prijsWas": 1.95,
-      "kortingPct": 0,
-      "korting": "ACTIE van 1.95",
-      "afbeelding": "https://web-fileserver.dirk.nl/offers/2%2F7%2F7%2F6%2F3%2F1%2FHonig%20soep_639160109225469173.png?width=190",
-      "geldigTot": "",
-      "geldigVanaf": "",
-      "merk": "",
-      "trefwoorden": [],
-      "opgehaald": "2026-06-16T11:00:47.704Z"
-    },
-    {
-      "id": "dirk-westland-bbq-salade",
-      "supermarkt": "dirk",
-      "naam": "Westland BBQ salade",
-      "beschrijving": "",
-      "categorie": "Dirk Aanbieding",
-      "prijsNu": 2.79,
+      "prijsNu": 1.48,
       "prijsWas": 0,
       "kortingPct": 0,
       "korting": "ACTIE",
-      "afbeelding": "https://web-fileserver.dirk.nl/offers/8%2F1%2F8%2F6%2F3%2F1%2FWestland%20BBQ%20salade__639160120343306609.png?width=190",
+      "afbeelding": "https://web-fileserver.dirk.nl/artikelen%2F194538_1_465980_638557083795942359.png?width=190",
       "geldigTot": "",
       "geldigVanaf": "",
       "merk": "",
       "trefwoorden": [],
-      "opgehaald": "2026-06-16T11:00:47.704Z"
+      "opgehaald": "2026-06-17T05:00:40.730Z"
+    },
+    {
+      "id": "dirk-fresh---easy-lunchsalade",
+      "supermarkt": "dirk",
+      "naam": "Fresh & Easy lunchsalade",
+      "beschrijving": "",
+      "categorie": "Dirk Aanbieding",
+      "prijsNu": 1.99,
+      "prijsWas": 0,
+      "kortingPct": 0,
+      "korting": "ACTIE",
+      "afbeelding": "https://web-fileserver.dirk.nl/offers/5%2F9%2F8%2F6%2F3%2F1%2FFresh%20%26%20Easy%20lunchsalade_639166124237245537.png?width=190",
+      "geldigTot": "",
+      "geldigVanaf": "",
+      "merk": "",
+      "trefwoorden": [],
+      "opgehaald": "2026-06-17T05:00:40.730Z"
+    },
+    {
+      "id": "dirk-verspakket-maaltijd",
+      "supermarkt": "dirk",
+      "naam": "Verspakket maaltijd",
+      "beschrijving": "",
+      "categorie": "Dirk Aanbieding",
+      "prijsNu": 3.99,
+      "prijsWas": 0,
+      "kortingPct": 0,
+      "korting": "ACTIE",
+      "afbeelding": "https://web-fileserver.dirk.nl/offers/?width=190",
+      "geldigTot": "",
+      "geldigVanaf": "",
+      "merk": "",
+      "trefwoorden": [],
+      "opgehaald": "2026-06-17T05:00:40.730Z"
+    },
+    {
+      "id": "dirk-jan-napoli-pizzadeeg",
+      "supermarkt": "dirk",
+      "naam": "Jan Napoli pizzadeeg",
+      "beschrijving": "",
+      "categorie": "Dirk Aanbieding",
+      "prijsNu": 2.19,
+      "prijsWas": 2.19,
+      "kortingPct": 0,
+      "korting": "ACTIE van 2.19",
+      "afbeelding": "https://web-fileserver.dirk.nl/artikelen%2F490072_2026-05-29_16-31-47-119_a64db1c2-97d9-4823-94db-63e930e3f46b.png?width=190",
+      "geldigTot": "",
+      "geldigVanaf": "",
+      "merk": "",
+      "trefwoorden": [],
+      "opgehaald": "2026-06-17T05:00:40.730Z"
+    },
+    {
+      "id": "dirk-los-taqueros-empanadas",
+      "supermarkt": "dirk",
+      "naam": "Los Taqueros empanadas",
+      "beschrijving": "",
+      "categorie": "Dirk Aanbieding",
+      "prijsNu": 2.69,
+      "prijsWas": 0,
+      "kortingPct": 0,
+      "korting": "ACTIE",
+      "afbeelding": "https://web-fileserver.dirk.nl/offers/2%2F6%2F9%2F6%2F3%2F1%2FLos%20Taqueros%20empanadas_639166121305748569.png?width=190",
+      "geldigTot": "",
+      "geldigVanaf": "",
+      "merk": "",
+      "trefwoorden": [],
+      "opgehaald": "2026-06-17T05:00:40.730Z"
     },
     {
       "id": "dirk-fresh---easy-verspakket-nachos",
@@ -5805,115 +5963,149 @@
       "prijsNu": 4.49,
       "prijsWas": 0,
       "kortingPct": 0,
-      "korting": "ACTIE",
+      "korting": "",
       "afbeelding": "https://web-fileserver.dirk.nl/artikelen%2F114961_1_438434_638237835993375899.png?width=190",
       "geldigTot": "",
       "geldigVanaf": "",
       "merk": "",
       "trefwoorden": [],
-      "opgehaald": "2026-06-16T11:00:47.704Z"
+      "opgehaald": "2026-06-17T05:00:40.730Z"
     },
     {
-      "id": "dirk-portionfrost",
+      "id": "dirk-puuur-visch",
       "supermarkt": "dirk",
-      "naam": "Portionfrost",
+      "naam": "Puuur Visch",
       "beschrijving": "",
       "categorie": "Dirk Aanbieding",
-      "prijsNu": 3.99,
+      "prijsNu": 4.49,
       "prijsWas": 0,
       "kortingPct": 0,
       "korting": "ACTIE",
-      "afbeelding": "https://web-fileserver.dirk.nl/offers/8%2F6%2F7%2F6%2F3%2F1%2FPortionfrost_639160115800060800.png?width=190",
+      "afbeelding": "https://web-fileserver.dirk.nl/offers/4%2F4%2F9%2F6%2F3%2F1%2FPuuur%20Visch_639166128412647104.png?width=190",
       "geldigTot": "",
       "geldigVanaf": "",
       "merk": "",
       "trefwoorden": [],
-      "opgehaald": "2026-06-16T11:00:47.704Z"
+      "opgehaald": "2026-06-17T05:00:40.730Z"
     },
     {
-      "id": "dirk-elvive-shampoo-of-conditioner",
+      "id": "dirk-prodent",
       "supermarkt": "dirk",
-      "naam": "Elvive shampoo of conditioner",
+      "naam": "Prodent",
       "beschrijving": "",
       "categorie": "Dirk Aanbieding",
-      "prijsNu": 3.99,
+      "prijsNu": 2.59,
+      "prijsWas": 2.59,
+      "kortingPct": 0,
+      "korting": "ACTIE van 2.59",
+      "afbeelding": "https://web-fileserver.dirk.nl/offers/1%2F9%2F9%2F6%2F3%2F1%2FProdent_639166132837660331.png?width=190",
+      "geldigTot": "",
+      "geldigVanaf": "",
+      "merk": "",
+      "trefwoorden": [],
+      "opgehaald": "2026-06-17T05:00:40.730Z"
+    },
+    {
+      "id": "dirk-gourmet-gold",
+      "supermarkt": "dirk",
+      "naam": "Gourmet Gold",
+      "beschrijving": "",
+      "categorie": "Dirk Aanbieding",
+      "prijsNu": 0.89,
+      "prijsWas": 0.89,
+      "kortingPct": 0,
+      "korting": "ACTIE van 0.89",
+      "afbeelding": "https://web-fileserver.dirk.nl/offers/3%2F9%2F9%2F6%2F3%2F1%2FGourmet%20Gold_639166114450736693.png?width=190",
+      "geldigTot": "",
+      "geldigVanaf": "",
+      "merk": "",
+      "trefwoorden": [],
+      "opgehaald": "2026-06-17T05:00:40.730Z"
+    },
+    {
+      "id": "dirk-jimmy-s-popcorn-salted-caramel",
+      "supermarkt": "dirk",
+      "naam": "Jimmy's Popcorn salted caramel",
+      "beschrijving": "",
+      "categorie": "Dirk Aanbieding",
+      "prijsNu": 1.95,
+      "prijsWas": 1.95,
+      "kortingPct": 0,
+      "korting": "ACTIE van 1.95",
+      "afbeelding": "https://web-fileserver.dirk.nl/artikelen%2F243343_1_484757_638978472332420392.png?width=190",
+      "geldigTot": "",
+      "geldigVanaf": "",
+      "merk": "",
+      "trefwoorden": [],
+      "opgehaald": "2026-06-17T05:00:40.730Z"
+    },
+    {
+      "id": "dirk-haribo-phantasia-of-tropifrutti",
+      "supermarkt": "dirk",
+      "naam": "Haribo Phantasia of Tropifrutti",
+      "beschrijving": "",
+      "categorie": "Dirk Aanbieding",
+      "prijsNu": 1.49,
       "prijsWas": 0,
       "kortingPct": 0,
       "korting": "ACTIE",
-      "afbeelding": "https://web-fileserver.dirk.nl/offers/1%2F0%2F8%2F6%2F3%2F1%2FElvive%20shampoo%20of%20conditioner_639160105057344947.png?width=190",
+      "afbeelding": "https://web-fileserver.dirk.nl/offers/1%2F5%2F9%2F6%2F3%2F1%2FHaribo%20Phantasia%20of%20Tropifrutti__639166115073107652.png?width=190",
       "geldigTot": "",
       "geldigVanaf": "",
       "merk": "",
       "trefwoorden": [],
-      "opgehaald": "2026-06-16T11:00:47.704Z"
+      "opgehaald": "2026-06-17T05:00:40.730Z"
     },
     {
-      "id": "dirk-palmolive-douchegel",
+      "id": "dirk-pringles",
       "supermarkt": "dirk",
-      "naam": "Palmolive douchegel",
+      "naam": "Pringles",
       "beschrijving": "",
       "categorie": "Dirk Aanbieding",
-      "prijsNu": 1.99,
+      "prijsNu": 1.39,
       "prijsWas": 0,
       "kortingPct": 0,
       "korting": "ACTIE",
-      "afbeelding": "https://web-fileserver.dirk.nl/offers/3%2F0%2F8%2F6%2F3%2F1%2FPalmolive%20douchegel_639160110459031731.png?width=190",
+      "afbeelding": "https://web-fileserver.dirk.nl/offers/7%2F6%2F9%2F6%2F3%2F1%2FPringles_639166129434914371.png?width=190",
       "geldigTot": "",
       "geldigVanaf": "",
       "merk": "",
       "trefwoorden": [],
-      "opgehaald": "2026-06-16T11:00:47.704Z"
+      "opgehaald": "2026-06-17T05:00:40.730Z"
     },
     {
-      "id": "dirk-edet-toiletpapier-24-rollen-simply-soft",
+      "id": "dirk-1-de-beste-borrelnoten-mild",
       "supermarkt": "dirk",
-      "naam": "Edet Toiletpapier 24 rollen simply soft",
+      "naam": "1 de Beste Borrelnoten mild",
       "beschrijving": "",
       "categorie": "Dirk Aanbieding",
-      "prijsNu": 6.99,
+      "prijsNu": 1.14,
       "prijsWas": 0,
       "kortingPct": 0,
-      "korting": "ACTIE",
-      "afbeelding": "https://web-fileserver.dirk.nl/artikelen%2F486886_2026-06-08_09-15-21-788_2b9d6a04-ed0c-4347-bdfc-7732689f7a39.png?width=190",
+      "korting": "",
+      "afbeelding": "https://web-fileserver.dirk.nl/artikelen%2F122219_1_399791_637904817744015525.png?width=190",
       "geldigTot": "",
       "geldigVanaf": "",
       "merk": "",
       "trefwoorden": [],
-      "opgehaald": "2026-06-16T11:00:47.704Z"
+      "opgehaald": "2026-06-17T05:00:40.730Z"
     },
     {
-      "id": "dirk-lay-s-max-holland--of-mexican--of-dorito",
+      "id": "dirk-1-de-beste-ribbelchips-naturel",
       "supermarkt": "dirk",
-      "naam": "Lay's MAX Holland- of Mexican- of Doritos Argentinian-style",
+      "naam": "1 de Beste Ribbelchips naturel",
       "beschrijving": "",
       "categorie": "Dirk Aanbieding",
-      "prijsNu": 2.35,
-      "prijsWas": 2.35,
-      "kortingPct": 0,
-      "korting": "ACTIE van 2.35",
-      "afbeelding": "https://web-fileserver.dirk.nl/offers/3%2F2%2F8%2F6%2F3%2F1%2FLay%E2%80%99s%20MAX%20of%20Doritos_639160122004740434.png?width=190",
-      "geldigTot": "",
-      "geldigVanaf": "",
-      "merk": "",
-      "trefwoorden": [],
-      "opgehaald": "2026-06-16T11:00:47.704Z"
-    },
-    {
-      "id": "dirk-lay-s-of-doritos-snackbox",
-      "supermarkt": "dirk",
-      "naam": "Lay's of Doritos snackbox",
-      "beschrijving": "",
-      "categorie": "Dirk Aanbieding",
-      "prijsNu": 1.99,
+      "prijsNu": 1.29,
       "prijsWas": 0,
       "kortingPct": 0,
-      "korting": "ACTIE",
-      "afbeelding": "https://web-fileserver.dirk.nl/offers/4%2F2%2F8%2F6%2F3%2F1%2FLay%E2%80%99s%20of%20Doritos%20snackbox_639160118960908788.png?width=190",
+      "korting": "",
+      "afbeelding": "https://web-fileserver.dirk.nl/artikelen%2F116203_1_438541_637879464861846978.png?width=190",
       "geldigTot": "",
       "geldigVanaf": "",
       "merk": "",
       "trefwoorden": [],
-      "opgehaald": "2026-06-16T11:00:47.704Z"
+      "opgehaald": "2026-06-17T05:00:40.730Z"
     }
   ]
 }

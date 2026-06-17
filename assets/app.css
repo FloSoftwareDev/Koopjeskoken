@@ -134,7 +134,7 @@ nav { position:sticky; top:0; z-index:100; background:rgba(255,248,240,0.95); ba
 .btn-nav:hover { background:var(--orange-light); transform:translateY(-1px); }
 .btn-nav .cart-count { position:absolute; top:-6px; right:-6px; background:var(--green); color:white; border-radius:50%; width:18px; height:18px; font-size:0.65rem; font-weight:800; display:flex; align-items:center; justify-content:center; }
 
-body.dark { color:#f2f2f2; background:#2a2520; }
+body.dark { color:#f2f2f2; background:#2a2520; --ink-soft:#c8c0b6; }
 body.dark nav { background:rgba(40,35,30,0.95); border-color:rgba(100,90,80,0.35); }
 body.dark nav .logo { color:var(--warm-white) }
 body.dark .nav-links a:hover, body.dark .nav-links a.active { color:var(--orange); }
@@ -155,17 +155,13 @@ body.dark #passwordHint { color:#d1d1d1; }
 body.dark .btn-nav { background:#4a4535; color:#fff; }
 body.dark .btn-nav:hover { background:#6a6555; }
 body.dark .hero-card-main, body.dark .site-section, body.dark .page, body.dark .planner-day, body.dark .supermarkt-card, body.dark .cart-panel, body.dark .hero-float, body.dark .search-box, body.dark .recipe-card, body.dark .deal-card { background:#2a2520 !important; color:#e8e8e8; border-color:rgba(255,255,255,0.15) !important; }
-body.dark .hero-desc, body.dark .stat-label, body.dark .nav-links a, body.dark .card-desc, body.dark .price-label { color:#d1d1d1; }
 body.dark .btn-primary, body.dark .btn-secondary, body.dark .chip { background:#4a4535; color:#fff; border-color:#6a6555; }
 body.dark .btn-secondary, body.dark .chip { background:#2a2520; color:#e8e8e8; }
 body.dark .card-time-badge { background:rgba(42,37,32,0.9); color:#e8e8e8; }
 body.dark .deal-badge { background:#2a7a3b; color:#e8e8e8; }
-body.dark .float-label { color:#d1d1d1; }
 body.dark .deals-strip { background:#2a2520; border-color:rgba(255,255,255,0.08); }
-body.dark .deals-strip h3 { color:#aaa; }
 body.dark .deal-pill { background:#3a3520; border-color:rgba(255,255,255,0.1); }
 body.dark .deal-pill:hover { background:#4a4535; border-color:var(--orange); }
-body.dark .deal-pill-sm { color:#aaa; }
 body.dark .category-card .cat-title { color:var(--ink); }
 body.dark .category-card .cat-count { color:var(--ink-soft); }
 
@@ -430,6 +426,12 @@ body.dark .deal-highlight { box-shadow:0 0 0 3px #7dd3fc, 0 8px 40px rgba(125,21
 .planner-add-btn { width:100%; background:var(--cream); border:1.5px dashed var(--border); border-radius:8px; padding:0.5rem; font-size:0.75rem; color:var(--ink-soft); cursor:pointer; transition:all 0.2s; font-family:'DM Sans',sans-serif; }
 .planner-add-btn:hover { border-color:var(--orange); color:var(--orange); background:var(--orange-pale); }
 .planner-summary { background:white; border-radius:var(--radius); border:1px solid var(--border); padding:1.5rem; display:grid; grid-template-columns:repeat(4,1fr); gap:1rem; text-align:center; }
+.planner-recipes-wrap { margin-top:1.5rem; background:white; border-radius:var(--radius); border:1px solid var(--border); padding:1.5rem; }
+body.dark .planner-summary, body.dark .planner-recipes-wrap { background:#2a2520; border-color:rgba(255,255,255,0.15); color:#e8e8e8; }
+body.dark .planner-day-header { background:#3a3520; border-bottom-color:rgba(255,255,255,0.1); color:#e8e8e8; }
+body.dark .planner-add-btn { background:#3a3520; border-color:rgba(255,255,255,0.15); }
+body.dark .planner-add-btn:hover { background:#4a4535; border-color:var(--orange); color:var(--orange); }
+body.dark .planner-meal { background:rgba(232,80,10,0.18); border-color:rgba(232,80,10,0.35); color:#f2f2f2; }
 .plan-sum-val { font-family:'Playfair Display',serif; font-size:1.5rem; font-weight:900; color:var(--orange); }
 .plan-sum-label { font-size:0.75rem; color:var(--ink-soft); margin-top:0.25rem; }
 
